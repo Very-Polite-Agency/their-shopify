@@ -18,3 +18,9 @@ document.addEventListener('lazybeforeunveil', function(e){
 document.addEventListener('lazyloaded', function(e){
   e.target.parentNode.classList.add('lazyloaded');
 });
+
+WebFont.load({
+  typekit: {
+    id: 'nic5wxt'
+  }
+});
