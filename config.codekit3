@@ -530,6 +530,29 @@
       "sC" : 3,
       "tS" : 1
     },
+    "\/assets\/main.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/main.css",
+      "oF" : 0,
+      "pg" : 0
+    },
+    "\/assets\/main.min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/main.min.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 1
+    },
     "\/assets\/media-gallery.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -830,6 +853,17 @@
       "mi" : 1,
       "oA" : 0,
       "oAP" : "\/assets\/theme-editor.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 1
+    },
+    "\/assets\/vendors.min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/vendors.min.min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 1
@@ -1437,6 +1471,28 @@
       "oO" : 1,
       "oS" : 1
     },
+    "\/node_modules" : {
+      "ft" : 65536,
+      "oA" : 2,
+      "oAP" : "\/node_modules",
+      "oF" : 0
+    },
+    "\/package-lock.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/package-lock.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/package.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/package.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
     "\/README.md" : {
       "cB" : 0,
       "cS" : 0,
@@ -1965,54 +2021,6 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/sections\/apps.liquid",
-      "oF" : 0
-    },
-    "\/sections\/cart-icon-bubble.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/cart-icon-bubble.liquid",
-      "oF" : 0
-    },
-    "\/sections\/cart-live-region-text.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/cart-live-region-text.liquid",
-      "oF" : 0
-    },
-    "\/sections\/cart-notification-button.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/cart-notification-button.liquid",
-      "oF" : 0
-    },
-    "\/sections\/cart-notification-product.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/cart-notification-product.liquid",
-      "oF" : 0
-    },
-    "\/sections\/collage.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/collage.liquid",
-      "oF" : 0
-    },
-    "\/sections\/collapsible-content.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/collapsible-content.liquid",
       "oF" : 0
     },
     "\/sections\/collection-list.liquid" : {
