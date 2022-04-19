@@ -15,16 +15,16 @@
 //////////////////////////////////////////////////////////
 
 $theme-info: (
-  'theme-name': 'Lontreau',
+  'theme-name': 'Their',
   'theme-uri': 'https://weareverypolite.com',
-  'description': 'Lontreau Custom Theme',
+  'description': 'Their Custom Theme',
   'author': 'Very Polite Digital Dept.',
   'author-uri': 'https://weareverypolite.com',
   'version': '1.0.0',
   'license': 'GNU General Public License v2 or later',
   'license-uri': 'URI: https://www.gnu.org/licenses/gpl-2.0.html',
   'tags': 'HTML5, CSS3, Responsive, Mobile Friendly',
-  'text-domain': 'lontreau',
+  'text-domain': 'their',
 );
 
 // ---------------------------------------- Typography | Body Copy
@@ -75,17 +75,14 @@ $theme-button-min-widths: (
 
 // ---------------------------------------- Colours
 $theme-colours: (
-  'asphalt': #F7F7F7,
-  'aqua': #0E668C,
   'black': #000000,
-  'brick': #91342A,
-  'fog': #E2E6EC,
-  'forrest': #0F5E38,
-  'forrest-dark': #093822,
-  'grass': #7DC773,
-  'liliac': #AAA1BF,
-  'maize': #D8A235,
-  'salmon': #EE8857,
+  'charcoal': #585858,
+  'fog': #A3B8B7,
+  'gold': #CCA664,
+  'navy': #26476B,
+  'red': #BF3321,
+  'silver': #C8C8C8,
+  'terracotta': #C58A7B,
   'white': #ffffff,
 );
 

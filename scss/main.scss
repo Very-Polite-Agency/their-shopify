@@ -76,17 +76,14 @@
   --theme-button-min-width--xxl: #{ map-get( $theme-button-min-widths, xxl ) };
 
   // ---------------------------------------- Colours
-  --theme-colour-asphalt: #{ hexToRGB( map-get( $theme-colours, 'asphalt' ) ) };
-  --theme-colour-aqua: #{ hexToRGB( map-get( $theme-colours, 'aqua' ) ) };
   --theme-colour-black: #{ hexToRGB( map-get( $theme-colours, 'black' ) ) };
-  --theme-colour-brick: #{ hexToRGB( map-get( $theme-colours, 'brick' ) ) };
+  --theme-colour-charcoal: #{ hexToRGB( map-get( $theme-colours, 'charcoal' ) ) };
   --theme-colour-fog: #{ hexToRGB( map-get( $theme-colours, 'fog' ) ) };
-  --theme-colour-forrest: #{ hexToRGB( map-get( $theme-colours, 'forrest' ) ) };
-  --theme-colour-forrest-dark: #{ hexToRGB( map-get( $theme-colours, 'forrest-dark' ) ) };
-  --theme-colour-grass: #{ hexToRGB( map-get( $theme-colours, 'grass' ) ) };
-  --theme-colour-liliac: #{ hexToRGB( map-get( $theme-colours, 'liliac' ) ) };
-  --theme-colour-maize: #{ hexToRGB( map-get( $theme-colours, 'maize' ) ) };
-  --theme-colour-salmon: #{ hexToRGB( map-get( $theme-colours, 'salmon' ) ) };
+  --theme-colour-gold: #{ hexToRGB( map-get( $theme-colours, 'gold' ) ) };
+  --theme-colour-navy: #{ hexToRGB( map-get( $theme-colours, 'navy' ) ) };
+  --theme-colour-red: #{ hexToRGB( map-get( $theme-colours, 'red' ) ) };
+  --theme-colour-silver: #{ hexToRGB( map-get( $theme-colours, 'silver' ) ) };
+  --theme-colour-terracotta: #{ hexToRGB( map-get( $theme-colours, 'terracotta' ) ) };
   --theme-colour-white: #{ hexToRGB( map-get( $theme-colours, 'white' ) ) };
 
   // ---------------------------------------- Container
