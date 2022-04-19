@@ -1,6 +1,7 @@
 // @codekit-prepend quiet "../node_modules/lazysizes/lazysizes.min.js";
 // @codekit-prepend quiet "../node_modules/lazysizes/plugins/unveilhooks/ls.unveilhooks.min.js";
 // @codekit-prepend quiet "../node_modules/lazysizes/plugins/attrchange/ls.attrchange.min.js";
+// @codekit-prepend quiet "../node_modules/webfontloader/webfontloader.js";
 // @codekit-prepend quiet "../node_modules/aos/dist/aos.js";
 
 window.lazySizesConfig = window.lazySizesConfig || {};
