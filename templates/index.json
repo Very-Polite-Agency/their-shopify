@@ -1,14 +1,14 @@
 {
   "sections": {
-    "16509236091675974d": {
-      "type": "text-feature",
+    "1650923978b97fb93e": {
+      "type": "hero",
       "settings": {
-        "anchor_id": "",
-        "width": "full"
+        "image": "shopify:\/\/shop_images\/THEIR--home-page--hero_2x_6501bb4f-74b4-4369-a36e-2c0d186505ad.png",
+        "height": "large"
       }
     }
   },
   "order": [
-    "16509236091675974d"
+    "1650923978b97fb93e"
   ]
 }
