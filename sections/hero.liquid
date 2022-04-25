@@ -7,6 +7,8 @@
 
 <div class="{{ section_name }}" id="{{ section_id }}">
 
+  {{ width }}
+
   {% if 'inset' == width %}{% render 'layout--container', state: 'open', col: 'col-12' %}{% endif %}
     <div class="{{ section_name }}__media" data-height-{{ height }}>
       {%
