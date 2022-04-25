@@ -7,9 +7,35 @@
         "width": "inset",
         "height": "large"
       }
+    },
+    "165093044106648c6d": {
+      "type": "fifty-fifty",
+      "blocks": {
+        "35f168b3-3d22-4035-9a8e-a274b3a9bfaf": {
+          "type": "content",
+          "settings": {
+            "heading": "<p>Carter Herringbone <\/p><p>Necklace<\/p>",
+            "message": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorpe.<\/p>",
+            "cta_title": "",
+            "cta_link": ""
+          }
+        },
+        "203d1e11-ac22-4763-869a-d64adbedfd81": {
+          "type": "media",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "35f168b3-3d22-4035-9a8e-a274b3a9bfaf",
+        "203d1e11-ac22-4763-869a-d64adbedfd81"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
-    "1650923978b97fb93e"
+    "1650923978b97fb93e",
+    "165093044106648c6d"
   ]
 }
