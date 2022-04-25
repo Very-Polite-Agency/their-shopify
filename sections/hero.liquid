@@ -1,0 +1,68 @@
+{%- assign section_name = 'hero' -%}
+{%- assign section_id = section_name | append: '--' | append: section.id -%}
+
+{% assign image = section.settings.image | default: false %}
+
+<div class="{{ section_name }}" id="{{ section_id }}">
+
+  <div class="{{ section_name }}__media">
+    {%
+      render 'content--lazyload-image',
+      background: true,
+      classes: 'full-width-feature__background-image',
+      image: image,
+      preload: true,
+      responsive: true,
+      duration: 500,
+    %}
+  </div>
+
+  <div class="{{ section_name }}__indicator">
+    <div class="{{ section_name }}__indicator-icon">
+      {% render 'svg', type: 'icon.arrow' %}
+    </div>
+  </div>
+
+</div>
+
+{% schema %}
+{
+  "name": "Hero",
+  "tag": "section",
+  "class": "section section--hero",
+  "settings": [
+    {
+      "content": "Content",
+      "type": "header"
+    },
+    {
+      "content": "Media",
+      "type": "header"
+    },
+    {
+      "label": "Image",
+      "type": "image_picker",
+      "id": "image"
+    },
+    {
+      "content": "Settings",
+      "type": "header"
+    },
+    {
+      "label": "Height",
+      "type": "select",
+      "options": [
+        { "value": "large", "label": "Large" }
+      ],
+      "default": "large",
+      "id": "height"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Hero"
+    }
+  ]
+}
+{% endschema %}
