@@ -2263,6 +2263,14 @@
       "oAP" : "\/sections\/product-recommendations.liquid",
       "oF" : 0
     },
+    "\/sections\/rich-text copy.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/sections\/rich-text copy.liquid",
+      "oF" : 0
+    },
     "\/sections\/rich-text.liquid" : {
       "cB" : 0,
       "ft" : 8192,
@@ -2277,6 +2285,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/sections\/slideshow.liquid",
+      "oF" : 0
+    },
+    "\/sections\/text-feature.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/sections\/text-feature.liquid",
       "oF" : 0
     },
     "\/sections\/video.liquid" : {
@@ -2351,6 +2367,22 @@
       "oAP" : "\/snippets\/facets.liquid",
       "oF" : 0
     },
+    "\/snippets\/input.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/input.liquid",
+      "oF" : 0
+    },
+    "\/snippets\/label.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/label.liquid",
+      "oF" : 0
+    },
     "\/snippets\/layout--container.liquid" : {
       "cB" : 0,
       "ft" : 8192,
@@ -2413,6 +2445,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/snippets\/svg.liquid",
+      "oF" : 0
+    },
+    "\/snippets\/textarea.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/textarea.liquid",
       "oF" : 0
     },
     "\/snippets\/theme--classes.liquid" : {
