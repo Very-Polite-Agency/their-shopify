@@ -2287,6 +2287,14 @@
       "oAP" : "\/sections\/video.liquid",
       "oF" : 0
     },
+    "\/snippets\/aos-attributes.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/aos-attributes.liquid",
+      "oF" : 0
+    },
     "\/snippets\/card-article.liquid" : {
       "cB" : 0,
       "ft" : 8192,
@@ -2405,6 +2413,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/snippets\/svg.liquid",
+      "oF" : 0
+    },
+    "\/snippets\/theme--classes.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/theme--classes.liquid",
       "oF" : 0
     },
     "\/snippets\/theme--css-variables.liquid" : {
