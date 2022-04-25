@@ -16,13 +16,14 @@
           "settings": {
             "heading": "<p>Carter Herringbone <\/p><p>Necklace<\/p>",
             "message": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorpe.<\/p>",
-            "cta_title": "",
-            "cta_link": ""
+            "cta_title": "Shop Now",
+            "cta_link": "shopify:\/\/collections\/all"
           }
         },
         "203d1e11-ac22-4763-869a-d64adbedfd81": {
           "type": "media",
           "settings": {
+            "image": "shopify:\/\/shop_images\/THEIR--home-page--FF_3x_edaff467-bd0b-4aec-a9ae-49614203f4ee.png"
           }
         }
       },
