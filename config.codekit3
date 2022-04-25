@@ -2215,14 +2215,6 @@
       "oAP" : "\/sections\/main-search.liquid",
       "oF" : 0
     },
-    "\/sections\/multicolumn.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/multicolumn.liquid",
-      "oF" : 0
-    },
     "\/sections\/newsletter.liquid" : {
       "cB" : 0,
       "ft" : 8192,
@@ -2263,44 +2255,12 @@
       "oAP" : "\/sections\/product-recommendations.liquid",
       "oF" : 0
     },
-    "\/sections\/rich-text copy.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/rich-text copy.liquid",
-      "oF" : 0
-    },
-    "\/sections\/rich-text.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/rich-text.liquid",
-      "oF" : 0
-    },
-    "\/sections\/slideshow.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/slideshow.liquid",
-      "oF" : 0
-    },
     "\/sections\/text-feature.liquid" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/sections\/text-feature.liquid",
-      "oF" : 0
-    },
-    "\/sections\/video.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/video.liquid",
       "oF" : 0
     },
     "\/snippets\/aos-attributes.liquid" : {
@@ -2619,6 +2579,14 @@
       "ft" : 524288,
       "oA" : 0,
       "oAP" : "\/templates\/page.contact.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/templates\/page.demo.json" : {
+      "ft" : 524288,
+      "oA" : 0,
+      "oAP" : "\/templates\/page.demo.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
