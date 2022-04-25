@@ -4,7 +4,7 @@
       "type": "hero",
       "settings": {
         "image": "shopify:\/\/shop_images\/THEIR--home-page--hero_2x_6501bb4f-74b4-4369-a36e-2c0d186505ad.png",
-        "Width": "inset",
+        "Width": "full",
         "height": "large"
       }
     }
