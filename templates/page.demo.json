@@ -6,9 +6,29 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "16509228834fc4067e": {
+      "type": "text-feature",
+      "blocks": {
+        "71e83f34-9475-4d69-9c03-24df960f925e": {
+          "type": "heading",
+          "settings": {
+            "heading": "Sample Heading",
+            "heading_size": "1"
+          }
+        }
+      },
+      "block_order": [
+        "71e83f34-9475-4d69-9c03-24df960f925e"
+      ],
+      "settings": {
+        "anchor_id": "",
+        "width": "full"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "16509228834fc4067e"
   ]
 }
