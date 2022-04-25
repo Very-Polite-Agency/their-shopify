@@ -3,20 +3,23 @@
 
 {% assign height = section.settings.height | default: 'large' %}
 {% assign image = section.settings.image | default: false %}
+{% assign width = section.settings.width | default: 'full' %}
 
-<div class="{{ section_name }}" id="{{ section_id }}" data-height-{{ height }}>
+<div class="{{ section_name }}" id="{{ section_id }}">
 
-  <div class="{{ section_name }}__media">
-    {%
-      render 'content--lazyload-image',
-      background: true,
-      classes: 'full-width-feature__background-image',
-      image: image,
-      preload: true,
-      responsive: true,
-      duration: 500,
-    %}
-  </div>
+  {% if 'inset' == width %}{% render 'layout--container', state: 'open', col: 'col-12' %}{% endif %}
+    <div class="{{ section_name }}__media" data-height-{{ height }}>
+      {%
+        render 'content--lazyload-image',
+        background: true,
+        classes: 'full-width-feature__background-image',
+        image: image,
+        preload: true,
+        responsive: true,
+        duration: 500,
+      %}
+    </div>
+  {% if 'inset' == width %}{% render 'layout--container', state: 'closed' %}{% endif %}
 
   <div class="{{ section_name }}__indicator">
     <div class="{{ section_name }}__indicator-icon">
