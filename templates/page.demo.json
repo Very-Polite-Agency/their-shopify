@@ -1,1 +1,43 @@
-{"order":["main"],"sections":{"main":{"block_order":["71e83f34-9475-4d69-9c03-24df960f925e","056d5dc6-c3dd-430c-aeef-c9a7c84578ed","cf6675ac-2584-4118-91f9-483028439046"],"blocks":{"056d5dc6-c3dd-430c-aeef-c9a7c84578ed":{"settings":{"text":"<p>Maecenas commodo mauris sed est feugiat egestas et non elit. Praesent ornare, enim a laoreet tincidunt, velit orci accumsan massa, vel pellentesque lacus mauris in elit. Nullam sollicitudin dolor id erat cursus fringilla a vel lorem. Proin commodo felis at bibendum tempor. Mauris at dapibus velit. Vivamus pellentesque lacus id ullamcorper tempus. Etiam dictum molestie molestie. Quisque id tellus a augue molestie venenatis. Nunc suscipit lacinia turpis ac vestibulum. Praesent in scelerisque metus, vitae condimentum ipsum. Integer eu lacus eget tellus pretium aliquet ornare eu felis.<\/p><p>Nullam lacus purus, sollicitudin semper cursus eu, rutrum at libero. Proin a sapien nec enim vestibulum feugiat. In dui enim, pulvinar quis viverra eu, tempus sed ligula. Praesent vitae nunc ut sem rhoncus porta a nec quam. Cras id molestie nisi. Etiam purus justo, porttitor in fermentum quis, auctor at diam. Nunc quam augue, euismod eget posuere ac, tincidunt ut dolor. Ut tincidunt nibh ac sapien pellentesque consectetur. Proin efficitur orci ac sem tempus, tincidunt consequat ipsum ullamcorper. Duis fermentum auctor nisl, eu lobortis magna vulputate sed.<\/p><p>Duis sagittis risus quis feugiat laoreet. Cras interdum accumsan ex quis pretium. Curabitur nisl mauris, facilisis fringilla leo at, cursus congue mauris. Nulla ut sagittis tortor. Nulla quis ante placerat, dignissim massa at, ornare dolor. Vivamus dictum, metus eget cursus vestibulum, ante nisl suscipit ligula, vitae luctus lorem purus ac neque. Pellentesque sodales bibendum egestas. Vivamus et est pellentesque, suscipit augue in, feugiat enim. Pellentesque dignissim ultricies felis, vulputate dignissim est vestibulum in. In non efficitur metus. Praesent feugiat elit id ante varius, sed interdum augue tristique. Aenean pulvinar neque id imperdiet venenatis. Morbi iaculis maximus ultrices. Phasellus tincidunt porta neque, eget feugiat nulla euismod eget.<\/p>"},"type":"text"},"71e83f34-9475-4d69-9c03-24df960f925e":{"settings":{"heading":"Sample Heading","heading_size":"1"},"type":"heading"},"cf6675ac-2584-4118-91f9-483028439046":{"settings":{"alignment":"left","link":"shopify:\/\/pages\/about","style":"primary","title":"Learn More"},"type":"button"}},"settings":{"anchor_id":"","width":"full"},"type":"text-feature"}}}
+{
+  "order": [
+    "main"
+  ],
+  "sections": {
+    "main": {
+      "type": "text-feature",
+      "blocks": {
+        "71e83f34-9475-4d69-9c03-24df960f925e": {
+          "type": "heading",
+          "settings": {
+            "heading": "Sample Heading",
+            "heading_size": "1"
+          }
+        },
+        "056d5dc6-c3dd-430c-aeef-c9a7c84578ed": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Maecenas commodo mauris sed est feugiat egestas et non elit. Praesent ornare, enim a laoreet tincidunt, velit orci accumsan massa, vel pellentesque lacus mauris in elit. Nullam sollicitudin dolor id erat cursus fringilla a vel lorem. Proin commodo felis at bibendum tempor. Mauris at dapibus velit. Vivamus pellentesque lacus id ullamcorper tempus. Etiam dictum molestie molestie. Quisque id tellus a augue molestie venenatis. Nunc suscipit lacinia turpis ac vestibulum. Praesent in scelerisque metus, vitae condimentum ipsum. Integer eu lacus eget tellus pretium aliquet ornare eu felis.<\/p><p>Nullam lacus purus, sollicitudin semper cursus eu, rutrum at libero. Proin a sapien nec enim vestibulum feugiat. In dui enim, pulvinar quis viverra eu, tempus sed ligula. Praesent vitae nunc ut sem rhoncus porta a nec quam. Cras id molestie nisi. Etiam purus justo, porttitor in fermentum quis, auctor at diam. Nunc quam augue, euismod eget posuere ac, tincidunt ut dolor. Ut tincidunt nibh ac sapien pellentesque consectetur. Proin efficitur orci ac sem tempus, tincidunt consequat ipsum ullamcorper. Duis fermentum auctor nisl, eu lobortis magna vulputate sed.<\/p>"
+          }
+        },
+        "cf6675ac-2584-4118-91f9-483028439046": {
+          "type": "button",
+          "settings": {
+            "title": "",
+            "link": "",
+            "style": "primary",
+            "alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "71e83f34-9475-4d69-9c03-24df960f925e",
+        "056d5dc6-c3dd-430c-aeef-c9a7c84578ed",
+        "cf6675ac-2584-4118-91f9-483028439046"
+      ],
+      "settings": {
+        "anchor_id": "",
+        "width": "full"
+      }
+    }
+  }
+}
