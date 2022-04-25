@@ -1,0 +1,70 @@
+{%- assign section_name = 'fifty-fifty' -%}
+{%- assign section_id = section_name | append: '--' | append: section.id -%}
+
+{% if section.settings.anchor_id != blank %}
+  {% assign section_id = section.settings.anchor_id %}
+{% endif %}
+
+<div class="{{ section_name }}" id="{{ section_id }}">
+
+</div>
+
+{% schema %}
+{
+  "name": "Fifty-Fifty",
+  "tag": "section",
+  "class": "section section--fifty-fifty",
+  "max_blocks": 2,
+  "settings": [],
+  "blocks": [
+    {
+      "name": "Content",
+      "type": "content",
+      "limit": 1,
+      "settings": [
+        {
+          "label": "Heading",
+          "type": "richtext",
+          "id": "heading"
+        },
+        {
+          "label": "Message",
+          "type": "richtext",
+          "id": "message"
+        },
+        {
+          "content": "Call to Action",
+          "type": "paragraph"
+        },
+        {
+          "label": "Title",
+          "type": "text",
+          "id": "cta_title"
+        },
+        {
+          "label": "Link",
+          "type": "url",
+          "id": "cta_link"
+        }
+      ]
+    },
+    {
+      "name": "Media",
+      "type": "media",
+      "limit": 1,
+      "settings": [
+        {
+          "label": "Image",
+          "type": "image_picker",
+          "id": "image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Fifty-Fifty"
+    }
+  ]
+}
+{% endschema %}
