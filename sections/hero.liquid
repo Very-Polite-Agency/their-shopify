@@ -1,9 +1,10 @@
 {%- assign section_name = 'hero' -%}
 {%- assign section_id = section_name | append: '--' | append: section.id -%}
 
+{% assign height = section.settings.height | default: 'large' %}
 {% assign image = section.settings.image | default: false %}
 
-<div class="{{ section_name }}" id="{{ section_id }}">
+<div class="{{ section_name }}" id="{{ section_id }}" data-height-{{ height }}>
 
   <div class="{{ section_name }}__media">
     {%
