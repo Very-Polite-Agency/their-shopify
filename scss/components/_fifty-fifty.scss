@@ -4,7 +4,7 @@
 
   &__content {
     color: rgba(var(--theme-colour-black),1);
-    padding: 0 10%;
+    padding: 0 15%;
   }
 
   &__cta {
@@ -23,10 +23,19 @@
     }
   }
 
+  &__image {
+    width: 84%;
+    margin: auto;
+  }
+
   &__item {
     display: inline-flex;
     width: 100%;
     flex-flow: row wrap;
+    position: relative;
+    & + .fifty-fifty__item {
+      margin-top: 32px;
+    }
   }
 
   &__layout {
@@ -45,11 +54,11 @@
   }
 
   &__stamp {
-    width: 30px;
+    width: 62px;
     height: auto;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 5%;
+    left: calc(8% - (62px/2));
     a, img, svg {
       display: block;
       width: 100%;
@@ -59,26 +68,115 @@
 
   @include breakpoint(sm) {} // min width sm
 
-  @include breakpoint(md) {} // min width md
+  @include breakpoint(md) {
+
+    &__stamp {
+      top: 10%;
+      width: 82px;
+      left: calc(8% - (82px/2));
+    }
+
+  } // min width md
 
   @include breakpoint(lg) {
 
     padding: 75px 0;
 
+    &__content {
+      padding: 0 10%;
+    }
+
+    &__heading {
+      & + .fifty-fifty__cta,
+      & + .fifty-fifty__message {
+        margin-top: 30px;
+      }
+    }
+
+    &__image {
+      width: 90%;
+      margin: 0;
+    }
+
     &__item {
       width: 50%;
+      & + .fifty-fifty__item {
+        margin-top: 0;
+      }
     }
 
     &__layout {
       flex-flow: row nowrap;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
+    }
+
+    &__message {
+      & + .fifty-fifty__cta {
+        margin-top: 30px;
+      }
+    }
+
+    &__stamp {
+      top: 5%;
+      width: 62px;
+      left: calc(-1*(62px/2));
     }
 
   } // min width lg
 
-  @include breakpoint(xl) {} // min width xl
+  @include breakpoint(xl) {
 
-  @include breakpoint(xxl) {} // min width xxl
+    &__content {
+      padding: 0 12.5%;
+    }
+
+    &__heading {
+      & + .fifty-fifty__cta,
+      & + .fifty-fifty__message {
+        margin-top: 34px;
+      }
+    }
+
+    &__message {
+      & + .fifty-fifty__cta {
+        margin-top: 34px;
+      }
+    }
+
+    &__stamp {
+      top: 7.5%;
+      width: 72px;
+      left: calc(-1*(72px/2));
+    }
+
+  } // min width xl
+
+  @include breakpoint(xxl) {
+
+    &__content {
+      padding: 0 15%;
+    }
+
+    &__heading {
+      & + .fifty-fifty__cta,
+      & + .fifty-fifty__message {
+        margin-top: 38px;
+      }
+    }
+
+    &__message {
+      & + .fifty-fifty__cta {
+        margin-top: 38px;
+      }
+    }
+
+    &__stamp {
+      top: 10%;
+      width: 82px;
+      left: calc(-1*(82px/2));
+    }
+
+  } // min width xxl
 
 }

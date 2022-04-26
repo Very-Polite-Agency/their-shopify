@@ -34,7 +34,7 @@
   &--1 {
     @extend .body-copy;
     font-size: 14px;
-    line-height: 1.17;
+    line-height: 1.71;
     font-weight: 300;
   }
 
@@ -46,10 +46,28 @@
 
   @include breakpoint(md) {} // min width md
 
-  @include breakpoint(lg) {} // min width lg
+  @include breakpoint(lg) {
 
-  @include breakpoint(xl) {} // min width xl
+    &--1 {
+      font-size: 14px;
+    }
 
-  @include breakpoint(xxl) {} // min width xxl
+  } // min width lg
+
+  @include breakpoint(xl) {
+
+    &--1 {
+      font-size: 15px;
+    }
+
+  } // min width xl
+
+  @include breakpoint(xxl) {
+
+    &--1 {
+      font-size: 16px;
+    }
+
+  } // min width xxl
 
 }

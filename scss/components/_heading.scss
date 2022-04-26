@@ -11,4 +11,32 @@
     font-size: 26px;
   }
 
+  @include breakpoint(sm) {} // min width sm
+
+  @include breakpoint(md) {} // min width md
+
+  @include breakpoint(lg) {
+
+    &--1 {
+      font-size: 26px;
+    }
+
+  } // min width lg
+
+  @include breakpoint(xl) {
+
+    &--1 {
+      font-size: 28px;
+    }
+
+  } // min width xl
+
+  @include breakpoint(xxl) {
+
+    &--1 {
+      font-size: 30px;
+    }
+
+  } // min width xxl
+
 }
