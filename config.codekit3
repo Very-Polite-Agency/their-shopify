@@ -598,6 +598,48 @@
       "sC" : 3,
       "tS" : 1
     },
+    "\/assets\/PPCirka.eot" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/PPCirka.eot",
+      "oF" : 0
+    },
+    "\/assets\/PPCirka.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/PPCirka.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/assets\/PPCirka.ttf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/PPCirka.ttf",
+      "oF" : 0
+    },
+    "\/assets\/PPCirka.woff" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/PPCirka.woff",
+      "oF" : 0
+    },
+    "\/assets\/PPCirka.woff2" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/PPCirka.woff2",
+      "oF" : 0
+    },
     "\/assets\/predictive-search.js" : {
       "bF" : 0,
       "ft" : 64,

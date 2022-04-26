@@ -1,12 +1,58 @@
 {%- assign section_name = 'fifty-fifty' -%}
 {%- assign section_id = section_name | append: '--' | append: section.id -%}
 
+{% assign colour_theme = section.settings.colour_theme | default: 'light' %}
+
 {% if section.settings.anchor_id != blank %}
   {% assign section_id = section.settings.anchor_id %}
 {% endif %}
 
-<div class="{{ section_name }}" id="{{ section_id }}">
+<div class="{{ section_name }}" id="{{ section_id }}" data-colour-theme-{{ colour_theme }}>
+  {% render 'layout--container', state: 'open', col: 'col-12' %}
+    <div class="{{ section_name }}__layout">
 
+      {%- for block in section.blocks -%}
+        <div class="{{ section_name }}__item" data-item-type="{{ block.type }}">
+          {%- case block.type -%}
+            {%- when 'content' -%}
+
+              {% assign cta_link = block.settings.cta_link | default: '' %}
+              {% assign cta_title = block.settings.cta_title | default: '' %}
+              {% assign heading = block.settings.heading | default: '' %}
+              {% assign message = block.settings.message | default: '' %}
+
+              {% if heading != blank or message != blank %}
+                <div class="{{ section_name }}__content">
+                  {% if heading %}<h2 class="{{ section_name }}__heading heading--1">{{ heading }}</h2>{% endif %}
+                  {% if message %}<div class="{{ section_name }}__message body-copy--1">{{ message }}</div>{% endif %}
+                  {% if cta_link != blank and cta_title != blank %}
+                    <div class="{{ section_name }}__cta">
+                      <a class="{{ section_name }}__button button--primary" href="{{ cta_link }}" title="{{ cta_title }}" target="_self">
+                        <span class="button__title">{{ cta_title }}</span>
+                      </a>
+                    </div>
+                  {% endif %}
+                </div>
+              {% endif %}
+
+            {%- when 'media' -%}
+
+              {% assign image = block.settings.image | default: false %}
+              {% assign stamp = block.settings.stamp | default: false %}
+
+              {% if image %}
+                <div class="{{ section_name }}__image">{% render 'content--lazyload-image', image: image %}</div>
+              {% endif %}
+              {% if stamp %}
+                <div class="{{ section_name }}__stamp">{% render 'content--lazyload-image', image: stamp %}</div>
+              {% endif %}
+
+          {%- endcase -%}
+        </div>
+      {%- endfor -%}
+
+    </div>
+  {% render 'layout--container', state: 'closed' %}
 </div>
 
 {% schema %}
@@ -15,7 +61,24 @@
   "tag": "section",
   "class": "section section--fifty-fifty",
   "max_blocks": 2,
-  "settings": [],
+  "settings": [
+    {
+      "label": "Anchor ID",
+      "info": "Optionally include a unique ID so that sections within the page can be linked to. Anchor IDs must be all lowercase, unique and replaced empty spaces with hyphens. For example: my-great-section-anchor",
+      "type": "text",
+      "id": "anchor_id"
+    },
+    {
+      "label": "Colour Theme",
+      "type": "select",
+      "options": [
+        { "value": "light", "label": "Light" },
+        { "value": "dark", "label": "Dark" }
+      ],
+      "default": "light",
+      "id": "colour_theme"
+    }
+  ],
   "blocks": [
     {
       "name": "Content",
@@ -57,6 +120,11 @@
           "label": "Image",
           "type": "image_picker",
           "id": "image"
+        },
+        {
+          "label": "Stamp",
+          "type": "image_picker",
+          "id": "stamp"
         }
       ]
     }
