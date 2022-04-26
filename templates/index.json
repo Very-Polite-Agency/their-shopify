@@ -34,13 +34,22 @@
       ],
       "settings": {
         "anchor_id": "",
-        "colour_theme": "dark",
+        "colour_theme": "light",
+        "text_alignment": "center"
+      }
+    },
+    "1651005681df706acc": {
+      "type": "fifty-fifty",
+      "settings": {
+        "anchor_id": "",
+        "colour_theme": "light",
         "text_alignment": "center"
       }
     }
   },
   "order": [
     "1650923978b97fb93e",
-    "165093044106648c6d"
+    "165093044106648c6d",
+    "1651005681df706acc"
   ]
 }
