@@ -2,16 +2,46 @@
 
   padding: 55px 0;
 
-  [data-item-type="content"] {
-    justify-content: flex-start;
+  &__content {
+    color: rgba(var(--theme-colour-black),1);
+    padding: 0 10%;
   }
 
-  [data-item-type="image"] {}
+  &__cta {
+    justify-content: flex-end;
+    display: flex;
+    a {
+      color: inherit;
+      border-color: inherit;
+    }
+  }
+
+  &__heading {
+    & + .fifty-fifty__cta,
+    & + .fifty-fifty__message {
+      margin-top: 30px;
+    }
+  }
+
+  &__item {
+    display: inline-flex;
+    width: 100%;
+    flex-flow: row wrap;
+  }
 
   &__layout {
     display: flex;
     width: 100%;
     flex-flow: column;
+  }
+
+  &__message {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    & + .fifty-fifty__cta {
+      margin-top: 30px;
+    }
   }
 
   &__stamp {

@@ -21,13 +21,13 @@
   }
 
   [data-text-alignment-bottom] {
-    [data-item-type-content] {
+    .fifty-fifty__layout {
       align-items: flex-end;
     }
   }
 
   [data-text-alignment-center] {
-    [data-item-type-content] {
+    .fifty-fifty__layout {
       align-items: center;
     }
   }
