@@ -7,10 +7,10 @@
   }
 
   &__hero {
-    [data-colour-theme-dark] {
+    [data-text-colour-theme-dark] {
       color: rgba(var(--theme-colour-black),1);
     }
-    [data-colour-theme-light] {
+    [data-text-colour-theme-light] {
       color: rgba(var(--theme-colour-white),1);
     }
     &-content {

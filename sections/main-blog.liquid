@@ -1,10 +1,10 @@
 {%- assign section_name = 'blog' -%}
 {%- assign section_id = section_name | append: '--' | append: section.id -%}
 
-{% assign hero_colour_theme = section.settings.hero_colour_theme | default: 'light' %}
 {% assign hero_heading = section.settings.hero_heading | default: '' %}
 {% assign hero_image = section.settings.hero_image | default: false %}
 {% assign hero_info = section.settings.hero_info | default: '' %}
+{% assign hero_text_colour_theme = section.settings.hero_text_colour_theme | default: 'light' %}
 {% assign post_per_page = section.settings.post_per_page | default: 6 %}
 
 {%- paginate blog.articles by 2 -%}
@@ -25,7 +25,7 @@
           {% endif %}
 
           {% if hero_heading != blank or hero_info != blank %}
-            <div class="{{ section_name }}__hero-content" data-colour-theme-{{ hero_colour_theme }}>
+            <div class="{{ section_name }}__hero-content" data-text-colour-theme-{{ hero_text_colour_theme }}>
               {% if hero_heading != blank %}<h1 class="{{ section_name }}__title heading--1">{{ hero_heading }}</h1>{% endif %}
               {% if hero_info != blank %}<div class="{{ section_name }}__info body-copy--1">{{ hero_info }}</div>{% endif %}
             </div>
@@ -73,6 +73,16 @@
       "id": "hero_info"
     },
     {
+      "label": "Text Colour Theme",
+      "type": "select",
+      "options": [
+        { "value": "light", "label": "Light" },
+        { "value": "dark", "label": "Dark" }
+      ],
+      "default": "light",
+      "id": "hero_text_colour_theme"
+    },
+    {
       "content": "Media",
       "type": "paragraph"
     },
@@ -80,16 +90,6 @@
       "label": "Image",
       "type": "image_picker",
       "id": "hero_image"
-    },
-    {
-      "label": "Colour Theme",
-      "type": "select",
-      "options": [
-        { "value": "light", "label": "Light" },
-        { "value": "dark", "label": "Dark" }
-      ],
-      "default": "light",
-      "id": "hero_colour_theme"
     },
     {
       "content": "Settings",
