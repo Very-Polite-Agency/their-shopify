@@ -40,6 +40,26 @@
     },
     "1651005681df706acc": {
       "type": "fifty-fifty",
+      "blocks": {
+        "04857235-aed8-4312-91ee-4b090505e33a": {
+          "type": "content",
+          "settings": {
+            "heading": "<p>Give Back<\/p>",
+            "message": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.<\/p>",
+            "cta_title": "Learn More",
+            "cta_link": "shopify:\/\/pages\/about"
+          }
+        },
+        "7e663e10-fb12-43c2-93f7-99a09fe5fe2a": {
+          "type": "media",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "04857235-aed8-4312-91ee-4b090505e33a",
+        "7e663e10-fb12-43c2-93f7-99a09fe5fe2a"
+      ],
       "settings": {
         "anchor_id": "",
         "colour_theme": "light",
