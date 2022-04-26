@@ -1,5 +1,7 @@
 .fifty-fifty {
 
+  padding: 55px 0;
+
   &__layout {
     display: flex;
     width: 100%;
@@ -12,12 +14,13 @@
 
   @include breakpoint(lg) {
 
+    padding: 75px 0;
+
     &__item {
       width: 50%;
     }
 
     &__layout {
-      gap: var(--bs-gutter-width);
       flex-flow: row nowrap;
       justify-content: space-between;
       align-items: center;
