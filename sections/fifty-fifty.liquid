@@ -21,9 +21,11 @@
               {% assign cta_title = block.settings.cta_title | default: '' %}
               {% assign heading = block.settings.heading | default: '' %}
               {% assign message = block.settings.message | default: '' %}
+              {% assign product = block.settings.product | default: false %}
 
               {% if heading != blank or message != blank %}
                 <div class="{{ section_name }}__content">
+                  {{ product }}
                   {% if heading %}<h2 class="{{ section_name }}__heading heading--1">{{ heading }}</h2>{% endif %}
                   {% if message %}<div class="{{ section_name }}__message body-copy--1">{{ message }}</div>{% endif %}
                   {% if cta_link != blank and cta_title != blank %}
@@ -38,11 +40,17 @@
 
             {%- when 'media' -%}
 
+              {% assign caption = block.settings.caption | default: '' %}
               {% assign image = block.settings.image | default: false %}
               {% assign stamp = block.settings.stamp | default: false %}
 
               {% if image %}
-                <div class="{{ section_name }}__image">{% render 'content--lazyload-image', image: image %}</div>
+                <div class="{{ section_name }}__image">
+                  {% render 'content--lazyload-image', image: image %}
+                  {% if caption != blank %}
+                    <span class="{{ section_name }}__caption caption--1">{{ caption }}</span>
+                  {% endif %}
+                </div>
               {% endif %}
               {% if stamp %}
                 <div class="{{ section_name }}__stamp">{% render 'content--lazyload-image', image: stamp %}</div>
@@ -97,6 +105,11 @@
       "limit": 1,
       "settings": [
         {
+          "label": "Product",
+          "type": "product",
+          "id": "product"
+        },
+        {
           "label": "Heading",
           "type": "richtext",
           "id": "heading"
@@ -131,6 +144,11 @@
           "label": "Image",
           "type": "image_picker",
           "id": "image"
+        },
+        {
+          "label": "Caption",
+          "type": "text",
+          "id": "caption"
         },
         {
           "label": "Stamp",

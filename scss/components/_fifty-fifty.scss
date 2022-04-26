@@ -103,6 +103,17 @@
       & + .fifty-fifty__item {
         margin-top: 0;
       }
+      &:first-child {
+        &[data-item-type-media] {
+          .fifty-fifty__image {
+            margin-left: auto;
+          }
+          .fifty-fifty__stamp {
+            left: unset;
+            right: calc(-1*(62px/2));
+          }
+        }
+      }
     }
 
     &__layout {
@@ -138,6 +149,16 @@
       }
     }
 
+    &__item {
+      &:first-child {
+        &[data-item-type-media] {
+          .fifty-fifty__stamp {
+            right: calc(-1*(72px/2));
+          }
+        }
+      }
+    }
+
     &__message {
       & + .fifty-fifty__cta {
         margin-top: 34px;
@@ -154,6 +175,8 @@
 
   @include breakpoint(xxl) {
 
+    padding: 95px 0;
+
     &__content {
       padding: 0 15%;
     }
@@ -162,6 +185,16 @@
       & + .fifty-fifty__cta,
       & + .fifty-fifty__message {
         margin-top: 38px;
+      }
+    }
+
+    &__item {
+      &:first-child {
+        &[data-item-type-media] {
+          .fifty-fifty__stamp {
+            right: calc(-1*(82px/2));
+          }
+        }
       }
     }
 

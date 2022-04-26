@@ -9,6 +9,8 @@
   &--1 {
     @extend .heading;
     font-size: 26px;
+    letter-spacing: 0.01em;
+    line-height: 1.23;
   }
 
   @include breakpoint(sm) {} // min width sm
