@@ -53,6 +53,7 @@
         "7e663e10-fb12-43c2-93f7-99a09fe5fe2a": {
           "type": "media",
           "settings": {
+            "image": "shopify:\/\/shop_images\/THEIR--home-page--FF02_3x_d686c333-42ae-4d81-97d4-88ea2d6c8c84.png"
           }
         }
       },
@@ -62,7 +63,7 @@
       ],
       "settings": {
         "anchor_id": "",
-        "colour_theme": "light",
+        "colour_theme": "dark",
         "text_alignment": "center"
       }
     }
