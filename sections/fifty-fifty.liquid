@@ -2,12 +2,13 @@
 {%- assign section_id = section_name | append: '--' | append: section.id -%}
 
 {% assign colour_theme = section.settings.colour_theme | default: 'light' %}
+{% assign text_alignment = section.settings.text_alignment | default: 'bottom' %}
 
 {% if section.settings.anchor_id != blank %}
   {% assign section_id = section.settings.anchor_id %}
 {% endif %}
 
-<div class="{{ section_name }}" id="{{ section_id }}" data-colour-theme-{{ colour_theme }}>
+<div class="{{ section_name }}" id="{{ section_id }}" data-colour-theme-{{ colour_theme }} data-text-alignment-{{ text_alignment }}>
   {% render 'layout--container', state: 'open', col: 'col-12' %}
     <div class="{{ section_name }}__layout">
 

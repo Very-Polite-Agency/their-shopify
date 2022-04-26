@@ -2,10 +2,29 @@
 
   padding: 55px 0;
 
+  [data-item-type="content"] {
+    justify-content: flex-start;
+  }
+
+  [data-item-type="image"] {}
+
   &__layout {
     display: flex;
     width: 100%;
     flex-flow: column;
+  }
+
+  &__stamp {
+    width: 30px;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    a, img, svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
   }
 
   @include breakpoint(sm) {} // min width sm

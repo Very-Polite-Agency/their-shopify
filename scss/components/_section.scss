@@ -7,17 +7,29 @@
     height: 100vh;
   }
 
-  &[data-colour-theme-dark],
-  &[data-colour-theme-light] {
+  [data-colour-theme-dark],
+  [data-colour-theme-light] {
     color: rgba(var(--theme-colour-black),1);
   }
 
-  &[data-colour-theme-dark] {
+  [data-colour-theme-dark] {
     background: rgba(var(--theme-colour-silver),1);
   }
 
-  &[data-colour-theme-light] {
+  [data-colour-theme-light] {
     background: rgba(var(--theme-colour-white),1);
+  }
+
+  [data-text-alignment-bottom] {
+    [data-item-type-content] {
+      align-items: flex-end;
+    }
+  }
+
+  [data-text-alignment-center] {
+    [data-item-type-content] {
+      align-items: center;
+    }
   }
 
 }
