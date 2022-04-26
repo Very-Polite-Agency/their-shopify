@@ -19,15 +19,20 @@
 {%- if article and article != empty -%}
 
   {% assign snippet_name = 'article' %}
+  {% assign snippet_classes = snippet_name %}
   {% assign snippet_id = snippet_name | append: '--' | append: article.id -%}
 
+  {% if classes and classes != empty %}
+    {% assign snippet_classes = snippet_classes | prepend: ' ' | prepend: classes %}
+  {% endif %}
+
   {% assign autor = article.author | default: '' %}
-  {% assign date = article.published_at %}
+  {% assign date_published = article.published_at %}
   {% assign image = article.image | default: false %}
   {% assign title = article.title | default: '' %}
   {% assign url = article.url | default: '' %}
 
-  <article class="{{ snippet_name }}" id="{{ snippet_id }}">
+  <article class="{{ snippet_classes }}" id="{{ snippet_id }}">
     <div class="{{ snippet_name }}__image">
       <a class="{{ snippet_name }}__image-link" href="{{ url }}" title="{{ title }}" target="_self">
         {%
@@ -38,7 +43,7 @@
       </a>
     </div>
     <div class="{{ snippet_name }}__content">
-      <time class="{{ snippet_name }}__date" datetime="{{ date }}">{{ date }}</time>
+      <time class="{{ snippet_name }}__date" datetime="{{ date_published | date: "%a, %b %d, %y" }}">{{ date_published | date: "%a, %b %d, %y" }}</time>
       <strong class="{{ snippet_name }}__title">
         <a class="{{ snippet_name }}__title-link" href="{{ url }}" title="{{ title }}" target="_self">{{ title }}</a>
       </strong>

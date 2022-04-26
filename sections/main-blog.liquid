@@ -1,53 +1,58 @@
 {%- assign section_name = 'blog' -%}
 {%- assign section_id = section_name | append: '--' | append: section.id -%}
 
+{% assign hero_colour_theme = section.settings.hero_colour_theme | default: 'light' %}
 {% assign hero_heading = section.settings.hero_heading | default: '' %}
-{% assign hero_image = section.settings.hero_image | default: '' %}
+{% assign hero_image = section.settings.hero_image | default: false %}
 {% assign hero_info = section.settings.hero_info | default: '' %}
 {% assign post_per_page = section.settings.post_per_page | default: 6 %}
 
 {%- paginate blog.articles by 2 -%}
 
-  <div class="{{ section_name }}" id="{{ section_id }}">
+  {% if hero_heading != blank or hero_info != blank or hero_image %}
+    <div class="{{ section_name }}__hero">
+      {% render 'layout--container', state: 'open' %}
+        <div class="{{ section_name }}__hero-main">
 
-    {% if hero_heading != blank or hero_info != blank or hero_image %}
-      <div class="{{ section_name }}__hero">
-        {% if hero_image %}
-          <div class="{{ section_name }}__hero-media">
-            {%
-              render 'content--lazyload-image',
-              background: true,
-              image: hero_image,
-            %}
-          </div>
-        {% endif %}
-        {% if hero_heading != blank or hero_info != blank %}
-          <div class="{{ section_name }}__hero-content">
-            {% if hero_heading != blank %}<h1 class="{{ section_name }}__title heading--1">{{ hero_heading }}</h1>{% endif %}
-            {% if hero_info != blank %}<div class="{{ section_name }}__info body-copy--1">{{ hero_info }}</div>{% endif %}
-          </div>
-        {% endif %}
-      </div>
-    {% endif %}
+          {% if hero_image %}
+            <div class="{{ section_name }}__hero-media">
+              {%
+                render 'content--lazyload-image',
+                background: true,
+                image: hero_image,
+              %}
+            </div>
+          {% endif %}
 
-    <div class="{{ section_name }}__list">
-      {%- for article in blog.articles -%}
-        {%- render 'card-article', article: article, classes: 'blog__article' -%}
-      {%- endfor -%}
+          {% if hero_heading != blank or hero_info != blank %}
+            <div class="{{ section_name }}__hero-content" data-colour-theme-{{ hero_colour_theme }}>
+              {% if hero_heading != blank %}<h1 class="{{ section_name }}__title heading--1">{{ hero_heading }}</h1>{% endif %}
+              {% if hero_info != blank %}<div class="{{ section_name }}__info body-copy--1">{{ hero_info }}</div>{% endif %}
+            </div>
+          {% endif %}
+
+        </div>
+      {% render 'layout--container', state: 'closed' %}
     </div>
+  {% endif %}
 
-    {%- if paginate.pages > 1 -%}
-      {%- render 'pagination', paginate: paginate -%}
-    {%- endif -%}
-
+  <div class="{{ section_name }}__list">
+    {%- for article in blog.articles -%}
+      {%- render 'card-article', article: article, classes: 'blog__article' -%}
+    {%- endfor -%}
   </div>
+
+  {%- if paginate.pages > 1 -%}
+    {%- render 'pagination', paginate: paginate -%}
+  {%- endif -%}
+
 {%- endpaginate -%}
 
 {% schema %}
 {
   "name": "Blog",
-  "tag": "section",
-  "class": "section section--blog",
+  "tag": "div",
+  "class": "blog",
   "settings": [
     {
       "content": "Hero",
@@ -75,6 +80,16 @@
       "label": "Image",
       "type": "image_picker",
       "id": "hero_image"
+    },
+    {
+      "label": "Colour Theme",
+      "type": "select",
+      "options": [
+        { "value": "light", "label": "Light" },
+        { "value": "dark", "label": "Dark" }
+      ],
+      "default": "light",
+      "id": "hero_colour_theme"
     },
     {
       "content": "Settings",

@@ -1,0 +1,104 @@
+.blog {
+
+  data-colour-theme-{{ hero_colour_theme }}
+
+  .article {
+    &__image {
+      position: relative;
+    }
+  }
+
+  &__hero {
+    [data-colour-theme-light] {
+      color: rgba(var(--theme-colour-white),1);
+    }
+    [data-colour-theme-light] {
+      color: rgba(var(--theme-colour-black),1);
+    }
+    &-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 66.6666%;
+      margin-right: auto;
+      padding: 22px;
+    }
+    &-main {
+      position: relative;
+    }
+    &-media {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16/9;
+      @supports not (aspect-ratio: auto) {
+        height: 300px;
+	    }
+    }
+  }
+
+  @include breakpoint(sm) {
+
+    &__hero {
+      &-media {
+        @supports not (aspect-ratio: auto) {
+          height: 350px;
+	      }
+      }
+    }
+
+  } // min width sm
+
+  @include breakpoint(md) {
+
+    &__hero {
+      &-media {
+        @supports not (aspect-ratio: auto) {
+          height: 400px;
+	      }
+      }
+    }
+
+  } // min width md
+
+  @include breakpoint(lg) {
+
+    &__hero {
+      &-content {
+        width: 33.3333%;
+        margin-right: auto;
+        padding: 28px;
+      }
+      &-media {
+        @supports not (aspect-ratio: auto) {
+          height: 500px;
+	      }
+      }
+    }
+
+  } // min width lg
+
+  @include breakpoint(xl) {
+
+    &__hero {
+      &-media {
+        @supports not (aspect-ratio: auto) {
+          height: 600px;
+	      }
+      }
+    }
+
+  } // min width xl
+
+  @include breakpoint(xxl) {
+
+    &__hero {
+      &-media {
+        @supports not (aspect-ratio: auto) {
+          height: 700px;
+	      }
+      }
+    }
+
+  } // min width xxl
+
+}
