@@ -15,12 +15,14 @@
           "type": "media",
           "settings": {
             "image": "shopify:\/\/shop_images\/THEIR--home-page--FF_3x_edaff467-bd0b-4aec-a9ae-49614203f4ee.png",
+            "caption": "",
             "stamp": "shopify:\/\/shop_images\/THEIR--home-page--ff-stamp_3x_c26f0594-7117-4b20-9d47-aa7e33a6dafc.png"
           }
         },
         "35f168b3-3d22-4035-9a8e-a274b3a9bfaf": {
           "type": "content",
           "settings": {
+            "product": "",
             "heading": "<p>Carter Herringbone <\/p><p>Necklace<\/p>",
             "message": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorpe.<\/p>",
             "cta_title": "Shop Now",
@@ -38,12 +40,43 @@
         "text_alignment": "bottom"
       }
     },
+    "16510075059df4bdc9": {
+      "type": "fifty-fifty",
+      "blocks": {
+        "774a11ac-2236-4a3e-8e3e-851795e12bc0": {
+          "type": "media",
+          "settings": {
+            "caption": ""
+          }
+        },
+        "8ef69ce4-55d5-49e4-9181-005ec9cae19a": {
+          "type": "content",
+          "settings": {
+            "product": "",
+            "heading": "<p>Behind the Brand<\/p>",
+            "message": "<p>The pieces we design aren’t about what’s happening around you like trends and popular opinions - we create pieces that celebrate who you are.<\/p>",
+            "cta_title": "Learn More",
+            "cta_link": "shopify:\/\/pages\/about"
+          }
+        }
+      },
+      "block_order": [
+        "774a11ac-2236-4a3e-8e3e-851795e12bc0",
+        "8ef69ce4-55d5-49e4-9181-005ec9cae19a"
+      ],
+      "settings": {
+        "anchor_id": "",
+        "colour_theme": "light",
+        "text_alignment": "center"
+      }
+    },
     "1651005681df706acc": {
       "type": "fifty-fifty",
       "blocks": {
         "04857235-aed8-4312-91ee-4b090505e33a": {
           "type": "content",
           "settings": {
+            "product": "",
             "heading": "<p>Give Back<\/p>",
             "message": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.<\/p>",
             "cta_title": "Learn More",
@@ -53,7 +86,8 @@
         "7e663e10-fb12-43c2-93f7-99a09fe5fe2a": {
           "type": "media",
           "settings": {
-            "image": "shopify:\/\/shop_images\/THEIR--home-page--FF02_3x_d686c333-42ae-4d81-97d4-88ea2d6c8c84.png"
+            "image": "shopify:\/\/shop_images\/THEIR--home-page--FF02_3x_d686c333-42ae-4d81-97d4-88ea2d6c8c84.png",
+            "caption": ""
           }
         }
       },
@@ -71,6 +105,7 @@
   "order": [
     "1650923978b97fb93e",
     "165093044106648c6d",
+    "16510075059df4bdc9",
     "1651005681df706acc"
   ]
 }
