@@ -10,7 +10,7 @@
           "type": "faq",
           "settings": {
             "title": "Question Lorem Ipsum lorem ipsum dolor sit amet, consectetuer?",
-            "answer": ""
+            "answer": "<p>Pellentesque suscipit id magna sit amet egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam tincidunt, arcu quis vestibulum convallis, libero enim vulputate nibh, nec laoreet nisl erat ac elit. Nullam accumsan vel erat nec semper. Phasellus fringilla lectus sed magna accumsan volutpat nec sed ligula. Donec ut est lectus. Cras ex elit, ultricies a accumsan nec, varius eget massa.<\/p>"
           }
         }
       },
