@@ -10,6 +10,14 @@
     }
   }
 
+  &__cta {
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   &__date {
     color: rgba(var(--theme-colour-charcoal),1);
     font-family: var(--theme-font-family--sans-serif--primary);
@@ -50,6 +58,12 @@
   &__related-articles {
     border-top: 1px solid rgba(var(--theme-colour-black),1);
     padding-top: 40px;
+  }
+
+  &__tags {
+    & + .article__share-this {
+      margin-top: 24px;
+    }
   }
 
   &__title {
