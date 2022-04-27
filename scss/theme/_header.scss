@@ -1,0 +1,38 @@
+.header {
+
+  transition: background var(--theme-transition-duration);
+  background: transparent;
+  border-bottom: 1px solid rgba(var(--theme-colour-black), 0.025);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 25;
+  width: 100%;
+
+  &__layout {
+    height: var(--theme-header-height);
+  }
+
+  .scroll-position--scrolled & {
+    background: rgba(var(--theme-colour-white), 0.6666);
+  }
+
+  .mobile-menu--active & {}
+
+  @include breakpoint(sm) {} // min width sm
+
+  @include breakpoint(md) {} // min width md
+
+  @include breakpoint(lg) {
+
+    &__layout {
+      height: var(--theme-header-height--lg);
+    }
+
+  } // min width lg
+
+  @include breakpoint(xl) {} // min width xl
+
+  @include breakpoint(xxl) {} // min width xxl
+
+}

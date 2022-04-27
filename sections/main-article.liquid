@@ -1,8 +1,37 @@
 {%- assign section_name = 'article' -%}
 {%- assign section_id = section_name | append: '--' | append: section.id -%}
 
+{% assign content = article.content | default: '' %}
+{% assign date_published = article.published_at %}
+{% assign featured_image = article.image | default: false %}
+{% assign title = article.title | default: '' %}
+
 <article class="{{ section_name }}" itemscope itemtype="http://schema.org/BlogPosting">
-  <h1 class="{{ section_name }}__title">{{ article.title }}</h1>
+
+  <div class="{{ section_name }}__hero">
+    {% if featured_image %}
+      {% render 'layout--container', state: 'open', col: 'col-12 col-lg-6 offset-lg-3' %}
+        <div class="{{ section_name }}__hero-image">
+          {%
+            render 'content--lazyload-image',
+            alt_text: title,
+            image: featured_image,
+          %}
+        </div>
+      {% render 'layout--container', state: 'closed' %}
+    {% endif %}
+  </div>
+
+  <div class="{{ section_name }}__body">
+    {% render 'layout--container', state: 'open', col: 'col-12 col-lg-6 offset-lg-3' %}
+      <time class="{{ section_name }}__date" datetime="{{ date_published | date: "%Y-%m-%d" }}">{{ date_published | date: "%B %e, %Y" }}</time>
+      <h1 class="{{ section_name }}__title">{{ title }}</h1>
+      {% if content != blank %}
+        <div class="{{ section_name }}__content body-copy--1">{{ content }}</div>
+      {% endif %}
+    {% render 'layout--container', state: 'closed' %}
+  </div>
+
 </article>
 
 {% render 'json-ld', article: article, type: 'article' %}
