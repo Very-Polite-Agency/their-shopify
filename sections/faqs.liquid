@@ -16,7 +16,40 @@
       {% if heading != blank %}<h2 class="{{ section_name }}__heading heading--1">{{ heading }}</h2>{% endif %}
       {% if message != blank %}<div class="{{ section_name }}__message body-copy--1">{{ message }}</div>{% endif %}
 
-      {{ faqs }}
+      {% if faqs %}
+        {%- for block in faqs -%}
+
+          {% assign item_id = section_name | append: '__item--' | append: block.id %}
+          {% assign question = block.settings.title | default: '' %}
+          {% assign answer = block.settings.answer | default: '' %}
+
+          {% if question != blank and answer != blank %}
+            <div class="{{ section_name }}__item collapsible" data-count="{{ forloop.index }}">
+
+              <button
+                class="{{ section_name }}__collapsible-trigger collapsible__trigger{% unless forloop.first %} collapsed{% endunless %}"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#{{ item_id }}"
+                aria-expanded="false"
+                aria-controls="{{ item_id }}"
+              >
+                <span class="button__title">{{ question }}</span>
+                <span class="button__icon">
+                  <span class="button__icon-plus">{% render 'svg', type: 'icon.plus' %}</span>
+                  <span class="button__icon-minus">{% render 'svg', type: 'icon.minus' %}</span>
+                </span>
+              </button>
+
+              <div class="{{ section_name }}__collapsible-main collapsible__main collapse{% if forloop.first %} show{% endif %}" id="{{ item_id }}">
+                <div class="{{ section_name }}__collapsible-content collapsible__content body-copy--1">{{ answer }}</div>
+              </div>
+
+            </div>
+          {% endif %}
+
+        {%- endfor -%}
+      {% endif %}
 
     </div>
   {% render 'layout--container', state: 'closed' %}

@@ -2809,6 +2809,14 @@
       "oO" : 1,
       "oS" : 1
     },
+    "\/templates\/page.faqs.json" : {
+      "ft" : 524288,
+      "oA" : 0,
+      "oAP" : "\/templates\/page.faqs.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
     "\/templates\/page.json" : {
       "ft" : 524288,
       "oA" : 0,
