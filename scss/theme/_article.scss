@@ -4,7 +4,11 @@
     padding-top: 60px;
   }
 
-  &__content {}
+  &__content {
+    & + .article__tags {
+      margin-top: 60px;
+    }
+  }
 
   &__date {
     color: rgba(var(--theme-colour-charcoal),1);
