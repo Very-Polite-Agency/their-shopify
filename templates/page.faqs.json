@@ -12,10 +12,26 @@
             "title": "Question Lorem Ipsum lorem ipsum dolor sit amet, consectetuer?",
             "answer": "<p>Pellentesque suscipit id magna sit amet egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam tincidunt, arcu quis vestibulum convallis, libero enim vulputate nibh, nec laoreet nisl erat ac elit. Nullam accumsan vel erat nec semper. Phasellus fringilla lectus sed magna accumsan volutpat nec sed ligula. Donec ut est lectus. Cras ex elit, ultricies a accumsan nec, varius eget massa.<\/p>"
           }
+        },
+        "523484b3-3a96-4819-8516-a0403c64da7a": {
+          "type": "faq",
+          "settings": {
+            "title": "Question Ipsum lorem ipsum  sit amet, consectetuer?",
+            "answer": ""
+          }
+        },
+        "7ecd7454-d47c-4efa-8495-aefaf5ecc621": {
+          "type": "faq",
+          "settings": {
+            "title": "hasellus tincidunt rutrum ultricies?",
+            "answer": ""
+          }
         }
       },
       "block_order": [
-        "1f7bd87c-5bf1-41e4-8c3e-ee186cc0d621"
+        "1f7bd87c-5bf1-41e4-8c3e-ee186cc0d621",
+        "523484b3-3a96-4819-8516-a0403c64da7a",
+        "7ecd7454-d47c-4efa-8495-aefaf5ecc621"
       ],
       "settings": {
         "heading": "Orders",
