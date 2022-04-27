@@ -1,5 +1,66 @@
 .article {
 
+  &__date {
+    color: rgba(var(--theme-colour-charcoal),1);
+    font-family: var(--theme-font-family--sans-serif--primary);
+    font-size: 11px;
+    line-height: 1;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    & + .article__title {
+      margin-top: 28px;
+    }
+  }
 
+  &__title {
+    font-family: var(--theme-font-family--serif--primary);
+    font-style: normal;
+    font-weight: 300;
+    font-size: 26px;
+    line-height: 1.23;
+    letter-spacing: 0.01em;
+    display: block;
+    width: 100%;
+  }
+
+  @include breakpoint(sm) {} // min width sm
+
+  @include breakpoint(md) {} // min width md
+
+  @include breakpoint(lg) {
+
+    &__date {
+      font-size: 11px;
+    }
+
+    &__title {
+      font-size: 26px;
+    }
+
+  } // min width lg
+
+  @include breakpoint(xl) {
+
+    &__date {
+      font-size: 12px;
+    }
+
+    &__title {
+      font-size: 28px;
+    }
+
+  } // min width xl
+
+  @include breakpoint(xxl) {
+
+    &__date {
+      font-size: 13px;
+    }
+
+    &__title {
+      font-size: 30px;
+    }
+
+  } // min width xxl
 
 }

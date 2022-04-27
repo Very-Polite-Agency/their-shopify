@@ -18,14 +18,16 @@
 
   &--text {
     @extend .link;
+    color: inherit;
     font-family: var(--theme-font-family--serif--primary);
     font-style: normal;
     font-weight: 300;
     font-size: 16px;
     border-bottom-style: solid;
     border-bottom-width: 1px;
-    border-bottom-color: transparent;
+    border-bottom-color: inherit;
     &:hover {
+      color: inherit;
       border-bottom-color: transparent;
     }
   }

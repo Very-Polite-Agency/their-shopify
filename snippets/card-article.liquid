@@ -43,7 +43,7 @@
       </a>
     </div>
     <div class="{{ snippet_name }}__content">
-      <time class="{{ snippet_name }}__date" datetime="{{ date_published | date: "%a, %b %d, %y" }}">{{ date_published | date: "%a, %b %d, %y" }}</time>
+      <time class="{{ snippet_name }}__date" datetime="{{ date_published | date: "%Y-%m-%d" }}">{{ date_published | date: "%B %e, %Y" }}</time>
       <strong class="{{ snippet_name }}__title">
         <a class="{{ snippet_name }}__title-link" href="{{ url }}" title="{{ title }}" target="_self">{{ title }}</a>
       </strong>

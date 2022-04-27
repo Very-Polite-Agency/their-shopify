@@ -7,7 +7,7 @@
 {% assign hero_text_colour_theme = section.settings.hero_text_colour_theme | default: 'light' %}
 {% assign post_per_page = section.settings.post_per_page | default: 6 %}
 
-{%- paginate blog.articles by 2 -%}
+{%- paginate blog.articles by 3 -%}
 
   {% if hero_heading != blank or hero_info != blank or hero_image %}
     <div class="{{ section_name }}__hero">
@@ -36,14 +36,24 @@
     </div>
   {% endif %}
 
-  <div class="{{ section_name }}__list">
-    {%- for article in blog.articles -%}
-      {%- render 'card-article', article: article, classes: 'blog__article' -%}
-    {%- endfor -%}
+  <div class="{{ section_name }}__main">
+    {% render 'layout--container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1' %}
+      <div class="{{ section_name }}__list">
+        {%- for article in blog.articles -%}
+          <div class="{{ section_name }}__item" data-article-count="{{ forloop.index }}" data-article-index="{{ forloop.index0 }}">
+            {%- render 'card-article', article: article -%}
+          </div>
+        {%- endfor -%}
+      </div>
+    {% render 'layout--container', state: 'closed' %}
   </div>
 
   {%- if paginate.pages > 1 -%}
-    {%- render 'pagination', paginate: paginate -%}
+    <div class="{{ section_name }}__pagination">
+      {% render 'layout--container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1' %}
+        {%- render 'pagination', paginate: paginate -%}
+      {% render 'layout--container', state: 'closed' %}
+    </div>
   {%- endif -%}
 
 {%- endpaginate -%}
