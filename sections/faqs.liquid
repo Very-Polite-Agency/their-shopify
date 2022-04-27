@@ -1,0 +1,80 @@
+{%- assign section_name = 'faqs' -%}
+{%- assign section_id = section_name | append: '--' | append: section.id -%}
+
+{% if section.settings.anchor_id != blank %}
+  {% assign section_id = section.settings.anchor_id %}
+{% endif %}
+
+{% assign faqs = section.blocks | where: 'type', 'faq' | default: false %}
+{% assign heading = section.settings.heading | default: '' %}
+{% assign message = section.settings.message | default: '' %}
+
+<div class="{{ section_name }}" id="{{ section_id }}">
+  {% render 'layout--container', state: 'open', col: 'col-12 col-lg-8 offset-lg-2' %}
+    <div class="{{ section_name }}__main">
+
+      {% if heading != blank %}<h2 class="{{ section_name }}__heading heading--1">{{ heading }}</h2>{% endif %}
+      {% if message != blank %}<div class="{{ section_name }}__message body-copy--1">{{ message }}</div>{% endif %}
+
+      {{ faqs }}
+
+    </div>
+  {% render 'layout--container', state: 'closed' %}
+</div>
+
+{% schema %}
+{
+  "name": "FAQs",
+  "tag": "section",
+  "class": "section section--faqs",
+  "settings": [
+     {
+      "content": "Content",
+      "type": "header"
+    },
+    {
+      "label": "Heading",
+      "type": "text",
+      "id": "heading"
+    },
+    {
+      "label": "Message",
+      "type": "richtext",
+      "id": "message"
+    },
+    {
+      "content": "Settings",
+      "type": "header"
+    },
+    {
+      "label": "Anchor ID",
+      "info": "Optionally include a unique ID so that sections within the page can be linked to. Anchor IDs must be all lowercase, unique and replaced empty spaces with hyphens. For example: my-great-section-anchor",
+      "type": "text",
+      "id": "anchor_id"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "FAQ",
+      "type": "faq",
+      "settings": [
+        {
+          "label": "Question",
+          "type": "text",
+          "id": "title"
+        },
+        {
+          "label": "Answer",
+          "type": "richtext",
+          "id": "answer"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQs"
+    }
+  ]
+}
+{% endschema %}

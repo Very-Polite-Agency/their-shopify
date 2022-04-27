@@ -3,6 +3,7 @@
   {% assign snippet_name = 'card-product' %}
   {% assign snippet_classes = snippet_name %}
   {% assign snippet_id = snippet_name | append: '--' | append: article.id -%}
+  {% assign style = style | default: 'default' %}
 
   {% if classes and classes != empty %}
     {% assign snippet_classes = snippet_classes | prepend: ' ' | prepend: classes %}
@@ -13,7 +14,7 @@
   {% assign type = product.type | default: '' %}
   {% assign url = product.url | default: '' %}
 
-  <article class="{{ snippet_classes }}" id="{{ snippet_id }}">
+  <article class="{{ snippet_classes }} {{ snippet_name }}--{{ style }} product" id="{{ snippet_id }}">
 
     {% case style %}
 
@@ -24,7 +25,7 @@
             {%
               render 'content--lazyload-image',
               alt_text: title,
-              image: image,
+              image: featured_image,
             %}
           </a>
           {% if type != blank %}

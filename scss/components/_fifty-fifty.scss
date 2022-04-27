@@ -34,7 +34,7 @@
     flex-flow: row wrap;
     position: relative;
     & + .fifty-fifty__item {
-      margin-top: 32px;
+      margin-top: 42px;
     }
   }
 
@@ -50,6 +50,15 @@
     margin-right: auto;
     & + .fifty-fifty__cta {
       margin-top: 30px;
+    }
+  }
+
+  &__product {
+    width: 65%;
+    & + .fifty-fifty__cta,
+    & + .fifty-fifty__heading,
+    & + .fifty-fifty__message {
+      margin-top: 45px;
     }
   }
 
@@ -128,6 +137,10 @@
       }
     }
 
+    &__product {
+      width: 55%;
+    }
+
     &__stamp {
       top: 5%;
       width: 62px;
@@ -163,6 +176,10 @@
       & + .fifty-fifty__cta {
         margin-top: 34px;
       }
+    }
+
+    &__product {
+      width: 65%;
     }
 
     &__stamp {
