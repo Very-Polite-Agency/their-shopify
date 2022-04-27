@@ -1,6 +1,7 @@
 {
   "order": [
-    "16511013082a131ed6"
+    "16511013082a131ed6",
+    "1651101316fa26364a"
   ],
   "sections": {
     "16511013082a131ed6": {
@@ -52,6 +53,14 @@
       "settings": {
         "heading": "Orders",
         "message": "<p>Fusce ut accumsan urna. Aliquam interdum volutpat lacus quis mollis. Proin porttitor facilisis semper. Donec a sagittis mi. Suspendisse at lorem lobortis, feugiat nunc eu, consectetur dui. Sed luctus vel nibh sit amet commodo. Vestibulum elementum nisi nisi, id bibendum ligula cursus vel. Nam dictum vulputate lectus, a aliquam dolor hendrerit quis. In quis justo turpis.<\/p>",
+        "anchor_id": ""
+      }
+    },
+    "1651101316fa26364a": {
+      "type": "faqs",
+      "settings": {
+        "heading": "Shipping & Returns",
+        "message": "",
         "anchor_id": ""
       }
     }
