@@ -41,8 +41,29 @@
       transform var(--theme-transition-duration);
   }
 
+  &--collapsible,
   &--primary {
     @extend .button;
+  }
+
+  &--collapsible {
+    min-height: unset;
+    .button__icon {
+      display: block;
+      height: 8px;
+      width: 8px;
+      position: relative;
+      &-minus,
+      &-plus {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+      }
+    }
+  }
+
+  &--primary {
     border: 1px solid rgba(var(--theme-colour-black),1);
     color: rgba(var(--theme-colour-black),1);
     padding: 0 var(--bs-gutter-width);

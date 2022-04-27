@@ -1,0 +1,56 @@
+.faqs {
+
+  padding: 55px 0;
+
+  &__collapsible {
+    &-content {
+      padding-bottom: var(--bs-gutter-width);
+    }
+    &-trigger {
+      font-family: var(--theme-font-family--sans-serif--primary);
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1;
+      text-transform: capitalize;
+      padding: 20px 0;
+    }
+  }
+
+  &__item {
+    border-bottom: 1px solid rgba(var(--theme-colour-black),1);
+  }
+
+  @include breakpoint(sm) {} // min width sm
+
+  @include breakpoint(md) {} // min width md
+
+  @include breakpoint(lg) {
+
+    padding: 75px 0;
+
+    &__collapsible-trigger {
+      font-size: 14px;
+    }
+
+  } // min width lg
+
+  @include breakpoint(xl) {
+
+    &__collapsible-trigger {
+      font-size: 15px;
+    }
+
+  } // min width xl
+
+  @include breakpoint(xxl) {
+
+    padding: 95px 0;
+
+    &__collapsible-trigger {
+      font-size: 16px;
+    }
+
+  } // min width xxl
+
+}

@@ -27,7 +27,7 @@
             <div class="{{ section_name }}__item collapsible" data-count="{{ forloop.index }}">
 
               <button
-                class="{{ section_name }}__collapsible-trigger collapsible__trigger{% unless forloop.first %} collapsed{% endunless %}"
+                class="{{ section_name }}__collapsible-trigger button--collapsible collapsible__trigger{% unless forloop.first %} collapsed{% endunless %}"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#{{ item_id }}"
