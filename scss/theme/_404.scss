@@ -1,0 +1,68 @@
+.error-404 {
+
+  min-height: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__cta {
+    margin-top: 25px;
+    justify-content: flex-end;
+    width: 100%;
+    display: flex;
+  }
+
+  &__heading {
+    line-height: 1;
+    margin-bottom: -7px;
+  }
+
+  &__image {
+    position: relative;
+  }
+
+  &__main {
+    width: 80%;
+    max-width: 400px;
+    margin: auto;
+  }
+
+  &__message {
+    position: absolute;
+    top: 15%;
+    right: -7.5%;
+  }
+
+  @include breakpoint(sm) {} // min width sm
+
+  @include breakpoint(md) {} // min width md
+
+  @include breakpoint(lg) {
+
+    &__main {
+      width: 100%;
+      max-width: none;
+    }
+
+  } // min width lg
+
+  @include breakpoint(xl) {
+
+    &__heading {
+      line-height: 1;
+      margin-bottom: -8px;
+    }
+
+  } // min width xl
+
+  @include breakpoint(xxl) {
+
+    &__heading {
+      line-height: 1;
+      margin-bottom: -9px;
+    }
+
+  } // min width xxl
+
+}
