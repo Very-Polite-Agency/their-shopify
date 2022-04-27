@@ -2207,6 +2207,14 @@
       "oAP" : "\/sections\/main-404.liquid",
       "oF" : 0
     },
+    "\/sections\/main-article--LEGACY.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/sections\/main-article--LEGACY.liquid",
+      "oF" : 0
+    },
     "\/sections\/main-article.liquid" : {
       "cB" : 0,
       "ft" : 8192,

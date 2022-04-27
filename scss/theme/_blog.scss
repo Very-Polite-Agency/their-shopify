@@ -87,6 +87,12 @@
     margin: auto;
   }
 
+  &__main {
+    & + .blog__pagination {
+      margin-top: 55px;
+    }
+  }
+
   @include breakpoint(sm) {
 
     &__hero {
@@ -123,7 +129,7 @@
 
     &__hero {
       &-content {
-        width: 33.3333%;
+        width: 45%;
         margin-right: auto;
         padding: 28px;
       }
@@ -133,6 +139,12 @@
 	      }
       }
       & + .blog__main {
+        margin-top: 75px;
+      }
+    }
+
+    &__main {
+      & + .blog__pagination {
         margin-top: 75px;
       }
     }
@@ -164,6 +176,12 @@
 	      }
       }
       & + .blog__main {
+        margin-top: 95px;
+      }
+    }
+
+    &__main {
+      & + .blog__pagination {
         margin-top: 95px;
       }
     }

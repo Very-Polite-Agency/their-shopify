@@ -49,11 +49,7 @@
   </div>
 
   {%- if paginate.pages > 1 -%}
-    <div class="{{ section_name }}__pagination">
-      {% render 'layout--container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1' %}
-        {%- render 'pagination', paginate: paginate -%}
-      {% render 'layout--container', state: 'closed' %}
-    </div>
+    {%- render 'pagination', classes: 'blog__pagination' col: 'col-12 col-lg-10 offset-lg-1', paginate: paginate -%}
   {%- endif -%}
 
 {%- endpaginate -%}
