@@ -7,7 +7,7 @@
 {% assign hero_text_colour_theme = section.settings.hero_text_colour_theme | default: 'light' %}
 {% assign post_per_page = section.settings.post_per_page | default: 6 %}
 
-{%- paginate blog.articles by 4 -%}
+{%- paginate blog.articles by post_per_page -%}
 
   {% if hero_heading != blank or hero_info != blank or hero_image %}
     <div class="{{ section_name }}__hero">
@@ -51,6 +51,12 @@
   {%- endif -%}
 
 {%- endpaginate -%}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
 
 {% schema %}
 {
