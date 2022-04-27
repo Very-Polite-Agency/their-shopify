@@ -1,0 +1,28 @@
+{%- if tags and tags.size > 0 -%}
+
+  {% assign snippet_name = 'tags' %}
+  {% assign snippet_classes = snippet_name %}
+
+  {% if classes and classes != empty %}
+    {% assign snippet_classes = snippet_classes | prepend: ' ' | prepend: classes %}
+  {% endif %}
+
+  <nav class="{{ snippet_classes }}" role="navigation" aria-label="Article Tags">
+
+    {% if col and col != blank %}
+      {% render 'layout--container', state: 'open', col: col %}
+    {% endif %}
+
+    <div class="{{ snippet_name }}__layout">
+      {% for tag in article.tags %}
+        <div class="{{ snippet_name }}__item">{{ tag }}</div>
+      {% endfor %}
+    </div>
+
+    {% if col and col != blank %}
+      {% render 'layout--container', state: 'closed' %}
+    {% endif %}
+
+  </nav>
+
+{% endif %}

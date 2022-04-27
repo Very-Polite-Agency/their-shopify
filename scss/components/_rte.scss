@@ -1,0 +1,68 @@
+.rte {
+
+  h2, h3, h4, h5, h6 {
+    margin-bottom: 30px;
+  }
+
+  h2, h3, h4, h5, h6 {
+    font-family: var(--theme-font-family--serif--primary);
+    font-style: normal;
+    font-weight: 300;
+    font-size: 21px;
+    line-height: 1.52;
+    letter-spacing: 0.01em;
+    margin-bottom: 12px;
+  }
+
+  iframe, ol, p, ul {
+    margin-bottom: 30px;
+    & + h2,
+    & + h3,
+    & + h4,
+    & + h5 {
+      padding-top: 20px;
+    }
+  }
+
+  ol, ul {
+    padding-left: 20px;
+  }
+
+  blockquote,
+  p img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    position: relative;
+  }
+
+  blockquote {
+    font-family: var(--theme-font-family--serif--primary);
+    width: 100%;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+  }
+
+  @include breakpoint(sm) {} // min width sm
+
+  @include breakpoint(md) {} // min width md
+
+  @include breakpoint(lg) {
+
+    blockquote,
+    p img {
+      width: 122%;
+      left: -11%;
+    }
+
+  } // min width lg
+
+  @include breakpoint(xl) {} // min width xl
+
+  @include breakpoint(xxl) {} // min width xxl
+
+}

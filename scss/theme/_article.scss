@@ -4,17 +4,7 @@
     padding-top: 60px;
   }
 
-  &__content {
-    p {
-      img {
-        display: block;
-        width: 100%;
-        height: auto;
-        margin: auto;
-        position: relative;
-      }
-    }
-  }
+  &__content {}
 
   &__date {
     color: rgba(var(--theme-colour-charcoal),1);
@@ -26,6 +16,10 @@
     & + .article__title {
       margin-top: 28px;
     }
+  }
+
+  &__footer {
+    margin-top: 90px;
   }
 
   &__hero {
@@ -49,6 +43,11 @@
 
   }
 
+  &__related-articles {
+    border-top: 1px solid rgba(var(--theme-colour-black),1);
+    padding-top: 40px;
+  }
+
   &__title {
     font-family: var(--theme-font-family--serif--primary);
     font-style: normal;
@@ -68,15 +67,6 @@
   @include breakpoint(md) {} // min width md
 
   @include breakpoint(lg) {
-
-    &__content {
-      p {
-        img {
-          width: 122%;
-          left: -11%;
-        }
-      }
-    }
 
     &__date {
       font-size: 11px;
