@@ -1,32 +1,26 @@
 {
   "order": [
-    "main"
+    "16511013082a131ed6"
   ],
   "sections": {
-    "main": {
-      "type": "text-feature",
+    "16511013082a131ed6": {
+      "type": "faqs",
       "blocks": {
-        "71e83f34-9475-4d69-9c03-24df960f925e": {
-          "type": "heading",
+        "1f7bd87c-5bf1-41e4-8c3e-ee186cc0d621": {
+          "type": "faq",
           "settings": {
-            "heading": "Sample Text Feature Heading",
-            "heading_size": "1"
-          }
-        },
-        "056d5dc6-c3dd-430c-aeef-c9a7c84578ed": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Nullam lacus purus, sollicitudin semper cursus eu, rutrum at libero. Proin a sapien nec enim vestibulum feugiat. In dui enim, pulvinar quis viverra eu, tempus sed ligula. Praesent vitae nunc ut sem rhoncus porta a nec quam. Cras id molestie nisi. Etiam purus justo, porttitor in fermentum quis, auctor at diam. Nunc quam augue, euismod eget posuere ac, tincidunt ut dolor. Ut tincidunt nibh ac sapien pellentesque consectetur. <\/p>"
+            "title": "Question Lorem Ipsum lorem ipsum dolor sit amet, consectetuer?",
+            "answer": ""
           }
         }
       },
       "block_order": [
-        "71e83f34-9475-4d69-9c03-24df960f925e",
-        "056d5dc6-c3dd-430c-aeef-c9a7c84578ed"
+        "1f7bd87c-5bf1-41e4-8c3e-ee186cc0d621"
       ],
       "settings": {
-        "anchor_id": "",
-        "width": "full"
+        "heading": "Orders",
+        "message": "<p>Fusce ut accumsan urna. Aliquam interdum volutpat lacus quis mollis. Proin porttitor facilisis semper. Donec a sagittis mi. Suspendisse at lorem lobortis, feugiat nunc eu, consectetur dui. Sed luctus vel nibh sit amet commodo. Vestibulum elementum nisi nisi, id bibendum ligula cursus vel. Nam dictum vulputate lectus, a aliquam dolor hendrerit quis. In quis justo turpis.<\/p>",
+        "anchor_id": ""
       }
     }
   }
