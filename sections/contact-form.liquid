@@ -25,6 +25,7 @@
 	"name": "Contact Form",
 	"tag": "section",
 	"class": "section section--contact-form",
+	"max_blocks": 2,
 	"settings": [
 		{
 			"content": "Content",
@@ -51,7 +52,25 @@
 			"id": "anchor_id"
 		}
 	],
-	"blocks": [],
+	"blocks": [
+		{
+      "name": "Product",
+      "type": "product",
+      "settings": [
+        {
+          "label": "Product",
+          "type": "product",
+          "id": "product"
+        },
+        {
+          "label": "Caption",
+					"info": "Optionally customize the product's title. Changes to product title only apply to this block.",
+          "type": "text",
+          "id": "caption"
+        }
+      ]
+    }
+	],
 	"presets": [{
 		"name": "Contact Form"
 	}]
