@@ -2428,6 +2428,14 @@
       "oAP" : "\/sections\/main-collection-banner.liquid",
       "oF" : 0
     },
+    "\/sections\/main-collection-product-grid--LEGACY.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/sections\/main-collection-product-grid--LEGACY.liquid",
+      "oF" : 0
+    },
     "\/sections\/main-collection-product-grid.liquid" : {
       "cB" : 0,
       "ft" : 8192,
