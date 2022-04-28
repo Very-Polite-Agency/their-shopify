@@ -101,7 +101,7 @@
         "type": "header",
         "settings": {
           "menu_main": "main-menu",
-          "menu_main_extras": ""
+          "menu_main_extras": "main-menu"
         }
       },
       "footer": {
