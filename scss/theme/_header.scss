@@ -1,13 +1,22 @@
 .header {
 
   transition: background var(--theme-transition-duration);
-  background: transparent;
   border-bottom: 1px solid rgba(var(--theme-colour-black), 0.025);
+  color: rgba(var(--theme-colour-black),1);
+  background: transparent;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 25;
   width: 100%;
+
+  .navigation {
+    font-family: var(--theme-font-family--sans-serif--primary);
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1;
+  }
 
   &__brand {
     position: absolute;
@@ -36,6 +45,18 @@
     width: 100%;
     justify-content: center;
     position: relative;
+    align-items: center;
+  }
+
+  &__main-menu {
+    margin-right: auto;
+    .navigation {
+      &__item {
+        & + .navigation__item {
+          margin-left: 35px;
+        }
+      }
+    }
   }
 
   .scroll-position--scrolled & {

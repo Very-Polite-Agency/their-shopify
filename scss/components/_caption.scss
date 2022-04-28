@@ -1,0 +1,14 @@
+.caption {
+
+  line-height: 1;
+  font-style: normal;
+  font-weight: 300;
+
+  &--1 {
+    @extend .caption;
+    font-family: var(--theme-font-family--serif--primary);
+    font-size: 12px;
+    letter-spacing: 0.15em;
+  }
+
+}

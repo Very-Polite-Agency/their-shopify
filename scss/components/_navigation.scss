@@ -11,6 +11,9 @@
 
   &__item {}
 
-  &__link {}
+  &__link {
+    color: inherit;
+    text-decoration: none;
+  }
 
 }

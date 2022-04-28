@@ -2,6 +2,10 @@
 
   padding: var(--theme-section-padding) 0;
 
+  &__caption {
+    margin-top: 5px;
+  }
+
   &__content {
     color: rgba(var(--theme-colour-black),1);
     padding: 0 15%;
