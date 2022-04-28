@@ -1,31 +1,22 @@
 {%- form 'contact', id: 'form--contact-us', class: 'form form--contact-us js--validate-me' -%}
 
     <div class="form__main">
-
-      <div class="form__field field">
+      <div class="form__field field field--rude">
         {% render 'input', classes: 'input--primary input--rude', name: 'contact[rude]', type: 'text' %}
       </div>
-
       <div class="form__field field">
         {% render 'input', classes: 'input--primary input--text', name: 'contact[name]', placeholder: 'Name', type: 'text' %}
       </div>
-
       <div class="form__field field">
         {% render 'input', classes: 'input--primary input--email', name: 'contact[email]', placeholder: 'Email', type: 'email' %}
       </div>
-
       <div class="form__field field">
         {% render 'input', classes: 'input--primary input--phone', name: 'contact[phone]', placeholder: 'Phone', type: 'tel' %}
       </div>
-
       <div class="form__field field error">
         {% render 'textarea', classes: 'textarea--primary textarea--body', name: 'contact[body]', placeholder: 'Message', %}
       </div>
-
-      <div class="form__field field">
-        <button class="button--submit" type="submit">Contact Us</button>
-      </div>
-
+      <button class="form__submit-button button--primary" type="submit">Submit</button>
     </div>
 
     <div class="form__loading">

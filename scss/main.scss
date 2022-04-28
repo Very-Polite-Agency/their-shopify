@@ -123,7 +123,7 @@
   --theme-font-family--serif--primary: 'PP Cirka', serif;
 
   // ---------------------------------------- Section Padding
-  --theme-section-padding: #{ map-get( $theme-section-padding-sizes, 'base' ) };
+  t: #{ map-get( $theme-section-padding-sizes, 'base' ) };
   --theme-section-padding--sm: #{ map-get( $theme-section-padding-sizes, 'sm' ) };
   --theme-section-padding--md: #{ map-get( $theme-section-padding-sizes, 'md' ) };
   --theme-section-padding--lg: #{ map-get( $theme-section-padding-sizes, 'lg' ) };

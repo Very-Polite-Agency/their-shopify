@@ -1,12 +1,36 @@
+:root {
+  --theme-abc: 50px;
+}
+
 .contact-form {
 
   .container {
-    border: 1px solid red;
+    border-left: 1px solid pink;
+    border-right: 1px solid pink;
+  }
+
+  .form {
+    &__field {
+      & + .form__field {
+        margin-top: 10px;
+      }
+    }
+    &__submit-button {
+      margin-top: 28px;
+    }
+  }
+
+  &__form {
+    border-left: 1px solid red;
   }
 
   &__featured-content {
     display: inline-flex;
     width: 100%;
+    &-wrapper {
+      display: inline-flex;
+      width: 100%;
+    }
   }
 
   &__layout {
@@ -28,40 +52,65 @@
 
     &__featured-content {
       margin-right: auto;
-      padding-right: 18px;
+      position: relative;
       &[data-products-total="2"] {
-        [data-count="1"] {
-          margin-left: -30px;
-          margin-right: 30px;
-        }
+        [data-count="1"] {}
+      }
+      &-wrapper {
+        width: 110%;
+        position: relative;
+        left: -10%;
+        border: 1px solid green;
       }
     }
 
     &__featured-content {
       [data-count="1"] {
-        width: 40%;
+        width: 45%;
       }
       [data-count="2"] {
-        width: 60%;
+        width: 65%;
       }
     }
 
     &__form {
       margin-left: auto;
-      border: 1px solid green;
     }
 
     &__layout {
       flex-flow: row nowrap;
       align-items: flex-start;
       justify-content: space-between;
-      border: 1px solid blue;
+      border-left: 1px solid blue;
+      border-right: 1px solid blue;
     }
 
   } // min width lg
 
-  @include breakpoint(xl) {} // min width xl
+  @include breakpoint(xl) {
 
-  @include breakpoint(xxl) {} // min width xxl
+    &__featured-content {
+      &[data-products-total="2"] {
+        [data-count="1"] {
+          margin-left: -55px;
+          margin-right: 55px;
+        }
+      }
+    }
+
+  } // min width xl
+
+  @include breakpoint(xxl) {
+
+    &__featured-content {
+      &[data-products-total="2"] {
+        [data-count="1"] {
+          margin-left: -55px;
+          margin-right: 55px;
+        }
+      }
+    }
+
+  } // min width xxl
 
 }

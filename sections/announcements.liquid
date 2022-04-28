@@ -20,9 +20,17 @@
   {%- endcase -%}
 {%- endfor -%}
 
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
+
 {% schema %}
 {
-  "name": "t:sections.announcement-bar.name",
+  "name": "Announcements",
+  "tag": "div",
+  "class": "announcements",
   "max_blocks": 12,
   "blocks": [
     {
