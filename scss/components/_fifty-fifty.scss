@@ -1,6 +1,6 @@
 .fifty-fifty {
 
-  padding: 55px 0;
+  padding: var(--theme-section-padding) 0;
 
   &__content {
     color: rgba(var(--theme-colour-black),1);
@@ -89,7 +89,7 @@
 
   @include breakpoint(lg) {
 
-    padding: 75px 0;
+    padding: var(--theme-section-padding--lg) 0;
 
     &__content {
       padding: 0 10%;
@@ -192,7 +192,7 @@
 
   @include breakpoint(xxl) {
 
-    padding: 95px 0;
+    padding: var(--theme-section-padding--xxl) 0;
 
     &__content {
       padding: 0 15%;

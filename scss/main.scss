@@ -14,6 +14,13 @@
 :root {
 
   //////////////////////////////////////////////////////////
+  ////  AOS
+  //////////////////////////////////////////////////////////
+
+  // ---------------------------------------- AOS Travel Distance
+  --aos-travel-size: 10px;
+
+  //////////////////////////////////////////////////////////
   ////  Bootstrap
   //////////////////////////////////////////////////////////
 
@@ -115,6 +122,14 @@
   --theme-font-family--sans-serif--primary: rustica, sans-serif;
   --theme-font-family--serif--primary: 'PP Cirka', serif;
 
+  // ---------------------------------------- Section Padding
+  --theme-section-padding: #{ map-get( $theme-section-padding-sizes, 'base' ) };
+  --theme-section-padding--sm: #{ map-get( $theme-section-padding-sizes, 'sm' ) };
+  --theme-section-padding--md: #{ map-get( $theme-section-padding-sizes, 'md' ) };
+  --theme-section-padding--lg: #{ map-get( $theme-section-padding-sizes, 'lg' ) };
+  --theme-section-padding--xl: #{ map-get( $theme-section-padding-sizes, 'xl' ) };
+  --theme-section-padding--xxl: #{ map-get( $theme-section-padding-sizes, 'xxl' ) };
+
   // ---------------------------------------- Transitions
   --theme-transition-duration: 280ms;
   --theme-transition-opacity: 0.3333;
@@ -186,7 +201,10 @@
 ////  Theme
 //////////////////////////////////////////////////////////
 
+
 @import './theme/404.scss';
+@import './theme/animations.scss';
+@import './theme/announcements.scss';
 @import './theme/article.scss';
 @import './theme/blog.scss';
 @import './theme/body.scss';
