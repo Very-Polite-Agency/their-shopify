@@ -14,16 +14,27 @@
     }
   }
 
+  &--contact-form {
+    .card-product {
+      &__caption {
+        writing-mode: tb-rl;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: absolute;
+        top: 0;
+        right: -18px;
+        strong {
+          transform: rotate(0deg);
+          text-align: left;
+        }
+      }
+    }
+  }
+
   &--fifty-fifty {
     .card-product {
       &__type {
-        font-family: var(--theme-font-family--sans-serif--primary);
-        font-style: normal;
-        font-weight: 400;
-        font-size: 9px;
-        line-height: 1;
-        letter-spacing: 0.25em;
-        text-transform: uppercase;
         position: absolute;
         transform: rotate(90deg);
         display: block;

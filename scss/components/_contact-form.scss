@@ -1,0 +1,67 @@
+.contact-form {
+
+  .container {
+    border: 1px solid red;
+  }
+
+  &__featured-content {
+    display: inline-flex;
+    width: 100%;
+  }
+
+  &__layout {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+  }
+
+  @include breakpoint(sm) {} // min width sm
+
+  @include breakpoint(md) {} // min width md
+
+  @include breakpoint(lg) {
+
+    &__featured-content,
+    &__form {
+      width: 50%;
+    }
+
+    &__featured-content {
+      margin-right: auto;
+      padding-right: 18px;
+      &[data-products-total="2"] {
+        [data-count="1"] {
+          margin-left: -30px;
+          margin-right: 30px;
+        }
+      }
+    }
+
+    &__featured-content {
+      [data-count="1"] {
+        width: 40%;
+      }
+      [data-count="2"] {
+        width: 60%;
+      }
+    }
+
+    &__form {
+      margin-left: auto;
+      border: 1px solid green;
+    }
+
+    &__layout {
+      flex-flow: row nowrap;
+      align-items: flex-start;
+      justify-content: space-between;
+      border: 1px solid blue;
+    }
+
+  } // min width lg
+
+  @include breakpoint(xl) {} // min width xl
+
+  @include breakpoint(xxl) {} // min width xxl
+
+}

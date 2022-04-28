@@ -13,7 +13,7 @@
   {% render 'layout--container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1' %}
     <div class="{{ section_name }}__layout">
 			{% if products %}
-      	<div class="{{ section_name }}__featured-content">
+      	<div class="{{ section_name }}__featured-content" data-products-total="{{ products.size }}">
 					{%- for block in products -%}
 
 						{% assign caption = block.settings.caption | default: '' %}
@@ -23,8 +23,8 @@
 						{% assign url = featured_product.url | default: '' %}
 
 						{% if featured_product %}
-							<div class="{{ section_name }}__featured-product">
-								{% render 'card-product', caption: caption, product: product, style: section_name %}
+							<div class="{{ section_name }}__featured-product" data-count="{{ forloop.index }}" data-index="{{ forloop.index0 }}">
+								{% render 'card-product', caption: caption, product: featured_product, style: section_name %}
 							</div>
 						{% endif %}
 

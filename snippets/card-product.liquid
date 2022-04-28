@@ -33,6 +33,10 @@
 
       {% when 'contact-form' %}
 
+        {% if caption != blank %}
+          {% assign title = caption %}
+        {% endif %}
+
         <div class="{{ snippet_name }}__featured-image product__featured-image">
           <a class="{{ snippet_name }}__featured-image-link" href="{{ url }}" title="{{ title }}" target="_self">
             {%
@@ -41,8 +45,10 @@
               image: featured_image,
             %}
           </a>
-          {% if type != blank %}
-            <strong class="{{ snippet_name }}__caption caption--2">{{ type }}</strong>
+          {% if title != blank %}
+            <div class="{{ snippet_name }}__caption caption--2">
+              <strong>{{ title }}</strong>
+            </div>
           {% endif %}
         </div>
 
