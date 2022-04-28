@@ -1,8 +1,21 @@
+{% comment %}
+
+    Accepts:
+    - product: {Object} Product Liquid object
+    - style: {String} Conditionally load different card types by passing style option
+    - caption: {String} Description of featured image (optional)
+
+    Usage:
+    {% render 'card-product', product: product, caption: 'What an amazing caption' %}
+
+{% endcomment %}
+
 {%- if product and product != blank -%}
 
   {% assign snippet_name = 'card-product' %}
   {% assign snippet_classes = snippet_name %}
   {% assign snippet_id = snippet_name | append: '--' | append: article.id -%}
+  {% assign caption = caption | default: '' %}
   {% assign style = style | default: 'default' %}
 
   {% if classes and classes != empty %}
@@ -18,7 +31,7 @@
 
     {% case style %}
 
-      {% when 'featured' %}
+      {% when 'contact-form' %}
 
         <div class="{{ snippet_name }}__featured-image product__featured-image">
           <a class="{{ snippet_name }}__featured-image-link" href="{{ url }}" title="{{ title }}" target="_self">

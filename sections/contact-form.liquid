@@ -24,7 +24,7 @@
 
 						{% if featured_product %}
 							<div class="{{ section_name }}__featured-product">
-
+								{% render 'card-product', caption: caption, product: product, style: section_name %}
 							</div>
 						{% endif %}
 
