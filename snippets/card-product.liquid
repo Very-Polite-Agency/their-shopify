@@ -18,6 +18,21 @@
 
     {% case style %}
 
+      {% when 'featured' %}
+
+        <div class="{{ snippet_name }}__featured-image product__featured-image">
+          <a class="{{ snippet_name }}__featured-image-link" href="{{ url }}" title="{{ title }}" target="_self">
+            {%
+              render 'content--lazyload-image',
+              alt_text: title,
+              image: featured_image,
+            %}
+          </a>
+          {% if type != blank %}
+            <strong class="{{ snippet_name }}__caption caption--2">{{ type }}</strong>
+          {% endif %}
+        </div>
+
       {% when 'fifty-fifty' %}
 
         <div class="{{ snippet_name }}__featured-image product__featured-image">
@@ -29,7 +44,7 @@
             %}
           </a>
           {% if type != blank %}
-            <strong class="{{ snippet_name }}__type product__type">{{ type }}</strong>
+            <strong class="{{ snippet_name }}__type caption--2">{{ type }}</strong>
           {% endif %}
         </div>
 

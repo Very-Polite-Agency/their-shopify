@@ -2,8 +2,8 @@
 {% assign section_id = section_name | append: '--' | append: section.id %}
 
 {% assign heading = section.settings.heading | default: '' %}
-{% assign heading_highlight = section.settings.heading_highlight | default: false %}
 {% assign message = section.settings.message | default: false %}
+{% assign products = section.blocks | where: 'type', 'product' | default: false %}
 
 {% if section.settings.anchor_id != blank %}
   {% assign section_id = section.settings.anchor_id %}
@@ -12,7 +12,25 @@
 <div class="{{ section_name }}" id="{{ section_id }}">
   {% render 'layout--container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1' %}
     <div class="{{ section_name }}__layout">
-      <div class="{{ section_name }}__featured-content"></div>
+			{% if products %}
+      	<div class="{{ section_name }}__featured-content">
+					{%- for block in products -%}
+
+						{% assign caption = block.settings.caption | default: '' %}
+						{% assign featured_product = block.settings.product | default: false %}
+          	{% assign title = featured_product.title | default: '' %}
+						{% assign featured_image = featured_product.featured_image | default: false %}
+						{% assign url = featured_product.url | default: '' %}
+
+						{% if featured_product %}
+							<div class="{{ section_name }}__featured-product">
+
+							</div>
+						{% endif %}
+
+					{% endfor %}
+				</div>
+			{% endif %}
 			<div class="{{ section_name }}__form">
 				{% render 'form--contact-us' %}
 			</div>
@@ -64,7 +82,7 @@
         },
         {
           "label": "Caption",
-					"info": "Optionally customize the product's title. Changes to product title only apply to this block.",
+					"info": "Optionally customize the caption. By default, the block will reference the product's title.",
           "type": "text",
           "id": "caption"
         }
