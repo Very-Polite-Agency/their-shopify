@@ -1,4 +1,13 @@
+{%- assign section_name = 'collection' -%}
+{%- assign section_id = section_name | append: '--' | append: section.id -%}
+
+{% if section.settings.anchor_id != blank %}
+  {% assign section_id = section.settings.anchor_id %}
+{% endif %}
+
 {%- paginate collection.products by section.settings.products_per_page -%}
+
+  <h1>{{ collection.title }}</h1>
 
   {%- if collection.products.size == 0 -%}
 
@@ -15,14 +24,7 @@
   {%- else -%}
 
     {%- for product in collection.products -%}
-      {% render 'card-product',
-        card_product: product,
-        media_aspect_ratio: section.settings.image_ratio,
-        show_secondary_image: section.settings.show_secondary_image,
-        show_vendor: section.settings.show_vendor,
-        show_rating: section.settings.show_rating,
-        lazy_load: lazy_load
-      %}
+      {% render 'card-product', product: product, style: section_name %}
     {%- endfor -%}
 
     {%- if paginate.pages > 1 -%}
@@ -48,6 +50,7 @@
       "label": "Products per Page",
       "type": "select",
       "options": [
+        { "value": "3", "label": "3" },
         { "value": "9", "label": "9" },
         { "value": "12", "label": "12" },
         { "value": "18", "label": "18" },
