@@ -1,1 +1,35 @@
-{"order":["main"],"sections":{"main":{"settings":{"anchor_id":"","heading":"","heading_highlight":"standard","message":""},"type":"contact-form"}}}
+{
+  "order": [
+    "main"
+  ],
+  "sections": {
+    "main": {
+      "type": "contact-form",
+      "blocks": {
+        "0b1fa165-1cae-4529-8b5d-a0d5d8ef90a6": {
+          "type": "product",
+          "settings": {
+            "product": "24k-gold-plated-ring-smoothooth",
+            "caption": ""
+          }
+        },
+        "252fe2f0-4c27-43be-8542-c122a47ae056": {
+          "type": "product",
+          "settings": {
+            "product": "24k-gold-chain",
+            "caption": "Custom Product Title"
+          }
+        }
+      },
+      "block_order": [
+        "0b1fa165-1cae-4529-8b5d-a0d5d8ef90a6",
+        "252fe2f0-4c27-43be-8542-c122a47ae056"
+      ],
+      "settings": {
+        "heading": "",
+        "message": "",
+        "anchor_id": ""
+      }
+    }
+  }
+}
