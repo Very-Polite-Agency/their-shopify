@@ -100,11 +100,17 @@
       "header": {
         "type": "header",
         "settings": {
+          "menu_main": "main-menu",
+          "menu_main_extras": ""
         }
       },
       "footer": {
         "type": "footer",
         "settings": {
+          "phone": "",
+          "email": "",
+          "menu_menu": "",
+          "policies_menu": ""
         }
       },
       "main-password-header": {
