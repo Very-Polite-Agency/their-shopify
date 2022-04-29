@@ -27,7 +27,7 @@
   {% assign type = product.type | default: '' %}
   {% assign url = product.url | default: '' %}
 
-  <article class="{{ snippet_classes }} {{ snippet_name }}--{{ style }} product" id="{{ snippet_id }}">
+  <article class="{{ snippet_classes }} {{ snippet_name }}--{{ style }} product" id="{{ snippet_id }}" data-published-at="{{ product.published_at | date: "%Y-%m-%d %H:%M:%S" }}">
 
     {% case style %}
 

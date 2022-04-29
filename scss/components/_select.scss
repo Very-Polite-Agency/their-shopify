@@ -25,6 +25,10 @@
 
   &--1 {
     @extend .select;
+    font-weight: 400;
+    font-size: 9px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
   }
 
 }

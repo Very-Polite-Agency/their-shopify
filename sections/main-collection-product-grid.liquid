@@ -28,16 +28,22 @@
       <div class="{{ section_name }}__hero">
         {% render 'layout--container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1' %}
           <div class="{{ section_name }}__hero-content">
+
             <h1 class="{{ section_name }}__title heading--1">{{ title }}</h1>
-            {% if description != blank %}<div class="{{ section_name }}__description body-copy--1">{{ description }}</div>{% endif %}
-             <select class="{{ section_name }}__sort-filter select--1" id="sort-by">
-              {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}
-              {% for option in collection.sort_options %}
-                <option value="{{ option.value }}" {% if option.value == sort_by %}selected="selected"{% endif %}>
-                  {{ option.name }}
-                </option>
-              {% endfor %}
-            </select>
+            {% if description != blank and false %}
+              <div class="{{ section_name }}__description body-copy--1">{{ description }}</div>
+            {% endif %}
+
+            <div class="{{ section_name }}__sort-filter">
+              <label class="{{ section_name }}__sort-filter-label caption--2">Sort by</label>
+              <select class="{{ section_name }}__sort-filter-options select--1" id="sort-by">
+                {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}
+                {% for option in collection.sort_options %}
+                  <option value="{{ option.value }}" {% if option.value == sort_by %}selected="selected"{% endif %}>{% render 'sort-option-name', option_value: option.value %}</option>
+                {% endfor %}
+              </select>
+            </div>
+
           </div>
         {% render 'layout--container', state: 'closed' %}
       </div>
