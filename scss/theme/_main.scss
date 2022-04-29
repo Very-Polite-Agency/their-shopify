@@ -3,6 +3,10 @@ main {
   padding-top: var(--theme-header-height);
   padding-bottom: calc( 1.5 * var(--theme-header-height) );
 
+  &.index {
+    padding-bottom: 0;
+  }
+
   @include breakpoint(sm) {
     padding-top: var(--theme-header-height--sm);
     padding-bottom: calc( 1.5 * var(--theme-header-height--sm) );

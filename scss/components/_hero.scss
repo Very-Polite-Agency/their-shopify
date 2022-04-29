@@ -37,9 +37,48 @@
 
   &__media {
     position: relative;
-    width: 100%;
     z-index: 0;
     overflow: hidden;
+    width: 100%;
+    aspect-ratio: 3/2;
+    @supports not (aspect-ratio: auto) {
+      height: 300px;
+    }
   }
+
+  @include breakpoint(sm) {} // min width sm
+
+  @include breakpoint(md) {} // min width md
+
+  @include breakpoint(lg) {
+
+    &__media {
+      aspect-ratio: 16/9;
+      @supports not (aspect-ratio: auto) {
+        height: 550px;
+      }
+    }
+
+  } // min width lg
+
+  @include breakpoint(xl) {
+
+    &__media {
+      @supports not (aspect-ratio: auto) {
+        height: 650px;
+      }
+    }
+
+  } // min width xl
+
+  @include breakpoint(xxl) {
+
+    &__media {
+      @supports not (aspect-ratio: auto) {
+        height: 750px;
+      }
+    }
+
+  } // min width xxl
 
 }

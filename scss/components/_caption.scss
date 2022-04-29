@@ -36,7 +36,7 @@
   @include breakpoint(xl) {
 
     &--2 {
-      font-size: 11px;
+      font-size: 10px;
     }
 
   } // min width xl
@@ -44,7 +44,7 @@
   @include breakpoint(xxl) {
 
     &--2 {
-      font-size: 13px;
+      font-size: 11px;
     }
 
   } // min width xxl
