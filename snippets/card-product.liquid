@@ -43,7 +43,7 @@
         </div>
         <div class="{{ snippet_name }}__info">
           <strong class="{{ snippet_name }}__title caption--2">{{ title }}</strong>
-          <span class="{{ snippet_name }}__price caption--2">90 CAD</strong>
+          <span class="{{ snippet_name }}__price caption--2">{% render 'price', product: product %}</strong>
         </div>
 
       {% when 'contact-form' %}

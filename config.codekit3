@@ -1959,6 +1959,21 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/scss\/components\/_price.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/_price.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/scss\/components\/_rte.scss" : {
       "aP" : 1,
       "bl" : 0,
@@ -2681,6 +2696,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/snippets\/pagination.liquid",
+      "oF" : 0
+    },
+    "\/snippets\/price--LEGACY.lquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/price--LEGACY.lquid",
       "oF" : 0
     },
     "\/snippets\/price.liquid" : {

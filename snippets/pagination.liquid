@@ -7,7 +7,7 @@
     {% assign snippet_classes = snippet_classes | prepend: ' ' | prepend: classes %}
   {% endif %}
 
-  <nav class="{{ snippet_classes }}" role="navigation" aria-label="Blog Pagination">
+  <nav class="{{ snippet_classes }}" role="navigation" aria-label="{{ template.name | capitalize }} Pagination">
 
     {% if col and col != blank %}
       {% render 'layout--container', state: 'open', col: col %}
