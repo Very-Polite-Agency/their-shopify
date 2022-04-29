@@ -2,7 +2,10 @@
   "sections": {
     "product-grid": {
       "type": "main-collection-product-grid",
-      "settings": {}
+      "settings": {
+        "products_per_page": "3",
+        "show_secondary_image": false
+      }
     }
   },
   "order": [
