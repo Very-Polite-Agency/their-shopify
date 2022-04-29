@@ -18,7 +18,6 @@
           <div class="{{ section_name }}__hero-content">
             <h1 class="{{ section_name }}__title heading--1">{{ title }}</h1>
             <div class="{{ section_name }}__description body-copy--1">It looks like there are currently no products in this collection!</div>
-
           </div>
         {% render 'layout--container', state: 'closed' %}
        </div>
@@ -27,15 +26,17 @@
 
       <div class="{{ section_name }}__hero">
         {% render 'layout--container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1' %}
-          <div class="{{ section_name }}__hero-content">
+          <div class="{{ section_name }}__hero-layout">
 
-            <h1 class="{{ section_name }}__title heading--1">{{ title }}</h1>
-            {% if description != blank and false %}
-              <div class="{{ section_name }}__description body-copy--1">{{ description }}</div>
-            {% endif %}
+            <div class="{{ section_name }}__hero-content">
+              <h1 class="{{ section_name }}__title heading--1">{{ title }}</h1>
+              {% if description != blank and false %}
+                <div class="{{ section_name }}__description body-copy--1">{{ description }}</div>
+              {% endif %}
+            </div>
 
             <div class="{{ section_name }}__sort-filter">
-              <label class="{{ section_name }}__sort-filter-label caption--2">Sort by</label>
+              <label class="{{ section_name }}__sort-filter-label caption--1">Sort by</label>
               <select class="{{ section_name }}__sort-filter-options select--1" id="sort-by">
                 {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}
                 {% for option in collection.sort_options %}

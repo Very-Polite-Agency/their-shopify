@@ -1,0 +1,31 @@
+main {
+
+  padding-top: var(--theme-header-height);
+  padding-bottom: calc( 1.5 * var(--theme-header-height) );
+
+  @include breakpoint(sm) {
+    padding-top: var(--theme-header-height--sm);
+    padding-bottom: calc( 1.5 * var(--theme-header-height--sm) );
+  } // min width sm
+
+  @include breakpoint(md) {
+    padding-top: var(--theme-header-height--md);
+    padding-bottom: calc( 1.5 * var(--theme-header-height--md) );
+  } // min width md
+
+  @include breakpoint(lg) {
+    padding-top: var(--theme-header-height--lg);
+    padding-bottom: calc( 1.5 * var(--theme-header-height--lg) );
+  } // min width lg
+
+  @include breakpoint(xl) {
+    padding-top: var(--theme-header-height--xl);
+    padding-bottom: calc( 1.5 * var(--theme-header-height--xl) );
+  } // min width xl
+
+  @include breakpoint(xxl) {
+    padding-top: var(--theme-header-height--xxl);
+    padding-bottom: calc( 1.5 * var(--theme-header-height--xxl) );
+  } // min width xxl
+
+}
