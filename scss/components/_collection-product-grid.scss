@@ -1,0 +1,27 @@
+.collection-product-grid {
+
+  .card-product {
+    &__price,
+    &__title {
+      letter-spacing: 0;
+    }
+    &__info {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-top: 10px;
+    }
+    &__price {}
+    &__title {
+      text-transform: none;
+    }
+  }
+
+  &__hero {
+    & + .collection-product-grid__main {
+      margin-top: 50px;
+    }
+  }
+
+}

@@ -1,5 +1,6 @@
 .listing {
 
+  &--collection-product-grid,
   &--flex,
   &--grid {
     width: 100%;
@@ -13,6 +14,7 @@
     flex-flow: column;
   }
 
+  &--collection-product-grid,
   &--grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -24,6 +26,7 @@
 
   @include breakpoint(md) {
 
+    &--collection-product-grid,
     &--flex,
     &--grid {
       row-gap: 55px;
@@ -44,6 +47,7 @@
       }
     }
 
+    &--collection-product-grid,
     &--grid {
       grid-template-columns: 1fr 1fr;
       grid-auto-flow: row;
@@ -52,10 +56,17 @@
 
   } // min width md
 
-  @include breakpoint(lg) {} // min width lg
+  @include breakpoint(lg) {
+
+    &--collection-product-grid {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+  } // min width lg
 
   @include breakpoint(xl) {
 
+    &--collection-product-grid,
     &--flex,
     &--grid {
       row-gap: 65px;
