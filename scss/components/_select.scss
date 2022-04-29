@@ -1,0 +1,30 @@
+.select {
+  transition:
+    background var(--theme-transition-duration),
+    border var(--theme-transition-duration),
+    color var(--theme-transition-duration),
+    opacity var(--theme-transition-duration);
+  font-family: var(--theme-font-family--sans-serif--primary);
+  color: rgba(var(--theme-colour-black), 1);
+  outline: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+  min-height: 36px;
+  line-height: 1;
+  text-decoration: none;
+  background: transparent;
+  font-weight: 300;
+  font-size: 10px;
+  font-style: normal;
+  width: 100%;
+
+  &--1 {
+    @extend .select;
+  }
+
+}
