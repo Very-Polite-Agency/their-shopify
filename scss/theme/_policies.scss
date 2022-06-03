@@ -1,6 +1,7 @@
 .policies {
 
-  &__content {
+  &__content,
+  &__media {
     flex: 1;
   }
 
@@ -18,10 +19,13 @@
 
     &__layout {
       flex-flow: row nowrap;
-    }
-
-    &__media {
-      width: 50%;
+      &.with-image {
+        .policies__content,
+        .policies__media {
+          width: 50%;
+          flex: auto;
+        }
+      }
     }
 
   } // min width lg
