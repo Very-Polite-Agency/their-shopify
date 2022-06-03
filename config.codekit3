@@ -431,7 +431,7 @@
       "mi" : 1,
       "oA" : 0,
       "oAP" : "\/assets\/main.min.js",
-      "oF" : 0,
+      "oF" : 2,
       "sC" : 3,
       "tS" : 1
     },
@@ -574,7 +574,7 @@
       "mi" : 1,
       "oA" : 0,
       "oAP" : "\/assets\/vendors.min.js",
-      "oF" : 0,
+      "oF" : 2,
       "sC" : 3,
       "tS" : 1
     },
