@@ -79,16 +79,8 @@
     {% section 'header' %}
 
     <main class="{% render 'theme--classes' %} content-for-layout focus-none" role="main" tabindex="-1">
-      {% if request.path == '/policies/refund-policy' %}
-        {% section 'policy-refund' %}
-      {% elsif request.path contains '/policies/privacy-policy' %}
-        {% section 'policy-privacy' %}
-      {% elsif request.path contains '/policies/terms-of-service' %}
-        {% section 'policy-terms-of-service' %}
-      {% elsif request.path contains '/policies/shipping-policy' %}
-        {% section 'policy-shipping' %}
-      {% elsif request.path contains '/policies/subscription-policy' %}
-        {% section 'policy-subscription' %}
+      {% if request.path contains '/policies/' %}
+        {% section 'policies' %}
       {% else %}
         {{ content_for_layout }}
       {% endif %}
