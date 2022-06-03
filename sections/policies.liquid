@@ -2,23 +2,36 @@
 {% assign section_id = section_name | append: '--' | append: section.id %}
 
 {% assign policy = shop.privacy_policy %}
+{% assign policy_key = 'privacy_policy' %}
 
 {% case request.path %}
   {% when '/policies/refund-policy' %}
     {% assign policy = shop.refund_policy %}
+    {% assign policy_key = 'refund_policy' %}
   {% when '/policies/shipping-policy' %}
     {% assign policy = shop.shipping_policy %}
+    {% assign policy_key = 'shipping_policy' %}
   {% when '/policies/subscription-policy' %}
     {% assign policy = shop.subscription_policy %}
+    {% assign policy_key = 'subscription_policy' %}
   {% when '/policies/terms-of-service' %}
     {% assign policy = shop.terms_of_service %}
+    {% assign policy_key = 'terms_of_service' %}
 {% endcase %}
+
+{% assign hero_image_key = policy_key | append: '_hero_image' %}
+{% assign hero_image = section.settings[hero_image_key] | default: false %}
 
 <div class="{{ section_name }}__main">
   {% render 'bs-container' %}
     <div class="{{ section_name }}__layout">
-      {{ policy.title }}
-      {{ policy.body }}
+      <div class="{{ section_name }}__content">
+        {{ policy.title }}
+        {{ policy.body }}
+      </div>
+      {% if hero_image %}
+        <div class="{{ section_name }}__media">{% render 'lazyload-image', image: hero_image %}</div>
+      {% endif %}
     </div>
   {% render 'bs-container', state: 'closed' %}
 </div>
@@ -34,6 +47,52 @@
     "name": "Policies",
     "tag": "section",
     "class": "section section--policies",
-    "settings": []
+    "settings": [
+      {
+        "content": "Privacy Policy",
+        "type": "header"
+      },
+      {
+        "label": "Hero",
+        "type": "image_picker",
+        "id": "privacy_policy_hero_image"
+      },
+      {
+        "content": "Refund Policy",
+        "type": "header"
+      },
+      {
+        "label": "Hero",
+        "type": "image_picker",
+        "id": "refund_policy_hero_image"
+      },
+      {
+        "content": "Shipping Policy",
+        "type": "header"
+      },
+      {
+        "label": "Hero",
+        "type": "image_picker",
+        "id": "shipping_policy_hero_image"
+      },
+      {
+        "content": "Subscription Policy",
+        "type": "header"
+      },
+      {
+        "label": "Hero",
+        "type": "image_picker",
+        "id": "subscription_policy_hero_image"
+      },
+      {
+        "content": "Terms of Service",
+        "type": "header"
+      },
+      {
+        "label": "Hero",
+        "type": "image_picker",
+        "id": "terms_of_service_hero_image"
+      }
+    ]
   }
 {% endschema %}
