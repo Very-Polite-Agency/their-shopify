@@ -10,7 +10,7 @@
 {% endif %}
 
 <div class="{{ section_name }}" id="{{ section_id }}">
-  {% render 'layout--container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1' %}
+  {% render 'bs-container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1' %}
     <div class="{{ section_name }}__layout">
 			{% if products %}
       	<div class="{{ section_name }}__featured-content" data-products-total="{{ products.size }}">
@@ -38,7 +38,7 @@
 				{% render 'form--contact-us' %}
 			</div>
     </div>
-  {% render 'layout--container', state: 'closed' %}
+  {% render 'bs-container', state: 'closed' %}
 </div>
 
 {% schema %}

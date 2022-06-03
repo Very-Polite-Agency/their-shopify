@@ -9,7 +9,7 @@
 {% endif %}
 
 <div class="{{ section_name }}" id="{{ section_id }}" data-colour-theme-{{ colour_theme }} data-text-alignment-{{ text_alignment }}>
-  {% render 'layout--container', state: 'open', col: 'col-12' %}
+  {% render 'bs-container', state: 'open', col: 'col-12' %}
     <div class="{{ section_name }}__layout">
 
       {%- for block in section.blocks -%}
@@ -48,14 +48,14 @@
 
               {% if image %}
                 <div class="{{ section_name }}__image">
-                  {% render 'content--lazyload-image', image: image %}
+                  {% render 'lazyload-image', image: image %}
                   {% if caption != blank %}
                     <span class="{{ section_name }}__caption caption--1">{{ caption }}</span>
                   {% endif %}
                 </div>
               {% endif %}
               {% if stamp %}
-                <div class="{{ section_name }}__stamp">{% render 'content--lazyload-image', image: stamp %}</div>
+                <div class="{{ section_name }}__stamp">{% render 'lazyload-image', image: stamp %}</div>
               {% endif %}
 
           {%- endcase -%}
@@ -63,7 +63,7 @@
       {%- endfor -%}
 
     </div>
-  {% render 'layout--container', state: 'closed' %}
+  {% render 'bs-container', state: 'closed' %}
 </div>
 
 {% schema %}

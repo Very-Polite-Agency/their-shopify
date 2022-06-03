@@ -12,18 +12,20 @@
   <nav class="{{ snippet_classes }}" role="navigation" aria-label="Article Tags">
 
     {% if col and col != blank %}
-      {% render 'layout--container', state: 'open', col: col %}
+      {% render 'bs-container', state: 'open', col: col %}
     {% endif %}
 
     <div class="{{ snippet_name }}__layout">
-      <div class="{{ snippet_name }}__item label">Tag</div>
+      <div class="{{ snippet_name }}__item label">Tags</div>
       {% for tag in article.tags %}
-        <div class="{{ snippet_name }}__item"><a href="/blogs/{{ blog_handle }}/tagged/{{ tag | handle }}" title="{{ tag }}" target="_self">{{ tag }}</a></div>
+        <div class="{{ snippet_name }}__item">
+          <a class="{{ snippet_name }}__link link" href="/blogs/{{ blog_handle }}/tagged/{{ tag | handle }}" title="{{ tag }}" target="_self">{{ tag }}</a>
+        </div>
       {% endfor %}
     </div>
 
     {% if col and col != blank %}
-      {% render 'layout--container', state: 'closed' %}
+      {% render 'bs-container', state: 'closed' %}
     {% endif %}
 
   </nav>

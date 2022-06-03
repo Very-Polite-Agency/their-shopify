@@ -3,7 +3,6 @@
 // @codekit-prepend quiet "../node_modules/lazysizes/plugins/attrchange/ls.attrchange.min.js";
 // @codekit-prepend quiet "../node_modules/webfontloader/webfontloader.js";
 
-
 window.lazySizesConfig = window.lazySizesConfig || {};
 window.lazySizesConfig.lazyClass = 'lazyload';
 lazySizesConfig.loadMode = 1;

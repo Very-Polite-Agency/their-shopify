@@ -14,11 +14,10 @@
 :root {
 
   //////////////////////////////////////////////////////////
-  ////  AOS
+  ////  Animate on Scroll (AOS)
   //////////////////////////////////////////////////////////
 
-  // ---------------------------------------- AOS Travel Distance
-  --aos-travel-size: 10px;
+  --aos-travel: 12px;
 
   //////////////////////////////////////////////////////////
   ////  Bootstrap
@@ -134,7 +133,6 @@
   --theme-transition-duration: 280ms;
   --theme-transition-opacity: 0.3333;
 
-
   // Rustica Light
   // font-family: rustica, sans-serif;
   // font-weight: 300;
@@ -167,47 +165,52 @@
 ////  Component
 //////////////////////////////////////////////////////////
 
+@import './components/aos.scss';
 @import './components/body-copy.scss';
 @import './components/button.scss';
 @import './components/caption.scss';
+@import './components/field.scss';
+@import './components/heading.scss';
+@import './components/input.scss';
+@import './components/label.scss';
+@import './components/lazyload.scss';
+@import './components/link.scss';
+@import './components/select.scss';
+@import './components/textarea.scss';
+@import './components/title.scss';
+
+//////////////////////////////////////////////////////////
+////  Layouts
+//////////////////////////////////////////////////////////
+
 @import './components/card.scss';
 @import './components/card-article.scss';
+@import './components/card-collection.scss';
 @import './components/card-product.scss';
 @import './components/collapsible.scss';
 @import './components/collection-product-grid';
 @import './components/contact-form.scss';
 @import './components/faqs.scss';
-@import './components/field.scss';
 @import './components/fifty-fifty-feature.scss';
 @import './components/fifty-fifty.scss';
 @import './components/form.scss';
 @import './components/full-width-feature.scss';
 @import './components/glide.scss';
-@import './components/heading.scss';
 @import './components/hero.scss';
-@import './components/input.scss';
-@import './components/label.scss';
-@import './components/lazyload.scss';
-@import './components/link.scss';
 @import './components/listing.scss';
 @import './components/navigation.scss';
 @import './components/pagination.scss';
 @import './components/price.scss';
 @import './components/rte.scss';
 @import './components/section.scss';
-@import './components/select.scss';
 @import './components/share-this.scss';
 @import './components/tags.scss';
-@import './components/textarea.scss';
-@import './components/title.scss';
 
 //////////////////////////////////////////////////////////
 ////  Theme
 //////////////////////////////////////////////////////////
 
-
 @import './theme/404.scss';
-@import './theme/animations.scss';
 @import './theme/announcements.scss';
 @import './theme/article.scss';
 @import './theme/blog.scss';
