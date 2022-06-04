@@ -545,17 +545,6 @@
       "sC" : 3,
       "tS" : 1
     },
-    "\/js\/modules\/_theme.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/assets\/_theme.min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 1
-    },
     "\/js\/modules\/_tools.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -1031,6 +1020,14 @@
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
+    },
+    "\/README.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/README.html",
+      "oF" : 0
     },
     "\/README.md" : {
       "cB" : 0,
@@ -1786,6 +1783,21 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/scss\/theme\/_policies.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/_policies.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/scss\/theme\/_product.scss" : {
       "aP" : 1,
       "bl" : 0,
@@ -2071,6 +2083,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/sections\/pickup-availability.liquid",
+      "oF" : 0
+    },
+    "\/sections\/policies.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/sections\/policies.liquid",
       "oF" : 0
     },
     "\/sections\/predictive-search.liquid" : {

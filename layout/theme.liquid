@@ -48,7 +48,8 @@
     {% endif %}
 
     <script src="{{ 'vendors.min.js' | asset_url }}" async></script>
-    <link type="text/css" href="{{ 'main.css' | asset_url }}" rel="stylesheet">
+
+    {{ 'main.css' | asset_url | stylesheet_tag }}
 
     <script>
 

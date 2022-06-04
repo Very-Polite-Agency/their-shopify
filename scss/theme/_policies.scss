@@ -19,11 +19,13 @@
 
     &__layout {
       flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: flex-start;
       &.with-image {
         .policies__content,
         .policies__media {
-          width: 50%;
-          flex: auto;
+          width: calc( (100% - var(--bs-gutter-width)) * 0.5 );
+          flex: unset;
         }
       }
     }
