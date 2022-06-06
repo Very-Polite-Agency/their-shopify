@@ -118,6 +118,7 @@
       "footer": {
         "type": "footer",
         "settings": {
+          "image": "shopify:\/\/shop_images\/footer-image.png",
           "menu_main": "main-menu",
           "menu_policies": "policies"
         }
