@@ -18,6 +18,13 @@ https://their-jewelry-and-accessories.myshopify.com
 
 ### Sections
 - [ ] 404
+- [ ] Announcements
+- [ ] Cookie Consent
+- [ ] Dynamic Cart
+- [ ] Footer
+- [ ] Header
 - [ ] Home page
+- [ ] Mobile Menu
+- [ ] Navigation
 - [ ] PDP
 - [ ] PLP
