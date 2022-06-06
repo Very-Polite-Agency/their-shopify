@@ -24,9 +24,21 @@
     text-transform: uppercase;
   }
 
-  @include breakpoint(sm) {} // min width sm
+  @include breakpoint(sm) {
 
-  @include breakpoint(md) {} // min width md
+    &--2 {
+      font-size: 11px;
+    }
+
+  } // min width sm
+
+  @include breakpoint(md) {
+
+    &--2 {
+      font-size: 12px;
+    }
+
+  } // min width md
 
   @include breakpoint(lg) {
 

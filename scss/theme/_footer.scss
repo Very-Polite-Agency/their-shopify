@@ -57,12 +57,16 @@
           }
         }
         &__link {
-          color: rgba(var(--theme-colour-silver),1);
+          color: rgba(var(--theme-colour-silver), 0.9);
           font-family: var(--theme-font-family--sans-serif--primary);
           font-style: normal;
           font-weight: 300;
           font-size: 12px;
           line-height: 1;
+          &.active,
+          &:hover {
+            color: rgba(var(--theme-colour-white),1);
+          }
         }
       }
     }
@@ -124,11 +128,90 @@
     }
   }
 
-  @include breakpoint(sm) {} // min width sm
+  @include breakpoint(sm) {
 
-  @include breakpoint(md) {} // min width md
+    .navigation {
+      &--main {
+        .navigation {
+          &__item {
+            & + .navigation__item {
+              margin-top: 32px;
+            }
+          }
+          &__link {
+            font-size: 24px;
+          }
+        }
+      }
+      &--policies {
+        .navigation {
+          &__item {
+            & + .navigation__item {
+              margin-left: 36px;
+            }
+          }
+          &__link {
+            font-size: 13px;
+          }
+        }
+      }
+    }
 
-  @include breakpoint(lg) {} // min width lg
+    &__copyright {
+      font-size: 11px;
+    }
+
+  } // min width sm
+
+  @include breakpoint(md) {
+
+    .navigation {
+      &--main {
+        .navigation {
+          &__item {
+            & + .navigation__item {
+              margin-top: 34px;
+            }
+          }
+          &__link {
+            font-size: 26px;
+          }
+        }
+      }
+      &--policies {
+        .navigation {
+          &__item {
+            & + .navigation__item {
+              margin-left: 38px;
+            }
+          }
+          &__link {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    &__copyright {
+      font-size: 12px;
+    }
+
+  } // min width md
+
+  @include breakpoint(lg) {
+
+    &__image {
+      width: auto;
+      left: unset;
+      position: relative;
+      aspect-ratio: 342 / 300;
+      margin: 0;
+      @supports not (aspect-ratio: auto) {
+        height: 300px;
+      }
+    }
+
+  } // min width lg
 
   @include breakpoint(xl) {} // min width xl
 
