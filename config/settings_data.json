@@ -118,10 +118,8 @@
       "footer": {
         "type": "footer",
         "settings": {
-          "phone": "",
-          "email": "",
-          "menu_menu": "",
-          "policies_menu": ""
+          "menu_main": "main-menu",
+          "menu_policies": "policies"
         }
       },
       "header": {
