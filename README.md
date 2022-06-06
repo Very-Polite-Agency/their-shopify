@@ -9,12 +9,20 @@ https://their-jewelry-and-accessories.myshopify.com
 - [ ] Article
 - [ ] Blog
 - [ ] Cart
+- [ ] Collection (PLP)
+- [ ] Collection Listing
 - [ ] Contact
 - [ ] FAQs
 - [ ] Home page
-- [ ] PDP
-- [ ] PLP
 - [ ] Policy Pages
+- [ ] Product (PDP)
+- [ ] Customer/Account
+- [ ] Customer/Activate Account
+- [ ] Customer/Addresses
+- [ ] Customer/Login
+- [ ] Customer/Order Detail
+- [ ] Customer/Register
+- [ ] Customer/Reset Password
 
 ### Sections
 - [ ] 404
@@ -26,5 +34,3 @@ https://their-jewelry-and-accessories.myshopify.com
 - [ ] Home page
 - [ ] Mobile Menu
 - [ ] Navigation
-- [ ] PDP
-- [ ] PLP
