@@ -18,18 +18,18 @@
 
     <div class="form__row form-row--rude">
       <div class="form__field form-field--rude">
-        {% render 'input', classes: 'input--primary input--rude', name: 'contact[rude]', type: 'text' %}
+        {% render 'input', classes: 'input--secondary input--rude', name: 'contact[rude]', type: 'text' %}
       </div>
       <div class="form__field form-field--tags">
-        {% render 'input', classes: 'input--primary input--tags', readonly: true, required: false, name: 'contact[tags]', type: 'text', value: tags %}
+        {% render 'input', classes: 'input--secondary input--tags', readonly: true, required: false, name: 'contact[tags]', type: 'text', value: tags %}
       </div>
     </div>
 
     <div class="form__row form-row">
       <div class="form__field form-field--email">
-        {% render 'input', classes: 'input--primary input--email', required: true, name: 'contact[email]', placeholder: 'Email', type: 'email' %}
+        {% render 'input', classes: 'input--secondary input--email', required: true, name: 'contact[email]', placeholder: 'Email', type: 'email' %}
       </div>
-      <button class="form__button button--image" type="submit"></button>
+      <button class="form__button button--submit-form" type="submit">{{ button_title }}</button>
     </div>
 
   </div>

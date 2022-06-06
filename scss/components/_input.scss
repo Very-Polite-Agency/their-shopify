@@ -18,7 +18,7 @@
   width: auto;
   justify-content: center;
   align-items: center;
-  min-height: 36px;
+  min-height: 42px;
   line-height: 1;
   text-decoration: none;
   background: transparent;
@@ -27,11 +27,55 @@
   font-style: normal;
   width: 100%;
   display: block;
-  padding: 8px 0;
+
+  &--primary,
+  &--secondary {
+    @extend .input;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-radius: 0;
+    -webkit-appearance: none;
+    &::placeholder {
+      font-family: var(--theme-font-family--sans-serif--primary);
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 1;
+      text-transform: capitalize;
+      color: rgba(var(--theme-colour-silver), 0.4);
+    }
+  }
 
   &--primary {
-    @extend .input;
-    border-bottom: 1px solid rgba(var(--theme-colour-black), 1);
+    border-bottom-color: rgba(var(--theme-colour-black), 1);
+    color: rgba(var(--theme-colour-black), 1);
   }
+
+  &--secondary {
+    border-bottom-color: rgba(var(--theme-colour-white), 1);
+    color: rgba(var(--theme-colour-white), 1);
+  }
+
+  .error & {
+    border-color: rgba(var(--theme-colour-gold),1);
+  }
+
+  @include breakpoint(sm) {} // min width sm
+
+  @include breakpoint(md) {} // min width md
+
+  @include breakpoint(lg) {
+
+    min-height: 44px;
+
+  } // min width lg
+
+  @include breakpoint(xl) {} // min width xl
+
+  @include breakpoint(xxl) {
+
+    min-height: 46px;
+
+  } // min width xxl
 
 }

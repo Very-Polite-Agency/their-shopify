@@ -33,6 +33,12 @@
       </div>
     </div>
 
+    {% if image %}
+      <div class="{{ section_name }}__image">
+        {% render 'lazyload-image', background: true, image: image %}
+      </div>
+    {% endif %}
+
     {% if menu_policies %}
       <nav class="{{ section_name }}__policies-navigation navigation--policies">
         {% for link in linklists[menu_policies].links %}
@@ -45,7 +51,7 @@
       {% if policies_menu %}
         {% render 'navigation', classes: 'footer__menus-policies', menu_handle: policies_menu %}
       {% endif %}
-      <div class="{{ section_name }}__copyright">&copy; {{ shop.name }} {{ "now" | date: "%Y" }}.</div>
+      <div class="{{ section_name }}__copyright">&copy; {{ shop.name }} All Rights Reserved, {{ "now" | date: "%Y" }}.</div>
     </div>
 
   {% render 'bs-container', state: 'closed' %}

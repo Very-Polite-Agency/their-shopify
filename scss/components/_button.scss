@@ -13,7 +13,7 @@
   width: auto;
   justify-content: center;
   align-items: center;
-  min-height: 46px;
+  min-height: 42px;
   line-height: 1;
   text-decoration: none;
   background: transparent;
@@ -42,7 +42,8 @@
   }
 
   &--collapsible,
-  &--primary {
+  &--primary,
+  &--submit-form {
     @extend .button;
   }
 
@@ -101,11 +102,24 @@
     }
   }
 
+  &--submit-form {
+    color: rgba(var(--theme-colour-white), 1);
+    border: 1px solid rgba(var(--theme-colour-white), 1);
+    font-family: var(--theme-font-family--serif--primary);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1;
+    padding: 0 var(--bs-gutter-width);
+  }
+
   @include breakpoint(sm) {} // min width sm
 
   @include breakpoint(md) {} // min width md
 
   @include breakpoint(lg) {
+
+    min-height: 44px;
 
     &--collapsible {
       .button__icon {
@@ -122,6 +136,10 @@
 
   @include breakpoint(xl) {} // min width xl
 
-  @include breakpoint(xxl) {} // min width xxl
+  @include breakpoint(xxl) {
+
+    min-height: 46px;
+
+  } // min width xxl
 
 }

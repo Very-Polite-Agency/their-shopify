@@ -220,24 +220,12 @@ const Forms = (() => {
     formData.forEach((value, key) => formObject[key] = value);
     document.body.classList.add('form-posting');
 
-    console.log( formObject );
+    console.log({ formObject });
 
     axios.post( formAction, formData )
     .then( data => {
       if ( debug ) console.log( data );
       switch ( formType ) {
-        case 'lead-generation': {
-          formElement.reset();
-          setTimeout(() => {
-            formElement.classList.remove('posting');
-            alert(`Thanks ${formObject['First Name']}!`);
-          }, 750 );
-          break;
-        }
-        case 'redirect': {
-          if ( redirectURL ) window.location.replace( redirectURL );
-          break;
-        }
         default: {
           window.location.replace( '/pages/thank-you' );
         }

@@ -27,6 +27,9 @@
   --bs-gutter-width: #{ $grid-gutter-width };
   --bs-gutter-x: #{ $grid-gutter-width };
 
+  // ---------------------------------------- Container Fluid Padding
+  --bs-container-fluid-padding: 28px;
+
   // ---------------------------------------- Container Breakpoints
   --bs-container-breakpoint--sm: #{ map-get( $grid-breakpoints, sm ) };
   --bs-container-breakpoint--md: #{ map-get( $grid-breakpoints, md ) };
@@ -107,7 +110,6 @@
   --theme-header-height--xl: #{ map-get( $theme-header-heights, 'xl' ) };
   --theme-header-height--xxl: #{ map-get( $theme-header-heights, 'xxl' ) };
 
-
   --theme-container-max-offset-left: auto;
 
   // ---------------------------------------- Icon
@@ -170,6 +172,7 @@
 @import './components/button.scss';
 @import './components/caption.scss';
 @import './components/field.scss';
+@import './components/form-row.scss';
 @import './components/heading.scss';
 @import './components/input.scss';
 @import './components/label.scss';
@@ -216,6 +219,7 @@
 @import './theme/blog.scss';
 @import './theme/body.scss';
 @import './theme/collection.scss';
+@import './theme/container.scss';
 @import './theme/fonts.scss';
 @import './theme/footer.scss';
 @import './theme/header.scss';

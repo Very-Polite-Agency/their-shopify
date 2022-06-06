@@ -1,0 +1,12 @@
+.form-row {
+
+  display: flex;
+  width: 100%;
+
+  &--rude {
+    @extend .form-row;
+    position: absolute;
+    left: -1235353432px;
+  }
+
+}
