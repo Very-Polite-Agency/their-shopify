@@ -27,7 +27,7 @@
   {% if hero_image %}
     <div class="{{ section_name }}__hero">
       {% render 'bs-container' %}
-        <div class="{{ section_name }}__hero">
+        <div class="{{ section_name }}__hero-image">
           {% render 'lazyload-image', background: true, image: hero_image %}
         </div>
       {% render 'bs-container', state: 'closed' %}

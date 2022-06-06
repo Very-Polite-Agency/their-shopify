@@ -1,14 +1,24 @@
 .policies {
 
-  &__content,
-  &__media {
-    flex: 1;
+  &__hero {
+    &-image {
+      width: 100%;
+      position: relative;
+      aspect-ratio: 375 / 185;
+      @supports not (aspect-ratio: auto) {
+        height: 185px;
+	    }
+    }
+    & + .policies__main {
+      margin-top: 65px;
+    }
   }
 
-  &__layout {
-    display: flex;
-    width: 100%;
-    flex-flow: column;
+  &__page-title {
+    position: relative;
+    & + .policies__body {
+      margin-top: 22px;
+    }
   }
 
   @include breakpoint(sm) {} // min width sm
@@ -17,19 +27,22 @@
 
   @include breakpoint(lg) {
 
-    &__layout {
-      flex-flow: row nowrap;
-      justify-content: space-between;
-      align-items: flex-start;
-      &.with-image {
-        .policies__content,
-        .policies__media {
-          width: calc( (100% - var(--bs-gutter-width)) * 0.5 );
-          flex: unset;
-        }
-        .policies__content {
-          padding-top: 180px;
-        }
+    &__hero {
+      &-image {
+        aspect-ratio: 960 / 185;
+        @supports not (aspect-ratio: auto) {
+          height: 185px;
+	      }
+      }
+      & + .policies__main {
+        margin-top: 75px;
+      }
+    }
+
+    &__page-title {
+      margin-left: calc( -1 * var(--bs-gutter-width) );
+      & + .policies__body {
+        margin-top: 25px;
       }
     }
 
@@ -37,11 +50,12 @@
 
   @include breakpoint(xl) {
 
-    &__layout {
-      &.with-image {
-        .policies__content {
-          padding-top: 250px;
-        }
+    &__hero {
+      &-image {
+        aspect-ratio: 1160 / 205;
+        @supports not (aspect-ratio: auto) {
+          height: 205px;
+	      }
       }
     }
 
@@ -49,11 +63,12 @@
 
   @include breakpoint(xxl) {
 
-    &__layout {
-      &.with-image {
-        .policies__content {
-          padding-top: 250px;
-        }
+    &__hero {
+      &-image {
+        aspect-ratio: 1360 / 225;
+        @supports not (aspect-ratio: auto) {
+          height: 225px;
+	      }
       }
     }
 
