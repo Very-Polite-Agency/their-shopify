@@ -1,0 +1,25 @@
+{% comment %}
+
+    Accepts:
+    - link: {Object} Link Liquid object
+
+    Usage:
+    {% render 'navigation-item', link: link %}
+
+{% endcomment %}
+
+{%- if link and link != blank -%}
+
+  {% assign link_active = link.active | default: false %}
+  {% assign link_title = link.title | default: '' %}
+  {% assign link_url = link.url | default: '' %}
+  {% assign link_has_links = false %}
+  {% if link.links.size > 0 %}
+    {% assign link_has_links = true %}
+  {% endif %}
+
+  <div class="navigation__item{% if link_has_links %} has-links{% endif %}">
+    <a class="navigation__link link{% if link_active %} active{% endif %}" href="{{ link_url }}">{{ link_title }}</a>
+  </div>
+
+{%- endif -%}

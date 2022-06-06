@@ -16,6 +16,11 @@
   text-decoration: none;
   background: transparent;
 
+  svg {
+    display: block;
+    fill: currentColor;
+  }
+
   &--text {
     @extend .link;
     color: inherit;

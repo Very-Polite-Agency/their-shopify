@@ -9,14 +9,28 @@
   {% render 'bs-container', container: 'container-fluid' %}
 
     <div class="{{ section_name }}__brand">
-      <a href="/" target="_self" title="Home">Brand</a>
+      <a class="{{ section_name }}__brand-link link" href="/" target="_self" title="Home">
+        {% render 'svg', type: 'brand.logo' %}
+      </a>
     </div>
 
-    <nav class="{{ section_name }}__main-navigation navigation"></nav>
+    {% if menu_main %}
+      <nav class="{{ section_name }}__main-navigation navigation--main">
+        {% for link in linklists[menu_main].links %}
+          {% render 'navigation-item', link: link %}
+        {% endfor %}
+      </nav>
+    {% endif %}
 
     <div class="{{ section_name }}__newsletter"></div>
 
-    <nav class="{{ section_name }}__policies-navigation navigation"></nav>
+    {% if menu_policies %}
+      <nav class="{{ section_name }}__policies-navigation navigation navigation--policies">
+        {% for link in linklists[menu_policies].links %}
+          {% render 'navigation-item', link: link %}
+        {% endfor %}
+      </nav>
+    {% endif %}
 
     <div class="{{ section_name }}__legal">
       {% if policies_menu %}

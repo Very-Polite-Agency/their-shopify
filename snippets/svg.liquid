@@ -1,4 +1,12 @@
-{% assign type = type | default: false %}
+{% comment %}
+
+    Accepts:
+    - type: {String} type of SVG to render
+
+    Usage:
+    {% render 'svg', type: 'brand.logo.small' %}
+
+{% endcomment %}
 
 {% case type %}
 

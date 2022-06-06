@@ -3,4 +3,8 @@
   background: rgba(var(--theme-colour-black),1);
   color: rgba(var(--theme-colour-white),1);
 
+  &__brand {
+    color: rgba(var(--theme-colour-gold),1);
+  }
+
 }
