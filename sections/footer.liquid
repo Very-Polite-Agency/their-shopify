@@ -25,7 +25,7 @@
     <div class="{{ section_name }}__newsletter"></div>
 
     {% if menu_policies %}
-      <nav class="{{ section_name }}__policies-navigation navigation navigation--policies">
+      <nav class="{{ section_name }}__policies-navigation navigation--policies">
         {% for link in linklists[menu_policies].links %}
           {% render 'navigation-item', link: link %}
         {% endfor %}
