@@ -27,13 +27,36 @@
           width: calc( (100% - var(--bs-gutter-width)) * 0.5 );
           flex: unset;
         }
+        .policies__content {
+          padding-top: 180px;
+        }
       }
     }
 
   } // min width lg
 
-  @include breakpoint(xl) {} // min width xl
+  @include breakpoint(xl) {
 
-  @include breakpoint(xxl) {} // min width xxl
+    &__layout {
+      &.with-image {
+        .policies__content {
+          padding-top: 250px;
+        }
+      }
+    }
+
+  } // min width xl
+
+  @include breakpoint(xxl) {
+
+    &__layout {
+      &.with-image {
+        .policies__content {
+          padding-top: 250px;
+        }
+      }
+    }
+
+  } // min width xxl
 
 }
