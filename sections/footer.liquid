@@ -4,6 +4,8 @@
 {% assign image = section.settings.image | default: false %}
 {% assign menu_main = section.settings.menu_main | default: false %}
 {% assign menu_policies = section.settings.menu_policies | default: false %}
+{% assign newsletter_heading = section.settings.newsletter_heading | default: 'Register Today' %}
+{% assign newsletter_button_title = section.settings.newsletter_button_title | default: 'Register' %}
 
 <div class="{{ section_name }}" id="{{ section_id }}">
   {% render 'bs-container', container: 'container-fluid' %}
@@ -22,7 +24,14 @@
       </nav>
     {% endif %}
 
-    <div class="{{ section_name }}__newsletter"></div>
+    <div class="{{ section_name }}__newsletter">
+      {% if newsletter_heading != blank %}
+        <strong class="{{ section_name }}__newsletter-heading caption--2">{{ newsletter_heading }}</strong>
+      {% endif %}
+      <div class="{{ section_name }}__newsletter-form">
+        {% render 'form-newsletter-sign-up', button_title: newsletter_button_title %}
+      </div>
+    </div>
 
     {% if menu_policies %}
       <nav class="{{ section_name }}__policies-navigation navigation--policies">

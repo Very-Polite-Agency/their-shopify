@@ -74,6 +74,10 @@
 
   }
 
+  &__newsletter {
+    border: 1px solid red;
+  }
+
   &--main {
     @extend .footer__navigation;
   }
