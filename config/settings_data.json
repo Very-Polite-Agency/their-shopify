@@ -129,7 +129,7 @@
         "type": "header",
         "settings": {
           "menu_main": "main-menu",
-          "menu_main_extras": "main-menu"
+          "menu_main_extras": "extras"
         }
       },
       "main-password-footer": {
