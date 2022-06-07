@@ -2,7 +2,7 @@
 
   background: rgba(var(--theme-colour-black),1);
   color: rgba(var(--theme-colour-white),1);
-  padding: var(--bs-gutter-width) 0 32px 0;
+  padding: var(--bs-gutter-width) 0 38px 0;
 
   .form {
     &__button {
@@ -104,6 +104,7 @@
     line-height: 1;
     text-transform: capitalize;
     letter-spacing: 0.035em;
+    margin-top: var(--bs-gutter-width);
   }
 
   &__image {
@@ -115,10 +116,6 @@
     @supports not (aspect-ratio: auto) {
       height: 165px;
     }
-  }
-
-  &__legal {
-    margin-top: var(--bs-gutter-width);
   }
 
   &__newsletter {
@@ -157,6 +154,10 @@
       }
     }
 
+    &__brand {
+      height: 42px;
+    }
+
     &__copyright {
       font-size: 11px;
     }
@@ -192,6 +193,10 @@
       }
     }
 
+    &__brand {
+      height: 44px;
+    }
+
     &__copyright {
       font-size: 12px;
     }
@@ -200,15 +205,84 @@
 
   @include breakpoint(lg) {
 
+    padding: 0;
+
+    .navigation {
+      &--main {
+        width: auto;
+        .navigation {
+          &__item {
+            width: auto;
+            min-width: 150px;
+            & + .navigation__item {
+              margin-top: 10px;
+            }
+          }
+          &__link {
+            font-size: 16px;
+          }
+        }
+      }
+      &--policies {
+        .navigation {
+          &__item {
+            & + .navigation__item {
+              margin-left: 24px;
+            }
+          }
+          &__link {
+            font-size: 10px;
+          }
+        }
+      }
+    }
+
+    &__brand {
+      height: 40px;
+      position: absolute;
+      top: var(--bs-container-fluid-padding);
+      right: 0;
+      & + .footer__main-navigation {
+        margin-top: 0;
+      }
+    }
+
+    &__copyright {
+      font-size: 10px;
+    }
+
     &__image {
-      width: auto;
+      width: 320px;
       left: unset;
       position: relative;
       aspect-ratio: 342 / 300;
       margin: 0;
       @supports not (aspect-ratio: auto) {
-        height: 300px;
+        height: 350px;
+        width: 350px;
       }
+    }
+
+    &__layout {
+      display: flex;
+      width: 100%;
+      position: relative;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    &__legal {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__newsletter {
+      margin: 0 0 0 var(--bs-container-fluid-padding);
     }
 
   } // min width lg

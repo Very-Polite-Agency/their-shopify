@@ -10,48 +10,54 @@
 <div class="{{ section_name }}" id="{{ section_id }}">
   {% render 'bs-container', container: 'container-fluid' %}
 
-    <div class="{{ section_name }}__brand">
+    <div class="{{ section_name }}__layout">
+
+      <div class="{{ section_name }}__brand">
       <a class="{{ section_name }}__brand-link link" href="/" target="_self" title="Home">
         {% render 'svg', type: 'brand.logo' %}
       </a>
     </div>
 
-    {% if menu_main %}
-      <nav class="{{ section_name }}__main-navigation navigation--main">
-        {% for link in linklists[menu_main].links %}
-          {% render 'navigation-item', link: link %}
-        {% endfor %}
-      </nav>
-    {% endif %}
-
-    <div class="{{ section_name }}__newsletter">
-      {% if newsletter_heading != blank %}
-        <strong class="{{ section_name }}__newsletter-heading caption--2">{{ newsletter_heading }}</strong>
+      {% if menu_main %}
+        <nav class="{{ section_name }}__main-navigation navigation--main">
+          {% for link in linklists[menu_main].links %}
+            {% render 'navigation-item', link: link %}
+          {% endfor %}
+        </nav>
       {% endif %}
-      <div class="{{ section_name }}__newsletter-form">
-        {% render 'form-newsletter-sign-up', button_title: newsletter_button_title %}
-      </div>
-    </div>
 
-    {% if image %}
-      <div class="{{ section_name }}__image">
-        {% render 'lazyload-image', background: true, image: image %}
-      </div>
-    {% endif %}
-
-    {% if menu_policies %}
-      <nav class="{{ section_name }}__policies-navigation navigation--policies">
-        {% for link in linklists[menu_policies].links %}
-          {% render 'navigation-item', link: link %}
-        {% endfor %}
-      </nav>
-    {% endif %}
-
-    <div class="{{ section_name }}__legal">
-      {% if policies_menu %}
-        {% render 'navigation', classes: 'footer__menus-policies', menu_handle: policies_menu %}
+      {% if image %}
+        <div class="{{ section_name }}__image d-none d-lg-block">
+          {% render 'lazyload-image', background: true, image: image %}
+        </div>
       {% endif %}
-      <div class="{{ section_name }}__copyright">&copy; {{ shop.name }} All Rights Reserved, {{ "now" | date: "%Y" }}.</div>
+
+      <div class="{{ section_name }}__newsletter">
+        {% if newsletter_heading != blank %}
+          <strong class="{{ section_name }}__newsletter-heading caption--2">{{ newsletter_heading }}</strong>
+        {% endif %}
+        <div class="{{ section_name }}__newsletter-form">
+          {% render 'form-newsletter-sign-up', button_title: newsletter_button_title %}
+        </div>
+      </div>
+
+      {% if image %}
+        <div class="{{ section_name }}__image d-lg-none">
+          {% render 'lazyload-image', background: true, image: image %}
+        </div>
+      {% endif %}
+
+      <div class="{{ section_name }}__legal">
+        {% if menu_policies %}
+          <nav class="{{ section_name }}__policies-navigation navigation--policies">
+            {% for link in linklists[menu_policies].links %}
+              {% render 'navigation-item', link: link %}
+            {% endfor %}
+          </nav>
+        {% endif %}
+        <div class="{{ section_name }}__copyright">&copy; {{ shop.name }} All Rights Reserved, {{ "now" | date: "%Y" }}.</div>
+      </div>
+
     </div>
 
   {% render 'bs-container', state: 'closed' %}
