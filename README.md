@@ -29,7 +29,7 @@ https://their-jewelry-and-accessories.myshopify.com
 - [ ] Announcements
 - [ ] Cookie Consent
 - [ ] Dynamic Cart
-- [ ] Footer
+- [x] Footer
 - [ ] Header
 - [ ] Home page
 - [ ] Mobile Menu
