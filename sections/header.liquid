@@ -17,7 +17,7 @@
       {% endif %}
 
       <div class="{{ section_name }}__brand">
-        <a href="/" target="_self" title="{{ shop.name }} Home">
+        <a class="{{ section_name }}__brand-link link" href="/" target="_self" title="{{ shop.name }} Home">
           {% render 'svg', type: 'brand.logo' %}
         </a>
       </div>
@@ -33,8 +33,10 @@
         </nav>
       {% endif %}
 
-      <button class="{{ section_name }}__button button d-inline-flex d-lg-none" type="button">
-        <span class="button__title">Menu</span>
+      <button class="{{ section_name }}__hamburger hamburger hamburger--squeeze js--mobile-menu-trigger" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
       </button>
 
     </div>
