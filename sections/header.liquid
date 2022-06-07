@@ -9,7 +9,11 @@
     <div class="{{ section_name }}__layout">
 
       {% if menu_main %}
-        {% render 'navigation', classes: 'header__main-menu d-none d-lg-inline-flex', menu_handle: menu_main %}
+        <nav class="{{ section_name }}__navigation-main navigation--main">
+          {% for link in linklists[menu_main].links %}
+            {% render 'navigation-item', link: link %}
+          {% endfor %}
+        </nav>
       {% endif %}
 
       <div class="{{ section_name }}__brand">
@@ -19,7 +23,14 @@
       </div>
 
       {% if menu_main_extras %}
-        {% render 'navigation', classes: 'header__main-menu d-none d-lg-inline-flex', menu_handle: menu_main_extras %}
+        <nav class="{{ section_name }}__navigation-extras navigation--extras">
+          {% for link in linklists[menu_main_extras].links %}
+            {% render 'navigation-item', link: link %}
+          {% endfor %}
+          <div class="navigation__item">
+            <a class="navigation__link link" href="/cart">Bag[<span class="js--cart-item-count">{{ cart.item_count }} </span>]</a>
+          </div>
+        </nav>
       {% endif %}
 
       <button class="{{ section_name }}__button button d-inline-flex d-lg-none" type="button">

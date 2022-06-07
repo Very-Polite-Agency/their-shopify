@@ -16,6 +16,11 @@
     font-weight: 300;
     font-size: 14px;
     line-height: 1;
+    display: none;
+    &--extras,
+    &--main {
+      @extend .navigation;
+    }
   }
 
   &__brand {
@@ -48,17 +53,6 @@
     align-items: center;
   }
 
-  &__main-menu {
-    margin-right: auto;
-    .navigation {
-      &__item {
-        & + .navigation__item {
-          margin-left: 35px;
-        }
-      }
-    }
-  }
-
   .scroll-position--scrolled & {
     background: rgba(var(--theme-colour-white), 0.6666);
   }
@@ -70,6 +64,17 @@
   @include breakpoint(md) {} // min width md
 
   @include breakpoint(lg) {
+
+    .navigation {
+      display: inline-flex;
+      align-items: center;
+      &--extras {
+        margin-left: auto;
+      }
+      &--main {
+        margin-right: auto;
+      }
+    }
 
     &__layout {
       height: var(--theme-header-height--lg);

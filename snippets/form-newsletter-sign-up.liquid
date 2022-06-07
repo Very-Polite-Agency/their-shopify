@@ -29,7 +29,9 @@
       <div class="form__field form-field--email">
         {% render 'input', classes: 'input--secondary input--email', required: true, name: 'contact[email]', placeholder: 'Email', type: 'email' %}
       </div>
-      <button class="form__button button--submit-form" type="submit">{{ button_title }}</button>
+      <button class="form__button button--submit-form" type="submit">
+        <span class="button__title">{{ button_title }}</span>
+      </button>
     </div>
 
   </div>
