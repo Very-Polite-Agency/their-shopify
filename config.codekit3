@@ -148,12 +148,12 @@
       "sC" : 3,
       "tS" : 1
     },
-    "\/assets\/favicon.ICO" : {
+    "\/assets\/favicon.ico" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/assets\/favicon.ICO",
+      "oAP" : "\/assets\/favicon.ico",
       "oF" : 0
     },
     "\/assets\/featured-image-tall.png" : {

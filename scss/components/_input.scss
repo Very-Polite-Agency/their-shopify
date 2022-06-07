@@ -66,15 +66,19 @@
 
   @include breakpoint(lg) {
 
-    min-height: 44px;
+    min-height: 40px;
 
   } // min width lg
 
-  @include breakpoint(xl) {} // min width xl
+  @include breakpoint(xl) {
+
+    min-height: 42px;
+
+  } // min width xl
 
   @include breakpoint(xxl) {
 
-    min-height: 46px;
+    min-height: 44px;
 
   } // min width xxl
 

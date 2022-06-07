@@ -111,6 +111,10 @@
     font-size: 16px;
     line-height: 1;
     padding: 0 var(--bs-gutter-width);
+    &:hover {
+      background: rgba(var(--theme-colour-white), 1);
+      color: rgba(var(--theme-colour-black), 1);
+    }
   }
 
   @include breakpoint(sm) {} // min width sm
@@ -119,7 +123,7 @@
 
   @include breakpoint(lg) {
 
-    min-height: 44px;
+    min-height: 40px;
 
     &--collapsible {
       .button__icon {
@@ -134,11 +138,15 @@
 
   } // min width lg
 
-  @include breakpoint(xl) {} // min width xl
+  @include breakpoint(xl) {
+
+    min-height: 42px;
+
+  } // min width xl
 
   @include breakpoint(xxl) {
 
-    min-height: 46px;
+    min-height: 44px;
 
   } // min width xxl
 
