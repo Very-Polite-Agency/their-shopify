@@ -4,7 +4,7 @@
 
 const MobileMenu = (() => {
 
-  let debug = false;
+  let debug = true;
   let info = { name : 'MobileMenu', version : '1.0' };
 
   let tools = new Tools();

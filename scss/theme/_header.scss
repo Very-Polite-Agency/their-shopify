@@ -1,11 +1,13 @@
+@use "sass:math";
+
 .header {
 
   $header-brand-height: 44px;
 
   transition: background var(--theme-transition-duration);
+  background: rgba(var(--theme-colour-white), 1);
   border-bottom: 1px solid rgba(var(--theme-colour-black), 0.025);
   color: rgba(var(--theme-colour-black),1);
-  background: transparent;
   position: fixed;
   top: 0;
   left: 0;
@@ -48,22 +50,40 @@
 
   &__layout {
     height: var(--theme-header-height);
-    display: flex;
     width: 100%;
+    display: flex;
     justify-content: center;
     position: relative;
     align-items: center;
   }
 
   .scroll-position--scrolled & {
-    background: rgba(var(--theme-colour-white), 0.6666);
+    //background: rgba(var(--theme-colour-white), 1);
   }
 
-  .mobile-menu--active & {}
+  .mobile-menu--active & {
+    //background: rgba(var(--theme-colour-white), 1);
+  }
 
-  @include breakpoint(sm) {} // min width sm
+  &:hover {
+    //background: rgba(var(--theme-colour-white), 1);
+  }
 
-  @include breakpoint(md) {} // min width md
+  @include breakpoint(sm) {
+
+    &__layout {
+      height: var(--theme-header-height--sm);
+    }
+
+  } // min width sm
+
+  @include breakpoint(md) {
+
+    &__layout {
+      height: var(--theme-header-height--md);
+    }
+
+  } // min width md
 
   @include breakpoint(lg) {
 
@@ -74,17 +94,21 @@
       display: inline-flex;
       align-items: center;
       &__item {
-        & + .navigation__item {
-          margin-left: 30px;
+        &.active {
+          .sub-navigation {
+            display: flex;
+          }
         }
       }
       &__link {
+        height: var(--theme-header-height--lg);
         color: rgba(var(--theme-colour-black), 1);
         font-style: normal;
         font-weight: 300;
         font-size: 14px;
         line-height: 1;
         text-transform: capitalize;
+        padding: 0 15px;
         &.active,
         &:hover {
           color: rgba(var(--theme-colour-gold), 1);
@@ -92,9 +116,85 @@
       }
       &--extras {
         margin-left: auto;
+        margin-right: -15px;
       }
       &--main {
         margin-right: auto;
+        margin-left: -15px;
+      }
+    }
+
+    .sub-navigation {
+      background: rgba(var(--theme-colour-black),1);
+      top: var(--theme-header-height--lg);
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: fixed;
+      left: 0;
+      width: 100%;
+      display: none;
+      padding: 50px 0;
+      &__item,
+      &__link {
+        line-height: 1;
+      }
+      &__item {
+        color: rgb(var(--theme-colour-white), 1);
+        flex: 1;
+        max-width: 275px;
+        //border: 1px solid pink;
+      }
+      &__layout {
+        display: flex;
+        width: 100%;
+        justify-content: flex-start;
+        align-items: baseline;
+        flex-flow: row nowrap;
+      }
+      &__link {
+        &.active,
+        &:hover {
+          color: rgb(var(--theme-colour-gold), 1);
+        }
+      }
+    }
+
+    .sub-sub-navigation {
+      margin-top: 42px;
+      display: grid;
+      width: 100%;
+      grid-template-columns: unset;
+      grid-template-rows: repeat( 1, 1fr );
+      grid-auto-flow: column;
+      margin-bottom: -12px;
+      $base: 2;
+	    $step: 1;
+      @while $base < 36 {
+        $repeat: math.ceil($base * 0.5);
+        &[data-links-count='#{$base}'] {
+          grid-template-rows: repeat( $repeat, 1fr );
+        }
+        $base: $base + $step;
+      }
+      &__item,
+      &__link {
+        line-height: 1;
+      }
+      &__item {
+        margin-bottom: 12px;
+      }
+      &__link {
+        color: rgba(var(--theme-colour-silver), 1);
+        font-family: var(--theme-font-family--sans-serif--primary);
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 1;
+        text-transform: capitalize;
+        &.active,
+        &:hover {
+          color: rgba(var(--theme-colour-white), 1);
+        }
       }
     }
 
@@ -112,10 +212,31 @@
   @include breakpoint(xl) {
 
     .navigation {
+      &__link {
+        height: var(--theme-header-height--xl);
+        font-size: 15px;
+        padding: 0 16px;
+      }
+      &--extras {
+        margin-right: -16px;
+      }
+      &--main {
+        margin-left: -16px;
+      }
+    }
+
+    .sub-navigation {
+      top: var(--theme-header-height--xl);
       &__item {
-        & + .navigation__item {
-          margin-left: 34px;
-        }
+        max-width: 295px;
+      }
+    }
+
+    .sub-sub-navigation {
+      top: var(--theme-header-height--xl);
+      margin-bottom: -14px;
+      &__item {
+        margin-bottom: 14px;
       }
       &__link {
         font-size: 15px;
@@ -131,10 +252,31 @@
   @include breakpoint(xxl) {
 
     .navigation {
+      &__link {
+        height: var(--theme-header-height--xxl);
+        font-size: 16px;
+        padding: 0 17px;
+      }
+      &--extras {
+        margin-right: -17px;
+      }
+      &--main {
+        margin-left: -17px;
+      }
+    }
+
+    .sub-navigation {
+      top: var(--theme-header-height--xxl);
       &__item {
-        & + .navigation__item {
-          margin-left: 38px;
-        }
+        max-width: 315px;
+      }
+    }
+
+    .sub-sub-navigation {
+      top: var(--theme-header-height--xl);
+      margin-bottom: -16px;
+      &__item {
+        margin-bottom: 16px;
       }
       &__link {
         font-size: 16px;

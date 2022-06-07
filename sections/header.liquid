@@ -1,11 +1,28 @@
 {% assign section_name = 'header' %}
 {% assign section_id = section_name | append: '--' | append: section.id %}
 
+{% assign announcements = section.blocks | where: 'type', 'announcement' | default: false %}
 {% assign menu_main = section.settings.menu_main | default: false %}
 {% assign menu_main_extras = section.settings.menu_main_extras | default: false %}
 
+{% if announcements %}
+  <div class="{{ section_name }}__announcements">
+    {% render 'bs-container', container: 'container', state: 'open' %}
+      {% for item in announcements %}
+
+        {% assign message = item.settings.title | default: '' %}
+
+        {% if message != blank %}
+          <div class="{{ section_name }}__announcements-item">{{ message }}</div>
+        {% endif %}
+
+      {% endfor %}
+    {% render 'bs-container', state: 'closed' %}
+  </div>
+{% endif %}
+
 <div class="{{ section_name }}__main">
-  {% render 'bs-container' %}
+  {% render 'bs-container', container: 'container', state: 'open' %}
     <div class="{{ section_name }}__layout">
 
       {% if menu_main %}
@@ -33,9 +50,10 @@
         </nav>
       {% endif %}
 
-      <button class="{{ section_name }}__hamburger hamburger hamburger--squeeze js--mobile-menu-trigger" type="button">
-        <span class="hamburger-box">
-          <span class="hamburger-inner"></span>
+      <button class="{{ section_name }}__hamburger hamburger js--mobile-menu-trigger" type="button">
+        <span class="hamburger__main">
+          <span class="hamburger__stroke top"></span>
+          <span class="hamburger__stroke bottom"></span>
         </span>
       </button>
 
@@ -68,6 +86,20 @@
         "label": "Main Menu Extras",
         "type": "link_list",
         "id": "menu_main_extras"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Announcement",
+        "type": "announcement",
+        "limit": 5,
+        "settings": [
+          {
+            "label": "Message",
+            "type": "richtext",
+            "id": "title"
+          }
+        ]
       }
     ]
   }

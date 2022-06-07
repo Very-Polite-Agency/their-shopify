@@ -8,6 +8,7 @@
 // @codekit-prepend "./modules/_breakpoints.js";
 // @codekit-prepend "./modules/_forms.js";
 // @codekit-prepend "./modules/_gliders.js";
+// @codekit-prepend "./modules/_header.js";
 // @codekit-prepend "./modules/_instagramFeed.js";
 // @codekit-prepend "./modules/_mobileMenu.js";
 // @codekit-prepend "./modules/_modals";
@@ -23,6 +24,7 @@
 let modules = [
   new Forms(),
   new Gliders(),
+  new Header(),
   new InstagramFeed(),
   new MobileMenu(),
   new Scrolling(),
