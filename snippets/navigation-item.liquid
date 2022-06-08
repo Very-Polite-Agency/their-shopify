@@ -2,9 +2,10 @@
 
     Accepts:
     - link: {Object} Link Liquid object
+    - collapsible: {Boolean} Conditionally include collapsible sub-navigation systems
 
     Usage:
-    {% render 'navigation-item', link: link %}
+    {% render 'navigation-item', index: forloop.index, link: link %}
 
 {% endcomment %}
 

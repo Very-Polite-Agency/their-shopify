@@ -1,0 +1,44 @@
+{% assign section_name = 'mobile-menu' %}
+{% assign section_id = section_name | append: '--' | append: section.id %}
+
+{% assign menu_main = section.settings.menu_main | default: false %}
+
+<div class="{{ section_name }}__main">
+  <div class="{{ section_name }}__layout">
+
+    {% if menu_main %}
+      <nav class="{{ section_name }}__navigation-main navigation--main">
+        {% for link in linklists[menu_main].links %}
+          {% render 'navigation-item-collapsible', index: forloop.index, link: link %}
+        {% endfor %}
+      </nav>
+    {% endif %}
+
+  </div>
+</div>
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
+
+{% schema %}
+  {
+    "name": "Mobile Menu",
+    "tag": "section",
+    "class": "mobile-menu",
+    "settings": [
+      {
+        "content": "Navigation",
+        "type": "header"
+      },
+      {
+        "label": "Main Menu",
+        "type": "link_list",
+        "id": "menu_main"
+      }
+    ],
+    "blocks": []
+  }
+{% endschema %}
