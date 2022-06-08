@@ -6,7 +6,7 @@ https://their-jewelry-and-accessories.myshopify.com
 ## Todo
 ## Phase 1.0
 ### Templates
-- [ ] 404
+- [x] 404
 - [ ] Article
 - [ ] Blog
 - [ ] Cart
@@ -19,12 +19,12 @@ https://their-jewelry-and-accessories.myshopify.com
 - [ ] Product (PDP)
 
 ### Sections
-- [ ] 404
+- [x] 404
 - [ ] Announcements
 - [ ] Cookie Consent
 - [ ] Dynamic Cart
 - [x] Footer
-- [ ] Header
+- [x] Header
 - [ ] Home page
 - [ ] Mobile Menu
 - [ ] Navigation
