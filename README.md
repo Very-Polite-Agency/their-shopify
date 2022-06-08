@@ -4,6 +4,7 @@
 https://their-jewelry-and-accessories.myshopify.com
 
 ## Todo
+## Phase 1.0
 ### Templates
 - [ ] 404
 - [ ] Article
@@ -16,13 +17,6 @@ https://their-jewelry-and-accessories.myshopify.com
 - [ ] Home page
 - [ ] Policy Pages
 - [ ] Product (PDP)
-- [ ] Customer/Account
-- [ ] Customer/Activate Account
-- [ ] Customer/Addresses
-- [ ] Customer/Login
-- [ ] Customer/Order Detail
-- [ ] Customer/Register
-- [ ] Customer/Reset Password
 
 ### Sections
 - [ ] 404
@@ -34,3 +28,13 @@ https://their-jewelry-and-accessories.myshopify.com
 - [ ] Home page
 - [ ] Mobile Menu
 - [ ] Navigation
+
+## Phase 2.0
+### Templates
+- [ ] Customer/Account
+- [ ] Customer/Activate Account
+- [ ] Customer/Addresses
+- [ ] Customer/Login
+- [ ] Customer/Order Detail
+- [ ] Customer/Register
+- [ ] Customer/Reset Password

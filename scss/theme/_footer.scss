@@ -205,8 +205,8 @@
 
   @include breakpoint(lg) {
 
-    $main-nav-width: 150px;
-    $image-width: 320px;
+    $main-nav-width: 130px;
+    $image-width: 300px;
     $form-width: 240px;
 
     padding: 0;
@@ -318,8 +318,8 @@
 
   @include breakpoint(xl) {
 
-    $main-nav-width: 160px;
-    $image-width: 340px;
+    $main-nav-width: 140px;
+    $image-width: 320px;
     $form-width: 265px;
 
     .form {
@@ -386,8 +386,8 @@
 
   @include breakpoint(xxl) {
 
-    $main-nav-width: 170px;
-    $image-width: 360px;
+    $main-nav-width: 150px;
+    $image-width: 340px;
     $form-width: 280px;
 
     .form {
