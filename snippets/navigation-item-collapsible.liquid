@@ -12,6 +12,7 @@
 {%- if link and link != blank -%}
 
   {% assign link_active = link.active | default: false %}
+  {% assign link_collapse_id = 'collapsible--' | append: link.title | handleize | append: '--' | append: index %}
   {% assign link_title = link.title | default: '' %}
   {% assign link_url = link.url | default: '' %}
   {% assign link_has_links = false %}
@@ -23,12 +24,10 @@
 
     {% if link_has_links %}
 
-      {% assign link_collapse_id = link.title | handleize | append: '--' | append: index %}
-
       <div class="collapsible">
 
         <button
-          class="collapsible__trigger button button--collapsible-trigger "
+          class="collapsible__trigger button button--collapsible-trigger{% unless index == 1 %} collapsed{% endunless %}"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#{{ link_collapse_id }}"
@@ -39,25 +38,74 @@
           <span class="button__icon"></span>
         </button>
 
-        <div class="collapsible__main collapse" id="{{ link_collapse_id }}">
+        <div class="collapsible__main{% unless index == 1 %} collapse{% endunless %}" id="{{ link_collapse_id }}">
           <div class="collapsible__content">
 
-             {% for sub_link in link.links %}
+            <div class="sub-navigation" data-links-count="{{ link.links.size }}">
 
-              {% assign sub_link_active = sub_link.active | default: false %}
-              {% assign sub_link_title = sub_link.title | default: '' %}
-              {% assign sub_link_url = sub_link.url | default: '' %}
-              {% assign sub_link_has_links = false %}
-              {% if sub_link.links.size > 0 %}
-                {% assign sub_link_has_links = true %}
-              {% endif %}
+              {% for sub_link in link.links %}
 
-            {% endfor %}
+                {% assign sub_link_active = sub_link.active | default: false %}
+                {% assign sub_link_collapse_id = 'sub-collapsible--' | append: sub_link.title | handleize | append: '--' | append: forloop.index %}
+                {% assign sub_link_title = sub_link.title | default: '' %}
+                {% assign sub_link_url = sub_link.url | default: '' %}
+                {% assign sub_link_has_links = false %}
+                {% if sub_link.links.size > 0 %}
+                  {% assign sub_link_has_links = true %}
+                {% endif %}
+
+                <div class="sub-navigation__item{% if sub_link_has_links %} has-links{% endif %}">
+
+                  {% if sub_link_has_links %}
+
+                    <div class="collapsible">
+
+                      <button
+                        class="collapsible__trigger button button--collapsible-trigger collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#{{ sub_link_collapse_id }}"
+                        aria-expanded="false"
+                        aria-controls="{{ sub_link_collapse_id }}"
+                      >
+                        <span class="button__title">{{ sub_link_title }}</span>
+                        <span class="button__icon"></span>
+                      </button>
+
+                      <div class="collapsible__main collapse" id="{{ sub_link_collapse_id }}">
+                        <div class="collapsible__content">
+
+                          <div class="sub-sub-navigation" data-links-count="{{ sub_link.links.size }}">
+                            {% for sub_sub_link in sub_link.links %}
+                              {% assign sub_sub_link_active = sub_sub_link.active | default: false %}
+                              {% assign sub_sub_link_title = sub_sub_link.title | default: '' %}
+                              {% assign sub_sub_link_url = sub_sub_link.url | default: '' %}
+                              <div class="sub-sub-navigation__item">
+                                <a class="sub-sub-navigation__link link{% if sub_sub_link_active %} active{% endif %}" href="{{ sub_sub_link_url }}">{{ sub_sub_link_title }}</a>
+                              </div>
+                            {% endfor %}
+                          </div>
+
+                        </div>
+                      </div>
+
+                    </div>
+
+                  {% else %}
+                    <a class="sub-navigation__link link caption--2{% if sub_link_active %} active{% endif %}" href="{{ sub_link_url }}">{{ sub_link_title }}</a>
+                  {% endif %}
+
+                 </div>
+
+              {% endfor %}
+
+            </div>
 
           </div>
         </div>
 
       </div>
+
     {% else %}
       <a class="navigation__link link{% if link_active %} active{% endif %}" href="{{ link_url }}">{{ link_title }}</a>
     {% endif %}

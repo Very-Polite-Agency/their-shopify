@@ -7,7 +7,7 @@
   <div class="{{ section_name }}__layout">
 
     {% if menu_main %}
-      <nav class="{{ section_name }}__navigation-main navigation--main">
+      <nav class="{{ section_name }}__navigation-main navigation">
         {% for link in linklists[menu_main].links %}
           {% render 'navigation-item-collapsible', index: forloop.index, link: link %}
         {% endfor %}
