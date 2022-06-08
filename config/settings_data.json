@@ -154,6 +154,12 @@
           "subscription_policy_hero_image": "shopify:\/\/shop_images\/policies--hero-image-01.png",
           "terms_of_service_hero_image": "shopify:\/\/shop_images\/policies--hero-image-02.png"
         }
+      },
+      "mobile-menu": {
+        "type": "mobile-menu",
+        "settings": {
+          "menu_main": "main-menu"
+        }
       }
     },
     "content_for_index": [
