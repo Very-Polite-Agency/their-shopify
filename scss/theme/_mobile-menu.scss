@@ -10,6 +10,11 @@
   height: 100%;
   z-index: 200;
 
+  .link {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
   .collapsible__trigger,
   .navigation__link,
   &__cart-link {
@@ -45,6 +50,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     &__item {
+      width: 100%;
       & + .navigation__item {
         margin-top: 16px;
       }
