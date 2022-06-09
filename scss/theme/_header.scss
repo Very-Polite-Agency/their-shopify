@@ -33,6 +33,7 @@
     color: rgba(var(--theme-colour-silver), 1);
     padding: 12px 0;
     a {
+      transition: color var(--theme-transition-duration);
       color: rgba(var(--theme-colour-gold), 1);
       text-decoration: none;
       &:hover {
