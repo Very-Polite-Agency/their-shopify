@@ -6,6 +6,10 @@
 <div class="{{ section_name }}__main">
   <div class="{{ section_name }}__layout">
 
+    <div class="{{ section_name }}__cart">
+      <a class="{{ section_name }}__cart-link link{% if request.path == '/cart' %} active{% endif %}" href="/cart">Bag [<span class="js--cart-item-count">{{ cart.item_count }} </span>]</a>
+    </div>
+
     {% if menu_main %}
       <nav class="{{ section_name }}__navigation-main navigation">
         {% for link in linklists[menu_main].links %}

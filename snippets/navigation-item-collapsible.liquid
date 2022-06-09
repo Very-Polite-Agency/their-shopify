@@ -20,14 +20,14 @@
     {% assign link_has_links = true %}
   {% endif %}
 
-  <div class="navigation__item{% if link_has_links %} has-links{% endif %}">
+  <div class="navigation__item{% if link_has_links %} has-links{% endif %}" data-item-index="{{ index }}">
 
     {% if link_has_links %}
 
       <div class="collapsible">
 
         <button
-          class="collapsible__trigger button button--collapsible-trigger{% unless index == 1 %} collapsed{% endunless %}"
+          class="collapsible__trigger button button--collapsible-trigger collapsed"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#{{ link_collapse_id }}"
@@ -38,7 +38,7 @@
           <span class="button__icon"></span>
         </button>
 
-        <div class="collapsible__main{% unless index == 1 %} collapse{% endunless %}" id="{{ link_collapse_id }}">
+        <div class="collapsible__main collapse" id="{{ link_collapse_id }}">
           <div class="collapsible__content">
 
             <div class="sub-navigation" data-links-count="{{ link.links.size }}">
