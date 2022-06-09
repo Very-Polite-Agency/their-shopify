@@ -3,7 +3,7 @@
   color: rgba(var(--theme-colour-black),1);
 
   &__cta {
-    margin-top: 32px;
+    margin-top: 10px;
   }
 
   &__date {
@@ -27,7 +27,7 @@
       }
     }
     & + .card-article__content {
-      margin-top: 40px;
+      margin-top: 20px;
     }
   }
 
