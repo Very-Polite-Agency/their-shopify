@@ -61,7 +61,7 @@
       "type": "faqs",
       "settings": {
         "heading": "Shipping & Returns",
-        "title": "",
+        "title": "Shipping & Returns",
         "message": "<p>Curabitur id dictum nisl, et auctor dui. Integer sem nunc, hendrerit pharetra luctus nec, suscipit vel libero. Morbi mattis ipsum quis risus fringilla, nec ultrices tortor tristique. Donec tempus augue quam. Nullam at elit id augue ultricies finibus. In hac habitasse platea dictumst. Sed sed tellus hendrerit velit molestie egestas ac ut libero. Nunc sit amet dui libero.<\/p>",
         "anchor_id": ""
       }
