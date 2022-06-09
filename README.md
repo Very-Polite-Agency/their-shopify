@@ -10,7 +10,7 @@ https://their-jewelry-and-accessories.myshopify.com
 - [x] Article
 - [x] Blog
 - [ ] Cart
-- [ ] Collection (PLP)
+- [x] Collection (PLP)
 - [ ] Collection Listing
 - [ ] Contact
 - [ ] FAQs

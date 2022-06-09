@@ -30,8 +30,15 @@
 
   &__announcements {
     background: rgba(var(--theme-colour-black), 1);
-    color: rgba(var(--theme-colour-white), 1);
+    color: rgba(var(--theme-colour-silver), 1);
     padding: 12px 0;
+    a {
+      color: rgba(var(--theme-colour-gold), 1);
+      text-decoration: none;
+      &:hover {
+        color: rgba(var(--theme-colour-silver), 1);
+      }
+    }
     p {
       margin: 0;
       padding: 0;
