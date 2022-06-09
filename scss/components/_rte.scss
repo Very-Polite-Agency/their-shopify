@@ -48,6 +48,14 @@
     padding: 20px 0;
   }
 
+  script {
+    & + ol,
+    & + p,
+    & + ul {
+      margin-top: 30px;
+    }
+  }
+
   @include breakpoint(sm) {} // min width sm
 
   @include breakpoint(md) {} // min width md
