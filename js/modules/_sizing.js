@@ -20,11 +20,6 @@ const Sizing = (() => {
     if ( height ) tools.setCSSVariable( 'theme-viewport-height--total', height + 'px' );
   };
 
-  const setMaxContainerLeftOffset = () => {
-    let block = document.querySelector( '.container .col-12' ).getBoundingClientRect() || 0;
-    if ( block ) tools.setCSSVariable( 'theme-container-max-offset-left', block.left + 'px' );
-  };
-
   //////////////////////////////////////////////////////////
   ////  Init
   //////////////////////////////////////////////////////////
@@ -35,7 +30,6 @@ const Sizing = (() => {
 
     tools.setHeaderHeightTotalCSSVariable();
     setViewportHeightTotalCSSVariable();
-    setMaxContainerLeftOffset();
 
     // ---------------------------------------- On resize, execute functions
     window.addEventListener( 'resize', function(e) {
@@ -43,7 +37,6 @@ const Sizing = (() => {
         window.requestAnimationFrame(function() {
           tools.setHeaderHeightTotalCSSVariable();
           setViewportHeightTotalCSSVariable();
-          setMaxContainerLeftOffset();
           throttled = false;
         });
         throttled = true;

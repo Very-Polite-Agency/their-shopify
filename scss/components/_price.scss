@@ -1,8 +1,19 @@
 .price {
-  &__value {
-    &.sale-price {
-      opacity: 0.3333;
-      text-decoration: line-through;
-    }
+  display: inline-flex;
+  align-items: center;
+  .compare-at-price {
+    opacity: 0.3333;
+    text-decoration: line-through;
+    margin-left: 10px;
+  }
+  &__currency-code,
+  &__currency-symbol {
+    display: block;
+  }
+  &__amount {
+    display: inline-flex;
+  }
+  &__currency-code {
+    margin-left: 3px;
   }
 }

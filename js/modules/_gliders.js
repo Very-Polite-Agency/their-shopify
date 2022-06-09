@@ -91,9 +91,11 @@ const Gliders = (() => {
       switch ( style ) {
         case 'header-announcements': {
           options = gliderOptions({
-            autoplay: 0,
+            autoplay: 3800,
             gap: 0,
             peek: 0,
+            perView: 1,
+            breakpoints: {},
           });
           break;
         }

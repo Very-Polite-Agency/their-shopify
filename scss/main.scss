@@ -110,7 +110,7 @@
   --theme-header-height--xl: #{ map-get( $theme-header-heights, 'xl' ) };
   --theme-header-height--xxl: #{ map-get( $theme-header-heights, 'xxl' ) };
 
-  --theme-container-max-offset-left: auto;
+  --theme-header-height--total: auto;
 
   // ---------------------------------------- Icon
   --theme-icon-size-social: 32px;

@@ -12,27 +12,35 @@
       align-items: baseline;
       margin-top: 10px;
     }
-    &__price {}
+    &__price {
+      font-weight: 300;
+    }
     &__title {
       text-transform: none;
+      flex: 1;
+      padding-right: 20px;
+      font-weight: 400;
     }
   }
 
   &__hero {
+    margin-top: 50px;
     &-layout {
       display: inline-flex;
       width: 100%;
       flex-flow: column;
     }
-    & + .collection-product-grid__main {
-      margin-top: 50px;
-    }
+  }
+
+  &__main {
+    margin-top: 25px;
   }
 
   &__sort-filter {
     display: inline-flex;
     width: 100%;
     align-items: baseline;
+    margin-top: 32px;
     &-label {
       width: auto;
       & + .collection-product-grid__sort-filter-options {
@@ -71,7 +79,13 @@
 
   @include breakpoint(md) {} // min width md
 
-  @include breakpoint(lg) {} // min width lg
+  @include breakpoint(lg) {
+
+    &__main {
+      margin-top: 50px;
+    }
+
+  } // min width lg
 
   @include breakpoint(xl) {} // min width xl
 

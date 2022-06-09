@@ -15,12 +15,12 @@ https://their-jewelry-and-accessories.myshopify.com
 - [ ] Contact
 - [ ] FAQs
 - [ ] Home page
-- [ ] Policy Pages
+- [x] Policy Pages
 - [ ] Product (PDP)
 
 ### Sections
 - [x] 404
-- [ ] Announcements
+- [x] Announcements
 - [ ] Cookie Consent
 - [ ] Dynamic Cart
 - [x] Footer

@@ -3,7 +3,8 @@
     Accepts:
     - classes: {String} Any combination of words
     - product: {Object} Product Liquid object,
-    - show_symbol: {Boolean} Conditionally show the currency symbol
+    - show_currency_code: {Boolean} Conditionally show the currency code
+    - show_currency_symbol: {Boolean} Conditionally show the currency symbol
 
     Usage:
     {%- render 'price', classes: 'my-great-class another-class',  product: product -%}
@@ -20,22 +21,27 @@
   {% endif %}
 
   {%- assign available = product.available -%}
+  {%- assign currency_code = shop.currency.iso_code | default: 'CAD' -%}
+  {%- assign currency_symbol = shop.currency.symbol | default: '$' -%}
   {%- assign price = product.price -%}
   {%- assign price_compare = product.compare_at_price -%}
-  {%- assign show_symbol = show_symbol | default: false -%}
+  {%- assign show_currency_code = show_currency_code | default: false -%}
+  {%- assign show_currency_symbol = show_currency_symbol | default: false -%}
   {%- assign symbol = shop.currency.symbol | default: '$' -%}
 
   <div class="{{ snippet_classes }}{% if show_symbol %} with-currency-symbol{% endif %}">
-    <span class="{{ snippet_name }}__amount">
-      {% if show_symbol %}<span class="{{ snippet_name }}__currency-symbol">{{- symbol -}}</span>{% endif %}
-      {{- price | money_without_currency -}}
-    </span>
     {%- if price_compare -%}
-      <span class="{{ snippet_name }}__amount compare-at-price">
-        {% if show_symbol %}<span class="{{ snippet_name }}__currency-symbol">{{- symbol -}}</span>{% endif %}
-        {{- price_compare | money_without_currency -}}
+      <span class="{{ snippet_name }}__amount">
+        {%- if show_symbol -%}<span class="{{ snippet_name }}__currency-symbol">{{ currency_symbol }}</span>{%- endif -%}
+        {{- price_compare | divided_by: 100 -}}
+        {%- if show_currency_code -%}<span class="{{ snippet_name }}__currency-code">{{ currency_code }}</span>{%- endif -%}
       </span>
     {%- endif -%}
+    <span class="{{ snippet_name }}__amount{% if price_compare %} compare-at-price{% endif %}">
+      {%- if show_symbol -%}<span class="{{ snippet_name }}__currency-symbol">{{ currency_symbol }}</span>{%- endif -%}
+      {{- price | divided_by: 100 -}}
+      {%- if show_currency_code -%}<span class="{{ snippet_name }}__currency-code">{{ currency_code }}</span>{%- endif -%}
+    </span>
   </div>
 
 {%- endif -%}
