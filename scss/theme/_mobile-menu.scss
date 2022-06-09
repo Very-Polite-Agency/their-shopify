@@ -1,11 +1,12 @@
 .mobile-menu {
 
+  transition: transform var(--theme-transition-duration);
   background: rgba(var(--theme-colour-black), 1);
   color: rgba(var(--theme-colour-white), 1);
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
+  right: calc(-1 * var(--theme-mobile-menu-width));
+  width: var(--theme-mobile-menu-width);
   height: 100%;
   z-index: 200;
 
@@ -61,6 +62,11 @@
       letter-spacing: 0.25em;
       text-transform: uppercase;
     }
+    .collapsible {
+      &__content {
+        padding-bottom: 20px;
+      }
+    }
     &__item {
       margin-top: 12px;
     }
@@ -75,7 +81,7 @@
       font-family: var(--theme-font-family--sans-serif--primary);
       font-style: normal;
       font-weight: 300;
-      font-size: 12px;
+      font-size: 15px;
       line-height: 1;
       text-transform: capitalize;
       &.active,
@@ -98,9 +104,23 @@
     padding: var(--bs-container-fluid-padding);
   }
 
-  @include breakpoint(sm) {} // min width sm
+  .mobile-menu--active & {
+    overflow-y: scroll;
+  }
 
-  @include breakpoint(md) {} // min width md
+  @include breakpoint(sm) {
+
+    right: calc(-1 * var(--theme-mobile-menu-width--sm));
+    width: var(--theme-mobile-menu-width--sm);
+
+  } // min width sm
+
+  @include breakpoint(md) {
+
+    right: calc(-1 * var(--theme-mobile-menu-width--md));
+    width: var(--theme-mobile-menu-width--md);
+
+  } // min width md
 
   @include breakpoint(lg) {} // min width lg
 

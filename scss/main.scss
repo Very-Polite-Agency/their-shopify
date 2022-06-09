@@ -123,6 +123,11 @@
   --theme-font-family--sans-serif--primary: rustica, sans-serif;
   --theme-font-family--serif--primary: 'PP Cirka', serif;
 
+  // ---------------------------------------- Mobile Menu Width
+  --theme-mobile-menu-width: 285px;
+  --theme-mobile-menu-width--sm: 305px;
+  --theme-mobile-menu-width--md: 325px;
+
   // ---------------------------------------- Section Padding
   --theme-section-padding: #{ map-get( $theme-section-padding-sizes, 'base' ) };
   --theme-section-padding--sm: #{ map-get( $theme-section-padding-sizes, 'sm' ) };

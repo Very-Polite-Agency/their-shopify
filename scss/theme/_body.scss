@@ -9,12 +9,54 @@ html {
 }
 
 body {
+
+  transition: transform var(--theme-transition-duration);
   display: flex;
   flex-direction: column;
+  left: 0;
+  overflow-x: hidden;
+  transform: translate3d( 0, 0, 0 );
+
   main {
     flex: 1 0 auto;
   }
+
   footer {
     flex-shrink: 0;
   }
+
+  &.mobile-menu--active {
+    transform: translate3d( calc(-1 * var(--theme-mobile-menu-width)), 0, 0 );
+    overflow: hidden;
+    position: relative;
+  }
+
+  @include breakpoint(sm) {
+
+    &.mobile-menu--active {
+      transform: translate3d( calc(-1 * var(--theme-mobile-menu-width--sm)), 0, 0 );
+    }
+
+  } // min width sm
+
+  @include breakpoint(md) {
+
+    &.mobile-menu--active {
+      transform: translate3d( calc(-1 * var(--theme-mobile-menu-width--md)), 0, 0 );
+    }
+
+  } // min width md
+
+  @include breakpoint(lg) {
+
+    &.mobile-menu--active {
+      transform: translate3d( 0, 0, 0 );
+    }
+
+  } // min width lg
+
+  @include breakpoint(xl) {} // min width xl
+
+  @include breakpoint(xxl) {} // min width xxl
+
 }
