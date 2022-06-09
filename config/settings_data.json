@@ -158,7 +158,7 @@
       "mobile-menu": {
         "type": "mobile-menu",
         "settings": {
-          "menu_main": "main-menu"
+          "menu_main": "mobile-menu"
         }
       }
     },
