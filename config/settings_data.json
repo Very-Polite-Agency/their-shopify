@@ -127,6 +127,31 @@
       },
       "header": {
         "type": "header",
+        "blocks": {
+          "798af693-4436-4e42-99e1-643f82935c14": {
+            "type": "announcement",
+            "settings": {
+              "title": "<p>Nunc quis condimentum leo, sed maximus sapien. Vestibulum nulla purus, ultricies sed pharetra.<\/p>"
+            }
+          },
+          "3b93f335-dd55-4ca6-801a-96bd87f7e3a4": {
+            "type": "announcement",
+            "settings": {
+              "title": ""
+            }
+          },
+          "bd4065a3-0319-43f1-9d30-8facefb7866d": {
+            "type": "announcement",
+            "settings": {
+              "title": ""
+            }
+          }
+        },
+        "block_order": [
+          "798af693-4436-4e42-99e1-643f82935c14",
+          "3b93f335-dd55-4ca6-801a-96bd87f7e3a4",
+          "bd4065a3-0319-43f1-9d30-8facefb7866d"
+        ],
         "settings": {
           "menu_main": "main-menu",
           "menu_main_extras": "extras"
