@@ -11,6 +11,9 @@
     justify-content: flex-end;
     width: 100%;
     display: flex;
+    &-link {
+      line-height: 1.165;
+    }
   }
 
   &__heading {

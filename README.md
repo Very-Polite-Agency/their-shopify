@@ -7,8 +7,8 @@ https://their-jewelry-and-accessories.myshopify.com
 ## Phase 1.0
 ### Templates
 - [x] 404
-- [ ] Article
-- [ ] Blog
+- [x] Article
+- [x] Blog
 - [ ] Cart
 - [ ] Collection (PLP)
 - [ ] Collection Listing
@@ -25,9 +25,11 @@ https://their-jewelry-and-accessories.myshopify.com
 - [ ] Dynamic Cart
 - [x] Footer
 - [x] Header
-- [ ] Home page
-- [ ] Mobile Menu
-- [ ] Navigation
+- [x] Mobile Menu
+- [x] Navigation
+
+### General
+- [ ] Remove 'post_per_page' override on the main-blog.liquid section
 
 ## Phase 2.0
 ### Templates

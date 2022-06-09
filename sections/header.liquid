@@ -1,22 +1,45 @@
 {% assign section_name = 'header' %}
 {% assign section_id = section_name | append: '--' | append: section.id %}
 
+{% assign aos_id = section_id | append: '--aos' %}
+{% assign aos_delay = 250 %}
+{% assign aos_delay_increment = 250 %}
+
 {% assign announcements = section.blocks | where: 'type', 'announcement' | default: false %}
+{% assign glider_id = section_id | append: '--glider' %}
+{% assign is_glider = false %}
 {% assign menu_main = section.settings.menu_main | default: false %}
 {% assign menu_main_extras = section.settings.menu_main_extras | default: false %}
 
 {% if announcements %}
+
+  {% if announcements.size > 1 %}
+    {% assign is_glider = true %}
+  {% endif %}
+
   <div class="{{ section_name }}__announcements">
     {% render 'bs-container', container: 'container', state: 'open' %}
-      {% for item in announcements %}
 
-        {% assign message = item.settings.title | default: '' %}
+      {% if is_glider %}<div class="glide js--glider" id="{{ glider_id }}" data-glide-style="{{ section_name }}-announcements">{% endif %}
+        {% if is_glider %}<div class="glide__track" data-glide-el="track">{% endif %}
+          {% if is_glider %}<ul class="glide__slides">{% endif %}
 
-        {% if message != blank %}
-          <div class="{{ section_name }}__announcements-item">{{ message }}</div>
-        {% endif %}
+            {% for item in announcements %}
 
-      {% endfor %}
+              {% assign message = item.settings.title | default: '' %}
+
+              {% if message != blank %}
+                {% if is_glider %}<li class="glide__slide">{% endif %}
+                  <div class="{{ section_name }}__announcements-item">{{ message }}</div>
+                {% if is_glider %}</li>{% endif %}
+              {% endif %}
+
+            {% endfor %}
+
+          {% if is_glider %}</ul>{% endif %}
+        {% if is_glider %}</div>{% endif %}
+      {% if is_glider %}</div>{% endif %}
+
     {% render 'bs-container', state: 'closed' %}
   </div>
 {% endif %}

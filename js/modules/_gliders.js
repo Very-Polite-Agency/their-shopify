@@ -5,7 +5,7 @@
 const Gliders = (() => {
 
   let debug = false;
-  let info = { name : 'Gliders', version : '1.0' };
+  let info = { name : 'Gliders', version : '1.1' };
 
   let tools = new Tools();
   let breakpoints = new Breakpoints();
@@ -67,7 +67,7 @@ const Gliders = (() => {
 
     let gliderElements = getGliders();
 
-    for( let i = 0; i < gliderElements.length; i++ ) {
+    for ( let i = 0; i < gliderElements.length; i++ ) {
 
       let element = gliderElements[i];
       let id = element.id;
@@ -89,117 +89,14 @@ const Gliders = (() => {
       };
 
       switch ( style ) {
-
-        case 'educational-carousel-detailed':
+        case 'header-announcements': {
           options = gliderOptions({
             autoplay: 0,
-            breakpoints: {
-              9999: {
-                focusAt: 0,
-                gap: 32,
-                peek: { before: 0, after: 175 },
-                perView: 5,
-              },
-              1599: {
-                focusAt: 0,
-                gap: 32,
-                peek: { before: 0, after: 150 },
-                perView: 4,
-              },
-              1299: {
-                focusAt: 0,
-                gap: 32,
-                peek: { before: 0, after: 125 },
-                perView: 3,
-              },
-              991: {
-                // up to 992
-                focusAt: 0,
-                gap: 32,
-                peek: { before: 0, after: 100 },
-                perView: 2,
-              },
-              767: {
-                // up to 768
-                focusAt: 0,
-                gap: 32,
-                peek: { before: 0, after: 75 },
-                perView: 1,
-              },
-              575: {
-                // up to 576
-                focusAt: 0,
-                perView: 1,
-              }
-            },
             gap: 0,
             peek: 0,
           });
           break;
-        case 'educational-carousel-minimal':
-          options = gliderOptions({
-            breakpoints: {
-              9999: {
-                // up to 1400
-                focusAt: 'center',
-                gap: 72,
-                peek: 0,
-                perView: 11,
-              },
-              1599: {
-                // up to 1400
-                focusAt: 'center',
-                gap: 62,
-                peek: 0,
-                perView: 9,
-              },
-              1399: {
-                // up to 1400
-                focusAt: 'center',
-                gap: 52,
-                peek: 0,
-                perView: 7,
-              },
-              1199: {
-                // up to 1200
-                focusAt: 'center',
-                gap: 42,
-                peek: 0,
-                perView: 6,
-              },
-              991: {
-                // up to 992
-                focusAt: 'center',
-                gap: 32,
-                peek: 0,
-                perView: 5,
-              },
-              767: {
-                // up to 768
-                focusAt: 'center',
-                gap: 32,
-                peek: { before: 55, after: 55 },
-                perView: 4,
-              },
-              575: {
-                // up to 576
-                focusAt: 'center',
-                gap: 32,
-                peek: { before: 35, after: 35 },
-                perView: 3,
-              },
-              400: {
-                // up to 576
-                focusAt: 'center',
-                gap: 32,
-                peek: { before: 15, after: 15 },
-                perView: 1,
-              },
-            },
-            gap: 32,
-            peek: 0,
-          });
-          break;
+        }
       }
 
       if ( gap ) {
@@ -265,31 +162,19 @@ const Gliders = (() => {
           let eventsToWatch = [ 'build.after', 'run.after' ]; // recently removed 'run'
 
           glide.on( 'mount.after', function( e ) {
+
             glider.glider = glide;
             glider.active = true;
             gliders[$id] = glider;
+
+            setTimeout( function() {
+              glide.update();
+            }, 250 );
+
           });
 
           glide.on( eventsToWatch, function() {
-
             setTimeout( () => updateGliderHeight( glider.element ), 100 );
-
-            if ( 'soul' === glider.style ) {
-
-              let activeSlideImage = glider.element.querySelector('.glide__slide--active .soul__item-image') || false;
-              let button = glider.element.querySelector('.glide__button') || false;
-
-              if ( activeSlideImage && button ) {
-                let imageHeight = activeSlideImage.offsetHeight;
-                let buttonHeight = button.offsetHeight;
-                let offset = ( imageHeight - buttonHeight ) / 2;
-                glider.element.querySelectorAll('.glide__button').forEach((button) => {
-                  button.style.top = offset + 'px';
-                });
-              }
-
-            }
-
           });
 
           ( document.querySelectorAll('[data-target="#' + glider.id + '"].next') || [] ).forEach( button => {
@@ -304,19 +189,7 @@ const Gliders = (() => {
             });
           });
 
-//           ( document.querySelectorAll('[data-target="#' + glider.id + '"].bullet') || [] ).forEach( button => {
-//             button.addEventListener('click', function () {
-//
-//               let pattern = button.dataset.glideDir || '';
-//               if ( pattern ) {
-//                 glide.go( pattern );
-//               }
-//
-//             });
-//           });
-
           glide.mount();
-
 
         }
       } else {
