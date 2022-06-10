@@ -80,12 +80,18 @@
     {% section 'header' %}
 
     <main class="{% render 'theme--classes' %} content-for-layout focus-none" role="main" tabindex="-1" data-request-path="{{ request.path }}">
-      {% case request.path %}
-        {% when '/policies/refund-policy', '/policies/terms-of-service', '/policies/privacy-policy', '/policies/shipping-policy' %}
-          {% section 'policies' %}
-        {% else %}
-          {{ content_for_layout }}
-      {% endcase %}
+      {% if request.path contains 'faqs' %}
+        <div class="random">
+          {% for i in (1..5) %}
+            <div class="random__item" data-index="{{ i }}"></div>
+          {% endfor %}
+        </div>
+      {% endif %}
+      {% if request.path contains 'policies' %}
+        {% section 'policies' %}
+      {% else %}
+        {{ content_for_layout }}
+      {% endif %}
     </main>
 
     {% section 'footer' %}
