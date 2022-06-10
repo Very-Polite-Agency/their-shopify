@@ -1,7 +1,8 @@
 {
   "order": [
     "16511013082a131ed6",
-    "1651101316fa26364a"
+    "1651101316fa26364a",
+    "1654887576250c0d0c"
   ],
   "sections": {
     "16511013082a131ed6": {
@@ -61,8 +62,17 @@
       "type": "faqs",
       "settings": {
         "heading": "Shipping & Returns",
-        "title": "Shipping & Returns",
+        "title": "",
         "message": "<p>Curabitur id dictum nisl, et auctor dui. Integer sem nunc, hendrerit pharetra luctus nec, suscipit vel libero. Morbi mattis ipsum quis risus fringilla, nec ultrices tortor tristique. Donec tempus augue quam. Nullam at elit id augue ultricies finibus. In hac habitasse platea dictumst. Sed sed tellus hendrerit velit molestie egestas ac ut libero. Nunc sit amet dui libero.<\/p>",
+        "anchor_id": ""
+      }
+    },
+    "1654887576250c0d0c": {
+      "type": "faqs",
+      "settings": {
+        "heading": "",
+        "title": "",
+        "message": "",
         "anchor_id": ""
       }
     }
