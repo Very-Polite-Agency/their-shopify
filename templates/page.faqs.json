@@ -60,6 +60,42 @@
     },
     "1651101316fa26364a": {
       "type": "faqs",
+      "blocks": {
+        "193ff746-9978-40df-a003-96dc053439b4": {
+          "type": "faq",
+          "settings": {
+            "title": "",
+            "answer": ""
+          }
+        },
+        "bfb841dd-4a1c-47c4-94be-358b912a8088": {
+          "type": "faq",
+          "settings": {
+            "title": "",
+            "answer": ""
+          }
+        },
+        "90e55309-8f51-4c1d-a8bb-0280095a0477": {
+          "type": "faq",
+          "settings": {
+            "title": "",
+            "answer": ""
+          }
+        },
+        "0b595287-947d-4f3e-83ad-d22fe8498592": {
+          "type": "faq",
+          "settings": {
+            "title": "",
+            "answer": ""
+          }
+        }
+      },
+      "block_order": [
+        "193ff746-9978-40df-a003-96dc053439b4",
+        "bfb841dd-4a1c-47c4-94be-358b912a8088",
+        "90e55309-8f51-4c1d-a8bb-0280095a0477",
+        "0b595287-947d-4f3e-83ad-d22fe8498592"
+      ],
       "settings": {
         "heading": "Shipping & Returns",
         "title": "",
@@ -69,6 +105,34 @@
     },
     "1654887576250c0d0c": {
       "type": "faqs",
+      "blocks": {
+        "14538947-9c68-4233-bf99-d0f5747859a7": {
+          "type": "faq",
+          "settings": {
+            "title": "",
+            "answer": ""
+          }
+        },
+        "1bf46a93-c149-4ada-b7aa-c7f296538ea6": {
+          "type": "faq",
+          "settings": {
+            "title": "",
+            "answer": ""
+          }
+        },
+        "cd6ef9f6-cc03-4268-be40-9b070a47ff71": {
+          "type": "faq",
+          "settings": {
+            "title": "",
+            "answer": ""
+          }
+        }
+      },
+      "block_order": [
+        "14538947-9c68-4233-bf99-d0f5747859a7",
+        "1bf46a93-c149-4ada-b7aa-c7f296538ea6",
+        "cd6ef9f6-cc03-4268-be40-9b070a47ff71"
+      ],
       "settings": {
         "heading": "Our Materials",
         "title": "",
