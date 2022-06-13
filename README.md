@@ -13,7 +13,7 @@ https://their-jewelry-and-accessories.myshopify.com
 - [x] Collection (PLP)
 - [ ] Collection Listing
 - [ ] Contact
-- [ ] FAQs
+- [x] FAQs
 - [ ] Home page
 - [x] Policy Pages
 - [ ] Product (PDP)
@@ -24,7 +24,11 @@ https://their-jewelry-and-accessories.myshopify.com
 - [ ] Cookie Consent
 - [ ] Dynamic Cart
 - [x] Footer
+- [ ] Feature Panel 01
+- [ ] Feature Panel 02
+- [ ] Feature Panel 03
 - [x] Header
+- [ ] Hero (with content option)
 - [x] Mobile Menu
 - [x] Navigation
 

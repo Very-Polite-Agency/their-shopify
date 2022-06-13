@@ -1,0 +1,54 @@
+{%- assign section_name = 'feature-panel-01' -%}
+{%- assign section_id = section_name | append: '--' | append: section.id -%}
+
+{%- assign columns = section.settings.width | default: 'col-12' -%}
+{%- assign width = section.settings.width | default: 'full' -%}
+
+{%- if section.settings.anchor_id != blank -%}
+  {%- assign section_id = section.settings.anchor_id -%}
+{%- endif -%}
+
+{%- case width -%}
+  {%- when 'full' -%}
+    {%- assign columns = 'col-12' -%}
+  {%- when 'inset' -%}
+    {%- assign columns = 'col-12 col-lg-10 offset-lg-1' -%}
+{%- endcase -%}
+
+<div class="{{ section_name }}" id="{{ section_id }}">
+  {% render 'bs-container', state: 'open', col: columns %}
+    <h1>Feature Panel 02</h1>
+  {% render 'bs-container', state: 'closed' %}
+</div>
+
+{% schema %}
+{
+  "name": "Feature Panel 02",
+  "tag": "section",
+  "class": "section section--feature-panel-01",
+  "settings": [
+    {
+      "label": "Anchor ID",
+      "info": "Optionally include a unique ID so that sections within the page can be linked to. Anchor IDs must be all lowercase, unique and replaced empty spaces with hyphens. For example: my-great-section-anchor",
+      "type": "text",
+      "id": "anchor_id"
+    },
+    {
+      "label": "Width",
+      "type": "select",
+      "options": [
+        { "value": "full", "label": "Full" },
+        { "value": "inset", "label": "Inset" }
+      ],
+      "default": "full",
+      "id": "width"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Feature Panel 02"
+    }
+  ]
+}
+{% endschema %}
