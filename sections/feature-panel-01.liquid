@@ -1,8 +1,7 @@
 {%- assign section_name = 'feature-panel-01' -%}
 {%- assign section_id = section_name | append: '--' | append: section.id -%}
 
-{%- assign columns = section.settings.width | default: 'col-12' -%}
-{%- assign width = section.settings.width | default: 'full' -%}
+{% assign message = section.settings.message | default: '' %}
 
 {%- if section.settings.anchor_id != blank -%}
   {%- assign section_id = section.settings.anchor_id -%}
@@ -28,20 +27,51 @@
   "class": "section section--feature-panel-01",
   "settings": [
     {
+      "content": "Content",
+      "type": "header"
+    },
+    {
+      "label": "Message",
+      "type": "richtext",
+      "id": "message"
+    },
+    {
+      "content": "Media",
+      "type": "header"
+    },
+    {
+      "label": "Stamp",
+      "type": "image_picker",
+      "id": "stamp"
+    },
+    {
+      "content": "Footnote",
+      "type": "paragraph"
+    },
+    {
+      "label": "Image",
+      "type": "image_picker",
+      "id": "footnote_image"
+    },
+    {
+      "label": "Caption",
+      "type": "image_picker",
+      "id": "footnote_caption"
+    },
+    {
+      "content": "Auxiliary",
+      "type": "paragraph"
+    },
+    {
+      "label": "Image",
+      "type": "image_picker",
+      "id": "auxiliary_image"
+    },
+    {
       "label": "Anchor ID",
       "info": "Optionally include a unique ID so that sections within the page can be linked to. Anchor IDs must be all lowercase, unique and replaced empty spaces with hyphens. For example: my-great-section-anchor",
       "type": "text",
       "id": "anchor_id"
-    },
-    {
-      "label": "Width",
-      "type": "select",
-      "options": [
-        { "value": "full", "label": "Full" },
-        { "value": "inset", "label": "Inset" }
-      ],
-      "default": "full",
-      "id": "width"
     }
   ],
   "blocks": [],
