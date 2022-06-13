@@ -7,10 +7,11 @@
     "1655160859cf10859f": {
       "type": "hero",
       "settings": {
-        "heading": "",
-        "message": "",
+        "heading": "We believe in creating jewelry that can last lifetimes.",
+        "message": "<p>The pieces we design aren’t about what’s happening around you like trends and popular opinions - we create pieces that celebrate who you are.<\/p>",
+        "image": "shopify:\/\/shop_images\/hero--secondary-image-4x5.png",
         "image_caption": "",
-        "style": "primary"
+        "style": "secondary"
       }
     },
     "16551608611a2689b3": {
