@@ -1,7 +1,9 @@
 {
   "order": [
     "1655160859cf10859f",
-    "16551608611a2689b3"
+    "16551608611a2689b3",
+    "1655161190b45a6c54",
+    "165516160734ca1368"
   ],
   "sections": {
     "1655160859cf10859f": {
@@ -18,8 +20,25 @@
       "type": "feature-panel-01",
       "settings": {
         "message": "<p>Our brand concept is inspired by the circular notion of heirlooms and recycled materials. The transformation of gold from raw to fluid to forged makes up the pillars of the brand's organically formed messaging, the fluidity of personas in photography and intentional products.<\/p>",
+        "stamp": "shopify:\/\/shop_images\/feature-panel-01--stamp_3x_31242608-f9b1-44e2-a61d-1be08a666ae8.png",
         "footnote_image": "shopify:\/\/shop_images\/footnote-image.png",
+        "footnote_caption": "1% For The Planet",
+        "auxiliary_image": "shopify:\/\/shop_images\/feature-panel-01--auxiliary.png",
         "anchor_id": ""
+      }
+    },
+    "1655161190b45a6c54": {
+      "type": "feature-panel-02",
+      "settings": {
+        "anchor_id": "",
+        "width": "full"
+      }
+    },
+    "165516160734ca1368": {
+      "type": "feature-panel-03",
+      "settings": {
+        "anchor_id": "",
+        "width": "full"
       }
     }
   }
