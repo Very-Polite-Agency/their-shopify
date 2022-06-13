@@ -18,6 +18,7 @@
       "type": "feature-panel-01",
       "settings": {
         "message": "<p>Our brand concept is inspired by the circular notion of heirlooms and recycled materials. The transformation of gold from raw to fluid to forged makes up the pillars of the brand's organically formed messaging, the fluidity of personas in photography and intentional products.<\/p>",
+        "footnote_image": "shopify:\/\/shop_images\/footnote-image.png",
         "anchor_id": ""
       }
     }
