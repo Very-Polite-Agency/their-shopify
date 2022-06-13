@@ -1,3 +1,15 @@
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-12px);
+  }
+  60% {
+    transform: translateY(-6px);
+  }
+}
+
 .hero {
 
   position: relative;
@@ -14,6 +26,32 @@
     left: 0;
   }
 
+  &__content {
+    padding: 40px 0;
+    display: block;
+    width: 100%;
+    margin: auto;
+    max-width: 420px;
+  }
+
+  &__heading {
+    & + .hero__message {
+      margin-top: 12px;
+    }
+  }
+
+  &__image {
+    &-caption {
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      position: absolute;
+      top: 22px;
+      right: 16px;
+      display: block;
+      line-height: 1;
+    }
+  }
+
   &__indicator {
     color: rgba(var(--theme-colour-white),1);
     position: absolute;
@@ -27,6 +65,8 @@
     &-icon {
       height: 12px;
       width: auto;
+      animation: bounce 1.2s infinite;
+      margin: auto;
       svg {
         display: block;
         height: 100%;
@@ -40,22 +80,93 @@
     z-index: 0;
     overflow: hidden;
     width: 100%;
-    aspect-ratio: 3/2;
-    @supports not (aspect-ratio: auto) {
-      height: 300px;
+    width: calc(100% + (2 * var(--bs-container-fluid-padding)));
+    left: calc(-1 * var(--bs-container-fluid-padding));
+  }
+
+  &[data-style-primary] {
+    .hero {
+      &__media {
+        aspect-ratio: 3/2;
+        @supports not (aspect-ratio: auto) {
+          height: 300px;
+        }
+      }
+    }
+  }
+
+  &[data-style-secondary] {
+    .hero {
+      &__media {
+        aspect-ratio: 4/5;
+        @supports not (aspect-ratio: auto) {
+          height: 500px;
+        }
+      }
     }
   }
 
   @include breakpoint(sm) {} // min width sm
 
-  @include breakpoint(md) {} // min width md
+  @include breakpoint(md) {
+
+    &__content {
+      padding: 45px 0;
+      max-width: 480px;
+    }
+
+  } // min width md
 
   @include breakpoint(lg) {
 
+    &__content {
+      padding: var(--bs-container-fluid-padding);
+      flex: 1;
+      max-width: none;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    &__heading {
+      width: 85%;
+    }
+
+    &__layout {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
     &__media {
-      aspect-ratio: 16/9;
-      @supports not (aspect-ratio: auto) {
-        height: 550px;
+      left: unset;
+    }
+
+    &__message {
+      margin: 15px 0 0 30px;
+    }
+
+    &[data-style-primary] {
+      .hero {
+        &__media {
+          aspect-ratio: 16/9;
+          @supports not (aspect-ratio: auto) {
+            height: 500px;
+          }
+        }
+      }
+    }
+
+    &[data-style-secondary] {
+      background: rgba(var(--theme-colour-black), 0.05);
+      .hero {
+        &__media {
+          aspect-ratio: 4/5;
+          width: 40%;
+          @supports not (aspect-ratio: auto) {
+            height: 500px;
+          }
+        }
       }
     }
 
@@ -63,15 +174,27 @@
 
   @include breakpoint(xl) {
 
+    &__heading {
+      width: 75%;
+    }
+
     &__media {
       @supports not (aspect-ratio: auto) {
         height: 650px;
       }
     }
 
+    &__message {
+      width: 70%;
+    }
+
   } // min width xl
 
   @include breakpoint(xxl) {
+
+    &__heading {
+      width: 65%;
+    }
 
     &__media {
       @supports not (aspect-ratio: auto) {

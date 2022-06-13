@@ -23,7 +23,7 @@
             %}
             {% if 'secondary' == style %}
               {% if image_caption != blank %}
-                <strong class="{{ section_name }}__image-caption">{{ image_caption }}</strong>
+                <strong class="{{ section_name }}__image-caption caption caption--2">{{ image_caption }}</strong>
               {% endif %}
             {% endif %}
           </div>
@@ -32,8 +32,8 @@
         {% if 'secondary' == style %}
           {% if heading != blank and message != blank %}
             <div class="{{ section_name }}__content">
-              {% if heading != blank %}<h1 class="{{ section_name }}__heading">{{ heading }}</h1>{% endif %}
-              {% if message != blank %}<div class="{{ section_name }}__message">{{ message }}</div>{% endif %}
+              {% if heading != blank %}<h1 class="{{ section_name }}__heading heading heading--1">{{ heading }}</h1>{% endif %}
+              {% if message != blank %}<div class="{{ section_name }}__message body-copy body-copy--1">{{ message }}</div>{% endif %}
             </div>
           {% endif %}
         {% endif %}
