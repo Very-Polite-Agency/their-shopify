@@ -13,24 +13,31 @@
 
 <div class="{{ section_name }}" id="{{ section_id }}">
   {% render 'bs-container', state: 'open' %}
-    {% if message != blank %}
-      <div class="{{ section_name }}__content">
-        {% if stamp %}
-          <div class="{{ section_name }}__stamp">{% render 'lazyload-image', image: stamp %}</div>
-        {% endif %}
-        <div class="{{ section_name }}__content-message heading heading--1">{{ message }}</div>
-        {% if footnote_image %}
-          <div class="{{ section_name }}__footnote">
-            <div class="{{ section_name }}__footnote-image">
-              {% render 'lazyload-image', image: footnote_image %}
+    <div class="{{ section_name }}__layout">
+      {% if message != blank %}
+        <div class="{{ section_name }}__content">
+          {% if stamp %}
+            <div class="{{ section_name }}__stamp">{% render 'lazyload-image', image: stamp %}</div>
+          {% endif %}
+          <div class="{{ section_name }}__content-message heading heading--1">{{ message }}</div>
+          {% if footnote_image %}
+            <div class="{{ section_name }}__footnote">
+              <div class="{{ section_name }}__footnote-image">
+                {% render 'lazyload-image', image: footnote_image %}
+              </div>
+              {% if footnote_caption %}
+                <strong class="{{ section_name }}__footnote-caption caption caption--2">{{ footnote_caption }}</strong>
+              {% endif %}
             </div>
-            {% if footnote_caption %}
-              <strong class="{{ section_name }}__footnote-caption caption caption--2">{{ footnote_caption }}</strong>
-            {% endif %}
-          </div>
-        {% endif %}
-      </div>
-    {% endif %}
+          {% endif %}
+        </div>
+      {% endif %}
+      {% if auxiliary_image %}
+        <div class="{{ section_name }}__auxiliary">
+          {% render 'lazyload-image', image: auxiliary_image %}
+        </div>
+      {% endif %}
+    </div>
   {% render 'bs-container', state: 'closed' %}
 </div>
 

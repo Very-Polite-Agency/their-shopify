@@ -2,18 +2,32 @@
 
   margin-top: 55px;
 
+  &__auxiliary {
+    width: calc( 100% + (2 * var(--bs-container-fluid-padding)));
+    left: calc( -1 * var(--bs-container-fluid-padding));
+    position: relative;
+  }
+
   &__footnote {
     display: inline-flex;
     width: 100%;
     align-items: flex-end;
     justify-content: space-between;
-    &-caption,
-    &-image {
-      width: 50%;
-    }
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 200px;
     &-caption {
-      padding: 8px 16px;
+      padding: 16px;
       line-height: 1;
+      flex: 1;
+    }
+    &-image {
+      aspect-ratio: 138/108;
+      max-width: 55%;
+      @supports not (aspect-ratio: auto) {
+        height: 200px;
+      }
     }
   }
 
@@ -23,6 +37,7 @@
     width: calc( 100% + (2 * var(--bs-container-fluid-padding)));
     left: calc( -1 * var(--bs-container-fluid-padding));
     position: relative;
+    padding-bottom: 250px;
     &-message {
       padding: 0 var(--bs-container-fluid-padding) 60px;
       p {
