@@ -93,6 +93,7 @@
     &__image {
       width: calc( (100% - var(--bs-gutter-width)) * 0.32 );
       & + .feature-panel-02__content {
+        margin-left: var(--bs-gutter-width);
         margin-top: 0;
       }
     }
@@ -102,7 +103,7 @@
       width: 85%;
       position: relative;
       align-items: flex-start;
-      justify-content: space-between;
+      justify-content: flex-end;
       margin: auto;
     }
 

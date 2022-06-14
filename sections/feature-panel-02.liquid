@@ -16,7 +16,7 @@
   {% render 'bs-container', state: 'open' %}
     <div class="{{ section_name }}__layout">
 
-      {% if marker %}
+      {% if marker != blank %}
         <div class="{{ section_name }}__marker caption caption--2">{{ marker }}</div>
       {% endif %}
 
