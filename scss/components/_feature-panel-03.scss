@@ -25,6 +25,9 @@
       display: block;
       line-height: 1;
     }
+    & + .feature-panel-03__content {
+      margin-top: var(--bs-gutter-width);
+    }
   }
 
   &__content {
@@ -92,6 +95,9 @@
         display: block;
         width: 185%;
         height: auto;
+      }
+      & + .feature-panel-03__content {
+        margin-top: 0;
       }
     }
 

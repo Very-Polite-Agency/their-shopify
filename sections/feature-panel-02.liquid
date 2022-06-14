@@ -16,7 +16,9 @@
   {% render 'bs-container', state: 'open' %}
     <div class="{{ section_name }}__layout">
 
-      <div class="{{ section_name }}__marker caption caption--2">{{ marker }}</div>
+      {% if marker %}
+        <div class="{{ section_name }}__marker caption caption--2">{{ marker }}</div>
+      {% endif %}
 
       {% if image %}
         <div class="{{ section_name }}__image">
