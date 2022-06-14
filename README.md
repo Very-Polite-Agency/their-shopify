@@ -27,8 +27,9 @@ https://their-jewelry-and-accessories.myshopify.com
 - [x] Footer
 - [ ] Feature Carousel
 - [x] Feature Panel 01
-- [ ] Feature Panel 02
+- [x] Feature Panel 02
 - [ ] Feature Panel 03
+- [ ] Fifty-Fifty
 - [x] Header
 - [x] Hero (with content option)
 - [x] Mobile Menu

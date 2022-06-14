@@ -1,10 +1,16 @@
 .feature-panel-03 {
 
+  margin-top: 60px;
+
   @include breakpoint(sm) {} // min width sm
 
   @include breakpoint(md) {} // min width md
 
-  @include breakpoint(lg) {} // min width lg
+  @include breakpoint(lg) {
+
+    margin-top: 120px;
+
+  } // min width lg
 
   @include breakpoint(xl) {} // min width xl
 
