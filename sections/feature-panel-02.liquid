@@ -5,7 +5,7 @@
 {% assign heading = section.settings.heading | default: '' %}
 {% assign image = section.settings.image | default: false %}
 {% assign image_caption = section.settings.image_caption | default: '' %}
-{% assign marker = section.settings.marker | default: '1' %}
+{% assign marker = section.settings.marker | default: '' %}
 {% assign message = section.settings.message | default: '' %}
 
 {%- if section.settings.anchor_id != blank -%}
@@ -16,9 +16,7 @@
   {% render 'bs-container', state: 'open' %}
     <div class="{{ section_name }}__layout">
 
-      <div class="{{ section_name }}__marker caption caption--2">
-        {{ marker }}
-      </div>
+      <div class="{{ section_name }}__marker caption caption--2">{{ marker }}</div>
 
       {% if image %}
         <div class="{{ section_name }}__image">

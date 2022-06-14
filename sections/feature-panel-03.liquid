@@ -6,6 +6,7 @@
 {% assign heading = section.settings.heading | default: '' %}
 {% assign image = section.settings.image | default: false %}
 {% assign image_caption = section.settings.image_caption | default: '' %}
+{% assign image_supporting = section.settings.image_supporting | default: false %}
 {% assign marker = section.settings.marker | default: '' %}
 {% assign message = section.settings.message | default: '' %}
 
@@ -16,6 +17,10 @@
 <div class="{{ section_name }}" id="{{ section_id }}">
   {% render 'bs-container', state: 'open' %}
     <div class="{{ section_name }}__layout">
+
+      {% if marker != blank %}
+        <div class="{{ section_name }}__marker caption caption--2">{{ marker }}</div>
+      {% endif %}
 
       {% if auxiliary_image %}
         <div class="{{ section_name }}__auxiliary-image">
@@ -48,7 +53,7 @@
           {% endif %}
 
           {% if image_caption %}
-            <strong class="{{ section_name }}__image-caption caption caption--2">{{ image_caption }}</strong>
+            <strong class="{{ section_name }}__content-image-caption caption caption--2">{{ image_caption }}</strong>
           {% endif %}
 
         </div>

@@ -5,8 +5,25 @@ main {
   position: relative;
   overflow: hidden;
 
-  &.index {
+  &.index,
+  &.page--about-us  {
     padding-bottom: 0;
   }
+
+  @include breakpoint(sm) {} // min width sm
+
+  @include breakpoint(md) {} // min width md
+
+  @include breakpoint(lg) {
+
+    &.page--about-us  {
+      padding-bottom: calc( 1.5 * var(--theme-header-height--total) );
+    }
+
+  } // min width lg
+
+  @include breakpoint(xl) {} // min width xl
+
+  @include breakpoint(xxl) {} // min width xxl
 
 }

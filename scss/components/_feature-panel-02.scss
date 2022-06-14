@@ -40,6 +40,10 @@
     }
   }
 
+  &__marker {
+    display: none;
+  }
+
   @include breakpoint(sm) {
 
     $auxiliary-image-height: 150px;
@@ -103,6 +107,7 @@
     }
 
     &__marker {
+      display: block;
       width: 10%;
     }
 

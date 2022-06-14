@@ -2,18 +2,175 @@
 
   margin-top: 60px;
 
+  &__content-supporting-image,
+  &__heading,
+  &__message {
+    position: relative;
+  }
+
+  &__auxiliary-image {
+    width: 80%;
+    position: relative;
+    a, img, svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    &-caption {
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      position: absolute;
+      top: 22px;
+      left: 16px;
+      display: block;
+      line-height: 1;
+    }
+  }
+
+  &__content {
+    position: relative;
+    background: rgba(var(--theme-colour-black), 1);
+    color: rgba(var(--theme-colour-white), 1);
+    width: calc( 100% + (2 * var(--bs-container-fluid-padding)));
+    left: calc( -1 * var(--bs-container-fluid-padding) );
+    padding: 60px var(--bs-container-fluid-padding);
+    &-background-image {
+      z-index: 0;
+    }
+    &-image-caption {
+      display: none;
+    }
+    &-supporting-image {
+      margin-top: 50px;
+      margin-left: auto;
+      width: 50%;
+      a, img, svg {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  &__heading {
+    & + .feature-panel-03__message {
+      margin-top: 12px;
+    }
+  }
+
+  &__layout {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+  }
+
+  &__marker {
+    display: none;
+  }
+
   @include breakpoint(sm) {} // min width sm
 
-  @include breakpoint(md) {} // min width md
+  @include breakpoint(md) {
+
+    &__message {
+      width: 80%;
+      margin: auto;
+    }
+
+  } // min width md
 
   @include breakpoint(lg) {
 
     margin-top: 120px;
 
+    &__auxiliary-image {
+      order: 3;
+      width: calc((100% - var(--bs-gutter-width)) * 0.32 );
+      a, img, svg {
+        display: block;
+        width: 185%;
+        height: auto;
+      }
+    }
+
+    &__content {
+      order: 2;
+      width: calc((100% - var(--bs-gutter-width)) * 0.68 );
+      left: unset;
+      margin-bottom: 20px;
+      padding: 30px 48px 48px;
+      &-image-caption {
+        display: block;
+        position: absolute;
+        bottom: -20px;
+        right: 0;
+        color: rgba(var(--theme-colour-black), 1);
+      }
+      &-supporting-image {
+        margin-top: 90px;
+        width: 35%;
+      }
+    }
+
+    &__heading {
+      & + .feature-panel-03__message {
+        margin-top: 20px;
+      }
+    }
+
+    &__layout {
+      flex-flow: row wrap;
+      width: 85%;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin: auto;
+    }
+
+    &__marker {
+      display: block;
+      width: 100%;
+      margin-bottom: 20px;
+      order: 1;
+    }
+
+    &__message {
+      width: 80%;
+      margin-right: unset;
+      margin-left: 8%;
+    }
+
   } // min width lg
 
-  @include breakpoint(xl) {} // min width xl
+  @include breakpoint(xl) {
 
-  @include breakpoint(xxl) {} // min width xxl
+    &__auxiliary-image {
+      a, img, svg {
+        width: 170%;
+      }
+    }
+
+    &__message {
+      width: 75%;
+      margin-left: 8%;
+    }
+
+  } // min width xl
+
+  @include breakpoint(xxl) {
+
+    &__auxiliary-image {
+      a, img, svg {
+        width: 155%;
+      }
+    }
+
+    &__message {
+      width: 70%;
+      margin-left: 8%;
+    }
+
+  } // min width xxl
 
 }
