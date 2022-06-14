@@ -30,15 +30,22 @@
     "1655161190b45a6c54": {
       "type": "feature-panel-02",
       "settings": {
-        "anchor_id": "",
-        "width": "full"
+        "marker": "1",
+        "heading": "Sustainability",
+        "message": "<p>Understanding that taking care of the planet is no longer a trendy proposition — it’s a necessity that current and future consumers expect.<\/p>",
+        "image": "shopify:\/\/shop_images\/feature-panel-02--image.png",
+        "image_caption": "Goal: Zero Waste 2024",
+        "auxiliary_image": "shopify:\/\/shop_images\/feature-panel-02--auxiliary.png",
+        "anchor_id": ""
       }
     },
     "165516160734ca1368": {
       "type": "feature-panel-03",
       "settings": {
-        "anchor_id": "",
-        "width": "full"
+        "marker": "2",
+        "heading": "Footprint",
+        "message": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis.<\/p>",
+        "anchor_id": ""
       }
     }
   }
