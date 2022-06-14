@@ -1,22 +1,36 @@
 {%- assign section_name = 'feature-panel-01' -%}
 {%- assign section_id = section_name | append: '--' | append: section.id -%}
 
+{% assign auxiliary_image = section.settings.auxiliary_image | default: false %}
+{% assign footnote_caption = section.settings.footnote_caption | default: '' %}
+{% assign footnote_image = section.settings.footnote_image | default: false %}
 {% assign message = section.settings.message | default: '' %}
+{% assign stamp = section.settings.stamp | default: false %}
 
 {%- if section.settings.anchor_id != blank -%}
   {%- assign section_id = section.settings.anchor_id -%}
 {%- endif -%}
 
-{%- case width -%}
-  {%- when 'full' -%}
-    {%- assign columns = 'col-12' -%}
-  {%- when 'inset' -%}
-    {%- assign columns = 'col-12 col-lg-10 offset-lg-1' -%}
-{%- endcase -%}
-
 <div class="{{ section_name }}" id="{{ section_id }}">
-  {% render 'bs-container', state: 'open', col: columns %}
-    <h1>Feature Panel 01</h1>
+  {% render 'bs-container', state: 'open' %}
+    {% if message != blank %}
+      <div class="{{ section_name }}__content">
+        {% if stamp %}
+          <div class="{{ section_name }}__stamp">{% render 'lazyload-image', image: stamp %}</div>
+        {% endif %}
+        <div class="{{ section_name }}__content-message heading heading--1">{{ message }}</div>
+        {% if footnote_image %}
+          <div class="{{ section_name }}__footnote">
+            <div class="{{ section_name }}__footnote-image">
+              {% render 'lazyload-image', image: footnote_image %}
+            </div>
+            {% if footnote_caption %}
+              <strong class="{{ section_name }}__footnote-caption caption caption--2">{{ footnote_caption }}</strong>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
   {% render 'bs-container', state: 'closed' %}
 </div>
 

@@ -40,7 +40,7 @@
     display: inline-flex;
     width: 100%;
     align-items: baseline;
-    margin-top: 32px;
+    margin-top: 20px;
     &-label {
       width: auto;
       & + .collection-product-grid__sort-filter-options {
@@ -53,7 +53,13 @@
     }
   }
 
-  @include breakpoint(sm) {
+  &__title {
+    line-height: 1;
+  }
+
+  @include breakpoint(sm) {} // min width sm
+
+  @include breakpoint(md) {
 
     &__hero {
       &-content {
@@ -63,21 +69,20 @@
       &-layout {
         flex-flow: row nowrap;
         justify-content: space-between;
-        align-items: baseline;
+        align-items: center;
       }
     }
 
     &__sort-filter {
       width: auto;
+      margin-top: 0;
       &-label {
         width: auto;
       }
       &-options {}
     }
 
-  } // min width sm
-
-  @include breakpoint(md) {} // min width md
+  } // min width md
 
   @include breakpoint(lg) {
 

@@ -7,6 +7,7 @@ https://their-jewelry-and-accessories.myshopify.com
 ## Phase 1.0
 ### Templates
 - [x] 404
+- [ ] About Us
 - [x] Article
 - [x] Blog
 - [ ] Cart
@@ -24,6 +25,7 @@ https://their-jewelry-and-accessories.myshopify.com
 - [ ] Cookie Consent
 - [ ] Dynamic Cart
 - [x] Footer
+- [ ] Feature Carousel
 - [ ] Feature Panel 01
 - [ ] Feature Panel 02
 - [ ] Feature Panel 03
