@@ -33,7 +33,9 @@
         "marker": "1",
         "heading": "Sustainability",
         "message": "<p>Understanding that taking care of the planet is no longer a trendy proposition — it’s a necessity that current and future consumers expect.<\/p>",
+        "image": "shopify:\/\/shop_images\/feature-panel-02--image.png",
         "image_caption": "Goal: Zero Waste 2024",
+        "auxiliary_image": "shopify:\/\/shop_images\/feature-panel-02--auxiliary.png",
         "anchor_id": ""
       }
     },
