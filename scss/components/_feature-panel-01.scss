@@ -1,8 +1,17 @@
+@keyframes looped-rotation {
+  100% {
+    transform:rotate(360deg);
+  }
+}
+
 .feature-panel-01 {
 
-  margin-top: 55px;
+  $footnote-image-height: 200px;
 
-  &__auxiliary {
+  margin-top: 60px;
+
+  &__auxiliary,
+  &__content {
     width: calc( 100% + (2 * var(--bs-container-fluid-padding)));
     left: calc( -1 * var(--bs-container-fluid-padding));
     position: relative;
@@ -16,7 +25,7 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 200px;
+    height: $footnote-image-height;
     &-caption {
       padding: 16px;
       line-height: 1;
@@ -25,8 +34,10 @@
     &-image {
       aspect-ratio: 138/108;
       max-width: 55%;
+      height: $footnote-image-height;
+      position: relative;
       @supports not (aspect-ratio: auto) {
-        height: 200px;
+        height: $footnote-image-height;
       }
     }
   }
@@ -34,10 +45,7 @@
   &__content {
     background: rgba(var(--theme-colour-black), 1);
     color: rgba(var(--theme-colour-white), 1);
-    width: calc( 100% + (2 * var(--bs-container-fluid-padding)));
-    left: calc( -1 * var(--bs-container-fluid-padding));
-    position: relative;
-    padding-bottom: 250px;
+    padding-bottom: $footnote-image-height;
     &-message {
       padding: 0 var(--bs-container-fluid-padding) 60px;
       p {
@@ -51,10 +59,10 @@
     position: relative;
     height: 140px;
     top: -55px;
-    margin-left: auto;
     width: auto;
     padding: 0 var(--bs-container-fluid-padding);
     a, img, svg {
+      animation: looped-rotation 20s linear infinite;
       display: block;
       height: 100%;
       width: auto;
@@ -62,14 +70,155 @@
     }
   }
 
-  @include breakpoint(sm) {} // min width sm
+  @include breakpoint(sm) {
 
-  @include breakpoint(md) {} // min width md
+    $footnote-image-height: 240px;
 
-  @include breakpoint(lg) {} // min width lg
+    &__footnote {
+      height: $footnote-image-height;
+      &-image {
+        height: $footnote-image-height;
+        @supports not (aspect-ratio: auto) {
+          height: $footnote-image-height;
+        }
+      }
+    }
 
-  @include breakpoint(xl) {} // min width xl
+    &__content {
+      padding-bottom: $footnote-image-height;
+    }
 
-  @include breakpoint(xxl) {} // min width xxl
+  } // min width sm
+
+  @include breakpoint(md) {
+
+    $footnote-image-height: 280px;
+
+    &__footnote {
+      height: $footnote-image-height;
+      &-image {
+        height: $footnote-image-height;
+        @supports not (aspect-ratio: auto) {
+          height: $footnote-image-height;
+        }
+      }
+    }
+
+    &__content {
+      padding-bottom: $footnote-image-height;
+    }
+
+  } // min width md
+
+  @include breakpoint(lg) {
+
+    $footnote-image-height: 140px;
+
+    margin-top: 120px;
+
+    &__auxiliary,
+    &__content {
+      width: 100%;
+      left: unset;
+    }
+
+    &__auxiliary {
+      width: calc( (100% - 65px) * 0.2);
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      img {
+        height: 100%;
+        width: auto;
+        display: block;
+      }
+    }
+
+    &__content {
+      margin-left: 65px;
+      width: calc( (100% - 65px) * 0.8);
+      padding-bottom: $footnote-image-height;
+      &-message {
+        padding: 25px 25px 60px;
+      }
+    }
+
+    &__footnote {
+      height: $footnote-image-height;
+      &-caption {
+        order: 1;
+        text-align: right;
+      }
+      &-image {
+        height: $footnote-image-height;
+        order: 2;
+        @supports not (aspect-ratio: auto) {
+          height: $footnote-image-height;
+        }
+      }
+    }
+
+    &__layout {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      position: relative;
+    }
+
+    &__stamp {
+      position: absolute;
+      height: 140px;
+      top: -55px;
+      padding: 0;
+      left: -65px;
+      z-index: -1;
+      a, img, svg {
+        margin-left: unset;
+        margin-right: auto;
+      }
+    }
+
+  } // min width lg
+
+  @include breakpoint(xl) {
+
+    $footnote-image-height: 160px;
+
+    &__content {
+      padding-bottom: $footnote-image-height;
+    }
+
+    &__footnote {
+      height: $footnote-image-height;
+      &-image {
+        height: $footnote-image-height;
+        @supports not (aspect-ratio: auto) {
+          height: $footnote-image-height;
+        }
+      }
+    }
+
+  } // min width xl
+
+  @include breakpoint(xxl) {
+
+    $footnote-image-height: 180px;
+
+    &__content {
+      padding-bottom: $footnote-image-height;
+    }
+
+    &__footnote {
+      height: $footnote-image-height;
+      &-image {
+        height: $footnote-image-height;
+        @supports not (aspect-ratio: auto) {
+          height: $footnote-image-height;
+        }
+      }
+    }
+
+  } // min width xxl
 
 }

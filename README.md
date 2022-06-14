@@ -26,7 +26,7 @@ https://their-jewelry-and-accessories.myshopify.com
 - [ ] Dynamic Cart
 - [x] Footer
 - [ ] Feature Carousel
-- [ ] Feature Panel 01
+- [x] Feature Panel 01
 - [ ] Feature Panel 02
 - [ ] Feature Panel 03
 - [x] Header

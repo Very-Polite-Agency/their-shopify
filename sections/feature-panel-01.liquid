@@ -23,7 +23,7 @@
           {% if footnote_image %}
             <div class="{{ section_name }}__footnote">
               <div class="{{ section_name }}__footnote-image">
-                {% render 'lazyload-image', image: footnote_image %}
+                {% render 'lazyload-image', background: true, image: footnote_image %}
               </div>
               {% if footnote_caption %}
                 <strong class="{{ section_name }}__footnote-caption caption caption--2">{{ footnote_caption }}</strong>
@@ -87,6 +87,10 @@
       "label": "Image",
       "type": "image_picker",
       "id": "auxiliary_image"
+    },
+    {
+      "content": "Settings",
+      "type": "header"
     },
     {
       "label": "Anchor ID",
