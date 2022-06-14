@@ -40,9 +40,9 @@
     "165516160734ca1368": {
       "type": "feature-panel-03",
       "settings": {
-        "marker": "",
-        "heading": "",
-        "message": "",
+        "marker": "2",
+        "heading": "Footprint",
+        "message": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis.<\/p>",
         "anchor_id": ""
       }
     }
