@@ -1,13 +1,137 @@
 .feature-panel-02 {
 
-  @include breakpoint(sm) {} // min width sm
+  $auxiliary-image-height: 120px;
 
-  @include breakpoint(md) {} // min width md
+  margin-top: 60px;
 
-  @include breakpoint(lg) {} // min width lg
+  &__content {
+    background: rgba(var(--theme-colour-silver), 1);
+    width: calc( 90% + var(--bs-container-fluid-padding) );
+    left: calc( -1 * var(--bs-container-fluid-padding) );
+    position: relative;
+    padding: 1.75*$auxiliary-image-height var(--bs-container-fluid-padding) var(--bs-container-fluid-padding);
 
-  @include breakpoint(xl) {} // min width xl
+    &-auxiliary-image {
+      height: $auxiliary-image-height;
+      position: absolute;
+      width: auto;
+      top: 0;
+      right: 0;
+      transform: translate3d( 50%, 0, 0);
+      a, img, svg {
+        display: block;
+        height: 100%;
+        width: auto;
+      }
+    }
+  }
 
-  @include breakpoint(xxl) {} // min width xxl
+  &__heading {
+    & + .feature-panel-02__message {
+      margin-top: 12px;
+    }
+  }
+
+  &__image {
+    width: 85%;
+    height: auto;
+    & + .feature-panel-02__content {
+      margin-top: 40px;
+    }
+  }
+
+  @include breakpoint(sm) {
+
+    $auxiliary-image-height: 150px;
+
+    &__content {
+      padding: 1.66*$auxiliary-image-height var(--bs-container-fluid-padding) 40px;
+      &-auxiliary-image {
+        height: $auxiliary-image-height;
+      }
+    }
+
+  } // min width sm
+
+  @include breakpoint(md) {
+
+    $auxiliary-image-height: 180px;
+
+    &__content {
+      padding: 1.5*$auxiliary-image-height var(--bs-container-fluid-padding) 40px;
+      &-auxiliary-image {
+        height: $auxiliary-image-height;
+      }
+    }
+
+    &__message {
+      width: 80%;
+      margin: auto;
+    }
+
+  } // min width md
+
+  @include breakpoint(lg) {
+
+    $auxiliary-image-height: 120px;
+
+    margin-top: 120px;
+
+    &__content {
+      width: calc( (100% - var(--bs-gutter-width)) * 0.55 );
+      left: unset;
+      padding: 1.75*$auxiliary-image-height var(--bs-container-fluid-padding) 40px;
+      &-auxiliary-image {
+        height: $auxiliary-image-height;
+      }
+    }
+
+    &__image {
+      width: calc( (100% - var(--bs-gutter-width)) * 0.32 );
+      & + .feature-panel-02__content {
+        margin-top: 0;
+      }
+    }
+
+    &__layout {
+      display: flex;
+      width: 85%;
+      position: relative;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin: auto;
+    }
+
+    &__marker {
+      width: 10%;
+    }
+
+  } // min width lg
+
+  @include breakpoint(xl) {
+
+    $auxiliary-image-height: 140px;
+
+    &__content {
+      padding: 1.75*$auxiliary-image-height var(--bs-container-fluid-padding) 40px;
+      &-auxiliary-image {
+        height: $auxiliary-image-height;
+      }
+    }
+
+  } // min width xl
+
+  @include breakpoint(xxl) {
+
+    $auxiliary-image-height: 160px;
+
+    &__content {
+      padding: 1.75*$auxiliary-image-height var(--bs-container-fluid-padding) 40px;
+      &-auxiliary-image {
+        height: $auxiliary-image-height;
+      }
+    }
+
+  } // min width xxl
 
 }

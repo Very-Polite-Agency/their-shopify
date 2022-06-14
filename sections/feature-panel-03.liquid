@@ -1,4 +1,4 @@
-{%- assign section_name = 'feature-panel-01' -%}
+{%- assign section_name = 'feature-panel-03' -%}
 {%- assign section_id = section_name | append: '--' | append: section.id -%}
 
 {% assign marker = section.settings.marker | default: '' %}
@@ -8,8 +8,8 @@
 {%- endif -%}
 
 <div class="{{ section_name }}" id="{{ section_id }}">
-  {% render 'bs-container', state: 'open', col: columns %}
-    <h1>Feature Panel 03</h1>
+  {% render 'bs-container', state: 'open' %}
+    <div class="{{ section_name }}__layout"></div>
   {% render 'bs-container', state: 'closed' %}
 </div>
 

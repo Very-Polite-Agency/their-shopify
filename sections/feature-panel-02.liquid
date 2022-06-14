@@ -1,22 +1,55 @@
-{%- assign section_name = 'feature-panel-01' -%}
+{%- assign section_name = 'feature-panel-02' -%}
 {%- assign section_id = section_name | append: '--' | append: section.id -%}
 
-{% assign marker = section.settings.marker | default: '' %}
+{% assign auxiliary_image = section.settings.auxiliary_image | default: false %}
+{% assign heading = section.settings.heading | default: '' %}
+{% assign image = section.settings.image | default: false %}
+{% assign image_caption = section.settings.image_caption | default: '' %}
+{% assign marker = section.settings.marker | default: '1' %}
+{% assign message = section.settings.message | default: '' %}
 
 {%- if section.settings.anchor_id != blank -%}
   {%- assign section_id = section.settings.anchor_id -%}
 {%- endif -%}
 
-{%- case width -%}
-  {%- when 'full' -%}
-    {%- assign columns = 'col-12' -%}
-  {%- when 'inset' -%}
-    {%- assign columns = 'col-12 col-lg-10 offset-lg-1' -%}
-{%- endcase -%}
-
 <div class="{{ section_name }}" id="{{ section_id }}">
-  {% render 'bs-container', state: 'open', col: columns %}
-    <h1>Feature Panel 02</h1>
+  {% render 'bs-container', state: 'open' %}
+    <div class="{{ section_name }}__layout">
+
+      <div class="{{ section_name }}__marker caption caption--2">
+        {{ marker }}
+      </div>
+
+      {% if image %}
+        <div class="{{ section_name }}__image">
+          {% render 'lazyload-image', image: image %}
+          {% if image_caption %}
+            <strong class="{{ section_name }}__image-caption caption caption--2">{{ image_caption }}</strong>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% if heading != blank or message != blank %}
+        <div class="{{ section_name }}__content">
+
+          {% if heading != blank %}
+            <h2 class="{{ section_name }}__heading heading heading--1">{{ heading }}</h2>
+          {% endif %}
+
+          {% if message != blank %}
+            <div class="{{ section_name }}__message body-copy body-copy--1">{{ message }}</div>
+          {% endif %}
+
+          {% if auxiliary_image %}
+            <div class="{{ section_name }}__content-auxiliary-image">
+              {% render 'lazyload-image', image: auxiliary_image %}
+            </div>
+          {% endif %}
+
+        </div>
+      {% endif %}
+
+    </div>
   {% render 'bs-container', state: 'closed' %}
 </div>
 
