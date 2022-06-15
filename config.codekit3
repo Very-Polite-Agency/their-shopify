@@ -2008,6 +2008,14 @@
       "oAP" : "\/sections\/faqs.liquid",
       "oF" : 0
     },
+    "\/sections\/feature-carousel.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/sections\/feature-carousel.liquid",
+      "oF" : 0
+    },
     "\/sections\/feature-panel-01.liquid" : {
       "cB" : 0,
       "ft" : 8192,

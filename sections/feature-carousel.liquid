@@ -1,0 +1,82 @@
+{%- assign section_name = 'feature-carousel' -%}
+{%- assign section_id = section_name | append: '--' | append: section.id -%}
+
+{%- if section.settings.anchor_id != blank -%}
+  {%- assign section_id = section.settings.anchor_id -%}
+{%- endif -%}
+
+<div class="{{ section_name }}" id="{{ section_id }}">
+  {% render 'bs-container', state: 'open' %}
+    <div class="{{ section_name }}__layout">
+
+
+    </div>
+  {% render 'bs-container', state: 'closed' %}
+</div>
+
+{% schema %}
+{
+  "name": "Feature Carousel",
+  "tag": "section",
+  "class": "section section--feature-carousel",
+  "settings": [
+    {
+      "content": "Content",
+      "type": "header"
+    },
+    {
+      "label": "Message",
+      "type": "richtext",
+      "id": "message"
+    },
+    {
+      "content": "Media",
+      "type": "header"
+    },
+    {
+      "label": "Stamp",
+      "type": "image_picker",
+      "id": "stamp"
+    },
+    {
+      "content": "Footnote",
+      "type": "paragraph"
+    },
+    {
+      "label": "Image",
+      "type": "image_picker",
+      "id": "footnote_image"
+    },
+    {
+      "label": "Caption",
+      "type": "text",
+      "id": "footnote_caption"
+    },
+    {
+      "content": "Auxiliary",
+      "type": "paragraph"
+    },
+    {
+      "label": "Image",
+      "type": "image_picker",
+      "id": "auxiliary_image"
+    },
+    {
+      "content": "Settings",
+      "type": "header"
+    },
+    {
+      "label": "Anchor ID",
+      "info": "Optionally include a unique ID so that sections within the page can be linked to. Anchor IDs must be all lowercase, unique and replaced empty spaces with hyphens. For example: my-great-section-anchor",
+      "type": "text",
+      "id": "anchor_id"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Feature Carousel"
+    }
+  ]
+}
+{% endschema %}
