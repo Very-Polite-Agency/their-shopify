@@ -1,6 +1,8 @@
 {%- assign section_name = 'feature-carousel' -%}
 {%- assign section_id = section_name | append: '--' | append: section.id -%}
 
+{% assign glider_id = section_id | append: '--glider' %}
+
 {%- if section.settings.anchor_id != blank -%}
   {%- assign section_id = section.settings.anchor_id -%}
 {%- endif -%}
@@ -9,6 +11,38 @@
   {% render 'bs-container', state: 'open' %}
     <div class="{{ section_name }}__layout">
 
+      {% if section.blocks.size > 0 %}
+
+        <div class="glide js--glider" id="{{ glider_id }}" data-glide-style="{{ section_name }}">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+
+              {% for block in section.blocks %}
+                <li class="glide__slide">
+                  {% case block.type %}
+                    {% when 'image' %}
+                      {%
+                        render 'card-image',
+                        caption: block.settings.caption,
+                        image: block.settings.image,
+                        link: block.settings.link,
+                        style: section_name
+                      %}
+                    {% when 'product' %}
+                      {%
+                        render 'card-product',
+                        product: block.settings.product,
+                        style: section_name
+                      %}
+                  {% endcase %}
+                </li>
+              {% endfor %}
+
+            </ul>
+          </div>
+        </div>
+
+      {% endif %}
 
     </div>
   {% render 'bs-container', state: 'closed' %}

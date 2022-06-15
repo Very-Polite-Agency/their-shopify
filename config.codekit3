@@ -1277,6 +1277,21 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/scss\/components\/_feature-carousel.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/_feature-carousel.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/scss\/components\/_feature-panel-01.scss" : {
       "aP" : 1,
       "bl" : 0,
@@ -2334,6 +2349,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/snippets\/card-collection.liquid",
+      "oF" : 0
+    },
+    "\/snippets\/card-image.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/card-image.liquid",
       "oF" : 0
     },
     "\/snippets\/card-product.liquid" : {

@@ -1,12 +1,13 @@
 {% comment %}
 
     Accepts:
+    - caption: {String} Description of featured image (optional)
     - product: {Object} Product Liquid object
     - style: {String} Conditionally load different card types by passing style option
-    - caption: {String} Description of featured image (optional)
+
 
     Usage:
-    {% render 'card-product', product: product, caption: 'What an amazing caption' %}
+    {% render 'card-product', caption: 'What an amazing caption', product: product, style: 'some-predefined-style' %}
 
 {% endcomment %}
 
