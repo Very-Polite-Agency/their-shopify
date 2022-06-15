@@ -21,47 +21,6 @@
   "class": "section section--feature-carousel",
   "settings": [
     {
-      "content": "Content",
-      "type": "header"
-    },
-    {
-      "label": "Message",
-      "type": "richtext",
-      "id": "message"
-    },
-    {
-      "content": "Media",
-      "type": "header"
-    },
-    {
-      "label": "Stamp",
-      "type": "image_picker",
-      "id": "stamp"
-    },
-    {
-      "content": "Footnote",
-      "type": "paragraph"
-    },
-    {
-      "label": "Image",
-      "type": "image_picker",
-      "id": "footnote_image"
-    },
-    {
-      "label": "Caption",
-      "type": "text",
-      "id": "footnote_caption"
-    },
-    {
-      "content": "Auxiliary",
-      "type": "paragraph"
-    },
-    {
-      "label": "Image",
-      "type": "image_picker",
-      "id": "auxiliary_image"
-    },
-    {
       "content": "Settings",
       "type": "header"
     },
@@ -72,7 +31,51 @@
       "id": "anchor_id"
     }
   ],
-  "blocks": [],
+  "blocks": [
+    {
+      "name": "Image",
+      "type": "image",
+      "settings": [
+        {
+          "label": "Image",
+          "type": "image_picker",
+          "id": "image"
+        },
+        {
+          "label": "Caption",
+          "type": "text",
+          "id": "caption"
+        },
+        {
+          "label": "Link",
+          "type": "url",
+          "id": "link"
+        }
+      ]
+    },
+    {
+      "name": "Product",
+      "type": "product",
+      "settings": [
+        {
+          "label": "Product",
+          "type": "product",
+          "id": "product"
+        },
+        {
+          "label": "Image Position",
+          "type": "select",
+          "options": [
+            { "value": "1", "label": "First (Featured)" },
+            { "value": "2", "label": "Second" },
+            { "value": "3", "label": "Third" }
+          ],
+          "default": "1",
+          "id": "image_position"
+        }
+      ]
+    }
+  ],
   "presets": [
     {
       "name": "Feature Carousel"
