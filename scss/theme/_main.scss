@@ -10,6 +10,14 @@ main {
     padding-bottom: 0;
   }
 
+  &.page--contact {
+    .shopify-section {
+      &:first-child {
+        padding-top: 40px;
+      }
+    }
+  }
+
   @include breakpoint(sm) {} // min width sm
 
   @include breakpoint(md) {} // min width md

@@ -1,3 +1,6 @@
+{% assign snippet_name = 'input' %}
+{% assign snippet_classes = snippet_name %}
+
 {% assign classes = classes | default: '' %}
 {% assign hidden = hidden | default: false %}
 {% assign name = name | default: '' %}
@@ -7,16 +10,21 @@
 {% assign type = type | default: 'text' %}
 {% assign value = value | default: '' %}
 
-{% if hidden %}
-  {% assign classes = classes | append: ' d-none' | strip %}
+{% if classes %}
+  {% assign snippet_classes = snippet_classes | append: ' ' | append: classes | strip %}
 {% endif %}
+
+{% if hidden %}
+  {% assign snippet_classes = snippet_classes | append: ' d-none' | strip %}
+{% endif %}
+
 {% if required %}
- {% assign classes = classes | append: ' required' | strip %}
+ {% assign snippet_classes = snippet_classes | append: ' required' | strip %}
 {% endif %}
 
 {% if name != blank %}
   <input
-    {% if classes != blank %}class="{{- classes -}}"{% endif %}
+    class="{{- snippet_classes -}}"
     type="{{- type -}}"
     name="{{- name -}}"
     autocomplete="{{- type -}}"

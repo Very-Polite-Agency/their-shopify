@@ -246,7 +246,7 @@ const Forms = (() => {
 
       onFormFocus();
 
-      document.querySelectorAll('.js--validate-me [type="submit"]').forEach( button => {
+      ( document.querySelectorAll('.js--validate-me [type="submit"]') || [] ).forEach( button => {
 
         button.addEventListener('click', ( event ) => {
 

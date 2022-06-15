@@ -1,8 +1,5 @@
 .input {
 
-  @include placeholder {
-    color: rgba(var(--theme-colour-charcoal), 1);
-  }
   transition:
     background var(--theme-transition-duration),
     border var(--theme-transition-duration),
@@ -27,23 +24,24 @@
   font-style: normal;
   width: 100%;
   display: block;
+  border-radius: 0;
+  -webkit-appearance: none;
+
+  &::placeholder {
+    color: rgba(var(--theme-colour-charcoal), 0.33);
+    font-family: var(--theme-font-family--sans-serif--primary);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1;
+    text-transform: capitalize;
+  }
 
   &--primary,
   &--secondary {
     @extend .input;
     border-bottom-width: 1px;
     border-bottom-style: solid;
-    border-radius: 0;
-    -webkit-appearance: none;
-    &::placeholder {
-      font-family: var(--theme-font-family--sans-serif--primary);
-      font-style: normal;
-      font-weight: 400;
-      font-size: 12px;
-      line-height: 1;
-      text-transform: capitalize;
-      color: rgba(var(--theme-colour-silver), 0.4);
-    }
   }
 
   &--primary {

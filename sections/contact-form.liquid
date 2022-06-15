@@ -10,33 +10,34 @@
 {% endif %}
 
 <div class="{{ section_name }}" id="{{ section_id }}">
-  {% render 'bs-container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1' %}
+  {% render 'bs-container', state: 'open' %}
     <div class="{{ section_name }}__layout">
-			{% if products %}
-      	<div class="{{ section_name }}__featured-content" data-products-total="{{ products.size }}">
-					<div class="{{ section_name }}__featured-content-wrapper">
-						{%- for block in products -%}
 
-							{% assign caption = block.settings.caption | default: '' %}
-							{% assign featured_product = block.settings.product | default: false %}
-          		{% assign title = featured_product.title | default: '' %}
-							{% assign featured_image = featured_product.featured_image | default: false %}
-							{% assign url = featured_product.url | default: '' %}
-
-							{% if featured_product %}
-								<div class="{{ section_name }}__featured-product" data-count="{{ forloop.index }}" data-index="{{ forloop.index0 }}">
-									{% render 'card-product', caption: caption, product: featured_product, style: section_name %}
-								</div>
-							{% endif %}
-
-						{% endfor %}
-					</div>
-				</div>
-			{% endif %}
 			<div class="{{ section_name }}__form">
-				<h2 class="{{ section_name }}__form heading--1">Contact</h2>
+				<h2 class="{{ section_name }}__form-heading heading heading--1">Contact</h2>
 				{% render 'form-contact-us' %}
 			</div>
+
+			{% if products %}
+      	<div class="{{ section_name }}__featured-content" data-products-total="{{ products.size }}">
+					{%- for block in products -%}
+
+						{% assign caption = block.settings.caption | default: '' %}
+						{% assign featured_product = block.settings.product | default: false %}
+        		{% assign title = featured_product.title | default: '' %}
+						{% assign featured_image = featured_product.featured_image | default: false %}
+						{% assign url = featured_product.url | default: '' %}
+
+						{% if featured_product %}
+							<div class="{{ section_name }}__featured-product" data-count="{{ forloop.index }}" data-index="{{ forloop.index0 }}">
+								{% render 'card-product', caption: caption, product: featured_product, style: section_name %}
+							</div>
+						{% endif %}
+
+					{% endfor %}
+				</div>
+			{% endif %}
+
     </div>
   {% render 'bs-container', state: 'closed' %}
 </div>
@@ -45,7 +46,7 @@
 {
 	"name": "Contact Form",
 	"tag": "section",
-	"class": "section section--contact-form section--padding-y",
+	"class": "section section--contact-form",
 	"max_blocks": 2,
 	"settings": [
 		{

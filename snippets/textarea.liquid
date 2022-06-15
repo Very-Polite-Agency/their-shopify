@@ -1,16 +1,22 @@
-{% assign classes = classes | default: '' %}
+{% assign snippet_name = 'textarea' %}
+{% assign snippet_classes = snippet_name %}
+
 {% assign name = name | default: '' %}
 {% assign placeholder = placeholder | default: '' %}
 {% assign readonly = readonly | default: false %}
 {% assign value = value | default: '' %}
 
+{% if classes %}
+  {% assign snippet_classes = snippet_classes | append: ' ' | append: classes | strip %}
+{% endif %}
+
 {% if required %}
- {% assign classes = classes | append: ' required' | strip %}
+  {% assign snippet_classes = snippet_classes | append: ' required' | strip %}
 {% endif %}
 
 {% if name != blank %}
   <textarea
-    {% if classes != blank %}class="{{- classes -}}"{% endif %}
+    class="{{- snippet_classes -}}"
     name="{{- name -}}"
     {% if value != blank %}value="{{- value -}}"{% endif %}
     {% if placeholder != blank %}placeholder="{{- placeholder -}}"{% endif %}

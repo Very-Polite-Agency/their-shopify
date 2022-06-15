@@ -4,32 +4,60 @@
 
 .contact-form {
 
-  .container {
-    border-left: 1px solid pink;
-    border-right: 1px solid pink;
+  .card-product {
+    &__caption {
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      margin-left: 12px;
+    }
+    &__featured-image {
+      position: relative;
+      display: inline-flex;
+      width: 100%;
+    }
   }
 
   .form {
-    &__field {
-      & + .form__field {
-        margin-top: 10px;
+    .button {
+      margin-top: 45px;
+      width: 100%;
+    }
+    .form-field:not(.form-field--rude) {
+      & + .form-field {
+        margin-top: 18px;
       }
     }
-    &__submit-button {
-      margin-top: 28px;
-    }
-  }
-
-  &__form {
-    border-left: 1px solid red;
   }
 
   &__featured-content {
     display: inline-flex;
-    width: 100%;
+    width: calc( 100% + var(--bs-container-fluid-padding));
+    left: calc( -1 * var(--bs-container-fluid-padding));
+    position: relative;
+    align-items: flex-start;
+    justify-content: space-between;
     &-wrapper {
       display: inline-flex;
       width: 100%;
+    }
+    & + .contact-form__form {
+      margin-top: 65px;
+    }
+  }
+
+  &__featured-product {
+    &[data-count="1"] {
+      flex: 1;
+    }
+    &[data-count="2"] {
+      margin-left: var(--bs-gutter-width);
+      width: 55%;
+    }
+  }
+
+  &__form {
+    & + .contact-form__featured-content {
+      margin-top: 65px;
     }
   }
 
@@ -45,44 +73,59 @@
 
   @include breakpoint(lg) {
 
-    &__featured-content,
-    &__form {
-      width: 50%;
-    }
-
-    &__featured-content {
-      margin-right: auto;
-      position: relative;
-      &[data-products-total="2"] {
-        [data-count="1"] {}
+    .form {
+      .button {
+        margin-top: 25px;
+        width: auto;
       }
-      &-wrapper {
-        width: 110%;
-        position: relative;
-        left: -10%;
-        border: 1px solid green;
+      .form-field:not(.form-field--rude) {
+        & + .form-field {
+          margin-top: 12px;
+        }
       }
     }
 
     &__featured-content {
-      [data-count="1"] {
-        width: 45%;
-      }
-      [data-count="2"] {
-        width: 65%;
-      }
+      order: 1;
+      margin-left: -10%;
+      width: 60%;
     }
 
     &__form {
-      margin-left: auto;
+      width: 40%;
+      order: 2;
+      & + .contact-form__featured-content {
+        margin-top: 0;
+      }
     }
 
     &__layout {
       flex-flow: row nowrap;
+      width: 85%;
+      margin-left: auto;
+      margin-right: auto;
       align-items: flex-start;
       justify-content: space-between;
-      border-left: 1px solid blue;
-      border-right: 1px solid blue;
+    }
+
+    &__featured-content {
+      &[data-products-total="1"] {
+        .contact-form__featured-product {
+          &[data-count="1"] {
+            width: 100%;
+          }
+        }
+      }
+      &[data-products-total="2"] {
+        .contact-form__featured-product {
+          &[data-count="1"] {
+            width: 45%;
+          }
+          &[data-count="2"] {
+            width: 55%;
+          }
+        }
+      }
     }
 
   } // min width lg
