@@ -13,7 +13,7 @@ https://their-jewelry-and-accessories.myshopify.com
 - [ ] Cart
 - [x] Collection (PLP)
 - [ ] Collection Listing
-- [ ] Contact
+- [x] Contact
 - [x] FAQs
 - [ ] Home page
 - [x] Policy Pages
@@ -22,6 +22,7 @@ https://their-jewelry-and-accessories.myshopify.com
 ### Sections
 - [x] 404
 - [x] Announcements
+- [x] Contact Form
 - [ ] Cookie Consent
 - [ ] Dynamic Cart
 - [x] Footer
@@ -37,6 +38,7 @@ https://their-jewelry-and-accessories.myshopify.com
 
 ### General
 - [ ] Remove 'post_per_page' override on the main-blog.liquid section
+- [ ] Test contact us form entries
 
 ## Phase 2.0
 ### Templates
