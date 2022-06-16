@@ -19,22 +19,24 @@
 
               {% for block in section.blocks %}
                 <li class="glide__slide">
-                  {% case block.type %}
-                    {% when 'image' %}
-                      {%
-                        render 'card-image',
-                        caption: block.settings.caption,
-                        image: block.settings.image,
-                        link: block.settings.link,
-                        style: section_name
-                      %}
-                    {% when 'product' %}
-                      {%
-                        render 'card-product',
-                        product: block.settings.product,
-                        style: section_name
-                      %}
-                  {% endcase %}
+                  <div class="{{ section_name }}__item">
+                    {% case block.type %}
+                      {% when 'image' %}
+                        {%
+                          render 'card-image',
+                          caption: block.settings.caption,
+                          image: block.settings.image,
+                          link: block.settings.link,
+                          style: section_name
+                        %}
+                      {% when 'product' %}
+                        {%
+                          render 'card-product',
+                          product: block.settings.product,
+                          style: section_name
+                        %}
+                    {% endcase %}
+                  </div>
                 </li>
               {% endfor %}
 
