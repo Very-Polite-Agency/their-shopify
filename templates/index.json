@@ -49,14 +49,14 @@
           "type": "product",
           "settings": {
             "product": "24k-gold-plated-ring",
-            "image_position": "2"
+            "image_position": "1"
           }
         },
         "e81b4482-c1dd-4c8a-8dbb-be9d5862ad64": {
           "type": "product",
           "settings": {
             "product": "24k-gold-plated-ring-smoothooth",
-            "image_position": "1"
+            "image_position": "0"
           }
         },
         "000eddd5-311e-46da-b390-7381502a238d": {
