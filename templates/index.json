@@ -44,9 +44,77 @@
     },
     "165531308513f664e8": {
       "type": "feature-carousel",
+      "blocks": {
+        "328108bc-2f23-427c-97ea-b455a3922ee1": {
+          "type": "product",
+          "settings": {
+            "product": "24k-gold-plated-ring",
+            "image_position": "1"
+          }
+        },
+        "e81b4482-c1dd-4c8a-8dbb-be9d5862ad64": {
+          "type": "product",
+          "settings": {
+            "product": "24k-gold-plated-ring-smoothooth",
+            "image_position": "1"
+          }
+        },
+        "8f6bc61e-dc53-450d-aee6-c4bd27f90e23": {
+          "type": "product",
+          "settings": {
+            "product": "gold-boy-ring",
+            "image_position": "1"
+          }
+        },
+        "f0978891-ec7d-4c3f-9f50-81f0485b381c": {
+          "type": "product",
+          "settings": {
+            "product": "24k-gold-chain",
+            "image_position": "1"
+          }
+        },
+        "4625e826-7031-44f5-b352-7c8b35092c46": {
+          "type": "product",
+          "settings": {
+            "product": "gold-hoops",
+            "image_position": "1"
+          }
+        },
+        "000eddd5-311e-46da-b390-7381502a238d": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/policies--hero-image-02.png",
+            "caption": "Sample caption for image",
+            "link": ""
+          }
+        },
+        "0945aec1-c39f-43a1-91a0-97f3e702c471": {
+          "type": "product",
+          "settings": {
+            "product": "silver-earrings",
+            "image_position": "1"
+          }
+        },
+        "fff094cc-6217-4fd1-b560-0db90d9e5c3a": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/blog-hero_2x_0aa44287-7dd8-4b6a-9788-2608fb36fc5d.png",
+            "caption": "Another sample caption with link",
+            "link": "shopify:\/\/blogs\/news"
+          }
+        }
+      },
+      "block_order": [
+        "328108bc-2f23-427c-97ea-b455a3922ee1",
+        "e81b4482-c1dd-4c8a-8dbb-be9d5862ad64",
+        "8f6bc61e-dc53-450d-aee6-c4bd27f90e23",
+        "f0978891-ec7d-4c3f-9f50-81f0485b381c",
+        "4625e826-7031-44f5-b352-7c8b35092c46",
+        "000eddd5-311e-46da-b390-7381502a238d",
+        "0945aec1-c39f-43a1-91a0-97f3e702c471",
+        "fff094cc-6217-4fd1-b560-0db90d9e5c3a"
+      ],
       "settings": {
-        "message": "",
-        "footnote_caption": "",
         "anchor_id": ""
       }
     },
