@@ -1,4 +1,21 @@
 .card-image {
+
   direction: ltr;
   text-align: left;
+
+  &__image {
+    position: relative;
+    &-link {
+      transition: opacity var(--theme-transition-duration);
+      display: block;
+      width: 100%;
+      height: auto;
+      opacity: 1;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+
 }

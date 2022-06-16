@@ -17,7 +17,7 @@
   {% assign snippet_classes = snippet_name | append: ' product' %}
   {% assign snippet_id = snippet_name | append: '--' | append: product.id -%}
   {% assign caption = caption | default: '' %}
-  {% assign image_position = image_position | default: '0'%}
+  {% assign image_position = image_position | default: '0' | plus: 0 %}
   {% assign style = style | default: 'default' %}
 
   {% if classes and classes != empty %}
