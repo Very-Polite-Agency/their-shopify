@@ -4,8 +4,41 @@
   color: rgba(var(--theme-colour-white), 1);
   padding: var(--theme-section-padding) 0;
 
+  .glide {
+    &__buttons {
+      padding: 0 0 0 var(--bs-container-fluid-padding);
+      margin-top: 56px;
+      display: flex;
+      justify-content: flex-end;
+    }
+    &__button {
+      color: rgba(var(--theme-colour-charcoal), 1);
+      &.prev {
+        margin-right: auto;
+      }
+      &:hover {
+        color: rgba(var(--theme-colour-white), 1);
+      }
+    }
+    &__slide {
+      height: auto;
+    }
+  }
+
   &__item {
     direction: ltr;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    & > * {
+      width: 100%;
+    }
+    a, img {
+      width: 100%;
+      display: block;
+    }
   }
 
   &__layout {
@@ -20,6 +53,17 @@
   @include breakpoint(lg) {
 
     padding: var(--theme-section-padding--lg) 0;
+
+    .glide {
+      &__buttons {
+        margin-top: 36px;
+      }
+      &__button {
+        &.prev {
+          display: none;
+        }
+      }
+    }
 
     &__layout {
       padding-right: calc( ((100% - var(--bs-container-width--lg))/2) + 12px );

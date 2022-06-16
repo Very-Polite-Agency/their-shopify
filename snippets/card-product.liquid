@@ -17,6 +17,7 @@
   {% assign snippet_classes = snippet_name | append: ' product' %}
   {% assign snippet_id = snippet_name | append: '--' | append: product.id -%}
   {% assign caption = caption | default: '' %}
+  {% assign image_position = image_position | default: '0'%}
   {% assign style = style | default: 'default' %}
 
   {% if classes and classes != empty %}
@@ -30,12 +31,19 @@
   {% assign available = product.available | default: false %}
   {% assign date_published = product.published_at %}
   {% assign featured_image = product.featured_image | default: false %}
+  {% assign images = product.images | default: false %}
   {% assign price = product.price %}
   {% assign price_compare = product.compare_at_price %}
   {% assign selected_variant = product.selected_or_first_available_variant | default: false %}
   {% assign title = product.title | default: '' %}
   {% assign type = product.type | default: '' %}
   {% assign url = product.url | default: '' %}
+
+  {% render 'tools--debug-this': item: image_position %}
+
+  {% if images and images.size > 1 and  %}
+    {% assign featured_image = images[image_position] %}
+  {% endif %}
 
   <article class="{{ snippet_classes }}" id="{{ snippet_id }}" data-published-at="{{ date_published | date: "%Y-%m-%d %H:%M:%S" }}" data-style="{{ style }}" {% unless available %}data-unavailable{% endunless %}>
     <div class="{{ snippet_classes }}__layout" id="{{ aos_id }}">

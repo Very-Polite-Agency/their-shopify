@@ -31,6 +31,7 @@
                     {% when 'product' %}
                       {%
                         render 'card-product',
+                        image_position: block.settings.image_position,
                         product: block.settings.product,
                         style: section_name
                       %}
@@ -43,8 +44,10 @@
         </div>
       </div>
 
-      <button class="glide__button button prev" type="button" data-target="#{{ glider_id }}">< Prev</button>
-      <button class="glide__button button next" type="button" data-target="#{{ glider_id }}">Next ></button>
+      <div class="glide__buttons">
+        <button class="glide__button button prev caption caption--2" type="button" data-target="#{{ glider_id }}">< Prev</button>
+        <button class="glide__button button next caption caption--2" type="button" data-target="#{{ glider_id }}">Next ></button>
+      </div>
 
     {% endif %}
 
@@ -103,11 +106,11 @@
           "label": "Image Position",
           "type": "select",
           "options": [
-            { "value": "1", "label": "First (Featured)" },
-            { "value": "2", "label": "Second" },
-            { "value": "3", "label": "Third" }
+            { "value": "0", "label": "First (Featured)" },
+            { "value": "1", "label": "Second" },
+            { "value": "2", "label": "Third" }
           ],
-          "default": "1",
+          "default": "0",
           "id": "image_position"
         }
       ]

@@ -1,5 +1,8 @@
 .card-product {
 
+  direction: ltr;
+  text-align: left;
+
   &__featured-image {
     position: relative;
     &-link {
@@ -24,10 +27,6 @@
 
   &__price {
     text-align: right;
-  }
-
-  &__title {
-    text-align: left;
   }
 
   &--contact-form {
