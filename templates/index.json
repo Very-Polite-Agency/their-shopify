@@ -71,14 +71,14 @@
           "type": "product",
           "settings": {
             "product": "gold-boy-ring",
-            "image_position": "1"
+            "image_position": "0"
           }
         },
         "f0978891-ec7d-4c3f-9f50-81f0485b381c": {
           "type": "product",
           "settings": {
             "product": "24k-gold-chain",
-            "image_position": "1"
+            "image_position": "0"
           }
         },
         "fff094cc-6217-4fd1-b560-0db90d9e5c3a": {
@@ -93,7 +93,7 @@
           "type": "product",
           "settings": {
             "product": "gold-hoops",
-            "image_position": "1"
+            "image_position": "0"
           }
         },
         "0945aec1-c39f-43a1-91a0-97f3e702c471": {
