@@ -22,6 +22,14 @@
     margin-top: 10px;
   }
 
+  &__price {
+    text-align: right;
+  }
+
+  &__title {
+    text-align: left;
+  }
+
   &--contact-form {
     .card-product {
       &__caption {

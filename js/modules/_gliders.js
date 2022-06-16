@@ -88,39 +88,39 @@ const Gliders = (() => {
             breakpoints: {
               // up to 9999
               9999: {
-                gap: 40,
-                peek: { before: 0, after: 0 },
-                perView: 6
+                gap: 100,
+                peek: { before: 0, after: 175 },
+                perView: 3
               },
               // up to 1400
               1399: {
-                gap: 40,
-                peek: { before: 0, after: 0 },
-                perView: 5
+                gap: 90,
+                peek: { before: 0, after: 175 },
+                perView: 2
               },
               // up to 1200
               1199: {
-                gap: 40,
-                peek: { before: 0, after: 0 },
-                perView: 4
+                gap: 80,
+                peek: { before: 0, after: 175 },
+                perView: 2
               },
               // up to 992
               991: {
-                gap: 40,
-                peek: { before: 0, after: 0 },
-                perView: 3
+                gap: 50,
+                peek: { before: 0, after: 100 },
+                perView: 2
               },
               // up to 768
               767: {
-                gap: 40,
-                peek: { before: 0, after: 0 },
-                perView: 2
+                gap: 50,
+                peek: { before: 0, after: 150 },
+                perView: 1
               },
               // up to 576
               575: {
-                gap: 40,
-                peek: { before: 0, after: 0 },
-                perView: 2
+                gap: 50,
+                peek: { before: 0, after: 100 },
+                perView: 1
               }
             }
           });

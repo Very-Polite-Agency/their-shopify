@@ -4,6 +4,15 @@
   color: rgba(var(--theme-colour-white), 1);
   padding: var(--theme-section-padding) 0;
 
+  &__item {
+    direction: ltr;
+  }
+
+  &__layout {
+    width: 100%;
+    padding-right: var(--bs-container-fluid-padding);
+  }
+
   @include breakpoint(sm) {} // min width sm
 
   @include breakpoint(md) {} // min width md
@@ -12,10 +21,26 @@
 
     padding: var(--theme-section-padding--lg) 0;
 
+    &__layout {
+      padding-right: calc( ((100% - var(--bs-container-width--lg))/2) + 12px );
+    }
+
   } // min width lg
 
-  @include breakpoint(xl) {} // min width xl
+  @include breakpoint(xl) {
 
-  @include breakpoint(xxl) {} // min width xxl
+    &__layout {
+      padding-right: calc( ((100% - var(--bs-container-width--xl))/2) + 12px );
+    }
+
+  } // min width xl
+
+  @include breakpoint(xxl) {
+
+    &__layout {
+      padding-right: calc( ((100% - var(--bs-container-width--xxl))/2) + 12px );
+    }
+
+  } // min width xxl
 
 }
