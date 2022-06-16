@@ -39,8 +39,6 @@
   {% assign type = product.type | default: '' %}
   {% assign url = product.url | default: '' %}
 
-  {% render 'tools--debug-this', item: image_position %}
-
   {% if images and images.size > 1 %}
     {% assign featured_image = images[image_position] %}
   {% endif %}

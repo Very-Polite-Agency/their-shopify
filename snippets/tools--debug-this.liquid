@@ -6,4 +6,10 @@
 
 {% endcomment %}
 
-<script>console.log( {{ item | json }} );</script>
+<script>
+var snippet_debugger = {
+  item: {{ item | json }},
+  item_type: typeof {{ item | json }},
+};
+console.log( snippet_debugger );
+</script>
