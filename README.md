@@ -1,4 +1,4 @@
-# Their-Shopify
+# Their Shopify
 
 ## Shopify Site URL
 https://their-jewelry-and-accessories.myshopify.com
