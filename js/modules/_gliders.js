@@ -31,18 +31,7 @@ const Gliders = (() => {
       animationTimingFunc: 'ease-in-out',
       animationDuration: 280,
       autoplay: 3200,
-      breakpoints: {
-        // up to 9999
-        9999: {
-          perView: 1,
-          peek: 90
-        },
-        // up to 992
-        991: {
-          perView: 1,
-          peek: 50
-        },
-      },
+      breakpoints: {},
       hoverpause: true,
       perView: 1,
       type: 'carousel',
@@ -89,6 +78,54 @@ const Gliders = (() => {
       };
 
       switch ( style ) {
+        case 'feature-carousel': {
+          options = gliderOptions({
+            autoplay: 0,
+            gap: 0,
+            peek: 0,
+            perView: 1,
+            direction: 'rtl',
+            breakpoints: {
+              // up to 9999
+              9999: {
+                gap: 40,
+                peek: { before: 0, after: 0 },
+                perView: 6
+              },
+              // up to 1400
+              1399: {
+                gap: 40,
+                peek: { before: 0, after: 0 },
+                perView: 5
+              },
+              // up to 1200
+              1199: {
+                gap: 40,
+                peek: { before: 0, after: 0 },
+                perView: 4
+              },
+              // up to 992
+              991: {
+                gap: 40,
+                peek: { before: 0, after: 0 },
+                perView: 3
+              },
+              // up to 768
+              767: {
+                gap: 40,
+                peek: { before: 0, after: 0 },
+                perView: 2
+              },
+              // up to 576
+              575: {
+                gap: 40,
+                peek: { before: 0, after: 0 },
+                perView: 2
+              }
+            }
+          });
+          break;
+        }
         case 'header-announcements': {
           options = gliderOptions({
             autoplay: 3800,

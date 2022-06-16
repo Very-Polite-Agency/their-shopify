@@ -1,0 +1,53 @@
+{% comment %}
+
+    Accepts:
+    - caption: {String} Description of featured image (optional)
+    - image: {Object} Image Liquid object
+    - link: {String} Description of featured image (optional)
+    - style: {String} Conditionally load different card types by passing style option
+
+    Usage:
+    {% render 'card-image', caption: 'What an amazing caption', image: image, link: 'https://www.google.com', style: 'not-default' %}
+
+{% endcomment %}
+
+{%- if image and image != blank -%}
+
+  {% assign snippet_name = 'card-image' %}
+  {% assign snippet_classes = snippet_name %}
+  {% assign snippet_id = snippet_name | append: '--' | append: image.id -%}
+  {% assign caption = caption | default: '' %}
+  {% assign link = link | default: '' %}
+  {% assign link_target = '_self' %}
+  {% assign style = style | default: 'default' %}
+
+  {% if classes and classes != blank %}
+    {% assign snippet_classes = snippet_classes | prepend: ' ' | prepend: classes %}
+  {% endif %}
+
+  {% if link contains 'http' %}
+    {% assign link_target = '_blank' %}
+  {% endif %}
+
+  {% assign aos_id = snippet_id | append: '--aos' %}
+  {% assign aos_delay = 250 %}
+  {% assign aos_delay_increment = 250 %}
+
+  <div class="{{ snippet_classes }}" id="{{ snippet_id }}" data-style="{{ style }}">
+    <div class="{{ snippet_classes }}__layout" id="{{ aos_id }}">
+
+      {% case style %}
+        {% when 'feature-carousel' %}
+          <div class="{{ snippet_classes }}__image">
+            {% if link != blank %}<a class="{{ snippet_classes }}__image-link link" href="{{ link }}" target="{{ link_target }}">{% endif %}
+              {% render 'lazyload-image', image: image %}
+            {% if link != blank %}</a>{% endif %}
+            {% if caption != blank %}<strong class="{{ snippet_classes }}__image-caption caption caption--2">{{ caption }}</strong>{% endif %}
+          </div>
+        {% else %}
+      {% endcase %}
+
+    </div>
+  </article>
+
+{%- endif -%}

@@ -53,7 +53,7 @@
             </a>
           </div>
           <div class="{{ snippet_name }}__info">
-            <strong class="{{ snippet_name }}__title caption--2">{{ title }}</strong>
+            <strong class="{{ snippet_name }}__title caption caption--2">{{ title }}</strong>
             {% render 'price', classes: 'card-product__price caption--2', product: product, show_currency_code: true %}
           </div>
 
@@ -72,7 +72,7 @@
               %}
             </a>
             {% if title != blank %}
-              <div class="{{ snippet_name }}__caption caption--2">
+              <div class="{{ snippet_name }}__caption caption caption--2">
                 <strong>{{ title }}</strong>
               </div>
             {% endif %}
@@ -89,7 +89,7 @@
               %}
             </a>
             {% if type != blank %}
-              <strong class="{{ snippet_name }}__type caption--2">{{ type }}</strong>
+              <strong class="{{ snippet_name }}__type caption caption--2">{{ type }}</strong>
             {% endif %}
           </div>
 

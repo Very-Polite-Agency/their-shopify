@@ -8,46 +8,44 @@
 {%- endif -%}
 
 <div class="{{ section_name }}" id="{{ section_id }}">
-  {% render 'bs-container', state: 'open' %}
-    <div class="{{ section_name }}__layout">
+  <div class="{{ section_name }}__layout">
 
-      {% if section.blocks.size > 0 %}
+    {% if section.blocks.size > 0 %}
 
-        <div class="glide js--glider" id="{{ glider_id }}" data-glide-style="{{ section_name }}">
-          <div class="glide__track" data-glide-el="track">
-            <ul class="glide__slides">
+      <div class="glide js--glider" id="{{ glider_id }}" data-glide-style="{{ section_name }}">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
 
-              {% for block in section.blocks %}
-                <li class="glide__slide">
-                  <div class="{{ section_name }}__item">
-                    {% case block.type %}
-                      {% when 'image' %}
-                        {%
-                          render 'card-image',
-                          caption: block.settings.caption,
-                          image: block.settings.image,
-                          link: block.settings.link,
-                          style: section_name
-                        %}
-                      {% when 'product' %}
-                        {%
-                          render 'card-product',
-                          product: block.settings.product,
-                          style: section_name
-                        %}
-                    {% endcase %}
-                  </div>
-                </li>
-              {% endfor %}
+            {% for block in section.blocks %}
+              <li class="glide__slide">
+                <div class="{{ section_name }}__item" data-index0="{{ forloop.index0 }}" data-index="{{ forloop.index }}">
+                  {% case block.type %}
+                    {% when 'image' %}
+                      {%
+                        render 'card-image',
+                        caption: block.settings.caption,
+                        image: block.settings.image,
+                        link: block.settings.link,
+                        style: section_name
+                      %}
+                    {% when 'product' %}
+                      {%
+                        render 'card-product',
+                        product: block.settings.product,
+                        style: section_name
+                      %}
+                  {% endcase %}
+                </div>
+              </li>
+            {% endfor %}
 
-            </ul>
-          </div>
+          </ul>
         </div>
+      </div>
 
-      {% endif %}
+    {% endif %}
 
-    </div>
-  {% render 'bs-container', state: 'closed' %}
+  </div>
 </div>
 
 {% schema %}

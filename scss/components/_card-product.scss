@@ -14,7 +14,13 @@
     }
   }
 
-  &__info {}
+  &__info {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 10px;
+  }
 
   &--contact-form {
     .card-product {

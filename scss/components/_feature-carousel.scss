@@ -2,12 +2,17 @@
 
   background: rgba(var(--theme-colour-black), 1);
   color: rgba(var(--theme-colour-white), 1);
+  padding: var(--theme-section-padding) 0;
 
   @include breakpoint(sm) {} // min width sm
 
   @include breakpoint(md) {} // min width md
 
-  @include breakpoint(lg) {} // min width lg
+  @include breakpoint(lg) {
+
+    padding: var(--theme-section-padding--lg) 0;
+
+  } // min width lg
 
   @include breakpoint(xl) {} // min width xl
 
