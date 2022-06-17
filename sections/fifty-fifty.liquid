@@ -50,7 +50,7 @@
                 <div class="{{ section_name }}__image">
                   {% render 'lazyload-image', image: image %}
                   {% if caption != blank %}
-                    <span class="{{ section_name }}__caption caption--1">{{ caption }}</span>
+                    <strong class="{{ section_name }}__caption caption--1">{{ caption }}</strong>
                   {% endif %}
                 </div>
               {% endif %}
@@ -107,9 +107,22 @@
       "limit": 1,
       "settings": [
         {
+          "content": "Product",
+          "type": "header"
+        },
+        {
           "label": "Product",
           "type": "product",
           "id": "product"
+        },
+        {
+          "label": "Title (Optional)",
+          "type": "text",
+          "id": "product_title"
+        },
+        {
+          "content": "Content",
+          "type": "header"
         },
         {
           "label": "Heading",
@@ -123,7 +136,7 @@
         },
         {
           "content": "Call to Action",
-          "type": "paragraph"
+          "type": "header"
         },
         {
           "label": "Title",

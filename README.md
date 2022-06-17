@@ -15,7 +15,7 @@ https://their-jewelry-and-accessories.myshopify.com
 - [ ] Collection Listing
 - [x] Contact
 - [x] FAQs
-- [ ] Home page
+- [x] Home page
 - [x] Policy Pages
 - [ ] Product (PDP)
 
@@ -26,11 +26,11 @@ https://their-jewelry-and-accessories.myshopify.com
 - [ ] Cookie Consent
 - [ ] Dynamic Cart
 - [x] Footer
-- [ ] Feature Carousel
+- [x] Feature Carousel
 - [x] Feature Panel 01
 - [x] Feature Panel 02
 - [x] Feature Panel 03
-- [ ] Fifty-Fifty
+- [x] Fifty-Fifty
 - [x] Header
 - [x] Hero (with content option)
 - [x] Mobile Menu

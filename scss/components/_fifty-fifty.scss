@@ -2,6 +2,17 @@
 
   padding: var(--theme-section-padding) 0;
 
+  .card-product {
+    &__type {
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      position: absolute;
+      bottom: 0;
+      right: -16px;
+      text-align: right;
+    }
+  }
+
   &__caption {
     margin-top: 5px;
   }
@@ -21,6 +32,9 @@
   }
 
   &__heading {
+    p {
+      margin: 0;
+    }
     & + .fifty-fifty__cta,
     & + .fifty-fifty__message {
       margin-top: 30px;
