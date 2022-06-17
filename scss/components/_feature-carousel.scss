@@ -1,8 +1,13 @@
+:root {
+  --theme-feature-carousel-section-padding: 88px;
+  --theme-feature-carousel-section-padding--lg: 115px;
+}
+
 .feature-carousel {
 
   background: rgba(var(--theme-colour-black), 1);
   color: rgba(var(--theme-colour-white), 1);
-  padding: var(--theme-section-padding) 0;
+  padding: var(--theme-feature-carousel-section-padding) 0;
   padding-right: var(--bs-container-fluid-padding);
 
   .glide {
@@ -26,6 +31,36 @@
     }
   }
 
+  &__heading,
+  &__subheading {
+    color: inherit;
+  }
+
+  &__content {
+    color: rgba(var(--theme-colour-gold), 1);
+    position: absolute;
+    top: calc( -1 * var(--theme-feature-carousel-section-padding));
+    right: 0;
+    z-index: 10;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    strong {
+      display: block;
+      position: relative;
+      &:first-child {
+        margin-top: calc( -1 * var(--theme-feature-carousel-section-padding));
+      }
+      & + strong {
+        margin-right: 18px;
+        margin-top: calc( 0.6666 * var(--theme-feature-carousel-section-padding));
+      }
+    }
+  }
+
   &__item {
     direction: ltr;
     height: 100%;
@@ -44,6 +79,7 @@
 
   &__layout {
     width: 100%;
+    position: relative;
   }
 
   @include breakpoint(sm) {} // min width sm
@@ -52,7 +88,7 @@
 
   @include breakpoint(lg) {
 
-    padding: var(--theme-section-padding--lg) 0;
+    padding: var(--theme-feature-carousel-section-padding--lg) 0;
     padding-right: calc( ((100% - var(--bs-container-width--lg))/2) + 12px );
 
     .glide {
@@ -66,8 +102,22 @@
       }
     }
 
-    &__layout {
+    &__content {
+      top: calc( -1 * var(--theme-feature-carousel-section-padding));
+      right: 5%;
+      strong {
+        &:first-child {
+          margin-top: calc( -1 * var(--theme-feature-carousel-section-padding));
+        }
+        & + strong {
+          margin-right: 18px;
+          margin-top: calc( 0.6666 * var(--theme-feature-carousel-section-padding));
+        }
+      }
+    }
 
+    &__layout {
+      padding-right: 15%;
     }
 
   } // min width lg
@@ -76,9 +126,7 @@
 
     padding-right: calc( ((100% - var(--bs-container-width--xl))/2) + 12px );
 
-    &__layout {
-
-    }
+    &__layout {}
 
   } // min width xl
 
@@ -86,9 +134,7 @@
 
     padding-right: calc( ((100% - var(--bs-container-width--xxl))/2) + 12px );
 
-    &__layout {
-
-    }
+    &__layout {}
 
   } // min width xxl
 

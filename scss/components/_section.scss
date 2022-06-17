@@ -15,9 +15,8 @@
     padding: var(--theme-section-padding) 0;
   }
 
-  [data-height-large] {
-    // height: 100%;
-    // height: 100vh;
+  &.section--feature-carousel {
+    overflow: visible;
   }
 
   [data-colour-theme-dark],
