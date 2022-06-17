@@ -2,6 +2,8 @@
 {%- assign section_id = section_name | append: '--' | append: section.id -%}
 
 {% assign glider_id = section_id | append: '--glider' %}
+{% assign heading = section.settings.heading | append: '' %}
+{% assign subheading = section.settings.subheading | append: '' %}
 
 {%- if section.settings.anchor_id != blank -%}
   {%- assign section_id = section.settings.anchor_id -%}
@@ -45,8 +47,8 @@
       </div>
 
       <div class="glide__buttons">
-        <button class="glide__button button next caption caption--2" type="button" data-target="#{{ glider_id }}">< Prev</button>
-        <button class="glide__button button prev caption caption--2" type="button" data-target="#{{ glider_id }}">Next ></button>
+        <button class="glide__button button prev caption caption--2" type="button" data-trigger-next data-target="#{{ glider_id }}">< Prev</button>
+        <button class="glide__button button next caption caption--2" type="button" data-trigger-prev data-target="#{{ glider_id }}">Next ></button>
       </div>
 
     {% endif %}
@@ -60,6 +62,20 @@
   "tag": "section",
   "class": "section section--feature-carousel",
   "settings": [
+    {
+      "content": "Content",
+      "type": "header"
+    },
+    {
+      "label": "Heading",
+      "type": "text",
+      "id": "heading"
+    },
+    {
+      "label": "Subheading",
+      "type": "text",
+      "id": "subheading"
+    },
     {
       "content": "Settings",
       "type": "header"

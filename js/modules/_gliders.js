@@ -216,13 +216,13 @@ const Gliders = (() => {
             setTimeout( () => updateGliderHeight( glider.element ), 100 );
           });
 
-          ( document.querySelectorAll('[data-target="#' + glider.id + '"].next') || [] ).forEach( button => {
+          ( document.querySelectorAll('[data-target="#' + glider.id + '"][data-trigger-next]') || [] ).forEach( button => {
             button.addEventListener('click', function () {
               glide.go('>');
             });
           });
 
-          ( document.querySelectorAll('[data-target="#' + glider.id + '"].prev') || [] ).forEach( button => {
+          ( document.querySelectorAll('[data-target="#' + glider.id + '"][data-trigger-prev]') || [] ).forEach( button => {
             button.addEventListener('click', function () {
               glide.go('<');
             });
