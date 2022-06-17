@@ -22,11 +22,12 @@
               {% assign heading = block.settings.heading | default: '' %}
               {% assign message = block.settings.message | default: '' %}
               {% assign product = block.settings.product | default: '' %}
+              {% assign product_title = block.settings.product_title | default: '' %}
 
               {% if heading != blank or message != blank %}
                 <div class="{{ section_name }}__content">
                   {% if product != blank %}
-                    {%- render 'card-product', classes: 'fifty-fifty__product', product: product, style: section_name -%}
+                    {%- render 'card-product', classes: 'fifty-fifty__product', product: product, product_title: product_title,  style: section_name -%}
                   {% endif %}
                   {% if heading != blank %}<h2 class="{{ section_name }}__heading heading--1">{{ heading }}</h2>{% endif %}
                   {% if message != blank %}<div class="{{ section_name }}__message body-copy--1">{{ message }}</div>{% endif %}
@@ -117,6 +118,7 @@
         },
         {
           "label": "Title (Optional)",
+          "info": "Optionally use a custom product title.",
           "type": "text",
           "id": "product_title"
         },

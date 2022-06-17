@@ -18,6 +18,8 @@
   {% assign snippet_id = snippet_name | append: '--' | append: product.id -%}
   {% assign caption = caption | default: '' %}
   {% assign image_position = image_position | default: '0' | plus: 0 %}
+  {% assign product_title = product_title | default: '' %}
+  {% assign style = style | default: 'default' %}
   {% assign style = style | default: 'default' %}
 
   {% if classes and classes != empty %}
@@ -41,6 +43,10 @@
 
   {% if images and images.size > 1 %}
     {% assign featured_image = images[image_position] %}
+  {% endif %}
+
+  {% if product_title != blank %}
+    {% assign title = product_title %}
   {% endif %}
 
   <article class="{{ snippet_classes }}" id="{{ snippet_id }}" data-published-at="{{ date_published | date: "%Y-%m-%d %H:%M:%S" }}" data-style="{{ style }}" {% unless available %}data-unavailable{% endunless %}>
