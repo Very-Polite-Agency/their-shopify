@@ -12,6 +12,13 @@
 <div class="{{ section_name }}" id="{{ section_id }}">
   <div class="{{ section_name }}__layout">
 
+    {% if heading != blank or subheading != blank %}
+      <div class="{{ section_name }}__content">
+        {% if heading != blank %}<strong class="{{ section_name }}__heading caption caption--2">{{ heading }}</strong>{% endif %}
+        {% if subheading != blank %}<strong class="{{ section_name }}__subheading caption caption--2">{{ subheading }}</strong>{% endif %}
+      </div>
+    {% endif %}
+
     {% if section.blocks.size > 0 %}
 
       <div class="glide js--glider" id="{{ glider_id }}" data-glide-style="{{ section_name }}">
