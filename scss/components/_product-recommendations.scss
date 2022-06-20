@@ -1,35 +1,10 @@
-:root {
-  --theme-feature-carousel-section-padding: 88px;
-  --theme-feature-carousel-section-padding--lg: 115px;
-}
-
-.feature-carousel {
+.product-recommendations {
 
   background: rgba(var(--theme-colour-black), 1);
   color: rgba(var(--theme-colour-white), 1);
   padding: var(--theme-feature-carousel-section-padding) 0;
-  padding-right: var(--bs-container-fluid-padding);
-
-  .glide {
-    &__buttons {
-      padding: 0 0 0 var(--bs-container-fluid-padding);
-      margin-top: 56px;
-      display: flex;
-      justify-content: flex-end;
-    }
-    &__button {
-      color: rgba(var(--theme-colour-charcoal), 1);
-      &.prev {
-        margin-right: auto;
-      }
-      &:hover {
-        color: rgba(var(--theme-colour-white), 1);
-      }
-    }
-    &__slide {
-      height: auto;
-    }
-  }
+  padding-left: var(--bs-container-fluid-padding);
+  margin-top: 55px;
 
   &__heading,
   &__subheading {
@@ -40,7 +15,7 @@
     color: rgba(var(--theme-colour-gold), 1);
     position: absolute;
     top: calc( -1 * var(--theme-feature-carousel-section-padding));
-    right: 0;
+    left: 0;
     z-index: 10;
     writing-mode: vertical-rl;
     text-orientation: mixed;
@@ -55,25 +30,9 @@
         margin-top: calc( -1 * var(--theme-feature-carousel-section-padding));
       }
       & + strong {
-        margin-right: 18px;
+        margin-left: 18px;
         margin-top: calc( 0.6666 * var(--theme-feature-carousel-section-padding));
       }
-    }
-  }
-
-  &__item {
-    direction: ltr;
-    height: 100%;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-    & > * {
-      width: 100%;
-    }
-    a, img {
-      width: 100%;
-      display: block;
     }
   }
 
@@ -89,18 +48,8 @@
   @include breakpoint(lg) {
 
     padding: var(--theme-feature-carousel-section-padding--lg) 0;
-    padding-right: calc( ((100% - var(--bs-container-width--lg))/2) + 12px );
-
-    .glide {
-      &__buttons {
-        margin-top: 36px;
-      }
-      &__button {
-        &.prev {
-          display: none;
-        }
-      }
-    }
+    padding-left: calc( ((100% - var(--bs-container-width--lg))/2) + 12px );
+    margin-top: 75px;
 
     &__content {
       top: calc( -1 * var(--theme-feature-carousel-section-padding));
@@ -109,21 +58,21 @@
           margin-top: calc( -1 * var(--theme-feature-carousel-section-padding));
         }
         & + strong {
-          margin-right: 18px;
+          margin-left: 18px;
           margin-top: calc( 0.6666 * var(--theme-feature-carousel-section-padding));
         }
       }
     }
 
     &__layout {
-      padding-right: 15%;
+      padding-left: 15%;
     }
 
   } // min width lg
 
   @include breakpoint(xl) {
 
-    padding-right: calc( ((100% - var(--bs-container-width--xl))/2) + 12px );
+    padding-left: calc( ((100% - var(--bs-container-width--xl))/2) + 12px );
 
   } // min width xl
 
