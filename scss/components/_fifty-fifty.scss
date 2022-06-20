@@ -3,12 +3,12 @@
   padding: var(--theme-section-padding) 0;
 
   .card-product {
-    &__type {
+    &__title {
       writing-mode: vertical-rl;
       text-orientation: mixed;
       position: absolute;
       bottom: 0;
-      right: -16px;
+      right: -20px;
       text-align: right;
     }
   }
@@ -19,7 +19,8 @@
 
   &__content {
     color: rgba(var(--theme-colour-black),1);
-    padding: 0 15%;
+    width: 84%;
+    margin: auto;
   }
 
   &__cta {

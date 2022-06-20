@@ -7,7 +7,7 @@
 
 
     Usage:
-    {% render 'card-product', caption: 'What an amazing caption', product: product, style: 'some-predefined-style' %}
+    {% render 'card-product', caption: 'What an amazing caption', product: product, product_title: 'Some Custom Title', style: 'some-predefined-style' %}
 
 {% endcomment %}
 
@@ -19,7 +19,6 @@
   {% assign caption = caption | default: '' %}
   {% assign image_position = image_position | default: '0' | plus: 0 %}
   {% assign product_title = product_title | default: '' %}
-  {% assign style = style | default: 'default' %}
   {% assign style = style | default: 'default' %}
 
   {% if classes and classes != empty %}
@@ -100,8 +99,8 @@
                 image: featured_image,
               %}
             </a>
-            {% if type != blank %}
-              <strong class="{{ snippet_name }}__type caption caption--2">{{ type }}</strong>
+            {% if title != blank %}
+              <strong class="{{ snippet_name }}__title caption caption--2">{{ title }}</strong>
             {% endif %}
           </div>
 

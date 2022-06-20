@@ -1,12 +1,15 @@
 {%- assign section_name = 'collection-product-grid' -%}
 {%- assign section_id = section_name | append: '--' | append: section.id -%}
 
+{% assign banner_image = section.settings.banner_image | default: false %}
+
 {% if section.settings.anchor_id != blank %}
   {% assign section_id = section.settings.anchor_id %}
 {% endif %}
 
-{% assign title = collection.title | defualt: '' %}
-{% assign description = collection.description | defualt: '' %}
+{% assign collection_image = collection.image | defualt: false %}
+{% assign collection_title = collection.title | defualt: '' %}
+{% assign collection_description = collection.description | defualt: '' %}
 
 <div class="{{ section_name }}" id="{{ section_id }}">
   {%- paginate collection.products by section.settings.products_per_page -%}
@@ -30,9 +33,6 @@
 
             <div class="{{ section_name }}__hero-content">
               <h1 class="{{ section_name }}__title heading--1">{{ title }}</h1>
-              {% if description != blank and false %}
-                <div class="{{ section_name }}__description body-copy--1">{{ description }}</div>
-              {% endif %}
             </div>
 
             <div class="{{ section_name }}__sort-filter">
@@ -61,6 +61,19 @@
 
       {%- if paginate.pages > 1 -%}
         {% render 'pagination', paginate: paginate, anchor: '' %}
+      {%- endif -%}
+
+      {% if banner_image or collection_image or collection_description != blank %}
+        <div class="{{ section_name }}__banner">
+          {% if banner_image %}
+            {% render 'lazyload-image', classes: 'collection-product-grid__banner-image' image: banner_image %}
+          {%- endif -%}
+          {% if collection_description %}
+            <div class="{{ section_name }}__description body-copy--1">{{ collection_description }}</div>
+          {% endif %}
+          {% if collection_image %}
+            {% render 'lazyload-image', classes: 'collection-product-grid__image' image: banner_image %}
+          {% endif %}
       {%- endif -%}
 
     {%- endif -%}
@@ -99,6 +112,19 @@
   "name": "Collection Product Grid",
   "class": "section section--collection-grid",
   "settings": [
+    {
+      "content": "Banner",
+      "type": "header"
+    },
+    {
+      "label": "Background",
+      "type": "image_picker",
+      "id": "banner_image"
+    },
+    {
+      "content": "Settings",
+      "type": "header"
+    },
     {
       "label": "Products per Page",
       "type": "select",
