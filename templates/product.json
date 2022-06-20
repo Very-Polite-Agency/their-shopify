@@ -1,1 +1,21 @@
-{"order":["main"],"sections":{"main":{"settings":{},"type":"main-product"}}}
+{
+  "order": [
+    "main",
+    "1655767302cfc75991"
+  ],
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "settings": {
+      }
+    },
+    "1655767302cfc75991": {
+      "type": "product-recommendations",
+      "settings": {
+        "heading": "",
+        "heading_highlight": "standard",
+        "product_limit": 4
+      }
+    }
+  }
+}
