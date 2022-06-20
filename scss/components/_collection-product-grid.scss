@@ -16,6 +16,13 @@
     }
   }
 
+  .pagination {
+    margin: 55px 0;
+    & + .collection-product-grid__banner {
+      margin-top: 0;
+    }
+  }
+
   &__banner {
     margin-bottom: var(--bs-container-fluid-padding);
     margin-top: 55px;
@@ -32,6 +39,10 @@
     }
     &-collection-image {
       display: none;
+      z-index: 2;
+    }
+    &-image {
+      z-index: 0;
     }
     &-main {
       background: rgba(var(--theme-colour-black), 1);
@@ -103,15 +114,23 @@
 
   @include breakpoint(lg) {
 
+    .pagination {
+      margin: 75px 0;
+    }
+
     &__banner {
       margin-top: 75px;
       &-collection-description {
+        padding: var(--bs-container-fluid-padding);
         width: 66.6666%;
       }
       &-collection-image {
         display: block;
-        width: 33.3333%;
         aspect-ratio: 1/1;
+        left: unset;
+        z-index: 1;
+        position: relative;
+        width: 33.3333%;
         @supports not (aspect-ratio: auto) {
           height: 500px;
 	      }
@@ -119,7 +138,7 @@
       &-layout {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-end;
       }
     }
 

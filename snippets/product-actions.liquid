@@ -1,0 +1,22 @@
+{%- if product and product != blank -%}
+
+  {%- assign template_name = 'product' -%}
+  {%- assign snippet_name = 'product-actions' -%}
+
+  {% assign available = product.available | default: false %}
+
+  <div class="{{ template_name }}__actions {{ snippet_name }}">
+
+    <button
+      class="{{ snippet_name }}__button-add-to-cart button button--primary js--add-to-cart"
+      type="button"
+      data-variant-id="{{ selected_variant.id }}"
+      data-quantity="1"
+      {% unless available %}disabled{% endunless %}
+    >
+      <span class="button__title">{% if available %}Add to Bag{% else %}Unavailable{% endif %}</span>
+    </button>
+
+  </div>
+
+{% endif %}

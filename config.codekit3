@@ -1622,6 +1622,51 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/scss\/components\/_product-actions.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/_product-actions.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/scss\/components\/_product-details.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/_product-details.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/scss\/components\/_product-gallery.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/_product-gallery.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/scss\/components\/_random.scss" : {
       "aP" : 1,
       "bl" : 0,
@@ -2318,6 +2363,14 @@
       "oAP" : "\/sections\/text-feature.liquid",
       "oF" : 0
     },
+    "\/snippets\/accordion-item.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/accordion-item.liquid",
+      "oF" : 0
+    },
     "\/snippets\/aos-attributes.liquid" : {
       "cB" : 0,
       "ft" : 8192,
@@ -2510,12 +2563,52 @@
       "oAP" : "\/snippets\/price.liquid",
       "oF" : 0
     },
+    "\/snippets\/product-actions.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/product-actions.liquid",
+      "oF" : 0
+    },
+    "\/snippets\/product-details.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/product-details.liquid",
+      "oF" : 0
+    },
+    "\/snippets\/product-gallery.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/product-gallery.liquid",
+      "oF" : 0
+    },
+    "\/snippets\/product-info.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/product-info.liquid",
+      "oF" : 0
+    },
     "\/snippets\/product-media.liquid" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/snippets\/product-media.liquid",
+      "oF" : 0
+    },
+    "\/snippets\/product-options.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/product-options.liquid",
       "oF" : 0
     },
     "\/snippets\/product-thumbnail.liquid" : {

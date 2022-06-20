@@ -1,0 +1,30 @@
+{% if title != blank and content != blank %}
+
+  {%- assign snippet_name = 'collapsible' -%}
+  {%- assign collapse_id = snippet_name | append: '--' | append: title | handleize %}
+  {%- assign open = open | default: false %}
+
+  <div class="{{ snippet_name }}">
+
+    <button
+      class="{{ snippet_name }}__button button button--collapsible{% unless open %} collapsed{% endunless %}"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#{{ collapse_id }}"
+      aria-expanded="false"
+      aria-controls="{{ collapse_id }}"
+    >
+      <span class="button__title caption caption--2">{{ title }}</span>
+      <span class="button__icon">
+        <span class="button__icon-plus">{% render 'svg', type: 'icon.plus' %}</span>
+        <span class="button__icon-minus">{% render 'svg', type: 'icon.minus' %}</span>
+      </span>
+    </button>
+
+    <div class="{{ snippet_name }}__main collapse{% if open %} show{% endif %}" id="{{ collapse_id }}">
+      <div class="{{ snippet_name }}__content body-copy body-copy--1">{{ content }}</div>
+    </div>
+
+  </div>
+
+{% endif %}

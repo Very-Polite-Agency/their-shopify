@@ -19,7 +19,7 @@
        <div class="{{ section_name }}__hero">
         {% render 'bs-container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1' %}
           <div class="{{ section_name }}__hero-content">
-            <h1 class="{{ section_name }}__title heading--1">{{ title }}</h1>
+            <h1 class="{{ section_name }}__title heading--1">{{ collection_title }}</h1>
             <div class="{{ section_name }}__description body-copy--1">It looks like there are currently no products in this collection!</div>
           </div>
         {% render 'bs-container', state: 'closed' %}
@@ -32,7 +32,7 @@
           <div class="{{ section_name }}__hero-layout">
 
             <div class="{{ section_name }}__hero-content">
-              <h1 class="{{ section_name }}__title heading--1">{{ title }}</h1>
+              <h1 class="{{ section_name }}__title heading--1">{{ collection_title }}</h1>
             </div>
 
             <div class="{{ section_name }}__sort-filter">
@@ -68,14 +68,16 @@
           {% render 'bs-container', state: 'open' %}
             <div class="{{ section_name }}__banner-main">
               {% if banner_image %}
-                {% render 'lazyload-image', background: true, classes: 'collection-product-grid__banner-image' image: banner_image %}
+                {% render 'lazyload-image', background: true, classes: 'collection-product-grid__banner-image', image: banner_image %}
               {%- endif -%}
               <div class="{{ section_name }}__banner-layout">
                 {% if collection_description %}
                   <div class="{{ section_name }}__banner-collection-description body-copy--1">{{ collection_description }}</div>
                 {% endif %}
                 {% if collection_image %}
-                  {% render 'lazyload-image', background: true, classes: 'collection-product-grid__banner-collection-image' image: banner_image %}
+                  <div class="{{ section_name }}__banner-collection-image">
+                    {% render 'lazyload-image', background: true, image: collection_image %}
+                  </div>
                 {% endif %}
               </div>
             </div>

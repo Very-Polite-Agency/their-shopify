@@ -1,0 +1,28 @@
+.product {
+
+  @import '../components/product-actions.scss';
+  @import '../components/product-details.scss';
+  @import '../components/product-gallery.scss';
+
+  @include breakpoint(sm) {} // min width sm
+
+  @include breakpoint(md) {} // min width md
+
+  @include breakpoint(lg) {
+
+    &__actions,
+    &__details,
+    &__info,
+    &__options {
+      width: 66.6666%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+  } // min width lg
+
+  @include breakpoint(xl) {} // min width xl
+
+  @include breakpoint(xxl) {} // min width xxl
+
+}

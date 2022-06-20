@@ -1,0 +1,25 @@
+{%- if product and product != blank -%}
+
+  {%- assign template_name = 'product' -%}
+  {%- assign snippet_name = 'product-options' -%}
+
+  {% assign available = product.available | default: false %}
+  {% assign has_multiple_options = false %}
+
+  {% if product.variants.size > 1 %}
+    {% assign has_multiple_options = true %}
+  {% endif %}
+
+  <div class="{{ template_name }}__options {{ snippet_name }}">
+
+    <select class="{{ snippet_name }}__variants{% unless has_multiple_options %} d-none{% endunless %}" name="id">
+      {% for variant in product.variants %}
+        <option class="{{ snippet_name }}__variant" value="{{ variant.id }}" data-available="{{ variant.available }}">{{ variant.title }}</option>
+      {% endfor %}
+    </select>
+
+    <input class="{{ snippet_name }}__quantity d-none" type="number" name="quantity" min="1" value="1">
+
+  </div>
+
+{% endif %}

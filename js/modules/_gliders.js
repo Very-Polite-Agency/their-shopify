@@ -137,6 +137,17 @@ const Gliders = (() => {
           });
           break;
         }
+        case 'product-gallery': {
+          options = gliderOptions({
+            animationDuration: 750,
+            autoplay: 3750,
+            breakpoints: {},
+            gap: 50,
+            peek: { before: 0, after: 100 },
+            perView: 1
+          });
+          break;
+        }
       }
 
       if ( gap ) {

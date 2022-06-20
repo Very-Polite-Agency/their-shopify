@@ -1,0 +1,32 @@
+{%- if product and product != blank and product.images.size > 0 -%}
+
+  {%- assign template_name = 'product' -%}
+  {%- assign snippet_name = 'product-gallery' -%}
+  {%- assign glider_id = snippet_name -%}
+
+  {%- assign images = product.images -%}
+  {%- assign is_glider = false -%}
+
+  {% if images.size > 1 %}
+    {%- assign is_glider = true -%}
+  {% endif %}
+
+  <div class="{{ template_name }}__gallery {{ snippet_name }}">
+
+    {% if is_glider %}<div class="glide js--glider" id="{{ glider_id }}" data-glide-style="{{ glider_id }}" data-glide-mobile-only="true">{% endif %}
+      {% if is_glider %}<div class="glide__track" data-glide-el="track">{% endif %}
+        {% if is_glider %}<ul class="glide__slides">{% endif %}
+
+          {% for image in images %}
+            {% if is_glider %}<li class="glide__slide">{% endif %}
+              <div class="{{ snippet_name }}">{% render 'lazyload-image', image: image %}</div>
+            {% if is_glider %}</li>{% endif %}
+          {% endfor %}
+
+        {% if is_glider %}</ul>{% endif %}
+      {% if is_glider %}</div>{% endif %}
+    {% if is_glider %}</div>{% endif %}
+
+  </div>
+
+{% endif %}

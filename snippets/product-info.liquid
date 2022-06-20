@@ -1,0 +1,20 @@
+{%- if product and product != blank -%}
+
+  {%- assign template_name = 'product' -%}
+  {%- assign snippet_name = 'product-info' -%}
+
+  {% assign description = product.description | default: '' %}
+  {% assign footprint = product.metafields.info.footprint | default: '' %}
+  {% assign recycling = product.metafields.info.recycling | default: '' %}
+  {% assign size_guide = product.metafields.info.size_guide | default: '' %}
+
+  <div class="{{ template_name }}__info {{ snippet_name }}">
+
+    {% render 'accordion-item', title: 'Description', content: description, open: true %}
+    {% render 'accordion-item', title: 'Size Guide', content: size_guide, open: false %}
+    {% render 'accordion-item', title: 'Recycling', content: recycling, open: false %}
+    {% render 'accordion-item', title: 'Footprint', content: footprint, open: false %}
+
+  </div>
+
+{% endif %}

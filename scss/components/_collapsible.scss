@@ -1,9 +1,37 @@
 .collapsible {
 
-  &__trigger {
+  border-bottom: 1px solid black;
+
+  &__button {
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
+    min-height: 0;
+    padding: 15px 0;
   }
+
+  &__content {
+    padding-bottom: 18px;
+  }
+
+  @include breakpoint(sm) {} // min width sm
+
+  @include breakpoint(md) {} // min width md
+
+  @include breakpoint(lg) {
+
+    &__button {
+      padding: 18px 0;
+    }
+
+    &__content {
+      padding-bottom: 20px;
+    }
+
+  } // min width lg
+
+  @include breakpoint(xl) {} // min width xl
+
+  @include breakpoint(xxl) {} // min width xxl
 
 }

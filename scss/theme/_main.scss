@@ -11,6 +11,10 @@ main {
     padding-bottom: 0;
   }
 
+  &.template--product {
+    padding-top: calc( 1.25 * var(--theme-header-height--total) );
+  }
+
   &.page--contact {
     .shopify-section {
       &:first-child {

@@ -1,0 +1,12 @@
+{%- if product and product != blank -%}
+
+  {%- assign template_name = 'product' -%}
+  {%- assign snippet_name = 'product-details' -%}
+
+  <div class="{{ template_name }}__details {{ snippet_name }}">
+    <strong class="{{ snippet_name }}__type caption caption--2">{{ product.type }}</strong>
+    {% render 'price', classes: 'product-details__price caption caption--2', product: product, show_currency_code: true %}
+    <h1 class="{{ snippet_name }}__title heading heading--1">{{ product.title }}</h1>
+  </div>
+
+{% endif %}
