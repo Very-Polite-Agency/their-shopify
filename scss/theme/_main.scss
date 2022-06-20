@@ -6,6 +6,7 @@ main {
   overflow: hidden;
 
   &.index,
+  &.template--collection,
   &.page--about-us  {
     padding-bottom: 0;
   }

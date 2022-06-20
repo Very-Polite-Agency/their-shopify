@@ -7,9 +7,8 @@
 {% endcomment %}
 
 <script>
-var snippet_debugger = {
-  item: {{ item | json }},
-  item_type: typeof {{ item | json }},
-};
-console.log( snippet_debugger );
+  console.log({
+    item: {{ item | json }},
+    item_type: typeof {{ item | json }},
+  });
 </script>

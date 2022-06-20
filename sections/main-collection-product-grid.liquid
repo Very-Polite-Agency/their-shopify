@@ -63,17 +63,24 @@
         {% render 'pagination', paginate: paginate, anchor: '' %}
       {%- endif -%}
 
-      {% if banner_image or collection_image or collection_description != blank %}
+      {% if collection_image or collection_description != blank %}
         <div class="{{ section_name }}__banner">
-          {% if banner_image %}
-            {% render 'lazyload-image', classes: 'collection-product-grid__banner-image' image: banner_image %}
-          {%- endif -%}
-          {% if collection_description %}
-            <div class="{{ section_name }}__description body-copy--1">{{ collection_description }}</div>
-          {% endif %}
-          {% if collection_image %}
-            {% render 'lazyload-image', classes: 'collection-product-grid__image' image: banner_image %}
-          {% endif %}
+          {% render 'bs-container', state: 'open' %}
+            <div class="{{ section_name }}__banner-main">
+              {% if banner_image %}
+                {% render 'lazyload-image', background: true, classes: 'collection-product-grid__banner-image' image: banner_image %}
+              {%- endif -%}
+              <div class="{{ section_name }}__banner-layout">
+                {% if collection_description %}
+                  <div class="{{ section_name }}__banner-collection-description body-copy--1">{{ collection_description }}</div>
+                {% endif %}
+                {% if collection_image %}
+                  {% render 'lazyload-image', background: true, classes: 'collection-product-grid__banner-collection-image' image: banner_image %}
+                {% endif %}
+              </div>
+            </div>
+          {% render 'bs-container', state: 'closed' %}
+        </div>
       {%- endif -%}
 
     {%- endif -%}
@@ -113,15 +120,6 @@
   "class": "section section--collection-grid",
   "settings": [
     {
-      "content": "Banner",
-      "type": "header"
-    },
-    {
-      "label": "Background",
-      "type": "image_picker",
-      "id": "banner_image"
-    },
-    {
       "content": "Settings",
       "type": "header"
     },
@@ -143,6 +141,15 @@
       "type": "checkbox",
       "default": false,
       "id": "show_secondary_image"
+    },
+     {
+      "content": "Banner",
+      "type": "header"
+    },
+    {
+      "label": "Background",
+      "type": "image_picker",
+      "id": "banner_image"
     }
   ]
 }
