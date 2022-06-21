@@ -14,7 +14,9 @@
       {% assign image = block.settings.image | default: false %}
 
       {% if image %}
-        {% render 'lazyload-image', image: image %}
+        <div class="{{ section_name }}__item">
+          {% render 'lazyload-image', background: true, image: image %}
+        </div>
       {% endif %}
 
     {% endfor %}
