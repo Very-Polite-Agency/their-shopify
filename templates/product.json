@@ -12,8 +12,8 @@
     "1655767302cfc75991": {
       "type": "product-recommendations",
       "settings": {
-        "heading": "",
-        "heading_highlight": "standard",
+        "heading": "Curated",
+        "subheading": "For You",
         "product_limit": 4
       }
     }
