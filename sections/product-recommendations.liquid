@@ -103,9 +103,16 @@
     let price_compare = product.compare_at_price || 0;
 
     return `
-      <div class="price${ price_compare ? ' with-sale-price' : '' }">
-        <span class="price__value"><span class="price__currency-symbol">$</span>${(price/100).toFixed(2)}</span>
-        <span class="price__value sale-price"><span class="price__currency-symbol">$</span>${(price_compare/100).toFixed(2)}</span>
+      <div class="price caption caption--2">
+        ${(function () {
+		      if ( price_compare ) {
+			      return `
+              <span class="price__value sale-price">${ price_compare/100 }</span>
+            `;
+		      }
+          return ``;
+	      })()}
+        <span class="price__value">${price/100}</span>
       </div>
     `;
 
@@ -115,48 +122,46 @@
 
     recommendedGlider.glider = new Glide( `#${recommendedGlider.id}`, {
       animationDuration: 750,
+      animationTimingFunc: 'ease-in-out',
       autoplay: 3750,
       breakpoints: {
         // up to 9999
         9999: {
-          gap: 100,
           peek: { before: 175, after: 0 },
           perView: 3
         },
         // up to 1400
         1399: {
-          gap: 90,
           peek: { before: 175, after: 0 },
           perView: 2
         },
         // up to 1200
         1199: {
-          gap: 80,
           peek: { before: 175, after: 0 },
           perView: 2
         },
         // up to 992
         991: {
-          gap: 50,
           peek: { before: 100, after: 0 },
           perView: 2
         },
         // up to 768
         767: {
-          gap: 50,
           peek: { before: 150, after: 0 },
           perView: 1
         },
         // up to 576
         575: {
-          gap: 50,
           peek: { before: 100, after: 0 },
           perView: 1
         }
       },
-      gap: 0,
+      gap: 28,
       peek: 0,
       perView: 1,
+      type: 'carousel',
+      rewind: true,
+      throttle: 50,
     });
 
     recommendedGlider.glider.on( 'mount.after', function(event) {
@@ -193,51 +198,45 @@
 
         recommendedGlider.glider = new Glide( `#${recommendedGlider.id}`, {
           animationTimingFunc: 'ease-in-out',
-          animationDuration: 280,
-          autoplay: 3200,
+          animationDuration: 750,
+          autoplay: 3750,
           breakpoints: {
+            // up to 9999
+            9999: {
+              peek: { before: 0, after: 175 },
+              perView: 3
+            },
+            // up to 1400
+            1399: {
+              peek: { before: 0, after: 175 },
+              perView: 2
+            },
+            // up to 1200
             1199: {
-              // up to 1200
-              focusAt: 'center',
-              gap: 42,
-              peek: 0,
-              perView: 6,
+              peek: { before: 0, after: 175 },
+              perView: 2
             },
+            // up to 992
             991: {
-              // up to 992
-              focusAt: 'center',
-              gap: 32,
-              peek: 0,
-              perView: 5,
+              peek: { before: 0, after: 100 },
+              perView: 2
             },
+            // up to 768
             767: {
-              // up to 768
-              focusAt: 'center',
-              gap: 32,
-              peek: { before: 55, after: 55 },
-              perView: 4,
+              peek: { before: 0, after: 150 },
+              perView: 1
             },
+            // up to 576
             575: {
-              // up to 576
-              focusAt: 'center',
-              gap: 32,
-              peek: { before: 35, after: 35 },
-              perView: 3,
-            },
-            400: {
-              // up to 576
-              focusAt: 'center',
-              gap: 32,
-              peek: { before: 15, after: 15 },
-              perView: 1,
-            },
+              peek: { before: 0, after: 100 },
+              perView: 1
+            }
           },
           gap: 32,
-          peek: 0,
           hoverpause: true,
-          type: 'carousel',
           rewind: true,
-          throttle: 50
+          throttle: 50,
+          type: 'carousel'
         });
 
         recommendedGlider.glider.on( 'mount.after', function(event) {
