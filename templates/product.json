@@ -12,7 +12,7 @@
     "1655767302cfc75991": {
       "type": "product-recommendations",
       "settings": {
-        "heading": "Curated",
+        "heading": "Curated Products",
         "subheading": "For You",
         "product_limit": 4
       }
