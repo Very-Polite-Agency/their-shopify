@@ -1,31 +1,32 @@
-{%- assign section_name = 'featured-image' -%}
+{%- assign section_name = 'featured-images' -%}
 {%- assign section_id = section_name | append: '--' | append: section.id -%}
 
-{% assign image = section.settings.image | append: '' %}
+{% assign image = section.settings.image | append: false %}
 
 {%- if section.settings.anchor_id != blank -%}
   {%- assign section_id = section.settings.anchor_id -%}
 {%- endif -%}
 
 <div class="{{ section_name }}" id="{{ section_id }}">
-  {% render 'lazyload-image', classes: 'featured-image__image', background: true, image: image %}
+  {% if section.blocks.size > 0 %}
+    {% for block in section.blocks %}
+
+      {% assign image = block.settings.image | default: false %}
+
+      {% if image %}
+        {% render 'lazyload-image', image: image %}
+      {% endif %}
+
+    {% endfor %}
+  {%  endif %}
 </div>
 
 {% schema %}
 {
-  "name": "Featured Image",
+  "name": "Featured Image(s)",
   "tag": "section",
-  "class": "section section--featured-image",
+  "class": "section section--featured-images",
   "settings": [
-    {
-      "content": "Content",
-      "type": "header"
-    },
-    {
-      "label": "Image",
-      "type": "image_picker",
-      "id": "image"
-    },
     {
       "label": "Anchor ID",
       "info": "Optionally include a unique ID so that sections within the page can be linked to. Anchor IDs must be all lowercase, unique and replaced empty spaces with hyphens. For example: my-great-section-anchor",
@@ -33,10 +34,22 @@
       "id": "anchor_id"
     }
   ],
-  "blocks": [],
+  "blocks": [
+    {
+      "name": "Image",
+      "type": "image",
+      "settings": [
+        {
+          "label": "Image",
+          "type": "image_picker",
+          "id": "image"
+        }
+      ]
+    }
+  ],
   "presets": [
     {
-      "name": "Featured Image"
+      "name": "Featured Image(s)"
     }
   ]
 }
