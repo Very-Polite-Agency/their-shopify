@@ -45,6 +45,68 @@
     },
     "1655834543a2b5ab6f": {
       "type": "featured-carousel",
+      "blocks": {
+        "bf53173c-056a-467e-8cfc-c441bbe45408": {
+          "type": "product",
+          "settings": {
+            "product": "24k-gold-plated-ring",
+            "image_position": "0"
+          }
+        },
+        "e273a287-b7a5-4d0f-a2d9-c199753189b1": {
+          "type": "product",
+          "settings": {
+            "product": "24k-gold-plated-ring-smoothooth",
+            "image_position": "0"
+          }
+        },
+        "6c27f179-2cd5-439e-b548-e553a2b68c71": {
+          "type": "product",
+          "settings": {
+            "product": "gold-boy-ring",
+            "image_position": "0"
+          }
+        },
+        "fbf936eb-27de-494d-a748-2e1ada860e3f": {
+          "type": "product",
+          "settings": {
+            "product": "gold-hoops",
+            "image_position": "0"
+          }
+        },
+        "022adf07-e061-4172-832b-097ec168a44e": {
+          "type": "product",
+          "settings": {
+            "product": "silver-earrings",
+            "image_position": "0"
+          }
+        },
+        "f7b38c82-d92f-45ee-a29f-cafe762ee8d7": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/feature-panel-03--image-supporting.png",
+            "caption": "",
+            "link": ""
+          }
+        },
+        "0b59634a-f69c-4f0c-9ffd-80c32d7acadc": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/feature-panel-02--auxiliary.png",
+            "caption": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "bf53173c-056a-467e-8cfc-c441bbe45408",
+        "e273a287-b7a5-4d0f-a2d9-c199753189b1",
+        "6c27f179-2cd5-439e-b548-e553a2b68c71",
+        "fbf936eb-27de-494d-a748-2e1ada860e3f",
+        "022adf07-e061-4172-832b-097ec168a44e",
+        "f7b38c82-d92f-45ee-a29f-cafe762ee8d7",
+        "0b59634a-f69c-4f0c-9ffd-80c32d7acadc"
+      ],
       "settings": {
         "heading": "Timeless Classic",
         "subheading": "Collection",
