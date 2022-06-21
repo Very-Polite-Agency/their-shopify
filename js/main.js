@@ -4,6 +4,7 @@
 // @codekit-prepend quiet "../node_modules/@glidejs/glide/dist/glide.min.js";
 // @codekit-prepend quiet "../node_modules/validator/validator.min.js";
 
+// @codekit-prepend "./modules/_add-to-cart.js";
 // @codekit-prepend "./modules/_credits.js";
 // @codekit-prepend "./modules/_breakpoints.js";
 // @codekit-prepend "./modules/_forms.js";
@@ -22,6 +23,7 @@
 //////////////////////////////////////////////////////////////////////////////////////////
 
 let modules = [
+  new AddToCart(),
   new Forms(),
   new Gliders(),
   new Header(),

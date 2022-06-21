@@ -201,6 +201,16 @@
       "sC" : 3,
       "tS" : 1
     },
+    "\/assets\/icon.select-chevron.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/icon.select-chevron.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
     "\/assets\/main.css" : {
       "aP" : 1,
       "bl" : 0,
@@ -440,6 +450,28 @@
       "oA" : 0,
       "oAP" : "\/assets\/main.min.js",
       "oF" : 2,
+      "sC" : 3,
+      "tS" : 1
+    },
+    "\/js\/modules\/_add-to-cart copy.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/assets\/_add-to-cart copy.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 1
+    },
+    "\/js\/modules\/_add-to-cart.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/assets\/_add-to-cart.min.js",
+      "oF" : 0,
       "sC" : 3,
       "tS" : 1
     },

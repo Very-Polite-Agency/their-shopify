@@ -12,9 +12,18 @@
 
   <div class="{{ template_name }}__options {{ snippet_name }}">
 
-    <select class="{{ snippet_name }}__variants{% unless has_multiple_options %} d-none{% endunless %}" name="id">
+    <select class="{{ snippet_name }}__variants select select--2{% unless has_multiple_options %} d-none{% endunless %}" name="id">
       {% for variant in product.variants %}
-        <option class="{{ snippet_name }}__variant" value="{{ variant.id }}" data-available="{{ variant.available }}">{{ variant.title }}</option>
+        {% render 'debug-this', item: variant %}
+        <option
+          class="{{ snippet_name }}__variant"
+          value="{{ variant.id }}"
+          data-available="{{ variant.available }}"
+          data-compare-at-price="{{ variant.compare_at_price }}"
+          data-inventory-management="{{ variant.inventory_management }}"
+          data-price="{{ variant.price }}"
+          {% unless variant.available %}disabled{% endunless %}
+        >{{ variant.title }}</option>
       {% endfor %}
     </select>
 

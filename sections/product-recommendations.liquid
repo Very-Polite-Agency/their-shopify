@@ -43,8 +43,7 @@
     fetch(window.Shopify.routes.root + `recommendations/products.json?product_id=${productID}&limit=${limit}`)
       .then(response => response.json())
       .then(({ products }) => {
-        console.log( 'recommendedProducts ::', products );
-        if (products.length > 0) {
+        if ( products.length > 0 ) {
           document.getElementById(`${sectionName}__main`).innerHTML = renderGliderMarkup(products);
           initializeGlider();
         }
@@ -194,8 +193,6 @@
   };
 
   function initializeGliderWithInterval() {
-
-    console.log('initializeGliderWithInterval :: Initialized');
 
     recommendedGlider.interval = setInterval( function() {
 
