@@ -60,6 +60,10 @@
       }
 
       var Theme = Theme || {};
+      Theme.currency = {
+        symbol: {{ cart.currency.symbol | json }} || '',
+        iso_code: {{ cart.currency.iso_code | json }} || '',
+      };
       Theme.product = {{ product | json }} || {};
       Theme.collection = {{ collection | json }} || {};
       Theme.imgURLFilter = function(src, size) {

@@ -6,6 +6,27 @@
   padding-left: var(--bs-container-fluid-padding);
   margin-top: var(--theme-feature-carousel-section-padding);
 
+  .glide {
+    &__buttons {
+      padding: 0 var(--bs-container-fluid-padding) 0 0;
+      margin-top: 56px;
+      display: flex;
+      justify-content: flex-end;
+    }
+    &__button {
+      color: rgba(var(--theme-colour-charcoal), 1);
+      &.prev {
+        margin-right: auto;
+      }
+      &:hover {
+        color: rgba(var(--theme-colour-white), 1);
+      }
+    }
+    &__slide {
+      height: auto;
+    }
+  }
+
   &__heading,
   &__subheading {
     color: inherit;
@@ -14,7 +35,7 @@
   &__content {
     color: rgba(var(--theme-colour-gold), 1);
     position: absolute;
-    top: calc( -0.75 * var(--theme-feature-carousel-section-padding));
+    top: calc( -1 * var(--theme-feature-carousel-section-padding) );
     left: 0;
     z-index: 10;
     writing-mode: vertical-rl;
@@ -27,11 +48,11 @@
       display: block;
       position: relative;
       &:first-child {
-        margin-top: calc( -1 * var(--theme-feature-carousel-section-padding));
+        margin-top: calc( -0.5 * var(--theme-feature-carousel-section-padding));
       }
       & + strong {
+        margin-top: calc( 0.5 * var(--theme-feature-carousel-section-padding));
         margin-right: 18px;
-        margin-top: calc( 0.6666 * var(--theme-feature-carousel-section-padding));
       }
     }
   }
@@ -55,15 +76,26 @@
     padding-left: calc( ((100% - var(--bs-container-width--lg))/2) + 12px );
     margin-top: var(--theme-feature-carousel-section-padding--lg);
 
+    .glide {
+      &__buttons {
+        margin-top: 36px;
+      }
+      &__button {
+        &.next {
+          display: none;
+        }
+      }
+    }
+
     &__content {
-      top: calc( -1 * var(--theme-feature-carousel-section-padding));
+      top: calc( -1 * var(--theme-feature-carousel-section-padding--lg) );
       strong {
         &:first-child {
-          margin-top: calc( -1 * var(--theme-feature-carousel-section-padding));
+          margin-top: calc( -0.25 * var(--theme-feature-carousel-section-padding--lg));
         }
         & + strong {
           margin-right: 18px;
-          margin-top: calc( 0.6666 * var(--theme-feature-carousel-section-padding));
+          margin-top: calc( 0.5 * var(--theme-feature-carousel-section-padding--lg));
         }
       }
     }

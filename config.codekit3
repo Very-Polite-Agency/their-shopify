@@ -1292,21 +1292,6 @@
       "pg" : 0,
       "sct" : 0
     },
-    "\/scss\/components\/_feature-carousel.scss" : {
-      "aP" : 1,
-      "bl" : 0,
-      "co" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/assets\/_feature-carousel.css",
-      "oF" : 0,
-      "oS" : 3,
-      "pg" : 0,
-      "sct" : 0
-    },
     "\/scss\/components\/_feature-panel-01.scss" : {
       "aP" : 1,
       "bl" : 0,
@@ -1352,7 +1337,7 @@
       "pg" : 0,
       "sct" : 0
     },
-    "\/scss\/components\/_fifty-fifty-feature.scss" : {
+    "\/scss\/components\/_featured-carousel.scss" : {
       "aP" : 1,
       "bl" : 0,
       "co" : 0,
@@ -1361,7 +1346,22 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_fifty-fifty-feature.css",
+      "oAP" : "\/assets\/_featured-carousel.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/scss\/components\/_featured-image.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/_featured-image.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2098,14 +2098,6 @@
       "oAP" : "\/sections\/faqs.liquid",
       "oF" : 0
     },
-    "\/sections\/feature-carousel.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/feature-carousel.liquid",
-      "oF" : 0
-    },
     "\/sections\/feature-panel-01.liquid" : {
       "cB" : 0,
       "ft" : 8192,
@@ -2138,12 +2130,28 @@
       "oAP" : "\/sections\/featured-blog.liquid",
       "oF" : 0
     },
+    "\/sections\/featured-carousel.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/sections\/featured-carousel.liquid",
+      "oF" : 0
+    },
     "\/sections\/featured-collection.liquid" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/sections\/featured-collection.liquid",
+      "oF" : 0
+    },
+    "\/sections\/featured-image.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/sections\/featured-image.liquid",
       "oF" : 0
     },
     "\/sections\/featured-product.liquid" : {

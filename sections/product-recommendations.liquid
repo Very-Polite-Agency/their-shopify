@@ -67,6 +67,10 @@
           </ul>
         </div>
       </div>
+      <div class="glide__buttons">
+        <button class="glide__button button prev caption caption--2" type="button" data-trigger-next data-target="#${recommendedGlider.id}">< Next</button>
+        <button class="glide__button button next caption caption--2" type="button" data-trigger-prev data-target="#${recommendedGlider.id}">Prev ></button>
+      </div>
     `;
   };
 
@@ -87,9 +91,7 @@
           </a>
         </div>
         <div class="card-product__info">
-          <strong class="card-product__title caption--2">
-            <a class="card-product__title-link link" href="/products/${handle}" title="${title}" target="_self">${title}</a>
-          </strong>
+          <strong class="card-product__title caption--2">${title}</strong>
           <div class="card-product__price caption--2">${renderProductPrice(product)}</div>
         </div>
       </article>
@@ -101,18 +103,23 @@
 
     let price = product.price || 0;
     let price_compare = product.compare_at_price || 0;
+    let currency_code = Theme.currency.iso_code;
 
     return `
       <div class="price caption caption--2">
         ${(function () {
 		      if ( price_compare ) {
 			      return `
-              <span class="price__value sale-price">${ price_compare/100 }</span>
+              <span class="price__amount">${ price_compare/100 }<span class="price__currency-code">${ currency_code }</span></span>
+              <span class="price__amount compare-at-price">${ price/100 }<span class="price__currency-code">${ currency_code }</span></span>
             `;
-		      }
-          return ``;
+		      } else {
+            return `
+              <span class="price__amount">${ price/100 }<span class="price__currency-code">${ currency_code }</span></span>
+            `;
+          }
+
 	      })()}
-        <span class="price__value">${price/100}</span>
       </div>
     `;
 
@@ -170,13 +177,13 @@
       }, 250 );
     });
 
-    ( document.querySelectorAll(`[data-target="#${recommendedGlider.id}"].next`) || [] ).forEach( button => {
+    ( document.querySelectorAll(`[data-target="#${recommendedGlider.id}"][data-trigger-next]`) || [] ).forEach( button => {
       button.addEventListener('click', function () {
         recommendedGlider.glider.go('>');
       });
     });
 
-    ( document.querySelectorAll(`[data-target="#${recommendedGlider.id}"].prev`) || [] ).forEach( button => {
+    ( document.querySelectorAll(`[data-target="#${recommendedGlider.id}"][data-trigger-prev]`) || [] ).forEach( button => {
       button.addEventListener('click', function () {
         recommendedGlider.glider.go('<');
       });

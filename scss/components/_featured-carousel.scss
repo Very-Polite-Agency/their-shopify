@@ -1,13 +1,13 @@
 :root {
-  --theme-feature-carousel-section-padding: 88px;
-  --theme-feature-carousel-section-padding--lg: 115px;
+  --theme-featured-carousel-section-padding: 88px;
+  --theme-featured-carousel-section-padding--lg: 115px;
 }
 
-.feature-carousel {
+.featured-carousel {
 
   background: rgba(var(--theme-colour-black), 1);
   color: rgba(var(--theme-colour-white), 1);
-  padding: var(--theme-feature-carousel-section-padding) 0;
+  padding: var(--theme-featured-carousel-section-padding) 0;
   padding-right: var(--bs-container-fluid-padding);
 
   .glide {
@@ -39,7 +39,7 @@
   &__content {
     color: rgba(var(--theme-colour-gold), 1);
     position: absolute;
-    top: calc( -1 * var(--theme-feature-carousel-section-padding));
+    top: calc( -1 * var(--theme-featured-carousel-section-padding));
     right: 0;
     z-index: 10;
     writing-mode: vertical-rl;
@@ -52,11 +52,11 @@
       display: block;
       position: relative;
       &:first-child {
-        margin-top: calc( -1 * var(--theme-feature-carousel-section-padding));
+        margin-top: calc( -1 * var(--theme-featured-carousel-section-padding));
       }
       & + strong {
         margin-right: 18px;
-        margin-top: calc( 0.6666 * var(--theme-feature-carousel-section-padding));
+        margin-top: calc( 0.6666 * var(--theme-featured-carousel-section-padding));
       }
     }
   }
@@ -88,7 +88,7 @@
 
   @include breakpoint(lg) {
 
-    padding: var(--theme-feature-carousel-section-padding--lg) 0;
+    padding: var(--theme-featured-carousel-section-padding--lg) 0;
     padding-right: calc( ((100% - var(--bs-container-width--lg))/2) + 12px );
 
     .glide {
@@ -103,14 +103,14 @@
     }
 
     &__content {
-      top: calc( -1 * var(--theme-feature-carousel-section-padding));
+      top: calc( -1 * var(--theme-featured-carousel-section-padding));
       strong {
         &:first-child {
-          margin-top: calc( -1 * var(--theme-feature-carousel-section-padding));
+          margin-top: calc( -1 * var(--theme-featured-carousel-section-padding));
         }
         & + strong {
           margin-right: 18px;
-          margin-top: calc( 0.6666 * var(--theme-feature-carousel-section-padding));
+          margin-top: calc( 0.6666 * var(--theme-featured-carousel-section-padding));
         }
       }
     }

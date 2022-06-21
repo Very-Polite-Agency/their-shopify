@@ -1,4 +1,4 @@
-{%- assign section_name = 'feature-carousel' -%}
+{%- assign section_name = 'featured-carousel' -%}
 {%- assign section_id = section_name | append: '--' | append: section.id -%}
 
 {% assign glider_id = section_id | append: '--glider' %}
@@ -65,9 +65,9 @@
 
 {% schema %}
 {
-  "name": "Feature Carousel",
+  "name": "Featured Carousel",
   "tag": "section",
-  "class": "section section--feature-carousel",
+  "class": "section section--featured-carousel",
   "settings": [
     {
       "content": "Content",
@@ -141,7 +141,7 @@
   ],
   "presets": [
     {
-      "name": "Feature Carousel"
+      "name": "Featured Carousel"
     }
   ]
 }
