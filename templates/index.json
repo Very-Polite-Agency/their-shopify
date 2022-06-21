@@ -43,77 +43,69 @@
         "text_alignment": "bottom"
       }
     },
-    "165531308513f664e8": {
-      "type": "feature-carousel",
+    "1655834543a2b5ab6f": {
+      "type": "featured-carousel",
       "blocks": {
-        "328108bc-2f23-427c-97ea-b455a3922ee1": {
+        "bf53173c-056a-467e-8cfc-c441bbe45408": {
           "type": "product",
           "settings": {
             "product": "24k-gold-plated-ring",
-            "image_position": "1"
+            "image_position": "0"
           }
         },
-        "e81b4482-c1dd-4c8a-8dbb-be9d5862ad64": {
+        "e273a287-b7a5-4d0f-a2d9-c199753189b1": {
           "type": "product",
           "settings": {
             "product": "24k-gold-plated-ring-smoothooth",
             "image_position": "0"
           }
         },
-        "000eddd5-311e-46da-b390-7381502a238d": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/feature-panel-02--auxiliary.png",
-            "caption": "Sample caption for",
-            "link": ""
-          }
-        },
-        "8f6bc61e-dc53-450d-aee6-c4bd27f90e23": {
+        "6c27f179-2cd5-439e-b548-e553a2b68c71": {
           "type": "product",
           "settings": {
             "product": "gold-boy-ring",
             "image_position": "0"
           }
         },
-        "f0978891-ec7d-4c3f-9f50-81f0485b381c": {
-          "type": "product",
-          "settings": {
-            "product": "24k-gold-chain",
-            "image_position": "0"
-          }
-        },
-        "fff094cc-6217-4fd1-b560-0db90d9e5c3a": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/blog-hero_2x_0aa44287-7dd8-4b6a-9788-2608fb36fc5d.png",
-            "caption": "Another sample caption with link",
-            "link": "shopify:\/\/blogs\/news"
-          }
-        },
-        "4625e826-7031-44f5-b352-7c8b35092c46": {
+        "fbf936eb-27de-494d-a748-2e1ada860e3f": {
           "type": "product",
           "settings": {
             "product": "gold-hoops",
             "image_position": "0"
           }
         },
-        "0945aec1-c39f-43a1-91a0-97f3e702c471": {
+        "022adf07-e061-4172-832b-097ec168a44e": {
           "type": "product",
           "settings": {
             "product": "silver-earrings",
             "image_position": "0"
           }
+        },
+        "f7b38c82-d92f-45ee-a29f-cafe762ee8d7": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/feature-panel-03--image-supporting.png",
+            "caption": "",
+            "link": ""
+          }
+        },
+        "0b59634a-f69c-4f0c-9ffd-80c32d7acadc": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/feature-panel-02--auxiliary.png",
+            "caption": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
-        "328108bc-2f23-427c-97ea-b455a3922ee1",
-        "e81b4482-c1dd-4c8a-8dbb-be9d5862ad64",
-        "000eddd5-311e-46da-b390-7381502a238d",
-        "8f6bc61e-dc53-450d-aee6-c4bd27f90e23",
-        "f0978891-ec7d-4c3f-9f50-81f0485b381c",
-        "fff094cc-6217-4fd1-b560-0db90d9e5c3a",
-        "4625e826-7031-44f5-b352-7c8b35092c46",
-        "0945aec1-c39f-43a1-91a0-97f3e702c471"
+        "bf53173c-056a-467e-8cfc-c441bbe45408",
+        "e273a287-b7a5-4d0f-a2d9-c199753189b1",
+        "6c27f179-2cd5-439e-b548-e553a2b68c71",
+        "fbf936eb-27de-494d-a748-2e1ada860e3f",
+        "022adf07-e061-4172-832b-097ec168a44e",
+        "f7b38c82-d92f-45ee-a29f-cafe762ee8d7",
+        "0b59634a-f69c-4f0c-9ffd-80c32d7acadc"
       ],
       "settings": {
         "heading": "Timeless Classic",
@@ -189,7 +181,7 @@
   "order": [
     "1650923978b97fb93e",
     "165093044106648c6d",
-    "165531308513f664e8",
+    "1655834543a2b5ab6f",
     "16510075059df4bdc9",
     "1651005681df706acc"
   ]
