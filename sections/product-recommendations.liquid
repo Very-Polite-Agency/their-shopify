@@ -114,45 +114,49 @@
   function initializeGlider() {
 
     recommendedGlider.glider = new Glide( `#${recommendedGlider.id}`, {
-      animationTimingFunc: 'ease-in-out',
-      animationDuration: 280,
-      autoplay: 3200,
+      animationDuration: 750,
+      autoplay: 3750,
       breakpoints: {
+        // up to 9999
         9999: {
-          // up to 1200
-          focusAt: 'center',
-          gap: 32,
-          peek: { before: 64, after: 64 },
-          perView: 4,
+          gap: 100,
+          peek: { before: 175, after: 0 },
+          perView: 3
         },
+        // up to 1400
         1399: {
-          // up to 992
-          focusAt: 'center',
-          gap: 32,
-          peek: { before: 64, after: 64 },
-          perView: 3,
+          gap: 90,
+          peek: { before: 175, after: 0 },
+          perView: 2
         },
+        // up to 1200
+        1199: {
+          gap: 80,
+          peek: { before: 175, after: 0 },
+          perView: 2
+        },
+        // up to 992
         991: {
-          // up to 992
-          focusAt: 'center',
-          gap: 32,
-          peek: { before: 64, after: 64 },
-          perView: 2,
+          gap: 50,
+          peek: { before: 100, after: 0 },
+          perView: 2
         },
+        // up to 768
         767: {
-          // up to 576
-          focusAt: 'center',
-          gap: 32,
-          peek: { before: 64, after: 64 },
-          perView: 1,
+          gap: 50,
+          peek: { before: 150, after: 0 },
+          perView: 1
         },
+        // up to 576
+        575: {
+          gap: 50,
+          peek: { before: 100, after: 0 },
+          perView: 1
+        }
       },
-      gap: 32,
+      gap: 0,
       peek: 0,
-      hoverpause: true,
-      type: 'carousel',
-      rewind: true,
-      throttle: 50
+      perView: 1,
     });
 
     recommendedGlider.glider.on( 'mount.after', function(event) {

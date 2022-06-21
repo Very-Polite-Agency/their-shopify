@@ -82,10 +82,6 @@ const Gliders = (() => {
           options = gliderOptions({
             animationDuration: 750,
             autoplay: 3750,
-            gap: 0,
-            peek: 0,
-            perView: 1,
-            direction: 'rtl',
             breakpoints: {
               // up to 9999
               9999: {
@@ -123,7 +119,11 @@ const Gliders = (() => {
                 peek: { before: 0, after: 100 },
                 perView: 1
               }
-            }
+            },
+            gap: 0,
+            peek: 0,
+            perView: 1,
+            direction: 'rtl',
           });
           break;
         }
