@@ -78,7 +78,7 @@
 
   @include breakpoint(xxl) {
 
-    padding-right: calc( ((100% - var(--bs-container-width--xxl))/2) + 12px );
+    padding-left: calc( ((100% - var(--bs-container-width--xxl))/2) + 12px );
 
   } // min width xxl
 
