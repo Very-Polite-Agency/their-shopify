@@ -8,7 +8,7 @@
 {%- endif -%}
 
 <div class="{{ section_name }}" id="{{ section_id }}">
-
+  {% render 'lazyload-image', classes: 'featured-image__image', background: true, image: image %}
 </div>
 
 {% schema %}
