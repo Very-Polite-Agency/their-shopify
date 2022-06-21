@@ -37,6 +37,7 @@ https://their-jewelry-and-accessories.myshopify.com
 - [x] Navigation
 
 ### General
+- [ ] Integrate AOS
 - [ ] Remove 'post_per_page' override on the main-blog.liquid section
 - [ ] Test contact us form entries
 - [ ] Solve random placement of background on FAQs page

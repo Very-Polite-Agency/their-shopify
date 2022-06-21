@@ -78,7 +78,7 @@ const Gliders = (() => {
       };
 
       switch ( style ) {
-        case 'feature-carousel': {
+        case 'featured-carousel': {
           options = gliderOptions({
             animationDuration: 750,
             autoplay: 3750,
