@@ -1,7 +1,8 @@
 {
   "order": [
     "main",
-    "1655767302cfc75991"
+    "1655767302cfc75991",
+    "165583490263ac7aff"
   ],
   "sections": {
     "main": {
@@ -15,6 +16,13 @@
         "heading": "Curated",
         "subheading": "For You",
         "product_limit": 4
+      }
+    },
+    "165583490263ac7aff": {
+      "type": "featured-image",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/narrow-feature_3x_7a3a28c1-9ff0-4943-9b12-0015e94e41a6.png",
+        "anchor_id": ""
       }
     }
   }
