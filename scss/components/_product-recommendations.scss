@@ -14,7 +14,7 @@
   &__content {
     color: rgba(var(--theme-colour-gold), 1);
     position: absolute;
-    top: calc( -1 * var(--theme-feature-carousel-section-padding));
+    top: calc( -0.75 * var(--theme-feature-carousel-section-padding));
     left: 0;
     z-index: 10;
     writing-mode: vertical-rl;
@@ -39,6 +39,10 @@
   &__layout {
     width: 100%;
     position: relative;
+  }
+
+  &__main {
+    padding-left: 30px;
   }
 
   @include breakpoint(sm) {} // min width sm
