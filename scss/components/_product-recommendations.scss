@@ -2,9 +2,9 @@
 
   background: rgba(var(--theme-colour-black), 1);
   color: rgba(var(--theme-colour-white), 1);
-  padding: var(--theme-feature-carousel-section-padding) 0;
+  padding: var(--theme-featured-carousel-section-padding) 0;
   padding-left: var(--bs-container-fluid-padding);
-  margin-top: var(--theme-feature-carousel-section-padding);
+  margin-top: var(--theme-featured-carousel-section-padding);
 
   .glide {
     &__buttons {
@@ -35,7 +35,7 @@
   &__content {
     color: rgba(var(--theme-colour-gold), 1);
     position: absolute;
-    top: calc( -1 * var(--theme-feature-carousel-section-padding) );
+    top: calc( -1 * var(--theme-featured-carousel-section-padding) );
     left: 0;
     z-index: 10;
     writing-mode: vertical-rl;
@@ -48,10 +48,10 @@
       display: block;
       position: relative;
       &:first-child {
-        margin-top: calc( -0.5 * var(--theme-feature-carousel-section-padding));
+        margin-top: calc( -0.5 * var(--theme-featured-carousel-section-padding));
       }
       & + strong {
-        margin-top: calc( 0.5 * var(--theme-feature-carousel-section-padding));
+        margin-top: calc( 0.5 * var(--theme-featured-carousel-section-padding));
         margin-right: 18px;
       }
     }
@@ -72,9 +72,9 @@
 
   @include breakpoint(lg) {
 
-    padding: var(--theme-feature-carousel-section-padding--lg) 0;
+    padding: var(--theme-featured-carousel-section-padding--lg) 0;
     padding-left: calc( ((100% - var(--bs-container-width--lg))/2) + 12px );
-    margin-top: var(--theme-feature-carousel-section-padding--lg);
+    margin-top: var(--theme-featured-carousel-section-padding--lg);
 
     .glide {
       &__buttons {
@@ -88,14 +88,14 @@
     }
 
     &__content {
-      top: calc( -1 * var(--theme-feature-carousel-section-padding--lg) );
+      top: calc( -1 * var(--theme-featured-carousel-section-padding--lg) );
       strong {
         &:first-child {
-          margin-top: calc( -0.25 * var(--theme-feature-carousel-section-padding--lg));
+          margin-top: calc( -0.25 * var(--theme-featured-carousel-section-padding--lg));
         }
         & + strong {
           margin-right: 18px;
-          margin-top: calc( 0.5 * var(--theme-feature-carousel-section-padding--lg));
+          margin-top: calc( 0.5 * var(--theme-featured-carousel-section-padding--lg));
         }
       }
     }

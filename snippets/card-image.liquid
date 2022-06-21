@@ -37,7 +37,7 @@
     <div class="{{ snippet_classes }}__layout" id="{{ aos_id }}">
 
       {% case style %}
-        {% when 'feature-carousel' %}
+        {% when 'featured-carousel' %}
           <div class="{{ snippet_classes }}__image">
             {% if link != blank %}<a class="{{ snippet_classes }}__image-link link" href="{{ link }}" target="{{ link_target }}">{% endif %}
               {% render 'lazyload-image', image: image %}
