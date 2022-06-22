@@ -1,1 +1,15 @@
-{"order":["main"],"sections":{"main":{"settings":{"empty_heading":"It looks like your bag is empty.","empty_message":"<p>Let's fix that. <a href=\"\/collections\/base-collection\" title=\"Base Collection\">Shop<\/a> our latest collection.<\/p>","hero_heading":"Shopping Bag"},"type":"main-cart"}}}
+{
+  "order": [
+    "main"
+  ],
+  "sections": {
+    "main": {
+      "type": "main-cart",
+      "settings": {
+        "hero_heading": "Shopping Bag",
+        "empty_heading": "",
+        "empty_message": "<p>Nothing has been added to cart. Shop our latest <a href=\"\/collections\/all\" title=\"All products\">drop<\/a>.<\/p>"
+      }
+    }
+  }
+}
