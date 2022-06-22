@@ -11,10 +11,6 @@ const Cart = (() => {
   let breakpoints = new Breakpoints();
   let throttled = false;
   let config = {
-    getCart: {
-      method: 'get',
-      url: window.Shopify.routes.root + 'cart.js'
-    },
     addToCart: {
       method: 'post',
       url: window.Shopify.routes.root + 'cart/add.js',
@@ -22,14 +18,33 @@ const Cart = (() => {
       data: {
         items: []
       }
+    },
+    getCart: {
+      method: 'get',
+      url: window.Shopify.routes.root + 'cart.js'
+    },
+    changeCart: {
+      method: 'post',
+      url: window.Shopify.routes.root + 'cart/change.js',
+      headers: { 'Content-Type': 'application/json' },
+      data: {}
     }
+  };
+
+  //////////////////////////////////////////////////////////
+  ////  Render Cart Item Removal by Key
+  //////////////////////////////////////////////////////////
+
+  const renderCartItemRemovalByKey = ( key = '' ) => {
+    let element = document.getElementById(`cart-line-item--${key}`) || false;
+    if ( element ) element.remove();
   };
 
   //////////////////////////////////////////////////////////
   ////  Render Cart Items Count
   //////////////////////////////////////////////////////////
 
-  const renderCartItemsCoun = ( count = 0 ) => {
+  const renderCartItemsCount = ( count = 0 ) => {
     ( document.querySelectorAll('.js--cart-item-count') || [] ).forEach( element => {
       element.innerHTML = `${count}`;
       if ( count > 0 ) {
@@ -41,13 +56,21 @@ const Cart = (() => {
   };
 
   //////////////////////////////////////////////////////////
+  ////  Render Empty Cart Message
+  //////////////////////////////////////////////////////////
+
+  const renderEmptyCartMessage = () => {
+    alert('Your cart is empty!');
+  };
+
+  //////////////////////////////////////////////////////////
   ////  Get Cart
   //////////////////////////////////////////////////////////
 
   const getCart = () => {
     axios( config.getCart ).then(function (response) {
       console.log( 'getCart :: Succes', response );
-      renderCartItemsCoun(response.data.item_count);
+      renderCartItemsCount(response.data.item_count);
     })
     .catch(function (error) {
       console.log( 'getCart :: Error', error );
@@ -86,6 +109,48 @@ const Cart = (() => {
   };
 
   //////////////////////////////////////////////////////////
+  ////  On Button Click Add Product To Cart
+  //////////////////////////////////////////////////////////
+
+  const onClickRemoveCartLineItem = () => {
+
+    let buttons = document.getElementsByClassName("js--remove-cart-line-item") || [];
+
+    Array.from(buttons).forEach( button => {
+      button.addEventListener('click', event => {
+
+        let key = button.closest('.cart-line-item') ? button.closest('.cart-line-item').dataset.lineItemKey : false;
+
+        if ( key ) {
+          config.changeCart.data = {
+            id: key,
+            quantity: 0
+          };
+          axios( config.changeCart ).then(function (response) {
+            console.log( 'changeCart :: Succes', response );
+
+            let items_count = response.data.item_count || 0;
+
+            if ( items_count ) {
+              renderCartItemsCount( items_count );
+              renderCartItemRemovalByKey( key  );
+            } else {
+              renderEmptyCartMessage();
+            }
+
+          })
+          .catch(function (error) {
+            console.log( 'changeCart :: Error', error );
+          })
+          .then(function () {});
+        }
+
+      });
+    });
+
+  };
+
+  //////////////////////////////////////////////////////////
   ////  Init
   //////////////////////////////////////////////////////////
 
@@ -95,6 +160,7 @@ const Cart = (() => {
 
     // execute expression
     onButtonClickAddProductToCart();
+    onClickRemoveCartLineItem();
 
     // ---------------------------------------- On resize, execute functions
     window.addEventListener( 'resize', function(e) {

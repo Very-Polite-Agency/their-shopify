@@ -1,0 +1,25 @@
+.cart-line-items {
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: var(--bs-gutter-width);
+
+  @include breakpoint(sm) {} // min width sm
+
+  @include breakpoint(md) {
+
+    grid-template-columns: 1fr 1fr;
+
+  } // min width md
+
+  @include breakpoint(lg) {} // min width lg
+
+  @include breakpoint(xl) {} // min width xl
+
+  @include breakpoint(xxl) {
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+  } // min width xxl
+
+}

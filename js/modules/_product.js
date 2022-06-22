@@ -88,10 +88,12 @@ const Product = (() => {
   const init = ( $options = false ) => {
 
     if ( debug ) console.log( `${info.name}.init() v.${info.version} Started` );
-    let option = elements.optionSelector.options[elements.optionSelector.selectedIndex];
-    updateProductAddToCartButton( option );
-    updateProductPrice( option );
-    onProductOptionsChange();
+    if ( elements.optionSelector ) {
+      let option = elements.optionSelector.options[elements.optionSelector.selectedIndex];
+      updateProductAddToCartButton( option );
+      updateProductPrice( option );
+      onProductOptionsChange();
+    }
     if ( debug ) console.log( `${info.name}.init() Finished` );
 
   };

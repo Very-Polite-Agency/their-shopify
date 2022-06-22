@@ -1,0 +1,91 @@
+{% comment %}
+
+    Accepts:
+    - line_item: {Object} Cart line item Liquid object
+    - style: {String} Optionally load different card types by passing style option
+
+    Usage:
+    {% render 'cart-line-item', line_item: item, style: 'anything-but-default' %}
+
+{% endcomment %}
+
+{%- if line_item and line_item != blank -%}
+
+  {% assign snippet_name = 'cart-line-item' %}
+  {% assign snippet_classes = snippet_name %}
+  {% assign snippet_id = snippet_name | append: '--' | append: line_item.key -%}
+
+  {% assign image = line_item.image %}
+  {% assign key = line_item.key %}
+  {% assign quantity = line_item.quantity %}
+  {% assign url = line_item.url %}
+  {% assign title = line_item.variant.product.title %}
+
+  <div class="{{ snippet_classes }}" id="{{ snippet_id }}" data-line-item-key="{{ key }}">
+
+    <div class="{{ snippet_name }}__layout">
+
+      <div class="{{ snippet_name }}__image">
+        <a class="{{ snippet_name }}__image-link link" href="{{ url }}" target="_self" title="{{ title }}">
+          {% render 'lazyload-image', alt_text: title, image: image %}
+        </a>
+      </div>
+
+      <div class="{{ snippet_name }}__content">
+        <strong>{{ title }}</strong>
+        {% render 'stepper' %}
+        <button class="{{ snippet_name }}__button-remove-cart-line-item button button--tertiary js--remove-cart-line-item" type="button">Remove Item x</button>
+      </div>
+
+    </div>
+
+    {% comment %} <div class="cart-line-item__info">
+      <strong class="line-item__title body-copy--alt">
+        <a href="{{ item.url }}" target="_self" title="{{ item.variant.product.title }}">{{ item.variant.product.title }}</a>
+      </strong>
+      {% unless "Default Title" == item.variant.title %}
+        <div class="line-item__variant body-copy--alt-small">{{ item.variant.title }}</div>
+      {% endunless %}
+      <div class="line-item__price body-copy--1">${{ item.original_price | money_without_currency }} ea.</div>
+    </div>
+
+    <div class="line-item__quantity">
+
+      <div class="line-item__total body-copy--1 d-md-none">
+        <label class="line-item__label body-copy--alt">Total</label>
+        <div class="line-item__total-price body-copy--1">${{ item.original_line_price | money_without_currency }}</div>
+      </div>
+
+      <div class="line-item__quantity-controls">
+        <label class="line-item__label body-copy--alt">Quantity</label>
+        <div class="line-item__stepper stepper">
+          <button
+            class="stepper__button button--decrease decrease js--line-item-quantity-update js--update-stepper-input"
+            name="decrease"
+            type="button"
+            data-target-id="line-item-quantity--{{ item.index | plus: 1 }}"
+          ><span class="button__icon">{% render 'svg', type: 'icon.minus' %}</span></button>
+          <input class="stepper__input"
+            type="number"
+            name="updates[]"
+            value="{{ item.quantity }}"
+            min="0"
+            id="line-item-quantity--{{ item.index | plus: 1 }}"
+            data-index="{{ item.index | plus: 1 }}"
+          >
+          <button
+            class="stepper__button button--increase increase js--line-item-quantity-update js--update-stepper-input"
+            name="increase"
+            type="button"
+            data-target-id="line-item-quantity--{{ item.index | plus: 1 }}"
+          ><span class="button__icon">{% render 'svg', type: 'icon.plus' %}</span></button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="line-item__total body-copy--1 d-none d-md-block">${{ item.original_line_price | money_without_currency }}</div> {% endcomment %}
+
+  </div>
+
+{% endif %}

@@ -1,0 +1,51 @@
+.cart-line-item {
+
+  border: 1px solid red;
+
+  &__content {
+    flex: 1;
+    border: 1px solid red;
+    display: inline-flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__image {
+    width: 55%;
+    a, img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__layout {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  @include breakpoint(sm) {
+
+    &__image {
+      width: 60%;
+    }
+
+  } // min width sm
+
+  @include breakpoint(md) {
+
+    &__image {
+      width: 66%;
+    }
+
+  } // min width md
+
+  @include breakpoint(lg) {} // min width lg
+
+  @include breakpoint(xl) {} // min width xl
+
+  @include breakpoint(xxl) {} // min width xxl
+
+}
