@@ -1,0 +1,172 @@
+{%- assign section_name = 'cart' -%}
+{%- assign section_id = section_name | append: '--' | append: section.id -%}
+
+{% assign empty_heading = section.settings.empty_heading | default: 'Your cart is empty.' %}
+{% assign empty_message = section.settings.empty_message | default: '' %}
+{% assign hero_heading = section.settings.hero_heading | default: 'Cart' %}
+
+<div class="{{ section_name }}__hero">
+  {% render 'bs-container', state: 'open' %}
+    <h1 class="heading--2">{{ hero_heading }}</h1>
+  {% render 'bs-container', state: 'closed' %}
+</div>
+
+<div class="{{ section_name }}__body">
+  {% render 'bs-container', state: 'open' %}
+
+    {% if cart == empty %}
+
+      <div class="{{ section_name }}__empty">
+        {% if empty_heading != blank %}
+          <h2 class="{{ section_name }}__empty-heading heading--3">{{ empty_heading }}</h2>
+        {% endif %}
+        {% if empty_message != blank %}
+          <div class="{{ section_name }}__empty-message body-copy--regular">{{ empty_message }}</div>
+        {% endif %}
+      </div>
+
+    {% else %}
+
+      <form class="{{ section_name }}__main" action="{{ routes.cart_url }}" method="post" id="cart">
+        <div class="row row--inner">
+
+          <div class="col-12 col-lg-7">
+
+            <div class="{{ section_name }}__legend">
+              <div class="{{ section_name }}__legend-item product">Product</div>
+              <div class="{{ section_name }}__legend-item quantity">Quantity</div>
+              <div class="{{ section_name }}__legend-item total">Total</div>
+            </div>
+
+            <div class="{{ section_name }}__line-items">
+
+              {%- for item in cart.items -%}
+                <div class="{{ section_name }}__line-item line-item">
+
+                  <div class="line-item__image">
+                    <a href="{{ item.url }}" target="_self" title="{{ item.variant.product.title }}">
+                      {% render 'lazyload-image', background: true, image: item.image %}
+                    </a>
+                  </div>
+
+                  <div class="line-item__info">
+                    <strong class="line-item__title body-copy--alt">
+                      <a href="{{ item.url }}" target="_self" title="{{ item.variant.product.title }}">{{ item.variant.product.title }}</a>
+                    </strong>
+                    {% unless "Default Title" == item.variant.title %}
+                      <div class="line-item__variant body-copy--alt-small">{{ item.variant.title }}</div>
+                    {% endunless %}
+                    <div class="line-item__price body-copy--1">${{ item.original_price | money_without_currency }} ea.</div>
+                  </div>
+
+                  <div class="line-item__quantity">
+
+                    <div class="line-item__total body-copy--1 d-md-none">
+                      <label class="line-item__label body-copy--alt">Total</label>
+                      <div class="line-item__total-price body-copy--1">${{ item.original_line_price | money_without_currency }}</div>
+                    </div>
+
+                    <div class="line-item__quantity-controls">
+                      <label class="line-item__label body-copy--alt">Quantity</label>
+                      <div class="line-item__stepper stepper">
+                        <button
+                          class="stepper__button button--decrease decrease js--line-item-quantity-update js--update-stepper-input"
+                          name="decrease"
+                          type="button"
+                          data-target-id="line-item-quantity--{{ item.index | plus: 1 }}"
+                        ><span class="button__icon">{% render 'svg', type: 'icon.minus' %}</span></button>
+                        <input class="stepper__input"
+                          type="number"
+                          name="updates[]"
+                          value="{{ item.quantity }}"
+                          min="0"
+                          id="line-item-quantity--{{ item.index | plus: 1 }}"
+                          data-index="{{ item.index | plus: 1 }}"
+                        >
+                        <button
+                          class="stepper__button button--increase increase js--line-item-quantity-update js--update-stepper-input"
+                          name="increase"
+                          type="button"
+                          data-target-id="line-item-quantity--{{ item.index | plus: 1 }}"
+                        ><span class="button__icon">{% render 'svg', type: 'icon.plus' %}</span></button>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="line-item__total body-copy--1 d-none d-md-block">${{ item.original_line_price | money_without_currency }}</div>
+
+                </div>
+              {%- endfor -%}
+            </div>
+
+            <div class="{{ section_name }}__line-items-cta">
+              <button type="submit" class="{{ section_name }}__update-cart-button button--outlined-dark">Update Bag</button>
+            </div>
+
+          </div>
+
+          <div class="col-12 col-lg-5">
+
+            <div class="{{ section_name }}__summary">
+              <strong class="{{ section_name }}__summary-heading">Total</strong>
+              <div class="{{ section_name }}__summary-notes">
+                <p>Shipping & Taxes<br>Calculated at Checkout</p>
+              </div>
+              <div class="{{ section_name }}__summary-cost">
+                <div class="{{ section_name }}__summary-currency">{{ shop.currency }}</div>
+                <div class="{{ section_name }}__summary-price">${{ cart.original_total_price | money_without_currency }}</div>
+              </div>
+              {% comment %} {%- if additional_checkout_buttons -%}
+                <div class="cart__dynamic-checkout-buttons additional-checkout-buttons">
+                  {{ content_for_additional_checkout_buttons }}
+                </div>
+              {%- endif -%} {% endcomment %}
+            </div>
+
+            <div class="{{ section_name }}__summary-cta">
+              <button class="{{ section_name }}__checkout-button button--primary" name="checkout" type="submit">Checkout • ${{ cart.original_total_price | money_without_currency }}</button>
+            </div>
+
+          </div>
+
+        </div>
+      </form>
+
+    {% endif %}
+
+  {% render 'bs-container', state: 'closed' %}
+</div>
+
+{% schema %}
+{
+  "name": "Cart",
+  "tag": "div",
+  "class": "cart",
+  "settings": [
+    {
+      "content": "Hero",
+      "type": "header"
+    },
+    {
+      "label": "Heading",
+      "type": "text",
+      "id": "hero_heading"
+    },
+    {
+      "content": "Empty Cart",
+      "type": "header"
+    },
+    {
+      "label": "Heading",
+      "type": "text",
+      "id": "empty_heading"
+    },
+    {
+      "label": "Message",
+      "type": "richtext",
+      "id": "empty_message"
+    }
+  ]
+}
+{% endschema %}

@@ -14,7 +14,6 @@
 
     <select class="{{ snippet_name }}__variants select select--2{% unless has_multiple_options %} d-none{% endunless %}" name="id">
       {% for variant in product.variants %}
-        {% render 'debug-this', item: variant %}
         <option
           class="{{ snippet_name }}__variant"
           value="{{ variant.id }}"

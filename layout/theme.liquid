@@ -101,6 +101,10 @@
 
     {% section 'footer' %}
 
+    {% if request.path contains 'product' or request.path contains 'collection' %}
+      {% render 'notification-added-to-cart' %}
+    {% endif %}
+
     <script src="{{ 'main.min.js' | asset_url }}" defer></script>
 
   </body>

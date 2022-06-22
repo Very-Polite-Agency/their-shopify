@@ -1,0 +1,13 @@
+{%- assign snippet_name = 'add-to-cart-notification' -%}
+
+<div class="{{ snippet_name }}">
+  <div class="{{ snippet_name }}__layout">
+    <div class="{{ snippet_name }}__message">
+      <strong>Added to Bag</strong>
+      <span>{% render 'svg', type: 'icon.checkmark' %}</span>
+    </div>
+    <strong class="{{ snippet_name }}__title">Carter CoiledPlated Gold Ring</strong>
+    <div class="{{ snippet_name }}__quantity">x1</div>
+    <a class="{{ snippet_name }}__checkout-link link link--primary" href="{{ routes.cart_url }}" class="link link--primary">Checkout</a>
+  </div>
+</div>

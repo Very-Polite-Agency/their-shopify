@@ -4,7 +4,7 @@
 // @codekit-prepend quiet "../node_modules/@glidejs/glide/dist/glide.min.js";
 // @codekit-prepend quiet "../node_modules/validator/validator.min.js";
 
-// @codekit-prepend "./modules/_add-to-cart.js";
+// @codekit-prepend "./modules/_cart.js";
 // @codekit-prepend "./modules/_credits.js";
 // @codekit-prepend "./modules/_breakpoints.js";
 // @codekit-prepend "./modules/_forms.js";
@@ -13,6 +13,7 @@
 // @codekit-prepend "./modules/_instagramFeed.js";
 // @codekit-prepend "./modules/_mobileMenu.js";
 // @codekit-prepend "./modules/_modals";
+// @codekit-prepend "./modules/_product.js";
 // @codekit-prepend "./modules/_scrolling.js";
 // @codekit-prepend "./modules/_sizing.js";
 // @codekit-prepend "./modules/_stepper.js";
@@ -23,12 +24,13 @@
 //////////////////////////////////////////////////////////////////////////////////////////
 
 let modules = [
-  new AddToCart(),
+  new Cart(),
   new Forms(),
   new Gliders(),
   new Header(),
   new InstagramFeed(),
   new MobileMenu(),
+  new Product(),
   new Scrolling(),
   new Sizing(),
   new Stepper(),

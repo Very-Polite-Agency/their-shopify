@@ -23,25 +23,24 @@
   {%- assign available = product.available -%}
   {%- assign currency_code = shop.currency.iso_code | default: 'CAD' -%}
   {%- assign currency_symbol = shop.currency.symbol | default: '$' -%}
-  {%- assign price = product.price -%}
-  {%- assign price_compare = product.compare_at_price -%}
+  {%- assign price = product.price | divided_by: 100 -%}
+  {%- assign price_compare = product.compare_at_price | divided_by: 100 -%}
   {%- assign show_currency_code = show_currency_code | default: false -%}
   {%- assign show_currency_symbol = show_currency_symbol | default: false -%}
-  {%- assign symbol = shop.currency.symbol | default: '$' -%}
 
-  <div class="{{ snippet_classes }}{% if show_symbol %} with-currency-symbol{% endif %}">
-    {%- if price_compare -%}
-      <span class="{{ snippet_name }}__amount">
+  <div class="{{ snippet_classes }}" data-price="{{ price }}" data-compate-at-price="{{ price_compare }}">
+    <span class="{{ snippet_name }}__amount">
+      {%- if show_symbol -%}<span class="{{ snippet_name }}__currency-symbol">{{ currency_symbol }}</span>{%- endif -%}
+      {{- price -}}
+      {%- if show_currency_code -%}<span class="{{ snippet_name }}__currency-code">{{ currency_code }}</span>{%- endif -%}
+    </span>
+    {%- if price_compare > 0 -%}
+      <span class="{{ snippet_name }}__amount compare-at-price">
         {%- if show_symbol -%}<span class="{{ snippet_name }}__currency-symbol">{{ currency_symbol }}</span>{%- endif -%}
-        {{- price_compare | divided_by: 100 -}}
+        {{- price_compare -}}
         {%- if show_currency_code -%}<span class="{{ snippet_name }}__currency-code">{{ currency_code }}</span>{%- endif -%}
       </span>
     {%- endif -%}
-    <span class="{{ snippet_name }}__amount{% if price_compare %} compare-at-price{% endif %}">
-      {%- if show_symbol -%}<span class="{{ snippet_name }}__currency-symbol">{{ currency_symbol }}</span>{%- endif -%}
-      {{- price | divided_by: 100 -}}
-      {%- if show_currency_code -%}<span class="{{ snippet_name }}__currency-code">{{ currency_code }}</span>{%- endif -%}
-    </span>
   </div>
 
 {%- endif -%}

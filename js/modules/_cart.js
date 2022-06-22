@@ -1,11 +1,11 @@
 //////////////////////////////////////////////////////////
-////  Add to Cart
+////  Cart
 //////////////////////////////////////////////////////////
 
-const AddToCart = (() => {
+const Cart = (() => {
 
   let debug = true;
-  let info = { name : 'Add to Cart', version : '1.0' };
+  let info = { name : 'Cart', version : '1.0' };
 
   let tools = new Tools();
   let breakpoints = new Breakpoints();
@@ -26,15 +26,31 @@ const AddToCart = (() => {
   };
 
   //////////////////////////////////////////////////////////
+  ////  Render Cart Items Count
+  //////////////////////////////////////////////////////////
+
+  const renderCartItemsCoun = ( count = 0 ) => {
+    ( document.querySelectorAll('.js--cart-item-count') || [] ).forEach( element => {
+      element.innerHTML = `${count}`;
+      if ( count > 0 ) {
+        element.classList.add('has-items');
+      } else {
+        element.classList.remove('has-items');
+      }
+    });
+  };
+
+  //////////////////////////////////////////////////////////
   ////  Get Cart
   //////////////////////////////////////////////////////////
 
   const getCart = () => {
     axios( config.getCart ).then(function (response) {
-      alert(response);
+      console.log( 'getCart :: Succes', response );
+      renderCartItemsCoun(response.data.item_count);
     })
     .catch(function (error) {
-      console.log(error);
+      console.log( 'getCart :: Error', error );
     })
     .then(function () {});
   };
@@ -53,16 +69,15 @@ const AddToCart = (() => {
         let quantity = parseInt( button.dataset.quantity ) || 0;
 
         if ( variantID && quantity ) {
-          config.data.items.push({ id: variantID, quantity: quantity });
-          axios( config ).then(function (response) {
-            console.log( response );
-            getCart();
+          config.addToCart.data.items.push({ id: variantID, quantity: quantity });
+          axios( config.addToCart ).then(function (response) {
+            console.log( 'onButtonClickAddProductToCart :: Succes', response );
           })
           .catch(function (error) {
-            console.log(error);
+            console.log( 'onButtonClickAddProductToCart :: Succes', error );
           })
           .then(function () {
-
+            getCart();
           });
         }
 
