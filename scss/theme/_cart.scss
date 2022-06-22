@@ -1,5 +1,7 @@
 .cart {
 
+  @import '../components/cart-body.scss';
+  @import '../components/cart-hero.scss';
   @import '../components/cart-line-item.scss';
   @import '../components/cart-line-items.scss';
 

@@ -4,7 +4,7 @@
 {% assign hero_heading = section.settings.hero_heading | default: 'Your Shopping Bag' %}
 {% assign empty_message = section.settings.empty_message | default: '' %}
 
-<div class="{{ section_name }}__hero">
+<div class="{{ section_name }}__hero cart-hero">
   {% render 'bs-container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1' %}
     <div class="{{ section_name }}__hero-layout">
       <h1 class="{{ section_name }}__hero-heading heading heading--1">{{ hero_heading }}</h1>
@@ -12,25 +12,23 @@
   {% render 'bs-container', state: 'closed' %}
 </div>
 
-{% unless cart.empty? %}
-  <div class="{{ section_name }}__body">
-    {% render 'bs-container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1' %}
-      {% if cart.empty? %}
-        <div class="{{ section_name }}__body-content">
-          {% if empty_message %}<div>{{ empty_message }}</div>{% endif %}
+<div class="{{ section_name }}__body cart-body">
+  {% render 'bs-container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1' %}
+    {% if cart.empty? %}
+      <div class="{{ section_name }}__body-content">
+        {% if empty_message %}<div>{{ empty_message }}</div>{% endif %}
+      </div>
+    {% else %}
+      <form class="{{ section_name }}__main" action="{{ routes.cart_url }}" method="post" id="cart">
+        <div class="{{ section_name }}__line-items cart-line-items">
+          {%- for item in cart.items -%}
+            {% render 'cart-line-item', line_item: item %}
+          {%- endfor -%}
         </div>
-      {% else %}
-        <form class="{{ section_name }}__main" action="{{ routes.cart_url }}" method="post" id="cart">
-          <div class="{{ section_name }}__line-items cart-line-items">
-            {%- for item in cart.items -%}
-              {% render 'cart-line-item', line_item: item %}
-            {%- endfor -%}
-          </div>
-        </form>
-      {% endif %}
-    {% render 'bs-container', state: 'closed' %}
-  </div>
-{% endunless %}
+      </form>
+    {% endif %}
+  {% render 'bs-container', state: 'closed' %}
+</div>
 
 {% schema %}
 {
@@ -55,6 +53,20 @@
       "label": "Message",
       "type": "richtext",
       "id": "empty_message"
+    },
+    {
+      "content": "Call to Action",
+      "type": "paragraph"
+    },
+    {
+      "label": "Title",
+      "type": "text",
+      "id": "empty_cta_title"
+    },
+    {
+      "label": "Link",
+      "type": "url",
+      "id": "empty_cta_link"
     }
   ]
 }
