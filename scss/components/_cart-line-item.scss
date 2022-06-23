@@ -1,5 +1,20 @@
 .cart-line-item {
 
+  .stepper {
+    border-top: 1px solid rgba(var(--theme-colour-black), 0.025);
+    .button {
+      &[name="decrease"] {
+        border-right: 1px solid rgba(var(--theme-colour-black), 0.025);
+      }
+      &[name="increase"] {
+        border-left: 1px solid rgba(var(--theme-colour-black), 0.025);
+      }
+      &:hover {
+        background: rgba(var(--theme-colour-black), 0.025);
+      }
+    }
+  }
+
   &__price,
   &__title,
   &__variant-option {
@@ -14,13 +29,25 @@
   &__variant-option,
   &__price {
     font-weight: 300;
-    font-size: 10px;
+  }
+
+  .stepper,
+  &__variant-option,
+  &__price {
+    font-size: 12px;
+  }
+
+  &__button-remove-item,
+  &__variant-option {
     text-transform: uppercase;
   }
 
   &__button-remove-item {
     letter-spacing: 0.07em;
     min-height: unset;
+    font-size: 10px;
+    position: absolute;
+    bottom: 0;
     &:hover {
       opacity: 0.6666;
     }
@@ -30,9 +57,10 @@
     flex: 1;
     display: inline-flex;
     flex-flow: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start;
     padding: 0 var(--bs-gutter-width);
+    position: relative;
   }
 
   &__image {
@@ -42,6 +70,11 @@
       width: 100%;
       height: auto;
     }
+    &-link {
+      &:hover {
+        opacity: 0.8;
+      }
+    }
   }
 
   &__layout {
@@ -50,9 +83,14 @@
     justify-content: space-between;
   }
 
+  &__product-details {
+    position: absolute;
+    top: 0;
+  }
+
   &__title {
     font-weight: 400;
-    font-size: 10px;
+    font-size: 12px;
   }
 
   @include breakpoint(sm) {
@@ -65,16 +103,78 @@
 
   @include breakpoint(md) {
 
+    .stepper,
+    &__variant-option,
+    &__price {
+      font-size: 14px;
+    }
+
+    &__button-remove-item {
+      font-size: 12px;
+    }
+
     &__image {
       width: 66%;
     }
 
+    &__title {
+      font-size: 17px;
+    }
+
   } // min width md
 
-  @include breakpoint(lg) {} // min width lg
+  @include breakpoint(lg) {
 
-  @include breakpoint(xl) {} // min width xl
+    .stepper,
+    &__variant-option,
+    &__price {
+      font-size: 12px;
+    }
 
-  @include breakpoint(xxl) {} // min width xxl
+    &__button-remove-item {
+      font-size: 10px;
+    }
+
+    &__title {
+      font-size: 14px;
+    }
+
+  } // min width lg
+
+  @include breakpoint(xl) {
+
+    .stepper,
+    &__variant-option,
+    &__price {
+      font-size: 13px;
+    }
+
+    &__button-remove-item {
+      font-size: 11px;
+    }
+
+    &__title {
+      font-size: 15px;
+    }
+
+  } // min width xl
+
+  @include breakpoint(xxl) {
+
+    .stepper,
+    &__variant-option,
+    &__price {
+      font-size: 14px;
+    }
+
+    &__button-remove-item {
+      font-size: 12px;
+    }
+
+    &__title {
+      font-size: 16px;
+    }
+
+  } // min width xxl
 
 }

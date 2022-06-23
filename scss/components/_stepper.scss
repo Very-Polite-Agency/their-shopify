@@ -1,16 +1,19 @@
 :root {
-  --theme-stepper-button-size: 36px;
-  --theme-stepper-button-size--lg: 36px;
+  --theme-stepper-button-size: 40px;
+  --theme-stepper-button-size--lg: 44px;
 }
 
 .stepper {
 
+  font-family: var(--theme-font-family--sans-serif--primary);
+  font-style: normal;
   display: inline-flex;
   justify-content: flex-start;
   align-items: center;
-  border: 1px solid green;
   padding: 0;
   margin: 0;
+  line-height: 1;
+  font-weight: 300;
 
   button,
   input {
@@ -20,13 +23,32 @@
 
   button {
     width: var(--theme-stepper-button-size);
-    background: black;
-    color: white;
   }
 
   input {
     width: var(--theme-stepper-button-size);
     text-align: center;
+    -moz-appearance: textfield;
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+
+  .button {
+    &__icon {
+      width: 35%;
+      img, svg {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .input {
+    font-size: inherit;
   }
 
 }
