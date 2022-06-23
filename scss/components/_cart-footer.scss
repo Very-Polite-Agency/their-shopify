@@ -33,6 +33,9 @@
     &-charge-amount {
       font-weight: 400;
     }
+    &-label {
+      margin-right: 5px;
+    }
     &-notice {
       width: 100%;
     }
@@ -42,5 +45,38 @@
     position: relative;
   }
 
+  @include breakpoint(sm) {} // min width sm
+
+  @include breakpoint(md) {
+
+    &__summary {
+      font-size: 12px;
+    }
+
+  } // min width md
+
+  @include breakpoint(lg) {
+
+    &__summary {
+      font-size: 10px;
+    }
+
+  } // min width lg
+
+  @include breakpoint(xl) {
+
+    &__summary {
+      font-size: 11px;
+    }
+
+  } // min width xl
+
+  @include breakpoint(xxl) {
+
+    &__summary {
+      font-size: 12px;
+    }
+
+  } // min width xxl
 
 }

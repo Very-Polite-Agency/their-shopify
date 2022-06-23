@@ -10,14 +10,14 @@ https://their-jewelry-and-accessories.myshopify.com
 - [x] About Us
 - [x] Article
 - [x] Blog
-- [ ] Cart
+- [x] Cart
 - [x] Collection (PLP)
 - [ ] Collection Listing
 - [x] Contact
 - [x] FAQs
 - [x] Home page
 - [x] Policy Pages
-- [ ] Product (PDP)
+- [x] Product (PDP)
 
 ### Sections
 - [x] 404

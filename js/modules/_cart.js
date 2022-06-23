@@ -56,6 +56,16 @@ const Cart = (() => {
   };
 
   //////////////////////////////////////////////////////////
+  ////  Render Cart Checkout Amount
+  //////////////////////////////////////////////////////////
+
+  const renderCartCheckoutChargeAmount = ( amount = 0 ) => {
+    ( document.querySelectorAll('.js--checkout-charge-amount') || [] ).forEach( element => {
+      element.innerHTML = `${amount}`;
+    });
+  };
+
+  //////////////////////////////////////////////////////////
   ////  Render Empty Cart Message
   //////////////////////////////////////////////////////////
 
@@ -94,7 +104,9 @@ const Cart = (() => {
       config.changeCart.data = { id: key, quantity: quantity };
 
       axios( config.changeCart ).then(function (response) {
-        renderCartItemsCount( response.data.item_count );
+        console.log( response );
+        renderCartCheckoutChargeAmount(response.data.items_subtotal_price/100);
+        renderCartItemsCount(response.data.item_count);
         if ( 0 === response.data.item_count ) renderEmptyCartMessage();
         if ( 0 === quantity ) renderCartItemRemovalByKey( key );
       })
@@ -118,6 +130,7 @@ const Cart = (() => {
     axios( config.getCart ).then(function (response) {
       console.log( 'getCart :: Axios Success', response );
       renderCartItemsCount(response.data.item_count);
+      renderCartCheckoutChargeAmount(response.data.items_subtotal_price/100);
     })
     .catch(function (error) {
       console.log( 'getCart :: Axios Error', error );
