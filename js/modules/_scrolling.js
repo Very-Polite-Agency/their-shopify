@@ -76,6 +76,31 @@ const Scrolling = (() => {
   };
 
   //////////////////////////////////////////////////////////
+  ////  Footer Watcher
+  //////////////////////////////////////////////////////////
+
+  const footerWatcher = () => {
+
+    let viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+    let footer = document.getElementById('shopify-section-footer') || false;
+    let cartFooter = document.getElementById('cart-footer') || false;
+    let footerBounding = footer ? footer.getBoundingClientRect() : false;
+    let cartFooterBounding = cartFooter ? cartFooter.getBoundingClientRect() : false;
+    let footerTop = footerBounding ? footerBounding.top : false;
+    let cartFooterHeight = cartFooterBounding ? cartFooterBounding.height : false;
+    let inView = false;
+
+    if ( cartFooterHeight && footerTop && viewportHeight ) {
+      if ( (footerTop + cartFooterHeight + 15) <= viewportHeight ) {
+        document.body.classList.add('footer-in-view');
+      } else {
+        document.body.classList.remove('footer-in-view');
+      }
+    }
+
+  };
+
+  //////////////////////////////////////////////////////////
   ////  Init
   //////////////////////////////////////////////////////////
 
@@ -83,6 +108,7 @@ const Scrolling = (() => {
 
     if ( debug ) console.log( `${info.name}.init() Started` );
 
+    footerWatcher();
     setScrollStateClassesByScrollPosition( scrollPosition.current );
     tools.setHeaderHeightTotalCSSVariable();
 
@@ -94,9 +120,12 @@ const Scrolling = (() => {
 
       if ( !throttled ) {
         window.requestAnimationFrame(function() {
+
+          footerWatcher();
           setScrollStateClassesByScrollPosition( scrollPosition.current );
           tools.setHeaderHeightTotalCSSVariable();
           throttled = false;
+
         });
         throttled = true;
       }
