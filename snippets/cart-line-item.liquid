@@ -16,10 +16,15 @@
   {% assign snippet_id = snippet_name | append: '--' | append: line_item.key -%}
 
   {% assign image = line_item.image %}
+  {% assign final_price = line_item.final_price %}
+  {% assign final_line_price = line_item.final_line_price %}
   {% assign key = line_item.key %}
   {% assign quantity = line_item.quantity %}
   {% assign url = line_item.url %}
   {% assign title = line_item.variant.product.title %}
+  {% assign variant_title = line_item.variant.title %}
+
+  {% render 'debug-this', item: line_item %}
 
   <div class="{{ snippet_classes }}" id="{{ snippet_id }}" data-line-item-key="{{ key }}">
 
@@ -32,9 +37,34 @@
       </div>
 
       <div class="{{ snippet_name }}__content">
-        <strong>{{ title }}</strong>
-        {% render 'stepper' %}
-        <button class="{{ snippet_name }}__button-remove-cart-line-item button button--tertiary js--remove-cart-line-item" type="button">Remove Item x</button>
+
+        <div class="{{ snippet_name }}__product-details">
+          <strong class="{{ snippet_name }}__title">{{ title }}</strong>
+          {% for option in line_item.options_with_values %}
+            {% unless 'Default Title' == option.value %}
+              <div class="{{ snippet_name }}__variant-option">
+                <span class="{{ snippet_name }}__variant-option-name">{{ option.name }}</span>
+                <span class="{{ snippet_name }}__variant-option-value">{{ option.value }}</span>
+              </div>
+            {% endunless %}
+          {% endfor %}
+          <span class="{{ snippet_name }}__price">{{ final_price | divided_by: 100 }} ea.</span>
+        </div>
+
+        {%
+          render 'stepper',
+          classes: 'cart-line-item__stepper',
+          id: key,
+          maximum: 9999,
+          minimum: 1,
+          quantity: quantity
+        %}
+
+        <button
+          class="{{ snippet_name }}__button-remove-cart-line-item caption caption--2 js--remove-cart-line-item"
+          type="button"
+        >Remove Item x</button>
+
       </div>
 
     </div>

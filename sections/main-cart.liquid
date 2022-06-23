@@ -2,21 +2,28 @@
 {%- assign section_id = section_name | append: '--' | append: section.id -%}
 
 {% assign hero_heading = section.settings.hero_heading | default: 'Your Shopping Bag' %}
+{% assign empty_cta_link = section.settings.empty_cta_link | default: '' %}
+{% assign empty_cta_title = section.settings.empty_cta_title | default: '' %}
 {% assign empty_message = section.settings.empty_message | default: '' %}
 
-<div class="{{ section_name }}__hero cart-hero">
+<div class="cart-hero">
   {% render 'bs-container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1' %}
-    <div class="{{ section_name }}__hero-layout">
-      <h1 class="{{ section_name }}__hero-heading heading heading--1">{{ hero_heading }}</h1>
-    </div>
+    <h1 class="cart-hero__heading heading heading--1">{{ hero_heading }}</h1>
   {% render 'bs-container', state: 'closed' %}
 </div>
 
-<div class="{{ section_name }}__body cart-body">
+<div class="cart-body">
   {% render 'bs-container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1' %}
     {% if cart.empty? %}
-      <div class="{{ section_name }}__body-content">
-        {% if empty_message %}<div>{{ empty_message }}</div>{% endif %}
+      <div class="cart-body__content">
+        {% if empty_message %}
+          <div class="cart-body__message">{{ empty_message }}</div>
+        {% endif %}
+        {% if empty_cta_link != blank and empty_cta_title != blank %}
+          <div class="cart-body__cta">
+            <a class="cart-body__cta-button button button--primary" href="{{ empty_cta_link }}">{{ empty_cta_title }}</a>
+          </div>
+        {% endif %}
       </div>
     {% else %}
       <form class="{{ section_name }}__main" action="{{ routes.cart_url }}" method="post" id="cart">
@@ -27,6 +34,12 @@
         </div>
       </form>
     {% endif %}
+  {% render 'bs-container', state: 'closed' %}
+</div>
+
+<div class="cart-footer">
+  {% render 'bs-container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1' %}
+    <button class="cart-footer__button-checkout button button--primary" form="cart" name="checkout" type="submit">Checkout</button>
   {% render 'bs-container', state: 'closed' %}
 </div>
 

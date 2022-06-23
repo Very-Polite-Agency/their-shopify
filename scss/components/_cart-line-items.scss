@@ -16,10 +16,6 @@
 
   @include breakpoint(xl) {} // min width xl
 
-  @include breakpoint(xxl) {
-
-    grid-template-columns: 1fr 1fr 1fr;
-
-  } // min width xxl
+  @include breakpoint(xxl) {} // min width xxl
 
 }

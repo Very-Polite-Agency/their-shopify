@@ -1,0 +1,32 @@
+:root {
+  --theme-stepper-button-size: 36px;
+  --theme-stepper-button-size--lg: 36px;
+}
+
+.stepper {
+
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid green;
+  padding: 0;
+  margin: 0;
+
+  button,
+  input {
+    height: var(--theme-stepper-button-size);
+    min-height: unset;
+  }
+
+  button {
+    width: var(--theme-stepper-button-size);
+    background: black;
+    color: white;
+  }
+
+  input {
+    width: var(--theme-stepper-button-size);
+    text-align: center;
+  }
+
+}

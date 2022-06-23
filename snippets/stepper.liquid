@@ -1,0 +1,51 @@
+{%- if id and id != blank -%}
+
+  {% assign snippet_name = 'stepper' %}
+  {% assign snippet_classes = snippet_name %}
+
+  {% assign stepper_maximum = maximum | default: 9999 %}
+  {% assign stepper_minimum = minimum | default: 1 %}
+  {% assign stepper_quantity = quantity | default: 1 %}
+  {% assign stepper_quantity_id = 'stepper-quantity--' | append: id %}
+
+  {% if classes and classes != blank %}
+    {% assign snippet_classes = snippet_classes | prepend: ' ' | prepend: classes %}
+  {% endif %}
+
+  <div class="{{ snippet_classes }}">
+
+    <button
+      class="{{ snippet_name }}__button button button--stepper"
+      name="decrease"
+      type="button"
+      data-target-id="{{ stepper_quantity_id }}"
+    >
+      <span class="button__icon">
+        {% render 'svg', type: 'icon.minus' %}
+      </span>
+    </button>
+
+    <input
+      class="{{ snippet_name }}__input input"
+      id="{{ stepper_quantity_id }}"
+      max="{{ stepper_maximum }}"
+      min="{{ stepper_minimum }}"
+      name="updates[]"
+      type="number"
+      value="{{ stepper_quantity }}"
+    >
+
+    <button
+      class="{{ snippet_name }}__button button button--stepper"
+      name="increase"
+      type="button"
+      data-target-id="{{ stepper_quantity_id }}"
+    >
+      <span class="button__icon">
+        {% render 'svg', type: 'icon.plus' %}
+      </span>
+    </button>
+
+  </div>
+
+{% endif %}
