@@ -2,5 +2,19 @@
 
   margin: 50px 0;
 
+  &__empty {
+    min-height: 50vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+  }
+
+  &__message {
+    & + .cart-body__cta {
+      margin-top: 32px;
+    }
+  }
 
 }

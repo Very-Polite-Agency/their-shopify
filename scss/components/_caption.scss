@@ -3,6 +3,15 @@
   line-height: 1;
   font-style: normal;
 
+  a {
+    color: rgba(var(--theme-colour-gold), 1);
+    border: none;
+    text-decoration: none;
+    &:hover {
+      color: rgba(var(--theme-colour-black), 1);
+    }
+  }
+
   &--1,
   &--2 {
     @extend .caption;

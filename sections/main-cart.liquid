@@ -15,9 +15,9 @@
 <div class="cart-body">
   {% render 'bs-container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1' %}
 
-    <div class="cart-body__empty {% if cart.empty? %}d-block{% else %}d-none{% endif %}">
+    <div class="cart-body__empty {% unless cart.empty? %}d-none{% endunless %}">
       {% if empty_message %}
-        <div class="cart-body__message">{{ empty_message }}</div>
+        <div class="cart-body__message caption--2">{{ empty_message }}</div>
       {% endif %}
       {% if empty_cta_link != blank and empty_cta_title != blank %}
         <div class="cart-body__cta">

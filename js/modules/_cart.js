@@ -37,6 +37,7 @@ const Cart = (() => {
 
   const renderCartItemRemovalByKey = ( key = '' ) => {
     let element = document.getElementById(`cart-line-item--${key}`) || false;
+    console.log( 'renderCartItemRemovalByKey ::', element );
     if ( element ) element.remove();
   };
 
@@ -71,7 +72,7 @@ const Cart = (() => {
 
   const renderEmptyCartMessage = () => {
     let emptyElement = document.querySelector('.cart-body__empty') || false;
-    if ( emptyElement ) emptyElement.classList.add('d-block').remove('d-none');
+    if ( emptyElement ) emptyElement.classList.remove('d-none');
   };
 
   //////////////////////////////////////////////////////////
@@ -168,6 +169,8 @@ const Cart = (() => {
       button.addEventListener('click', event => {
 
         let key = button.closest('.cart-line-item') ? button.closest('.cart-line-item').dataset.lineItemKey : '';
+
+        console.log( 'onClickRemoveCartLineItem ::', key );
         changeCart( key, 0 );
 
       });
