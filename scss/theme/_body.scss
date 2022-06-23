@@ -10,12 +10,12 @@ html {
 
 body {
 
-  transition: transform var(--theme-transition-duration);
+  //transition: transform var(--theme-transition-duration);
   display: flex;
   flex-direction: column;
   left: 0;
   overflow-x: hidden;
-  transform: translate3d( 0, 0, 0 );
+  //transform: translate3d( 0, 0, 0 );
 
   main {
     flex: 1 0 auto;
