@@ -14,26 +14,26 @@
 
 <div class="cart-body">
   {% render 'bs-container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1' %}
-    {% if cart.empty? %}
-      <div class="cart-body__content">
-        {% if empty_message %}
-          <div class="cart-body__message">{{ empty_message }}</div>
-        {% endif %}
-        {% if empty_cta_link != blank and empty_cta_title != blank %}
-          <div class="cart-body__cta">
-            <a class="cart-body__cta-button button button--primary" href="{{ empty_cta_link }}">{{ empty_cta_title }}</a>
-          </div>
-        {% endif %}
-      </div>
-    {% else %}
-      <form class="{{ section_name }}__main" action="{{ routes.cart_url }}" method="post" id="cart">
-        <div class="{{ section_name }}__line-items cart-line-items">
-          {%- for item in cart.items -%}
-            {% render 'cart-line-item', line_item: item %}
-          {%- endfor -%}
+
+    <div class="cart-body__empty {% if cart.empty? %}d-block{% else %}d-none{% endif %}">
+      {% if empty_message %}
+        <div class="cart-body__message">{{ empty_message }}</div>
+      {% endif %}
+      {% if empty_cta_link != blank and empty_cta_title != blank %}
+        <div class="cart-body__cta">
+          <a class="cart-body__cta-button button button--primary" href="{{ empty_cta_link }}">{{ empty_cta_title }}</a>
         </div>
-      </form>
-    {% endif %}
+      {% endif %}
+    </div>
+
+    <form class="{{ section_name }}__main" action="{{ routes.cart_url }}" method="post" id="cart">
+      <div class="{{ section_name }}__line-items cart-line-items">
+        {%- for item in cart.items -%}
+          {% render 'cart-line-item', line_item: item %}
+        {%- endfor -%}
+      </div>
+    </form>
+
   {% render 'bs-container', state: 'closed' %}
 </div>
 

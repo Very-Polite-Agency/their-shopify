@@ -70,7 +70,8 @@ const Cart = (() => {
   //////////////////////////////////////////////////////////
 
   const renderEmptyCartMessage = () => {
-    alert('Your cart is empty!');
+    let emptyElement = document.querySelector('.cart-body__empty') || false;
+    if ( emptyElement ) emptyElement.classList.add('d-block').remove('d-none');
   };
 
   //////////////////////////////////////////////////////////
@@ -161,7 +162,7 @@ const Cart = (() => {
 
   const onClickRemoveCartLineItem = () => {
 
-    let buttons = document.getElementsByClassName("js--remove-cart-line-item") || [];
+    let buttons = document.getElementsByClassName("cart-line-item__button-remove-item") || [];
 
     Array.from(buttons).forEach( button => {
       button.addEventListener('click', event => {
