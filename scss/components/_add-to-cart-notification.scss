@@ -16,6 +16,12 @@
   right: 0;
   z-index: 50;
   opacity: 0;
+  padding: 10px;
+
+
+  opacity: 1;
+  transform: translate3d( calc(-1*var(--theme-add-to-cart-notification-width)), 0, 0 );
+
 
   &__main {
     display: flex;

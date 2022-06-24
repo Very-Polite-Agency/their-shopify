@@ -1,28 +1,34 @@
-
-
-  const renderAddedToCartNotification = ( product = {} ) => {
-
-    if ( notificationElement ) {
-      notificationElement.innerHTML = renderNotificationCard( title, options, image );
-    }
-
-    var animation = anime.timeline({
-      targets: document.getElementById('shopify-add-to-cart-notification'),
-      easing: 'easeOutExpo',
-    })
-    .add({
-      translateX: 0,
-      opacity: 1,
-      duration: 250
-    })
-    .add({
-      translateX: 300,
-      opacity: 0,
-      delay: 2850,
-      duration: 850
-    });
-
-    animation.play;
+//  ${options.map(option =>
+//               `<div class="${abc}__product-option">
+//                 ${console.log(option)}
+//               </div>`
+//             ).join('')}
+//             
+//             <img class="lazyload-item lazyload-item--image lazypreload lazyload-item--inline inline lazyautosizes lazyload" src="${image.size.pico}" data-src="${image.size.compact}" alt="${image.alt}" width="${image.width}" height="${image.height}" />
+// 
+//   const renderAddedToCartNotification = ( product = {} ) => {
+// 
+//     if ( notificationElement ) {
+//       notificationElement.innerHTML = renderNotificationCard( title, options, image );
+//     }
+// 
+//     var animation = anime.timeline({
+//       targets: document.getElementById('shopify-add-to-cart-notification'),
+//       easing: 'easeOutExpo',
+//     })
+//     .add({
+//       translateX: 0,
+//       opacity: 1,
+//       duration: 250
+//     })
+//     .add({
+//       translateX: 300,
+//       opacity: 0,
+//       delay: 2850,
+//       duration: 850
+//     });
+// 
+//     animation.play;
 
     // image = {
     //   alt: "Gold Boy Ring"
@@ -109,5 +115,3 @@
     // variant_options: ['Default Title']
     // variant_title: null
     // vendor: "Their Jewelry and Accessories"
-
-  };

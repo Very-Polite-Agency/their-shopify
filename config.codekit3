@@ -54,6 +54,17 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/assets\/backup.min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/backup.min.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 1
+    },
     "\/assets\/base.css" : {
       "aP" : 1,
       "bl" : 0,
@@ -377,6 +388,17 @@
       "oF" : 0,
       "sC" : 3,
       "tS" : 1
+    },
+    "\/assets\/THEIR--product-image--gold-boy-ring--featured-image-sample.webp" : {
+      "ft" : 8388608,
+      "iS" : 70248,
+      "oA" : 0,
+      "oAP" : "\/assets\/THEIR--product-image--gold-boy-ring--featured-image-sample.webp",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-default",
+      "rq" : 75
     },
     "\/assets\/theme-editor.js" : {
       "bF" : 0,

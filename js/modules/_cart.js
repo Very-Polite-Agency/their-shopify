@@ -82,7 +82,7 @@ const Cart = (() => {
 
   const addToCart = ( arrOfProducts = [] ) => {
 
-    config.addToCart.data.items = arrOfProducts
+    config.addToCart.data.items = arrOfProducts;
 
     axios( config.addToCart ).then(function (response) {
       if (debug) console.log( 'addToCart :: Axios Success', response );
