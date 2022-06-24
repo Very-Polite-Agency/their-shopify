@@ -442,6 +442,17 @@
       "oO" : 1,
       "oS" : 1
     },
+    "\/js\/backup.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/backup.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 1
+    },
     "\/js\/main.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -570,6 +581,17 @@
       "mi" : 1,
       "oA" : 1,
       "oAP" : "\/assets\/_product.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 1
+    },
+    "\/js\/modules\/_render.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/assets\/_render.min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 1

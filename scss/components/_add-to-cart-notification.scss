@@ -1,19 +1,23 @@
 :root {
   --theme-add-to-cart-notification-width: 300px;
-  --theme-add-to-cart-notification-width--lg: 360px;
 }
 
 .add-to-cart-notification {
 
+  transition:
+    opacity var(--theme-transition-duration),
+    transform var(--theme-transition-duration);
+  transform: translate3d( var(--theme-add-to-cart-notification-width), 0, 0 );
+  top: calc(var(--theme-header-height--total) + var(--bs-container-fluid-padding));
   width: var(--theme-add-to-cart-notification-width);
   background: rgba(var(--theme-colour-black), 1);
   color: rgba(var(--theme-colour-white), 1);
   position: fixed;
-  top: calc(var(--theme-header-height--total) + var(--bs-container-fluid-padding));
   right: 0;
   z-index: 50;
+  opacity: 0;
 
-  &__layout {
+  &__main {
     display: flex;
   }
 
@@ -21,11 +25,7 @@
 
   @include breakpoint(md) {} // min width md
 
-  @include breakpoint(lg) {
-
-    width: var(--theme-add-to-cart-notification-width--lg);
-
-  } // min width lg
+  @include breakpoint(lg) {} // min width lg
 
   @include breakpoint(xl) {} // min width xl
 

@@ -8,6 +8,7 @@ const Cart = (() => {
   let info = { name : 'Cart', version : '1.0' };
 
   let tools = new Tools();
+  let render = new Render();
   let breakpoints = new Breakpoints();
   let throttled = false;
   let config = {
@@ -84,8 +85,9 @@ const Cart = (() => {
     config.addToCart.data.items = arrOfProducts
 
     axios( config.addToCart ).then(function (response) {
-      console.log( 'addToCart :: Axios Success', response );
+      if (debug) console.log( 'addToCart :: Axios Success', response );
       config.addToCart.data.items.length = 0;
+      render.notification.productAddedToCart( response.data.items[0] );
       getCart();
     })
     .catch(function (error) {

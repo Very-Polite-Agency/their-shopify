@@ -4,6 +4,12 @@
   width: calc( 100% + var(--bs-container-fluid-padding));
   margin-bottom: 25px;
 
+  .glide {
+    &__track {
+      transition: height var(--theme-transition-duration);
+    }
+  }
+
   @include breakpoint(sm) {} // min width sm
 
   @include breakpoint(md) {} // min width md

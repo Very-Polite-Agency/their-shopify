@@ -10,12 +10,11 @@ html {
 
 body {
 
-  //transition: transform var(--theme-transition-duration);
   display: flex;
   flex-direction: column;
   left: 0;
   overflow-x: hidden;
-  //transform: translate3d( 0, 0, 0 );
+  position: relative;
 
   main {
     flex: 1 0 auto;
@@ -25,16 +24,33 @@ body {
     flex-shrink: 0;
   }
 
+  #add-to-cart-notification,
+  #shopify-main,
+  #shopify-section-footer,
+  #shopify-section-header {
+    transition: transform var(--theme-transition-duration);
+  }
+
   &.mobile-menu--active {
-    transform: translate3d( calc(-1 * var(--theme-mobile-menu-width)), 0, 0 );
     overflow: hidden;
     position: relative;
+    #add-to-cart-notification,
+    #shopify-main,
+    #shopify-section-footer,
+    #shopify-section-header {
+      transform: translate3d( calc(-1 * var(--theme-mobile-menu-width)), 0, 0 );
+    }
   }
 
   @include breakpoint(sm) {
 
     &.mobile-menu--active {
-      transform: translate3d( calc(-1 * var(--theme-mobile-menu-width--sm)), 0, 0 );
+      #add-to-cart-notification,
+      #shopify-main,
+      #shopify-section-footer,
+      #shopify-section-header {
+        transform: translate3d( calc(-1 * var(--theme-mobile-menu-width--sm)), 0, 0 );
+      }
     }
 
   } // min width sm
@@ -42,7 +58,12 @@ body {
   @include breakpoint(md) {
 
     &.mobile-menu--active {
-      transform: translate3d( calc(-1 * var(--theme-mobile-menu-width--md)), 0, 0 );
+      #add-to-cart-notification,
+      #shopify-main,
+      #shopify-section-footer,
+      #shopify-section-header {
+        transform: translate3d( calc(-1 * var(--theme-mobile-menu-width--md)), 0, 0 );
+      }
     }
 
   } // min width md
@@ -50,7 +71,12 @@ body {
   @include breakpoint(lg) {
 
     &.mobile-menu--active {
-      transform: translate3d( 0, 0, 0 );
+      #add-to-cart-notification,
+      #shopify-main,
+      #shopify-section-footer,
+      #shopify-section-header {
+        transform: translate3d( 0, 0, 0 );
+      }
     }
 
   } // min width lg

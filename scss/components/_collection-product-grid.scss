@@ -58,6 +58,9 @@
       width: 100%;
       flex-flow: column;
     }
+    &.no-products {
+      margin-bottom: 50px;
+    }
   }
 
   &__main {

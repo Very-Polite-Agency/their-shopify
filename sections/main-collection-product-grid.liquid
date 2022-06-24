@@ -16,7 +16,7 @@
 
     {%- if collection.products.size == 0 -%}
 
-       <div class="{{ section_name }}__hero">
+       <div class="{{ section_name }}__hero no-products">
         {% render 'bs-container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1' %}
           <div class="{{ section_name }}__hero-content">
             <h1 class="{{ section_name }}__title heading--1">{{ collection_title }}</h1>

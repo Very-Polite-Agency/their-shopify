@@ -1,3 +1,4 @@
+// @codekit-prepend quiet "../node_modules/animejs/lib/anime.min.js";
 // @codekit-prepend quiet "../node_modules/aos/dist/aos.js";
 // @codekit-prepend quiet "../node_modules/axios/dist/axios.min.js";
 // @codekit-prepend quiet "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
@@ -14,6 +15,7 @@
 // @codekit-prepend "./modules/_mobileMenu.js";
 // @codekit-prepend "./modules/_modals";
 // @codekit-prepend "./modules/_product.js";
+// @codekit-prepend "./modules/_render.js";
 // @codekit-prepend "./modules/_scrolling.js";
 // @codekit-prepend "./modules/_sizing.js";
 // @codekit-prepend "./modules/_stepper.js";

@@ -3,12 +3,13 @@
   transition: transform var(--theme-transition-duration);
   background: rgba(var(--theme-colour-black), 1);
   color: rgba(var(--theme-colour-white), 1);
+  width: var(--theme-mobile-menu-width);
+  transform: translate3d( var(--theme-mobile-menu-width), 0, 0 );
   position: fixed;
   top: 0;
-  right: calc(-1 * var(--theme-mobile-menu-width));
-  width: var(--theme-mobile-menu-width);
   height: 100%;
   z-index: 200;
+  right: 0;
 
   .link {
     width: 100%;
@@ -114,24 +115,31 @@
   }
 
   .mobile-menu--active & {
+    transform: translate3d( 0, 0, 0 );
     overflow-y: scroll;
   }
 
   @include breakpoint(sm) {
 
-    right: calc(-1 * var(--theme-mobile-menu-width--sm));
+    transform: translate3d( var(--theme-mobile-menu-width--sm), 0, 0 );
     width: var(--theme-mobile-menu-width--sm);
 
   } // min width sm
 
   @include breakpoint(md) {
 
-    right: calc(-1 * var(--theme-mobile-menu-width--md));
+    transform: translate3d( var(--theme-mobile-menu-width--md), 0, 0 );
     width: var(--theme-mobile-menu-width--md);
 
   } // min width md
 
-  @include breakpoint(lg) {} // min width lg
+  @include breakpoint(lg) {
+
+    .mobile-menu--active & {
+      transform: translate3d( var(--theme-mobile-menu-width--md), 0, 0 );
+    }
+
+  } // min width lg
 
   @include breakpoint(xl) {} // min width xl
 

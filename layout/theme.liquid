@@ -84,7 +84,8 @@
     {% section 'mobile-menu' %}
     {% section 'header' %}
 
-    <main class="{% render 'theme--classes' %} content-for-layout focus-none" role="main" tabindex="-1" data-request-path="{{ request.path }}">
+    <main class="{% render 'theme--classes' %} content-for-layout focus-none" id="shopify-main" role="main" tabindex="-1" data-request-path="{{ request.path }}">
+
       {% if request.path contains 'faqs' %}
         <div class="random">
           {% for i in (1..5) %}
@@ -92,18 +93,20 @@
           {% endfor %}
         </div>
       {% endif %}
+
       {% if request.path contains 'policies' %}
         {% section 'policies' %}
       {% else %}
         {{ content_for_layout }}
       {% endif %}
+
+      {% if request.path contains 'product' or request.path contains 'collection' %}
+        {% render 'notification-added-to-cart' %}
+      {% endif %}
+
     </main>
 
     {% section 'footer' %}
-
-    {% if request.path contains 'product' or request.path contains 'collection' %}
-      {% render 'notification-added-to-cart' %}
-    {% endif %}
 
     <script src="{{ 'main.min.js' | asset_url }}" defer></script>
 
