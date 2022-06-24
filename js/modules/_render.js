@@ -76,7 +76,7 @@ const Render = (() => {
       .add({
         translateX: elementRect.width,
         opacity: 0,
-        delay: 2750,
+        delay: 2500,
         duration: 550
       });
 

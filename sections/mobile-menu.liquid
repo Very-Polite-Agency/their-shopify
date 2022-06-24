@@ -7,7 +7,9 @@
   <div class="{{ section_name }}__layout">
 
     <div class="{{ section_name }}__cart">
-      <a class="{{ section_name }}__cart-link link{% if request.path == '/cart' %} active{% endif %}" href="/cart">Bag [<span class="js--cart-item-count">{{ cart.item_count }} </span>]</a>
+      <a class="{{ section_name }}__cart-link link{% if request.path == '/cart' %} active{% endif %}" href="/cart">
+        Bag [<span class="js--cart-item-count">{{ cart.item_count }} </span>]
+      </a>
     </div>
 
     {% if menu_main %}
@@ -17,6 +19,8 @@
         {% endfor %}
       </nav>
     {% endif %}
+
+    <div></div>
 
   </div>
 </div>
