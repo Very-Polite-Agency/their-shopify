@@ -1,6 +1,11 @@
 {%- assign section_name = 'hero' -%}
 {%- assign section_id = section_name | append: '--' | append: section.id -%}
 
+{% assign aos_id = section_id | append: '--aos' %}
+{% assign aos_transition = 'fade-up' %}
+{% assign aos_delay = 250 %}
+{% assign aos_delay_increment = 250 %}
+
 {% assign heading = section.settings.heading | default: '' %}
 {% assign image = section.settings.image | default: false %}
 {% assign image_caption = section.settings.image_caption | default: '' %}
@@ -11,10 +16,20 @@
 
   <div class="{{ section_name }}__main">
     {% render 'bs-container', state: 'open' %}
-      <div class="{{ section_name }}__layout">
+      <div class="{{ section_name }}__layout" id="{{ aos_id }}">
 
         {% if image %}
-          <div class="{{ section_name }}__media">
+          {% capture aos %}
+            {%
+              render 'aos-attributes',
+              anchor: aos_id,
+              anchor_placement: 'top-center',
+              delay: aos_delay,
+              transition: 'fade-up',
+            %}
+          {% endcapture %}
+          {% assign aos_delay = aos_delay | plus : aos_delay_increment %}
+          <div class="{{ section_name }}__media" {{ aos }}>
             {%
               render 'lazyload-image',
               background: true,
@@ -32,8 +47,31 @@
         {% if 'secondary' == style %}
           {% if heading != blank and message != blank %}
             <div class="{{ section_name }}__content">
-              {% if heading != blank %}<h1 class="{{ section_name }}__heading heading heading--1">{{ heading }}</h1>{% endif %}
-              {% if message != blank %}<div class="{{ section_name }}__message body-copy body-copy--1">{{ message }}</div>{% endif %}
+              {% if heading != blank %}
+                {% capture aos %}
+                  {%
+                    render 'aos-attributes',
+                    anchor: aos_id,
+                    anchor_placement: 'top-center',
+                    delay: aos_delay,
+                    transition: aos_transition,
+                  %}
+                {% endcapture %}
+                {% assign aos_delay = aos_delay | plus : aos_delay_increment %}
+                <h1 class="{{ section_name }}__heading heading heading--1" {{ aos }}>{{ heading }}</h1>
+              {% endif %}
+              {% if message != blank %}
+                {% capture aos %}
+                  {%
+                    render 'aos-attributes',
+                    anchor: aos_id,
+                    anchor_placement: 'top-center',
+                    delay: aos_delay,
+                    transition: aos_transition,
+                  %}
+                {% endcapture %}
+                <div class="{{ section_name }}__message body-copy body-copy--1" {{ aos }}>{{ message }}</div>
+              {% endif %}
             </div>
           {% endif %}
         {% endif %}

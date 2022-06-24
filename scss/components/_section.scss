@@ -15,7 +15,8 @@
     padding: var(--theme-section-padding) 0;
   }
 
-  &.section--featured-carousel {
+  &.section--featured-carousel,
+  &.section--feature-panel-01 {
     overflow: visible;
   }
 

@@ -1,6 +1,10 @@
 {%- assign section_name = 'feature-panel-01' -%}
 {%- assign section_id = section_name | append: '--' | append: section.id -%}
 
+{% assign aos_id = section_id | append: '--aos' %}
+{% assign aos_delay = 250 %}
+{% assign aos_delay_increment = 250 %}
+
 {% assign auxiliary_image = section.settings.auxiliary_image | default: false %}
 {% assign footnote_caption = section.settings.footnote_caption | default: '' %}
 {% assign footnote_image = section.settings.footnote_image | default: false %}
@@ -13,15 +17,35 @@
 
 <div class="{{ section_name }}" id="{{ section_id }}">
   {% render 'bs-container', state: 'open' %}
-    <div class="{{ section_name }}__layout">
+    <div class="{{ section_name }}__layout" id="{{ aos_id }}">
       {% if message != blank %}
         <div class="{{ section_name }}__content">
           {% if stamp %}
             <div class="{{ section_name }}__stamp">{% render 'lazyload-image', image: stamp %}</div>
           {% endif %}
-          <div class="{{ section_name }}__content-message heading heading--1">{{ message }}</div>
+
+          {% capture aos %}
+            {%
+              render 'aos-attributes',
+              anchor: aos_id,
+              delay: aos_delay,
+              transition: 'fade-up',
+            %}
+          {% endcapture %}
+          {% assign aos_delay = aos_delay | plus : aos_delay_increment %}
+          <div class="{{ section_name }}__content-message heading heading--1" {{ aos }}>{{ message }}</div>
+
           {% if footnote_image %}
-            <div class="{{ section_name }}__footnote">
+            {% capture aos %}
+              {%
+                render 'aos-attributes',
+                anchor: aos_id,
+                delay: aos_delay,
+                transition: 'fade-right',
+              %}
+            {% endcapture %}
+            {% assign aos_delay = aos_delay | plus : aos_delay_increment %}
+            <div class="{{ section_name }}__footnote" {{ aos }}>
               <div class="{{ section_name }}__footnote-image">
                 {% render 'lazyload-image', background: true, image: footnote_image %}
               </div>
@@ -33,7 +57,15 @@
         </div>
       {% endif %}
       {% if auxiliary_image %}
-        <div class="{{ section_name }}__auxiliary">
+        {% capture aos %}
+          {%
+            render 'aos-attributes',
+            anchor: aos_id,
+            delay: aos_delay,
+            transition: 'fade-left',
+          %}
+        {% endcapture %}
+        <div class="{{ section_name }}__auxiliary" {{ aos }}>
           {% render 'lazyload-image', image: auxiliary_image %}
         </div>
       {% endif %}

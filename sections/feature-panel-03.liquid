@@ -1,6 +1,10 @@
 {%- assign section_name = 'feature-panel-03' -%}
 {%- assign section_id = section_name | append: '--' | append: section.id -%}
 
+{% assign aos_id = section_id | append: '--aos' %}
+{% assign aos_delay = 250 %}
+{% assign aos_delay_increment = 250 %}
+
 {% assign auxiliary_image = section.settings.auxiliary_image | default: false %}
 {% assign auxiliary_image_caption = section.settings.auxiliary_image_caption | default: '' %}
 {% assign heading = section.settings.heading | default: '' %}
@@ -16,14 +20,22 @@
 
 <div class="{{ section_name }}" id="{{ section_id }}">
   {% render 'bs-container', state: 'open' %}
-    <div class="{{ section_name }}__layout">
+    <div class="{{ section_name }}__layout" id="{{ aos_id }}">
 
       {% if marker != blank %}
         <div class="{{ section_name }}__marker caption caption--2">{{ marker }}</div>
       {% endif %}
 
       {% if auxiliary_image %}
-        <div class="{{ section_name }}__auxiliary-image">
+        {% capture aos %}
+          {%
+            render 'aos-attributes',
+            anchor: aos_id,
+            delay: aos_delay,
+            transition: 'fade-left',
+          %}
+        {% endcapture %}
+        <div class="{{ section_name }}__auxiliary-image" {{ aos }}>
           {% render 'lazyload-image', image: auxiliary_image %}
           {% if auxiliary_image_caption %}
             <strong class="{{ section_name }}__auxiliary-image-caption caption caption--2">{{ auxiliary_image_caption }}</strong>
@@ -39,15 +51,42 @@
           {% endif %}
 
           {% if heading != blank %}
-            <h2 class="{{ section_name }}__heading heading heading--1">{{ heading }}</h2>
+            {% capture aos %}
+              {%
+                render 'aos-attributes',
+                anchor: aos_id,
+                delay: aos_delay,
+                transition: 'fade-up',
+              %}
+            {% endcapture %}
+            {% assign aos_delay = aos_delay | plus : aos_delay_increment %}
+            <h2 class="{{ section_name }}__heading heading heading--1" {{ aos }}>{{ heading }}</h2>
           {% endif %}
 
           {% if message != blank %}
-            <div class="{{ section_name }}__message body-copy body-copy--1">{{ message }}</div>
+            {% capture aos %}
+              {%
+                render 'aos-attributes',
+                anchor: aos_id,
+                delay: aos_delay,
+                transition: 'fade-up',
+              %}
+            {% endcapture %}
+            {% assign aos_delay = aos_delay | plus : aos_delay_increment %}
+            <div class="{{ section_name }}__message body-copy body-copy--1" {{ aos }}>{{ message }}</div>
           {% endif %}
 
           {% if image_supporting %}
-            <div class="{{ section_name }}__content-supporting-image">
+            {% capture aos %}
+              {%
+                render 'aos-attributes',
+                anchor: aos_id,
+                delay: aos_delay,
+                transition: 'fade-right',
+              %}
+            {% endcapture %}
+            {% assign aos_delay = aos_delay | plus : aos_delay_increment %}
+            <div class="{{ section_name }}__content-supporting-image" {{ aos }}>
               {% render 'lazyload-image', image: image_supporting %}
             </div>
           {% endif %}

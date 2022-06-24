@@ -1,6 +1,7 @@
 {% comment %}
 
     Accepts:
+    - aos: {String} AOS
     - caption: {String} Description of featured image (optional)
     - product: {Object} Product Liquid object
     - style: {String} Conditionally load different card types by passing style option
@@ -16,6 +17,7 @@
   {% assign snippet_name = 'card-product' %}
   {% assign snippet_classes = snippet_name | append: ' product' %}
   {% assign snippet_id = snippet_name | append: '--' | append: product.id -%}
+  {% assign aos = aos | default: '' %}
   {% assign caption = caption | default: '' %}
   {% assign image_position = image_position | default: '0' | plus: 0 %}
   {% assign product_title = product_title | default: '' %}
@@ -48,7 +50,13 @@
     {% assign title = product_title %}
   {% endif %}
 
-  <article class="{{ snippet_classes }}" id="{{ snippet_id }}" data-published-at="{{ date_published | date: "%Y-%m-%d %H:%M:%S" }}" data-style="{{ style }}" {% unless available %}data-unavailable{% endunless %}>
+  <article
+    class="{{ snippet_classes }}"
+    id="{{ snippet_id }}"
+    data-published-at="{{ date_published | date: "%Y-%m-%d %H:%M:%S" }}"
+    data-style="{{ style }}" {% unless available %}data-unavailable{% endunless %}
+    {% if aos != blank %}{{ aos }}{% endif %}
+  >
     <div class="{{ snippet_classes }}__layout" id="{{ aos_id }}">
 
       {% case style %}
