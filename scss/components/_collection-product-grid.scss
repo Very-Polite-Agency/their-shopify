@@ -81,6 +81,7 @@
     &-options {
       min-width: 150px;
       text-align: left;
+      flex: 1;
     }
   }
 
@@ -110,7 +111,9 @@
       &-label {
         width: auto;
       }
-      &-options {}
+      &-options {
+        min-width: 240px;
+      }
     }
 
   } // min width md
@@ -147,6 +150,12 @@
 
     &__main {
       margin-top: 50px;
+    }
+
+    &__sort-filter {
+      &-options {
+        min-width: 280px;
+      }
     }
 
   } // min width lg
