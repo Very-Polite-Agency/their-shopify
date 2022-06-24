@@ -24,7 +24,7 @@ https://their-jewelry-and-accessories.myshopify.com
 - [x] Announcements
 - [x] Contact Form
 - [ ] Cookie Consent
-- [ ] Dynamic Cart
+- [x] Dynamic Cart
 - [x] Footer
 - [x] Feature Carousel
 - [x] Feature Panel 01
@@ -41,6 +41,8 @@ https://their-jewelry-and-accessories.myshopify.com
 - [ ] Remove 'post_per_page' override on the main-blog.liquid section
 - [ ] Test contact us form entries
 - [ ] Solve random placement of background on FAQs page
+- [ ] Setup Google Analytics
+- [ ] Setup Google Search Console
 
 ## Phase 2.0
 ### Templates
