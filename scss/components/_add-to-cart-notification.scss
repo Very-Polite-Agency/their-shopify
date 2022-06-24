@@ -1,5 +1,5 @@
 :root {
-  --theme-add-to-cart-notification-width: 300px;
+  --theme-add-to-cart-notification-width: 320px;
 }
 
 .add-to-cart-notification {
@@ -7,24 +7,104 @@
   transition:
     opacity var(--theme-transition-duration),
     transform var(--theme-transition-duration);
+  font-family: var(--theme-font-family--sans-serif--primary);
+  font-style: normal;
   transform: translate3d( var(--theme-add-to-cart-notification-width), 0, 0 );
   top: calc(var(--theme-header-height--total) + var(--bs-container-fluid-padding));
   width: var(--theme-add-to-cart-notification-width);
   background: rgba(var(--theme-colour-black), 1);
   color: rgba(var(--theme-colour-white), 1);
   position: fixed;
+  text-transform: uppercase;
   right: 0;
   z-index: 50;
   opacity: 0;
-  padding: 10px;
+  padding: 15px;
+  font-weight: 400;
 
+  &__content {
+    flex: 1;
+    margin-left: 14px;
+  }
 
-  opacity: 1;
-  transform: translate3d( calc(-1*var(--theme-add-to-cart-notification-width)), 0, 0 );
+  &__cta {
+    font-family: var(--theme-font-family--serif--primary);
+    font-size: 15px;
+    line-height: 1;
+    text-transform: capitalize;
+    position: absolute;
+    bottom: 0;
+    &-link {
+      border-bottom: 1px solid rgba(var(--theme-colour-white), 1);
+      color: inherit;
+      font-weight: inherit;
+      font-size: inherit;
+      line-height: inherit;
+      &:hover {
+        color: inherit;
+        border-bottom: 1px solid rgba(var(--theme-colour-white), 0);
+      }
+    }
+  }
 
+  &__image {
+    width: 100px;
+    height: auto;
+    a, img, svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
 
   &__main {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  &__notice {
+    opacity: 0;
+    font-size: 9px;
+    line-height: 1;
+    letter-spacing: 0.15em;
+    position: absolute;
+    top: 0;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    &-icon {
+      position: relative;
+      background-image: url('./THEIR--icon.checkmark.svg');
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      aspect-ratio: 50/38;
+      width: 10px;
+      margin-left: 5px;
+      @supports not (aspect-ratio: auto) {
+        height: 8px;
+	    }
+    }
+  }
+
+  &__product {
+    &-details {
+      font-size: 12px;
+      line-height: 1.45;
+      letter-spacing: 0.25em;
+    }
+    &-title {
+      font-weight: inherit;
+    }
+    &-option {
+      display: flex;
+      justify-content: flex-start;
+      align-items: baseline;
+      &-value {
+        margin-left: 6px;
+      }
+    }
   }
 
   @include breakpoint(sm) {} // min width sm
