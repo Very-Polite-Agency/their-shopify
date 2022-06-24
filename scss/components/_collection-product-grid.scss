@@ -70,8 +70,9 @@
   &__sort-filter {
     display: inline-flex;
     width: 100%;
-    align-items: center;
+    align-items: baseline;
     margin-top: 20px;
+    padding: 12px 0;
     &-label {
       width: auto;
       & + .collection-product-grid__sort-filter-options {
@@ -82,6 +83,7 @@
       min-width: 150px;
       text-align: left;
       flex: 1;
+      min-height: unset;
     }
   }
 
@@ -108,6 +110,7 @@
     &__sort-filter {
       width: auto;
       margin-top: 0;
+      padding: 0;
       &-label {
         width: auto;
       }
