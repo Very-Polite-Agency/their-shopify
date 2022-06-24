@@ -77,11 +77,11 @@
                 render 'aos-attributes',
                 anchor: aos_id,
                 delay: aos_delay,
-                transition: 'fade-left',
+                transition: 'fade-in',
               %}
             {% endcapture %}
             {% assign aos_delay = aos_delay | plus : aos_delay_increment %}
-            <div class="{{ section_name }}__content-auxiliary-image" {{ aos }}>
+            <div class="{{ section_name }}__content-auxiliary-image">
               {% render 'lazyload-image', image: auxiliary_image %}
             </div>
           {% endif %}
