@@ -43,6 +43,7 @@
   }
 
   &__button-remove-item {
+    color: rgba(var(--theme-colour-black), 1);
     letter-spacing: 0.07em;
     min-height: unset;
     font-size: 10px;

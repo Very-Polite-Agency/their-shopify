@@ -17,6 +17,7 @@
 
   button,
   input {
+    color: rgba(var(--theme-colour-black), 1);
     height: var(--theme-stepper-button-size);
     min-height: unset;
   }
