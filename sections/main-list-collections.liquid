@@ -24,48 +24,41 @@
 -%}
 
 <div class="{{ section_name }}" id="{{ section_id }}">
+  {% render 'bs-container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1' %}
+    <div class="{{ section_name }}__layout" id="{{ aos_id }}">
 
-  <div class="{{ section_name }}__intro intro" data-text-alignment-{{ alignment }}>
-    {% render 'bs-container', state: 'open', col: 'col-12 col-lg-8 offset-lg-2' %}
       {% if heading != blank %}
         {% capture aos %}
           {%
             render 'aos-attributes',
-            anchor: section_id,
-            anchor_placement: 'top-center',
-            delay: 500,
-            offset: -175,
-            transition: 'fade-down',
+            anchor: aos_id,
+            delay: 250,
+            transition: 'fade-up',
           %}
         {% endcapture %}
-        <div class="{{ section_name }}__heading heading--2 {% if heading_highlight %} highlight--{{ heading_highlight }}{% endif %}" {{ aos }}>{{ heading }}</div>
+        <h1 class="{{ section_name }}__heading heading heading--2" {{ aos }}>{{ heading }}</h1>
       {% endif %}
+
       {% if message != blank %}
         {% capture aos %}
           {%
             render 'aos-attributes',
-            anchor: section_id,
-            anchor_placement: 'top-center',
-            delay: 750,
-            offset: -175,
-            transition: 'fade-left',
+            anchor: aos_id,
+            delay: 500,
+            transition: 'fade-up',
           %}
         {% endcapture %}
-        <div class="{{ section_name }}__message body-copy--regular" {{ aos }}>{{ message }}</div>
+        <div class="{{ section_name }}__message body-copy body-copy--1" {{ aos }}>{{ message }}</div>
       {% endif %}
-    {% render 'bs-container', state: 'closed' %}
-  </div>
 
-  <div class="{{ section_name }}__main main">
-    {% render 'bs-container', state: 'open' %}
       <div class="{{ section_name }}__listing listing--{{ section_name }}">
         {%- for collection in collections -%}
-          {% render 'card-collection', collection: collection, index: forloop.index, style: section_name %}
+          {% render 'card-collection', classes: 'list-collections__collection', collection: collection, index: forloop.index, style: section_name %}
         {%- endfor -%}
       </div>
-    {% render 'bs-container', state: 'closed' %}
-  </div>
 
+    </div>
+  {% render 'bs-container', state: 'closed' %}
 </div>
 
 {% schema %}

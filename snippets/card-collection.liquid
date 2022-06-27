@@ -1,6 +1,7 @@
 {% comment %}
 
     Accepts:
+    - classes: {String} Optionally include custom classes for snippet
     - collection: {Object} Collection Liquid object
     - style: {String} Optionally load different card types by passing style option
 
@@ -13,7 +14,7 @@
 
   {% assign snippet_name = 'card-collection' %}
   {% assign snippet_classes = snippet_name | append: ' collection' %}
-  {% assign snippet_id = snippet_name | append: '--' | append: article.id -%}
+  {% assign snippet_id = snippet_name | append: '--' | append: collection.id -%}
   {% assign style = style | default: 'not-set' %}
 
   {% if classes and classes != empty %}
@@ -31,21 +32,26 @@
   {% assign url = collection.url | default: '' %}
 
   <article class="{{ snippet_classes }}" id="{{ snippet_id }}" data-published-at="{{ date_published | date: "%Y-%m-%d %H:%M:%S" }}" data-style="{{ style }}">
-    <div class="{{ snippet_classes }}__layout" id="{{ aos_id }}">
+    <div class="{{ snippet_name }}__layout" id="{{ aos_id }}">
 
       {% case style %}
         {% when 'featured' %}
+          <time class="{{ snippet_name }}__date" datetime="{{ date_published | date: "%Y-%m-%d" }}">{{ date_published | date: "%B %e, %Y" }}</time>
+
         {% else %}
           <div class="{{ snippet_name }}__image">
             <a class="{{ snippet_name }}__image-link" href="{{ url }}" title="{{ title }}" target="_self">
-              {% render 'lazyload-image', image: image %}
+              {% render 'lazyload-image', background: true, image: image %}
             </a>
           </div>
           <div class="{{ snippet_name }}__content">
-            <time class="{{ snippet_name }}__date" datetime="{{ date_published | date: "%Y-%m-%d" }}">{{ date_published | date: "%B %e, %Y" }}</time>
             <strong class="{{ snippet_name }}__title">
-              <a class="{{ snippet_name }}__title-link" href="{{ url }}" title="{{ title }}" target="_self">{{ title }}</a>
+              <a class="{{ snippet_name }}__title-link link" href="{{ url }}" title="{{ title }}" target="_self">{{ title }}</a>
             </strong>
+            <div class="{{ snippet_name }}__cta">
+              <a class="{{ snippet_name }}__cta-link link" href="{{ url }}" title="{{ title }}" target="_self">Shop Now</a>
+            </div>
+            <div class="{{ snippet_name }}__desciption body-copy body-copy--1">{{ desciption }}</div>
           </div>
       {% endcase %}
 

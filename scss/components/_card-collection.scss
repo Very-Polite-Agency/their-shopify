@@ -1,0 +1,22 @@
+.card-collection {
+
+  &__image {
+    position: relative;
+    &-link {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+  }
+
+  @include breakpoint(sm) {} // min width sm
+
+  @include breakpoint(md) {} // min width md
+
+  @include breakpoint(lg) {} // min width lg
+
+  @include breakpoint(xl) {} // min width xl
+
+  @include breakpoint(xxl) {} // min width xxl
+
+}

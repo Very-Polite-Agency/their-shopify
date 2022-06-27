@@ -1,0 +1,60 @@
+.list-collections {
+
+  .collection {
+    &__image {
+      width: 100%;
+      aspect-ratio: 4/3;
+      @supports not (aspect-ratio: auto) {
+        height: 350px;
+	    }
+    }
+    & + .collection {
+      margin-top: var(--bs-container-fluid-padding);
+    }
+  }
+
+  @include breakpoint(sm) {} // min width sm
+
+  @include breakpoint(md) {} // min width md
+
+  @include breakpoint(lg) {
+
+    .collection {
+      &__image {
+        aspect-ratio: 5/3;
+        @supports not (aspect-ratio: auto) {
+          height: 400px;
+	      }
+      }
+      & + .collection {
+        margin-top: calc( 2 * var(--bs-container-fluid-padding));
+      }
+    }
+
+  } // min width lg
+
+  @include breakpoint(xl) {
+
+    .collection {
+      &__image {
+        @supports not (aspect-ratio: auto) {
+          height: 450px;
+	      }
+      }
+    }
+
+  } // min width xl
+
+  @include breakpoint(xxl) {
+
+    .collection {
+      &__image {
+        @supports not (aspect-ratio: auto) {
+          height: 500px;
+	      }
+      }
+    }
+
+  } // min width xxl
+
+}
