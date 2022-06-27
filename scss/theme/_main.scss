@@ -13,6 +13,7 @@ main {
     padding-bottom: 0;
   }
 
+  &.template--list-collections,
   &.template--product {
     padding-top: calc( 1.25 * var(--theme-header-height--total) );
   }
@@ -23,6 +24,11 @@ main {
         padding-top: 40px;
       }
     }
+  }
+
+  &.template--list-collections {
+    background: rgba(var(--theme-colour-black), 1);
+    color: rgba(var(--theme-colour-white), 1);
   }
 
   @include breakpoint(sm) {} // min width sm

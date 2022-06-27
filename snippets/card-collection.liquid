@@ -40,16 +40,18 @@
 
         {% else %}
           <div class="{{ snippet_name }}__image">
-            <a class="{{ snippet_name }}__image-link" href="{{ url }}" title="{{ title }}" target="_self">
+            <a class="{{ snippet_name }}__image-link link" href="{{ url }}" title="{{ title }}" target="_self">
               {% render 'lazyload-image', background: true, image: image %}
             </a>
           </div>
           <div class="{{ snippet_name }}__content">
-            <strong class="{{ snippet_name }}__title">
+            <strong class="{{ snippet_name }}__title heading heading--1">
               <a class="{{ snippet_name }}__title-link link" href="{{ url }}" title="{{ title }}" target="_self">{{ title }}</a>
             </strong>
             <div class="{{ snippet_name }}__cta">
-              <a class="{{ snippet_name }}__cta-link link" href="{{ url }}" title="{{ title }}" target="_self">Shop Now</a>
+              <a class="{{ snippet_name }}__cta-link link link--text" href="{{ url }}" title="{{ title }}" target="_self">
+                <span class="link__title">Shop Now</span>
+              </a>
             </div>
             <div class="{{ snippet_name }}__desciption body-copy body-copy--1">{{ desciption }}</div>
           </div>
