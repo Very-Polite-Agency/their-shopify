@@ -1,39 +1,118 @@
-{{ 'component-card.css' | asset_url | stylesheet_tag }}
-{{ 'section-collection-list.css' | asset_url | stylesheet_tag }}
+{%- assign section_name = 'list-collections' -%}
+{%- assign section_id = section_name | append: '--' | append: section.id -%}
 
-<div class="page-width">
-  <h1 class="title title--primary">{{ section.settings.title | escape }}</h1>
-  {%- liquid
-    case section.settings.sort
-      when 'products_high' or 'products_low'
-        assign collections = collections | sort: 'all_products_count'
-      when 'date' or 'date_reversed'
-        assign collections = collections | sort: 'published_at'
-    endcase
+{% assign aos_id = section_id | append: '--aos' %}
+{% assign aos_delay = 250 %}
+{% assign aos_delay_increment = 250 %}
 
-    if section.settings.sort == 'products_high' or section.settings.sort == 'date_reversed' or section.settings.sort == 'alphabetical_reversed'
-      assign collections = collections | reverse
-    endif
-  -%}
-  <ul class="collection-list grid grid--1-col grid--3-col-tablet" role="list">
-    {%- for collection in collections -%}
-      <li class="collection-list__item grid__item">
-        {% render 'card-collection', card_collection: collection, media_aspect_ratio: section.settings.image_ratio, columns: 3 %}
-      </li>
-    {%- endfor -%}
-  </ul>
+{% assign alignment = section.settings.alignment | default: 'center' %}
+{% assign heading = section.settings.heading | default: '' %}
+{% assign heading_highlight = section.settings.heading_highlight | default: false %}
+{% assign message = section.settings.message | default: false %}
+
+{%- liquid
+  case section.settings.sort
+    when 'products_high' or 'products_low'
+      assign collections = collections | sort: 'all_products_count'
+    when 'date' or 'date_reversed'
+      assign collections = collections | sort: 'published_at'
+  endcase
+
+  if section.settings.sort == 'products_high' or section.settings.sort == 'date_reversed' or section.settings.sort == 'alphabetical_reversed'
+    assign collections = collections | reverse
+  endif
+-%}
+
+<div class="{{ section_name }}" id="{{ section_id }}">
+
+  <div class="{{ section_name }}__intro intro" data-text-alignment-{{ alignment }}>
+    {% render 'bs-container', state: 'open', col: 'col-12 col-lg-8 offset-lg-2' %}
+      {% if heading != blank %}
+        {% capture aos %}
+          {%
+            render 'aos-attributes',
+            anchor: section_id,
+            anchor_placement: 'top-center',
+            delay: 500,
+            offset: -175,
+            transition: 'fade-down',
+          %}
+        {% endcapture %}
+        <div class="{{ section_name }}__heading heading--2 {% if heading_highlight %} highlight--{{ heading_highlight }}{% endif %}" {{ aos }}>{{ heading }}</div>
+      {% endif %}
+      {% if message != blank %}
+        {% capture aos %}
+          {%
+            render 'aos-attributes',
+            anchor: section_id,
+            anchor_placement: 'top-center',
+            delay: 750,
+            offset: -175,
+            transition: 'fade-left',
+          %}
+        {% endcapture %}
+        <div class="{{ section_name }}__message body-copy--regular" {{ aos }}>{{ message }}</div>
+      {% endif %}
+    {% render 'bs-container', state: 'closed' %}
+  </div>
+
+  <div class="{{ section_name }}__main main">
+    {% render 'bs-container', state: 'open' %}
+      <div class="{{ section_name }}__listing listing--{{ section_name }}">
+        {%- for collection in collections -%}
+          {% render 'card-collection', collection: collection, index: forloop.index, style: section_name %}
+        {%- endfor -%}
+      </div>
+    {% render 'bs-container', state: 'closed' %}
+  </div>
+
 </div>
 
 {% schema %}
 {
-  "name": "t:sections.main-list-collections.name",
-  "class": "section",
+  "name": "List Collections",
+  "class": "section section--list-collections",
+  "tag": "section",
   "settings": [
     {
-      "type": "text",
-      "id": "title",
-      "label": "t:sections.main-list-collections.settings.title.label",
-      "default": "Collections"
+      "content": "Content",
+      "type": "header"
+    },
+    {
+      "label": "Alignment",
+      "type": "select",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "center",
+      "id": "alignment"
+    },
+    {
+      "label": "Heading",
+      "type": "richtext",
+      "id": "heading"
+    },
+    {
+      "label": "Heading Highlight",
+      "type": "select",
+      "options": [
+        { "value": "standard", "label": "Standard" },
+        { "value": "stroke", "label": "Stroke" },
+        { "value": "circle", "label": "Circle" }
+      ],
+      "default": "standard",
+      "id": "heading_highlight"
+    },
+    {
+      "label": "Message",
+      "type": "richtext",
+      "id": "message"
+    },
+    {
+      "content": "Settings",
+      "type": "header"
     },
     {
       "type": "select",
@@ -66,27 +145,6 @@
       ],
       "default": "alphabetical",
       "label": "t:sections.main-list-collections.settings.sort.label"
-    },
-    {
-      "type": "select",
-      "id": "image_ratio",
-      "options": [
-        {
-          "value": "adapt",
-          "label": "t:sections.main-list-collections.settings.image_ratio.options__1.label"
-        },
-        {
-          "value": "portrait",
-          "label": "t:sections.main-list-collections.settings.image_ratio.options__2.label"
-        },
-        {
-          "value": "square",
-          "label": "t:sections.main-list-collections.settings.image_ratio.options__3.label"
-        }
-      ],
-      "default": "adapt",
-      "label": "t:sections.main-list-collections.settings.image_ratio.label",
-      "info": "t:sections.main-list-collections.settings.image_ratio.info"
     }
   ]
 }
