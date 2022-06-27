@@ -11,8 +11,14 @@
       width: 100%;
       height: auto;
       opacity: 1;
+      position: relative;
       &:hover {
-        opacity: 0.8;
+        img {
+          opacity: 0.8;
+        }
+        .card-product__secondary-image {
+          opacity: 1;
+        }
       }
     }
   }
@@ -27,6 +33,17 @@
 
   &__price {
     text-align: right;
+  }
+
+  &__secondary-image {
+    transition: opacity var(--theme-transition-duration);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    opacity: 0;
   }
 
   &--contact-form {
