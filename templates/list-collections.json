@@ -3,9 +3,11 @@
     "main": {
       "type": "main-list-collections",
       "settings": {
-        "title": "Collections",
-        "sort": "alphabetical",
-        "image_ratio": "square"
+        "alignment": "center",
+        "heading": "<p>Our Collections<\/p>",
+        "heading_highlight": "standard",
+        "message": "",
+        "sort": "products_high"
       }
     }
   },
