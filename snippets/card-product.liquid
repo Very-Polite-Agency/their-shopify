@@ -21,6 +21,7 @@
   {% assign caption = caption | default: '' %}
   {% assign image_position = image_position | default: '0' | plus: 0 %}
   {% assign product_title = product_title | default: '' %}
+  {% assign show_secondary_image = show_secondary_image | default: false %}
   {% assign style = style | default: 'default' %}
 
   {% if classes and classes != empty %}
@@ -37,6 +38,7 @@
   {% assign images = product.images | default: false %}
   {% assign price = product.price %}
   {% assign price_compare = product.compare_at_price %}
+  {% assign secondary_image = false %}
   {% assign selected_variant = product.selected_or_first_available_variant | default: false %}
   {% assign title = product.title | default: '' %}
   {% assign type = product.type | default: '' %}
@@ -44,6 +46,10 @@
 
   {% if images and images.size > 1 %}
     {% assign featured_image = images[image_position] %}
+    {% if show_secondary_image %}
+      {% assign secondary_image = images[1] %}
+    {% endif %}
+
   {% endif %}
 
   {% if product_title != blank %}
@@ -69,6 +75,15 @@
                 alt_text: title,
                 image: featured_image,
               %}
+              {% if secondary_image %}
+                <div class="{{ snippet_name }}__secondary-image">
+                  {%
+                    render 'lazyload-image',
+                    background: true,
+                    image: secondary_image,
+                  %}
+                </div>
+              {% endif %}
             </a>
           </div>
           <div class="{{ snippet_name }}__info">
