@@ -42,7 +42,7 @@ https://their-jewelry-and-accessories.myshopify.com
 - [x] Remove 'post_per_page' override on the main-blog.liquid section
 - [ ] Test contact us form entries
 - [ ] Solve random placement of background on FAQs page
-- [ ] Setup Google Analytics
+- [x] Setup Google Analytics
 - [ ] Setup Google Search Console
 
 ## Phase 2.0

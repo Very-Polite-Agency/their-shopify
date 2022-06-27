@@ -29,22 +29,20 @@
     font-style: normal;
     font-weight: 400;
     font-size: 10px;
+    font-size: 12px;
     letter-spacing: .25em;
     text-transform: uppercase;
   }
 
   @include breakpoint(sm) {
 
-    &--2 {
-      font-size: 11px;
-    }
 
   } // min width sm
 
   @include breakpoint(md) {
 
     &--2 {
-      font-size: 12px;
+      font-size: 13px;
     }
 
   } // min width md
@@ -60,7 +58,7 @@
   @include breakpoint(xl) {
 
     &--2 {
-      font-size: 10px;
+      font-size: 11px;
     }
 
   } // min width xl
@@ -68,7 +66,7 @@
   @include breakpoint(xxl) {
 
     &--2 {
-      font-size: 11px;
+      font-size: 13px;
     }
 
   } // min width xxl

@@ -9,6 +9,7 @@
   color: rgba(var(--theme-colour-white), 1);
   padding: var(--theme-featured-carousel-section-padding) 0;
   padding-right: var(--bs-container-fluid-padding);
+  padding-bottom: 30px;
 
   .glide {
     &__buttons {
@@ -90,6 +91,7 @@
 
     padding: var(--theme-featured-carousel-section-padding--lg) 0;
     padding-right: calc( ((100% - var(--bs-container-width--lg))/2) + 12px );
+    padding-bottom: 50px;
 
     .glide {
       &__buttons {
