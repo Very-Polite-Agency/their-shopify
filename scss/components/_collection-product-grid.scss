@@ -65,6 +65,10 @@
 
   &__main {
     margin-top: 25px;
+    margin-bottom: 55px;
+    & + .pagination {
+      margin-top: 0;
+    }
   }
 
   &__sort-filter {
@@ -153,6 +157,7 @@
 
     &__main {
       margin-top: 50px;
+      margin-bottom: 75px;
     }
 
     &__sort-filter {
