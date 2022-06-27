@@ -4,8 +4,8 @@
       "type": "main-list-collections",
       "settings": {
         "heading": "Our Collections",
-        "message": "",
-        "sort": "products_high"
+        "message": "<p>Nullam pretium lacinia massa. Donec non accumsan ipsum, non efficitur justo. Sed bibendum ut nisi sed vehicula. Curabitur ultrices enim ac lobortis facilisis. Curabitur sed efficitur eros.<\/p>",
+        "sort": "alphabetical"
       }
     }
   },
