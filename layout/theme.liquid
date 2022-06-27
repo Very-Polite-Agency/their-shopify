@@ -31,7 +31,8 @@
     <link rel='preconnect' href='https://cdn.shopify.com' crossorigin>
     <link rel='preconnect' href='https://v.shopify.com' crossorigin>
 
-    <!-- Vendor Scripts -->
+    <!-- External Vendor Scripts -->
+    <script src="https://www.googletagmanager.com/gtag/js?id=G-GGL1G0TCRD" async></script>
     <script src="{{ 'vendors.min.js' | asset_url }}" async></script>
 
     {{ content_for_header }}
@@ -53,6 +54,12 @@
     {{ 'main.css' | asset_url | stylesheet_tag }}
 
     <script>
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-GGL1G0TCRD');
 
       document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
       if ( Shopify.designMode ) {

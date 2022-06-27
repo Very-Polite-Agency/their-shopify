@@ -37,9 +37,9 @@ https://their-jewelry-and-accessories.myshopify.com
 - [x] Navigation
 
 ### General
-- [ ] Integrate AOS on Fifty-fifty
-- [ ] Integrate AOS on FAQs
-- [ ] Remove 'post_per_page' override on the main-blog.liquid section
+- [x] Integrate AOS on Fifty-fifty
+- [x] Integrate AOS on FAQs
+- [x] Remove 'post_per_page' override on the main-blog.liquid section
 - [ ] Test contact us form entries
 - [ ] Solve random placement of background on FAQs page
 - [ ] Setup Google Analytics

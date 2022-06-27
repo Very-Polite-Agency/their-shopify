@@ -110,7 +110,16 @@
                 </div>
               {% endif %}
               {% if stamp %}
-                <div class="{{ section_name }}__stamp">{% render 'lazyload-image', image: stamp %}</div>
+                {% capture aos %}
+                  {%
+                    render 'aos-attributes',
+                    anchor: aos_id,
+                    delay: aos_delay,
+                    transition: 'fade-up',
+                  %}
+                {% endcapture %}
+                {% assign aos_delay = aos_delay | plus : aos_delay_increment %}
+                <div class="{{ section_name }}__stamp" {{ aos }}>{% render 'lazyload-image', image: stamp %}</div>
               {% endif %}
 
           {%- endcase -%}

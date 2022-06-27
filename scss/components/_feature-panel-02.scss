@@ -18,12 +18,18 @@
       top: 0;
       right: 0;
       transform: translate3d( 50%, 0, 0);
+      &-aos {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
       a, img, svg {
         display: block;
         height: 100%;
         width: auto;
       }
     }
+
   }
 
   &__heading {
