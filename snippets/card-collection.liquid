@@ -3,6 +3,7 @@
     Accepts:
     - classes: {String} Optionally include custom classes for snippet
     - collection: {Object} Collection Liquid object
+    - index: {Object} Optionally include index of card
     - style: {String} Optionally load different card types by passing style option
 
     Usage:
@@ -15,6 +16,7 @@
   {% assign snippet_name = 'card-collection' %}
   {% assign snippet_classes = snippet_name | append: ' collection' %}
   {% assign snippet_id = snippet_name | append: '--' | append: collection.id -%}
+  {% assign index = index | default: 1 %}
   {% assign style = style | default: 'not-set' %}
 
   {% if classes and classes != empty %}
@@ -39,22 +41,72 @@
           <time class="{{ snippet_name }}__date" datetime="{{ date_published | date: "%Y-%m-%d" }}">{{ date_published | date: "%B %e, %Y" }}</time>
 
         {% else %}
-          <div class="{{ snippet_name }}__image">
+
+          {% capture aos %}
+            {%
+              render 'aos-attributes',
+              anchor: aos_id,
+              delay: aos_delay,
+              transition: 'fade-up',
+            %}
+          {% endcapture %}
+          {% assign aos_delay = aos_delay | plus : aos_delay_increment %}
+
+          <div class="{{ snippet_name }}__image" {{ aos }}>
             <a class="{{ snippet_name }}__image-link link" href="{{ url }}" title="{{ title }}" target="_self">
               {% render 'lazyload-image', background: true, image: image %}
             </a>
           </div>
+
           <div class="{{ snippet_name }}__content">
-            <strong class="{{ snippet_name }}__title heading heading--1">
+
+            {% capture aos %}
+              {%
+                render 'aos-attributes',
+                anchor: aos_id,
+                delay: aos_delay,
+                transition: 'fade-left',
+              %}
+            {% endcapture %}
+            {% assign aos_delay = aos_delay | plus : aos_delay_increment %}
+
+            <strong class="{{ snippet_name }}__title heading heading--1" {{ aos }}>
               <a class="{{ snippet_name }}__title-link link" href="{{ url }}" title="{{ title }}" target="_self">{{ title }}</a>
             </strong>
-            <div class="{{ snippet_name }}__cta">
+
+            {% capture aos %}
+              {%
+                render 'aos-attributes',
+                anchor: aos_id,
+                delay: aos_delay,
+                transition: 'fade-left',
+              %}
+            {% endcapture %}
+            {% assign aos_delay = aos_delay | plus : aos_delay_increment %}
+
+            <div class="{{ snippet_name }}__cta" {{ aos }}>
               <a class="{{ snippet_name }}__cta-link link link--text" href="{{ url }}" title="{{ title }}" target="_self">
                 <span class="link__title">Shop Now</span>
               </a>
             </div>
-            <div class="{{ snippet_name }}__desciption body-copy body-copy--1">{{ desciption }}</div>
+
+            {% if desciption != blank %}
+
+              {% capture aos %}
+                {%
+                  render 'aos-attributes',
+                  anchor: aos_id,
+                  delay: aos_delay,
+                  transition: 'fade-left',
+                %}
+              {% endcapture %}
+
+              <div class="{{ snippet_name }}__description body-copy body-copy--1" {{ aos }}>{{ desciption }}</div>
+
+            {% endif %}
           </div>
+
+
       {% endcase %}
 
     </div>

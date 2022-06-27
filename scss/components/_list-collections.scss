@@ -10,14 +10,24 @@
     }
     &__cta {
       order: 3;
+      margin-top: 20px;
+      &-link {
+        color: rgba(var(--theme-colour-charcoal), 1);
+        border-color: rgba(var(--theme-colour-charcoal), 1);
+        &:hover {
+          color: rgba(var(--theme-colour-white), 1);
+          border-color: rgba(var(--theme-colour-charcoal), 0);
+        }
+      }
     }
     &__description {
       order: 2;
+      margin-top: 15px;
     }
     &__image {
       width: 100%;
       aspect-ratio: 4/3;
-      background: rgba(var(--theme-colour-white), 0.1);
+      background: rgba(var(--theme-colour-white), 0.075);
       @supports not (aspect-ratio: auto) {
         height: 350px;
 	    }
@@ -25,13 +35,16 @@
         width: 100%;
         height: 100%;
       }
+      & + .card-collection__content {
+        margin-top: 28px;
+      }
     }
     &__title {
       width: 100%;
       order: 1;
     }
     & + .card-collection {
-      margin-top: var(--bs-container-fluid-padding);
+      margin-top: 65px;
     }
   }
 
@@ -52,19 +65,44 @@
   @include breakpoint(lg) {
 
     .card-collection {
+      &__cta {
+        order: 2;
+        margin-top: 0;
+        margin-left: auto;
+      }
+      &__description {
+        order: 3;
+        width: 100%;
+        padding-right: 20%;
+      }
       &__image {
         aspect-ratio: 5/3;
         @supports not (aspect-ratio: auto) {
           height: 400px;
 	      }
       }
+      &__title {
+        width: auto;
+        order: 1;
+      }
       & + .card-collection {
-        margin-top: calc( 2 * var(--bs-container-fluid-padding));
+        margin-top: 85px;
       }
     }
 
     &__listing {
       margin-top: 60px;
+      .card-collection {
+        width: 66%;
+        &:nth-child(even) {
+          margin-left: auto;
+        }
+        &:nth-child(odd) {}
+      }
+    }
+
+    &__message {
+      width: 66.6666%;
     }
 
   } // min width lg
@@ -72,6 +110,9 @@
   @include breakpoint(xl) {
 
     .card-collection {
+      &__description {
+        padding-right: 30%;
+      }
       &__image {
         @supports not (aspect-ratio: auto) {
           height: 450px;
@@ -84,6 +125,9 @@
   @include breakpoint(xxl) {
 
     .collection {
+      &__description {
+        padding-right: 40%;
+      }
       &__image {
         @supports not (aspect-ratio: auto) {
           height: 500px;

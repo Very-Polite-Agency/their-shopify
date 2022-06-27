@@ -12,7 +12,7 @@ https://their-jewelry-and-accessories.myshopify.com
 - [x] Blog
 - [x] Cart
 - [x] Collection (PLP)
-- [ ] Collection Listing
+- [x] Collection Listing
 - [x] Contact
 - [x] FAQs
 - [x] Home page
@@ -37,7 +37,8 @@ https://their-jewelry-and-accessories.myshopify.com
 - [x] Navigation
 
 ### General
-- [ ] Integrate AOS
+- [ ] Integrate AOS on Fifty-fifty
+- [ ] Integrate AOS on FAQs
 - [ ] Remove 'post_per_page' override on the main-blog.liquid section
 - [ ] Test contact us form entries
 - [ ] Solve random placement of background on FAQs page
