@@ -3,9 +3,7 @@
     "main": {
       "type": "main-list-collections",
       "settings": {
-        "alignment": "center",
-        "heading": "<p>Our Collections<\/p>",
-        "heading_highlight": "standard",
+        "heading": "Our Collections",
         "message": "",
         "sort": "products_high"
       }
