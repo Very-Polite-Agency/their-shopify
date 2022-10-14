@@ -50,10 +50,10 @@
         <h2 class='{{ section_name }}__heading heading--1'>Related Articles</h2>
         <div class='{{ section_name }}__related-articles listing--flex'>
           {% if article_previous %}
-            {%- render 'card-article', article: article_previous, classes: 'article__related-articles-item previous' -%}
+            {%- render 'card-article', card_article: article_previous, classes: 'article__related-articles-item previous' -%}
           {% endif %}
           {% if article_next %}
-            {%- render 'card-article', article: article_next, classes: 'article__related-articles-item next' -%}
+            {%- render 'card-article', card_article: article_next, classes: 'article__related-articles-item next' -%}
           {% endif %}
         </div>
       {% render 'bs-container', state: 'close' %}

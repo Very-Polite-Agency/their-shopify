@@ -40,7 +40,7 @@
     {% render 'bs-container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1' %}
       <div class="{{ section_name }}__list listing--grid">
         {%- for article in blog.articles -%}
-          {%- render 'card-article', article: article, classes: 'blog__article' -%}
+          {%- render 'card-article', card_article: article, classes: 'blog__article' -%}
         {%- endfor -%}
       </div>
     {% render 'bs-container', state: 'closed' %}
