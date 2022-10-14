@@ -67,19 +67,32 @@
       }
 
       var Theme = Theme || {};
+      Theme.cart = {{ cart | json }};
+      Theme.collection = {{ collection | json }} || {};
+      Theme.customer = {{ customer | json }} || {};
       Theme.currency = {
         symbol: {{ cart.currency.symbol | json }} || '',
         iso_code: {{ cart.currency.iso_code | json }} || '',
       };
+      Theme.moneyFormat = {{ shop.money_format | json }};
+      Theme.orders = [];
       Theme.product = {{ product | json }} || {};
-      Theme.collection = {{ collection | json }} || {};
-      Theme.imgURLFilter = function(src, size) {
-        return src
-          .replace(/_(pico|icon|thumb|small|compact|medium|large|grande|original|1024x1024|2048x2048|master)+\./g, '.')
-          .replace(/\.jpg|\.png|\.gif|\.jpeg/g, function(match) {
-            return '_'+size+match;
-          })
-        ;
+      Theme.routes = {
+        root_url: '{{ routes.root_url }}',
+        cart_url: '{{ routes.cart_url }}',
+        cart_add_url: '{{ routes.cart_add_url }}',
+        cart_change_url: '{{ routes.cart_change_url }}',
+        cart_update_url: '{{ routes.cart_update_url }}',
+        predictive_search_url: '{{ routes.predictive_search_url }}'
+      };
+      Theme.tools = {
+        imgURLFilter: function(src, size) {
+          return src
+            .replace(/_(pico|icon|thumb|small|compact|medium|large|grande|original|1024x1024|2048x2048|master)+\./g, '.')
+            .replace(/\.jpg|\.png|\.gif|\.jpeg/g, function(match) {
+              return '_'+size+match;
+            });
+        }
       };
 
     </script>
@@ -93,11 +106,20 @@
 
     <main class="{% render 'theme--classes' %} content-for-layout focus-none" id="shopify-main" role="main" tabindex="-1" data-request-path="{{ request.path }}">
 
-      {% if request.path contains 'policies' %}
-        {% section 'policies' %}
-      {% else %}
-        {{ content_for_layout }}
-      {% endif %}
+      {% case request.path %}
+        {% when '/policies/privacy-policy' %}
+          {% section 'policy-privacy' %}
+        {% when '/policies/refund-policy' %}
+          {% section 'policy-refund' %}
+        {% when '/policies/shipping-policy' %}
+          {% section 'policy-shipping' %}
+        {% when '/policies/subscription-policy' %}
+          {% section 'policy-subscription' %}
+        {% when '/policies/terms-of-service' %}
+          {% section 'policy-terms-of-service' %}
+        {% else %}
+          {{ content_for_layout }}
+      {% endcase %}
 
       {% if request.path contains 'product' or request.path contains 'collection' %}
         {% render 'notification-added-to-cart' %}
