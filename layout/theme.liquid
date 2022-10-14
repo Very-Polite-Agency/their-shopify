@@ -33,7 +33,7 @@
 
     <!-- External Vendor Scripts -->
     <script src="https://www.googletagmanager.com/gtag/js?id=G-GGL1G0TCRD" async></script>
-    <script src="{{ 'vendors.min.js' | asset_url }}" async></script>
+    <script src="{{ 'vendors.min.js' | asset_url }}" defer></script>
 
     {{ content_for_header }}
 
@@ -92,14 +92,6 @@
     {% section 'header' %}
 
     <main class="{% render 'theme--classes' %} content-for-layout focus-none" id="shopify-main" role="main" tabindex="-1" data-request-path="{{ request.path }}">
-
-      {% if request.path contains 'faqs' %}
-        <div class="random">
-          {% for i in (1..5) %}
-            <div class="random__item" data-index="{{ i }}"></div>
-          {% endfor %}
-        </div>
-      {% endif %}
 
       {% if request.path contains 'policies' %}
         {% section 'policies' %}
