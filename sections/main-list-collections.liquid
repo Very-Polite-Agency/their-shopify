@@ -52,7 +52,7 @@
 
       <div class="{{ section_name }}__listing listing--{{ section_name }}">
         {%- for collection in collections -%}
-          {% render 'card-collection', classes: 'list-collections__collection', collection: collection, index: forloop.index, style: section_name %}
+          {% render 'card-collection', classes: 'list-collections__collection', card_collection: collection, style: section_name %}
         {%- endfor -%}
       </div>
 

@@ -54,7 +54,7 @@
         {% render 'bs-container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1' %}
           <div class="{{ section_name }}__listing listing--{{ section_name }}">
             {%- for product in collection.products -%}
-              {% render 'card-product', product: product, show_secondary_image: show_secondary_image, style: section_name %}
+              {% render 'card-product', card_product: product, show_secondary_image: show_secondary_image, style: section_name %}
             {%- endfor -%}
           </div>
         {% render 'bs-container', state: 'closed' %}

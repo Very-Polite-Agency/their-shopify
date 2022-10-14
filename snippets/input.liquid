@@ -1,28 +1,32 @@
-{% assign snippet_name = 'input' %}
-{% assign snippet_classes = snippet_name %}
+{%- liquid
 
-{% assign classes = classes | default: '' %}
-{% assign hidden = hidden | default: false %}
-{% assign name = name | default: '' %}
-{% assign placeholder = placeholder | default: '' %}
-{% assign readonly = readonly | default: false %}
-{% assign required = required | default: false %}
-{% assign type = type | default: 'text' %}
-{% assign value = value | default: '' %}
+  assign snippet_name = 'input'
+  assign snippet_classes = snippet_name
 
-{% if classes %}
-  {% assign snippet_classes = snippet_classes | append: ' ' | append: classes | strip %}
-{% endif %}
+  assign classes = classes | default: ''
+  assign hidden = hidden | default: false
+  assign name = name | default: ''
+  assign placeholder = placeholder | default: ''
+  assign readonly = readonly | default: false
+  assign required = required | default: false
+  assign type = type | default: 'text'
+  assign value = value | default: ''
 
-{% if hidden %}
-  {% assign snippet_classes = snippet_classes | append: ' d-none' | strip %}
-{% endif %}
+  if classes
+    assign snippet_classes = snippet_classes | append: ' ' | append: classes | strip
+  endif
 
-{% if required %}
- {% assign snippet_classes = snippet_classes | append: ' required' | strip %}
-{% endif %}
+  if hidden
+    assign snippet_classes = snippet_classes | append: ' d-none' | strip
+  endif
 
-{% if name != blank %}
+  if required
+   assign snippet_classes = snippet_classes | append: ' required' | strip
+  endif
+
+-%}
+
+{% if name and name != blank %}
   <input
     class="{{- snippet_classes -}}"
     type="{{- type -}}"

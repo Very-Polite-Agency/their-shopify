@@ -55,8 +55,8 @@
 
 {%- endstyle -%}
 
-<link rel="stylesheet" href="{{ 'section-featured-blog.css' | asset_url }}" media="print" onload="this.media='all'">
-<noscript>{{ 'section-featured-blog.css' | asset_url | stylesheet_tag }}</noscript>
+{% comment %} <link rel="stylesheet" href="{{ 'section-featured-blog.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'section-featured-blog.css' | asset_url | stylesheet_tag }}</noscript> {% endcomment %}
 
 <div class="{{ section_classes }}" id="{{ section_id }}">
   {% render 'bs-container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1', container: container %}
@@ -64,15 +64,9 @@
 
       {% if blog_articles_count > 0 %}
         {% for item in blog.articles limit: blog_limit %}
-
-          {%- liquid
-            assign item_id = 'card-article' | append: '--' | append: item.id | append: '--' | append: forloop.index
-          -%}
-
           <div class="{{ section_name }}__item grid__item" data-index="{{ forloop.index }}">
-            {% render 'card-article', card_article: item, classes: 'featured-blog__article', id: item_id %}
+            {% render 'card-article', card_article: item, classes: 'featured-blog__article' %}
           </div>
-
         {% endfor %}
       {% endif %}
 

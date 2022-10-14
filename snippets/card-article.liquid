@@ -1,11 +1,12 @@
 {% comment %}
 
     Accepts:
-    - article: {Object} Article Liquid object
+    - card_article: {Object} Article Liquid object
+    - classes: {String} Optionally include custom classes for snippet
     - style: {String} Optionally load different card types by passing style option
 
     Usage:
-    {% render 'card-article', card_article: item, id: 'some-unique-id-here', style: 'anything-but-default' %}
+    {% render 'card-article', card_article: item, style: 'anything-but-default' %}
 
 {% endcomment %}
 

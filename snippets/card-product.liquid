@@ -3,20 +3,20 @@
     Accepts:
     - aos: {String} AOS
     - caption: {String} Description of featured image (optional)
-    - product: {Object} Product Liquid object
+    - card_product: {Object} Product Liquid object
     - style: {String} Conditionally load different card types by passing style option
 
 
     Usage:
-    {% render 'card-product', caption: 'What an amazing caption', product: product, product_title: 'Some Custom Title', style: 'some-predefined-style' %}
+    {% render 'card-product', caption: 'What an amazing caption', card_product: product, product_title: 'Some Custom Title', style: 'some-predefined-style' %}
 
 {% endcomment %}
 
-{%- if product and product != blank -%}
+{%- if card_product and card_product != blank -%}
 
   {% assign snippet_name = 'card-product' %}
   {% assign snippet_classes = snippet_name | append: ' product' %}
-  {% assign snippet_id = snippet_name | append: '--' | append: product.id -%}
+  {% assign snippet_id = snippet_name | append: '--' | append: card_product.id -%}
   {% assign aos = aos | default: '' %}
   {% assign caption = caption | default: '' %}
   {% assign image_position = image_position | default: '0' | plus: 0 %}
@@ -32,17 +32,17 @@
   {% assign aos_delay = 250 %}
   {% assign aos_delay_increment = 250 %}
 
-  {% assign available = product.available | default: false %}
-  {% assign date_published = product.published_at %}
-  {% assign featured_image = product.featured_image | default: false %}
-  {% assign images = product.images | default: false %}
-  {% assign price = product.price %}
-  {% assign price_compare = product.compare_at_price %}
+  {% assign available = card_product.available | default: false %}
+  {% assign date_published = card_product.published_at %}
+  {% assign featured_image = card_product.featured_image | default: false %}
+  {% assign images = card_product.images | default: false %}
+  {% assign price = card_product.price %}
+  {% assign price_compare = card_product.compare_at_price %}
   {% assign secondary_image = false %}
-  {% assign selected_variant = product.selected_or_first_available_variant | default: false %}
-  {% assign title = product.title | default: '' %}
-  {% assign type = product.type | default: '' %}
-  {% assign url = product.url | default: '' %}
+  {% assign selected_variant = card_product.selected_or_first_available_variant | default: false %}
+  {% assign title = card_product.title | default: '' %}
+  {% assign type = card_product.type | default: '' %}
+  {% assign url = card_product.url | default: '' %}
 
   {% if images and images.size > 1 %}
     {% assign featured_image = images[image_position] %}
@@ -88,7 +88,7 @@
           </div>
           <div class="{{ snippet_name }}__info">
             <strong class="{{ snippet_name }}__title caption caption--2">{{ title }}</strong>
-            {% render 'price', classes: 'card-product__price caption caption--2', product: product, show_currency_code: true %}
+            {% render 'price', classes: 'card-product__price caption caption--2', product: card_product, show_currency_code: true %}
           </div>
 
         {% when 'contact-form' %}

@@ -40,8 +40,8 @@
                     {% when 'product' %}
                       {%
                         render 'card-product',
+                        card_product: block.settings.product,
                         image_position: block.settings.image_position,
-                        product: block.settings.product,
                         style: section_name
                       %}
                   {% endcase %}

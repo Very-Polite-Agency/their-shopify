@@ -58,7 +58,7 @@
 
     {% if hero_heading != blank or hero_info != blank or hero_image %}
       <div class="{{ section_name }}__hero">
-        {% render 'bs-container', state: 'open' %}
+        {% render 'bs-container', state: 'open', container: container %}
           <div class="{{ section_name }}__hero-main">
 
             {% if hero_image %}
@@ -79,26 +79,20 @@
             {% endif %}
 
           </div>
-        {% render 'bs-container', state: 'closed' %}
+        {% render 'bs-container', state: 'closed', container: container %}
       </div>
     {% endif %}
 
     <div class="{{ section_name }}__main">
-      {% render 'bs-container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1' %}
+      {% render 'bs-container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1', container: container %}
         <div class="{{ section_name }}__list grid grid--{{ grid_layout }}" id="{{ aos_id }}" data-grid-gutter="{{ grid_gutter }}" role="list">
           {%- for item in blog.articles -%}
-
-            {%- liquid
-              assign item_id = 'card-article' | append: '--' | append: item.id | append: '--' | append: forloop.index
-            -%}
-
             <div class="{{ section_name }}__item grid__item" data-index="{{ forloop.index }}">
-              {% render 'card-article', card_article: item, classes: 'blog__article', id: item_id %}
+              {% render 'card-article', card_article: item, classes: 'blog__article' %}
             </div>
-
           {%- endfor -%}
         </div>
-      {% render 'bs-container', state: 'closed' %}
+      {% render 'bs-container', state: 'closed', container: container %}
     </div>
 
     {%- if paginate.pages > 1 -%}

@@ -41,7 +41,7 @@
                       %}
                     {% endcapture %}
                     {% assign aos_delay = aos_delay | plus : aos_delay_increment %}
-                    {%- render 'card-product', aos: aos, classes: 'fifty-fifty__product', product: product, product_title: product_title, style: section_name -%}
+                    {%- render 'card-product', aos: aos, classes: 'fifty-fifty__product', card_product: product, product_title: product_title, style: section_name -%}
                   {% endif %}
                   {% if heading != blank %}
                     {% capture aos %}

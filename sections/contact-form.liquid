@@ -30,7 +30,7 @@
 
 						{% if featured_product %}
 							<div class="{{ section_name }}__featured-product" data-count="{{ forloop.index }}" data-index="{{ forloop.index0 }}">
-								{% render 'card-product', caption: caption, product: featured_product, style: section_name %}
+								{% render 'card-product', caption: caption, card_product: featured_product, style: section_name %}
 							</div>
 						{% endif %}
 

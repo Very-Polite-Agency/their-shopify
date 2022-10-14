@@ -1,20 +1,24 @@
-{% assign snippet_name = 'textarea' %}
-{% assign snippet_classes = snippet_name %}
+{%- liquid
 
-{% assign name = name | default: '' %}
-{% assign placeholder = placeholder | default: '' %}
-{% assign readonly = readonly | default: false %}
-{% assign value = value | default: '' %}
+  assign snippet_name = 'textarea'
+  assign snippet_classes = snippet_name
 
-{% if classes %}
-  {% assign snippet_classes = snippet_classes | append: ' ' | append: classes | strip %}
-{% endif %}
+  assign name = name | default: ''
+  assign placeholder = placeholder | default: ''
+  assign readonly = readonly | default: false
+  assign value = value | default: ''
 
-{% if required %}
-  {% assign snippet_classes = snippet_classes | append: ' required' | strip %}
-{% endif %}
+  if classes
+    assign snippet_classes = snippet_classes | append: ' ' | append: classes | strip
+  endif
 
-{% if name != blank %}
+  if required
+    assign snippet_classes = snippet_classes | append: ' required' | strip
+  endif
+
+-%}
+
+{% if name and name != blank %}
   <textarea
     class="{{- snippet_classes -}}"
     name="{{- name -}}"
