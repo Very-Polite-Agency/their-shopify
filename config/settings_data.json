@@ -185,6 +185,17 @@
         "settings": {
           "menu_main": "mobile-menu"
         }
+      },
+      "policy-refund": {
+        "type": "policy-refund",
+        "settings": {
+          "width": "full",
+          "background": "white",
+          "container": "container",
+          "padding_top": 60,
+          "padding_bottom": 0,
+          "anchor_id": ""
+        }
       }
     },
     "content_for_index": [
