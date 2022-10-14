@@ -3,8 +3,8 @@
     "main": {
       "type": "main-article",
       "settings": {
-        "cta_title": "Back to Shop",
-        "cta_link": "shopify:\/\/collections"
+        "cta_title": "Back to Blog",
+        "cta_link": "shopify:\/\/blogs\/news"
       }
     }
   },

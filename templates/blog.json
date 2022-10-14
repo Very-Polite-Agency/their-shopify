@@ -10,7 +10,14 @@
         "hero_info": "<p>See, Learn & Admire The Art & Science of Gold, sum dolor sit amet, consectetuer adipiscing elit.<\/p>",
         "hero_text_colour_theme": "light",
         "hero_image": "shopify:\/\/shop_images\/blog-hero_2x_0aa44287-7dd8-4b6a-9788-2608fb36fc5d.png",
-        "post_per_page": 6
+        "post_per_page": 6,
+        "grid_layout": "2",
+        "grid_gutter": 26,
+        "background": "white",
+        "container": "container",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "anchor_id": ""
       }
     }
   }
