@@ -15,7 +15,7 @@
   assign blog_limit = section.settings.limit | default: 3
   assign container = section.settings.container | default: 'container'
   assign grid_gutter = section.settings.grid_gutter | default: 20
-  assign grid_layout section.settings.grid_layout | default: '2'
+  assign grid_layout = section.settings.grid_layout | default: '2'
 
   if section.settings.anchor_id != blank
     assign section_id = section.settings.anchor_id
