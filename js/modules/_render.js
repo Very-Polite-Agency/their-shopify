@@ -29,8 +29,8 @@ const Render = (() => {
       });
 
       image.size = {
-        small: image.url ? Theme.imgURLFilter( image.url, 'small' ) : '',
-        pico: image.url ? Theme.imgURLFilter( image.url, 'pico' ) : '',
+        small: image.url ? Theme.tools.imgURLFilter( image.url, 'small' ) : '',
+        pico: image.url ? Theme.tools.imgURLFilter( image.url, 'pico' ) : '',
       };
 
       element.innerHTML = `
