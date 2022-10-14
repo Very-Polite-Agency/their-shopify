@@ -1,8 +1,8 @@
 {%- liquid
 
   assign section_name = 'featured-blog'
-  assign section_id = section_name | append: '--' | append: section.id
   assign section_classes = section_name | append: ' section-' | append: section.id | append: '-padding'
+  assign section_id = section_name | append: '--' | append: section.id
 
   assign aos_id = section_id | append: '--aos'
   assign aos_delay = 250
