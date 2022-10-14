@@ -14,6 +14,8 @@
   assign blog_articles_exceeded = false
   assign blog_limit = section.settings.limit | default: 3
   assign container = section.settings.container | default: 'container'
+  assign grid_gutter = section.settings.grid_gutter | default: 20
+  assign grid_layout section.settings.grid_layout | default: '2'
 
   if section.settings.anchor_id != blank
     assign section_id = section.settings.anchor_id
@@ -60,7 +62,7 @@
 
 <div class="{{ section_classes }}" id="{{ section_id }}">
   {% render 'bs-container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1', container: container %}
-    <div class="{{ section_name }}__layout grid grid--{{ grid_layout }}" id="{{ aos_id }}" data-grid-gutter="{{ gutter }}" role="list">
+    <div class="{{ section_name }}__list grid grid--{{ grid_layout }}" id="{{ aos_id }}" data-grid-gutter="{{ grid_gutter }}" role="list">
 
       {% if blog_articles_count > 0 %}
         {% for item in blog.articles limit: blog_limit %}
