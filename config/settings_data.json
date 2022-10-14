@@ -196,6 +196,17 @@
           "padding_bottom": 0,
           "anchor_id": ""
         }
+      },
+      "policy-shipping": {
+        "type": "policy-shipping",
+        "settings": {
+          "width": "full",
+          "background": "white",
+          "container": "container",
+          "padding_top": 60,
+          "padding_bottom": 0,
+          "anchor_id": ""
+        }
       }
     },
     "content_for_index": [
