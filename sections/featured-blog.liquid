@@ -60,14 +60,17 @@
 
 <div class="{{ section_classes }}" id="{{ section_id }}">
   {% render 'bs-container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1', container: container %}
-    <div class="{{ section_name }}__layout grid grid--{{ layout }}" id="{{ aos_id }}" role="list">
+    <div class="{{ section_name }}__layout grid grid--{{ grid_layout }}" id="{{ aos_id }}" data-grid-gutter="{{ gutter }}" role="list">
 
       {% if blog_articles_count > 0 %}
         {% for item in blog.articles limit: blog_limit %}
 
-          {% assign item_id = 'card-article' | append: '--' | append: item.id | append: '--' | append: forloop.index %}
+          {%- liquid
+            assign item_id = 'card-article' | append: '--' | append: item.id | append: '--' | append: forloop.index
+          -%}
+
           <div class="{{ section_name }}__item grid__item" data-index="{{ forloop.index }}">
-            {% render 'card-article', card_article: item, id: item_id %}
+            {% render 'card-article', card_article: item, classes: 'featured-blog__article', id: item_id %}
           </div>
 
         {% endfor %}
@@ -125,6 +128,25 @@
       ],
       "default": "container",
       "id": "container"
+    },
+    {
+      "label": "Grid Layout",
+      "type": "select",
+      "options": [
+        { "label": "Two Column", "value": "2" },
+        { "label": "Three Column", "value": "3" }
+      ],
+      "default": "2",
+      "id": "grid_layout"
+    },
+    {
+      "label": "Grid Gutter",
+      "type": "range",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "default": 20,
+      "id": "grid_gutter"
     },
     {
 			"content": "Padding",

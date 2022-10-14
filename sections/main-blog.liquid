@@ -38,9 +38,11 @@
 
   <div class="{{ section_name }}__main">
     {% render 'bs-container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1' %}
-      <div class="{{ section_name }}__list listing--grid">
+      <div class="{{ section_name }}__list grid grid--2" data-grid-gutter="{{ gutter }}">
         {%- for article in blog.articles -%}
-          {%- render 'card-article', card_article: article, classes: 'blog__article' -%}
+          <div class="grid__item">
+            {%- render 'card-article', card_article: article, classes: 'blog__article' -%}
+          </div>
         {%- endfor -%}
       </div>
     {% render 'bs-container', state: 'closed' %}
