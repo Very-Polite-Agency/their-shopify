@@ -26,6 +26,7 @@
     },
     "165093044106648c6d": {
       "type": "fifty-fifty",
+      "disabled": true,
       "blocks": {
         "35f168b3-3d22-4035-9a8e-a274b3a9bfaf": {
           "type": "content",
@@ -59,6 +60,7 @@
     },
     "1655834543a2b5ab6f": {
       "type": "featured-carousel",
+      "disabled": true,
       "blocks": {
         "bf53173c-056a-467e-8cfc-c441bbe45408": {
           "type": "product",
@@ -129,6 +131,7 @@
     },
     "16510075059df4bdc9": {
       "type": "fifty-fifty",
+      "disabled": true,
       "blocks": {
         "774a11ac-2236-4a3e-8e3e-851795e12bc0": {
           "type": "media",
@@ -161,6 +164,7 @@
     },
     "1651005681df706acc": {
       "type": "fifty-fifty",
+      "disabled": true,
       "blocks": {
         "04857235-aed8-4312-91ee-4b090505e33a": {
           "type": "content",
