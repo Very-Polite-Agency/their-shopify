@@ -33,8 +33,6 @@
     #shopify-section-{{ section.id }} {
       background: rgba(var(--theme-colour-{{ background_colour }}), 1);
       {% case background_colour %}
-        {% when 'orange' %}
-          color: rgba(var(--theme-colour-black), 1);
         {% when 'white' %}
           color: rgba(var(--theme-colour-black), 1);
         {% else %}
@@ -107,9 +105,28 @@
       "id": "limit"
     },
     {
-			"content": "Layout",
-			"type": "header"
-		},
+      "label": "Grid Layout",
+      "type": "select",
+      "options": [
+        { "label": "Two Column", "value": "2" },
+        { "label": "Three Column", "value": "3" }
+      ],
+      "default": "2",
+      "id": "grid_layout"
+    },
+    {
+      "label": "Grid Gutter",
+      "type": "range",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "default": 20,
+      "id": "grid_gutter"
+    },
+    {
+      "content": "Settings",
+      "type": "header"
+    },
     {
 		  "label": "Background",
 		  "type": "select",
@@ -131,29 +148,6 @@
       "default": "container",
       "id": "container"
     },
-    {
-      "label": "Grid Layout",
-      "type": "select",
-      "options": [
-        { "label": "Two Column", "value": "2" },
-        { "label": "Three Column", "value": "3" }
-      ],
-      "default": "2",
-      "id": "grid_layout"
-    },
-    {
-      "label": "Grid Gutter",
-      "type": "range",
-      "min": 0,
-      "max": 50,
-      "step": 1,
-      "default": 20,
-      "id": "grid_gutter"
-    },
-    {
-			"content": "Padding",
-			"type": "header"
-		},
 		{
 			"label": "Top Padding",
 			"type": "range",
