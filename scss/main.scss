@@ -89,6 +89,7 @@
   --theme-colour-charcoal: #{ hexToRGB( map-get( $theme-colours, 'charcoal' ) ) };
   --theme-colour-fog: #{ hexToRGB( map-get( $theme-colours, 'fog' ) ) };
   --theme-colour-gold: #{ hexToRGB( map-get( $theme-colours, 'gold' ) ) };
+  --theme-colour-light-silver: #{ hexToRGB( map-get( $theme-colours, 'light-silver' ) ) };
   --theme-colour-navy: #{ hexToRGB( map-get( $theme-colours, 'navy' ) ) };
   --theme-colour-red: #{ hexToRGB( map-get( $theme-colours, 'red' ) ) };
   --theme-colour-silver: #{ hexToRGB( map-get( $theme-colours, 'silver' ) ) };
