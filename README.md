@@ -41,7 +41,7 @@ https://their-jewelry-and-accessories.myshopify.com
 - [x] Integrate AOS on FAQs
 - [x] Remove 'post_per_page' override on the main-blog.liquid section
 - [ ] Test contact us form entries
-- [ ] Solve random placement of background on FAQs page
+- [x] Solve random placement of background on FAQs page
 - [x] Setup Google Analytics
 - [ ] Setup Google Search Console
 
