@@ -17,14 +17,11 @@ const Footer = (() => {
   const setFooterLegalContainerPosition = () => {
 
     let footerLegal = document.querySelector('.footer__legal') || false;
-    let footerImageDesktop = document.querySelector('.footer__image.d-lg-block') || false;
-    let containerPadding = getComputedStyle(document.documentElement).getPropertyValue('--bs-container-fluid-padding');
+    let footerNewsletter = document.querySelector('.footer__newsletter') || false;
 
-    console.log({ footerLegal, footerImageDesktop, containerPadding });
-
-    if ( footerLegal && footerImageDesktop ) {
+    if ( footerLegal && footerNewsletter ) {
       if ( window.innerWidth >= breakpoints.sizes.lg ) {
-        footerLegal.style.paddingLeft = footerImageDesktop.offsetWidth + 28 + 'px';
+        footerLegal.style.paddingLeft = `${footerNewsletter.offsetLeft}px`;
       } else {
         footerLegal.style.paddingLeft = 'unset';
       }
