@@ -120,7 +120,7 @@
         "settings": {
           "image": "shopify:\/\/shop_images\/footer-image.png",
           "menu_main": "",
-          "menu_policies": "",
+          "menu_policies": "policies",
           "newsletter_heading": "Newseltter Sign Up",
           "newsletter_button_title": "Sign Up"
         }
