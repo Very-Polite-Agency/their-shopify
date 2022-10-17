@@ -185,6 +185,7 @@
       "mobile-menu": {
         "type": "mobile-menu",
         "settings": {
+          "cart_enabled": false,
           "menu_main": "mobile-menu"
         }
       },
