@@ -1,16 +1,23 @@
-{% assign section_name = 'mobile-menu' %}
-{% assign section_id = section_name | append: '--' | append: section.id %}
+{%- liquid
 
-{% assign menu_main = section.settings.menu_main | default: false %}
+  assign section_name = 'mobile-menu'
+  assign section_id = section_name | append: '--' | append: section.id
+
+  assign cart_enabled = section.settings.cart_enabled | default: false
+  assign menu_main = section.settings.menu_main | default: false
+
+-%}
 
 <div class="{{ section_name }}__main">
   <div class="{{ section_name }}__layout">
 
-    <div class="{{ section_name }}__cart">
-      <a class="{{ section_name }}__cart-link link{% if request.path == '/cart' %} active{% endif %}" href="/cart">
-        Bag [<span class="js--cart-item-count">{{ cart.item_count }} </span>]
-      </a>
-    </div>
+    {% if cart_enabled %}
+      <div class="{{ section_name }}__cart">
+        <a class="{{ section_name }}__cart-link link{% if request.path == '/cart' %} active{% endif %}" href="/cart">
+          Bag [<span class="js--cart-item-count">{{ cart.item_count }} </span>]
+        </a>
+      </div>
+    {% endif %}
 
     {% if menu_main %}
       <nav class="{{ section_name }}__navigation-main navigation">
@@ -37,6 +44,16 @@
     "tag": "section",
     "class": "mobile-menu",
     "settings": [
+      {
+        "content": "Cart",
+        "type": "header"
+      },
+      {
+        "label": "Show cart",
+      	"type": "checkbox",
+        "default": true,
+        "id": "cart_enabled"
+      },
       {
         "content": "Navigation",
         "type": "header"
