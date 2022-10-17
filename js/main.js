@@ -8,6 +8,7 @@
 // @codekit-prepend "./modules/_cart.js";
 // @codekit-prepend "./modules/_credits.js";
 // @codekit-prepend "./modules/_breakpoints.js";
+// @codekit-prepend "./modules/_footer.js";
 // @codekit-prepend "./modules/_forms.js";
 // @codekit-prepend "./modules/_gliders.js";
 // @codekit-prepend "./modules/_header.js";
@@ -28,6 +29,7 @@
 let modules = [
   new Cart(),
   new Forms(),
+  new Footer(),
   new Gliders(),
   new Header(),
   new InstagramFeed(),

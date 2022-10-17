@@ -245,6 +245,7 @@
       }
       &--policies {
         width: auto;
+        margin-right: auto;
         .navigation {
           &__item {
             width: auto;
@@ -303,7 +304,7 @@
       display: flex;
       flex-flow: row nowrap;
       align-items: baseline;
-      justify-content: space-between;
+      justify-content: flex-end;
       width: 100%;
     }
 
