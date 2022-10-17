@@ -1,15 +1,27 @@
-{% assign section_name = 'header' %}
-{% assign section_id = section_name | append: '--' | append: section.id %}
+{%- liquid
 
-{% assign aos_id = section_id | append: '--aos' %}
-{% assign aos_delay = 250 %}
-{% assign aos_delay_increment = 250 %}
+  assign section_name = 'header'
+  assign section_id = section_name | append: '--' | append: section.id
 
-{% assign announcements = section.blocks | where: 'type', 'announcement' | default: false %}
-{% assign glider_id = section_id | append: '--glider' %}
-{% assign is_glider = false %}
-{% assign menu_main = section.settings.menu_main | default: false %}
-{% assign menu_main_extras = section.settings.menu_main_extras | default: false %}
+  assign aos_id = section_id | append: '--aos'
+  assign aos_delay = 250
+  assign aos_delay_increment = 250
+
+  assign announcements = section.blocks | where: 'type', 'announcement' | default: false
+  assign announcements_enabled = section.settings.announcements_enabled | default: false
+  assign announcements_homepage_only = section.settings.announcements_homepage_only | default: false
+  assign announcements_glider_id = section_id | append: '--announcements-glider'
+  assign is_glider = false
+  assign menu_main = section.settings.menu_main | default: false
+  assign menu_main_extras = section.settings.menu_main_extras | default: false
+
+  if announcements_enabled
+    if announcements_homepage_only and 'index' != template.name
+      assign announcements_enabled = false
+    endif
+  endif
+
+-%}
 
 {% if announcements %}
 
@@ -20,7 +32,7 @@
   <div class="{{ section_name }}__announcements">
     {% render 'bs-container', container: 'container', state: 'open' %}
 
-      {% if is_glider %}<div class="glide js--glider" id="{{ glider_id }}" data-glide-style="{{ section_name }}-announcements">{% endif %}
+      {% if is_glider %}<div class="glide js--glider" id="{{ announcements_glider_id }}" data-glide-style="{{ section_name }}-announcements">{% endif %}
         {% if is_glider %}<div class="glide__track" data-glide-el="track">{% endif %}
           {% if is_glider %}<ul class="glide__slides">{% endif %}
 
@@ -96,6 +108,22 @@
     "tag": "header",
     "class": "header",
     "settings": [
+      {
+        "content": "Announcements",
+        "type": "header"
+      },
+      {
+        "label": "Show announcements",
+      	"type": "checkbox",
+        "default": true,
+        "id": "announcements_enabled"
+      },
+      {
+        "label": "Homepage only",
+      	"type": "checkbox",
+        "default": false,
+        "id": "announcements_homepage_only"
+      },
       {
         "content": "Navigation",
         "type": "header"
