@@ -4,10 +4,10 @@
       "type": "hero",
       "settings": {
         "heading": "Sample heading",
-        "message": "<p>Sample messaging<\/p>",
+        "message": "<p>Sample messaging lorem the ipsum lots of content for the hero message here.<\/p>",
         "image": "shopify:\/\/shop_images\/THEIR--home-page--hero_2x_6501bb4f-74b4-4369-a36e-2c0d186505ad.png",
         "image_caption": "",
-        "style": "primary"
+        "style": "secondary"
       }
     },
     "f2fd7723-b9af-4377-8025-baa44c4bd886": {
