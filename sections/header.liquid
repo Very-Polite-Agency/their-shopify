@@ -23,7 +23,7 @@
 
 -%}
 
-{% if announcements %}
+{% if announcements_enabled and announcements %}
 
   {% if announcements.size > 1 %}
     {% assign is_glider = true %}
@@ -54,6 +54,7 @@
 
     {% render 'bs-container', state: 'closed' %}
   </div>
+
 {% endif %}
 
 <div class="{{ section_name }}__main">
@@ -95,12 +96,6 @@
     </div>
   {% render 'bs-container', state: 'closed' %}
 </div>
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
 
 {% schema %}
   {
