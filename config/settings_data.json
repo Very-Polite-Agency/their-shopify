@@ -186,7 +186,7 @@
         "type": "mobile-menu",
         "settings": {
           "cart_enabled": false,
-          "menu_main": "mobile-menu"
+          "menu_main": "blog-menu"
         }
       },
       "policy-refund": {
