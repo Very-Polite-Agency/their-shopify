@@ -16,7 +16,7 @@
         "blog": "news",
         "limit": 6,
         "grid_layout": "2",
-        "grid_gutter": 26,
+        "grid_gutter": 24,
         "background": "white",
         "container": "container",
         "padding_top": 60,
