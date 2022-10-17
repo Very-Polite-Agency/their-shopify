@@ -153,6 +153,8 @@
           "bd4065a3-0319-43f1-9d30-8facefb7866d"
         ],
         "settings": {
+          "announcements_enabled": false,
+          "announcements_homepage_only": false,
           "menu_main": "main-menu",
           "menu_main_extras": "extras"
         }
