@@ -3197,6 +3197,14 @@
       "oO" : 1,
       "oS" : 1
     },
+    "\/templates\/page.thank-you.json" : {
+      "ft" : 524288,
+      "oA" : 0,
+      "oAP" : "\/templates\/page.thank-you.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
     "\/templates\/password.json" : {
       "ft" : 524288,
       "oA" : 0,
