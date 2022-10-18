@@ -9,7 +9,7 @@
     "16551438448090a8df": {
       "type": "hero",
       "settings": {
-        "heading": "We believe in creating jewelry that can last lifetimes.",
+        "heading": "Thanks for signing up. We believe in creating jewelry that can last lifetimes.",
         "message": "<p>The pieces we design aren’t about what’s happening around you like trends and popular opinions - we create pieces that celebrate who you are.   <\/p>",
         "image": "shopify:\/\/shop_images\/hero--secondary-image-4x5.png",
         "image_caption": "Timeless Design",
@@ -19,18 +19,29 @@
     "1655143832920ac672": {
       "type": "feature-panel-01",
       "settings": {
+        "message": "",
+        "footnote_caption": "",
         "anchor_id": ""
       }
     },
     "1655143834b59df173": {
       "type": "feature-panel-02",
       "settings": {
+        "marker": "",
+        "heading": "",
+        "message": "",
+        "image_caption": "",
         "anchor_id": ""
       }
     },
     "1655143836ff8d0c63": {
       "type": "feature-panel-03",
       "settings": {
+        "marker": "",
+        "heading": "",
+        "message": "",
+        "image_caption": "",
+        "auxiliary_image_caption": "",
         "anchor_id": ""
       }
     }
