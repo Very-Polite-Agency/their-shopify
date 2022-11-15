@@ -10,20 +10,6 @@
         "style": "primary"
       }
     },
-    "f2fd7723-b9af-4377-8025-baa44c4bd886": {
-      "type": "featured-blog",
-      "settings": {
-        "blog": "news",
-        "limit": 6,
-        "grid_layout": "2",
-        "grid_gutter": 24,
-        "background": "white",
-        "container": "container",
-        "padding_top": 60,
-        "padding_bottom": 60,
-        "anchor_id": ""
-      }
-    },
     "165093044106648c6d": {
       "type": "fifty-fifty",
       "disabled": true,
@@ -131,7 +117,6 @@
     },
     "16510075059df4bdc9": {
       "type": "fifty-fifty",
-      "disabled": true,
       "blocks": {
         "774a11ac-2236-4a3e-8e3e-851795e12bc0": {
           "type": "media",
@@ -172,7 +157,7 @@
             "product": "",
             "product_title": "",
             "heading": "<p>Give Back<\/p>",
-            "message": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.<\/p>",
+            "message": "<p>We have committed to creating a Their Sustainability Plan, one that will grow with us andchallenge us to be in a constant pursuit of ethical and responsible business practices. Althoughthere’s always more that canbe done, we are inspired to do what we can, where we can and tocontinue to see our give back commitment grow<\/p>",
             "cta_title": "Learn More",
             "cta_link": "shopify:\/\/pages\/about"
           }
@@ -194,14 +179,28 @@
         "colour_theme": "dark",
         "text_alignment": "center"
       }
+    },
+    "f2fd7723-b9af-4377-8025-baa44c4bd886": {
+      "type": "featured-blog",
+      "settings": {
+        "blog": "news",
+        "limit": 6,
+        "grid_layout": "2",
+        "grid_gutter": 24,
+        "background": "white",
+        "container": "container",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "anchor_id": ""
+      }
     }
   },
   "order": [
     "1650923978b97fb93e",
-    "f2fd7723-b9af-4377-8025-baa44c4bd886",
     "165093044106648c6d",
     "1655834543a2b5ab6f",
     "16510075059df4bdc9",
-    "1651005681df706acc"
+    "1651005681df706acc",
+    "f2fd7723-b9af-4377-8025-baa44c4bd886"
   ]
 }
