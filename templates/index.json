@@ -117,6 +117,7 @@
     },
     "16510075059df4bdc9": {
       "type": "fifty-fifty",
+      "disabled": true,
       "blocks": {
         "774a11ac-2236-4a3e-8e3e-851795e12bc0": {
           "type": "media",
