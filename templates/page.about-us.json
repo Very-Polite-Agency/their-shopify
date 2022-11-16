@@ -11,7 +11,7 @@
       "settings": {
         "heading": "We believe in creating jewelry that can last lifetimes.",
         "message": "<p>The pieces we design aren’t about what’s happening around you like trends and popular opinions - we create pieces that celebrate who you are.<\/p>",
-        "image": "shopify:\/\/shop_images\/hero--secondary-image-4x5.png",
+        "image": "shopify:\/\/shop_images\/THEIR_Campaign_Test14.jpg",
         "image_caption": "Timeless Design",
         "style": "secondary"
       }
@@ -21,9 +21,9 @@
       "settings": {
         "message": "<p>Our brand concept is inspired by the circular notion of heirlooms and recycled materials. The transformation of gold from raw to fluid to forged makes up the pillars of the brand's organically formed messaging, the fluidity of personas in photography and intentional products.<\/p>",
         "stamp": "shopify:\/\/shop_images\/feature-panel-01--stamp_3x_31242608-f9b1-44e2-a61d-1be08a666ae8.png",
-        "footnote_image": "shopify:\/\/shop_images\/footnote-image.png",
+        "footnote_image": "shopify:\/\/shop_images\/THEIR_Campaign_Test9.jpg",
         "footnote_caption": "1% For The Planet",
-        "auxiliary_image": "shopify:\/\/shop_images\/feature-panel-01--auxiliary.png",
+        "auxiliary_image": "shopify:\/\/shop_images\/THEIR_Campaign_Test12.jpg",
         "anchor_id": ""
       }
     },
@@ -44,11 +44,11 @@
       "settings": {
         "marker": "2",
         "heading": "Footprint",
-        "message": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis.<\/p>",
+        "message": "<p>Within our first year of business, we are working towards becoming Climate Neutral Certified. Thispositive accreditation means achieving a balance between emitting carbon and committing to carbonreducing programs and business decisions. Achieving carbon neutrality or climate neutrality can helpaccelerate the world along the path towards net-zero by 2050.<\/p><p>Achieving carbon neutrality means we have measured and offset our carbon footprint in full.<\/p>",
         "image": "shopify:\/\/shop_images\/feature-panel-03--image.png",
-        "image_caption": "BPA + BFA + Phthalate free",
-        "image_supporting": "shopify:\/\/shop_images\/feature-panel-03--image-supporting.png",
-        "auxiliary_image": "shopify:\/\/shop_images\/feature-panel-03--image-auxiliary.png",
+        "image_caption": "Climate Neutral Certified by 2023",
+        "image_supporting": "shopify:\/\/shop_images\/THEIR_Campaign_Test17.jpg",
+        "auxiliary_image": "shopify:\/\/shop_images\/THEIR_Campaign_Test16.jpg",
         "auxiliary_image_caption": "Climate Neutral Certified",
         "anchor_id": ""
       }
