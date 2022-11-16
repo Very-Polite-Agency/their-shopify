@@ -45,6 +45,20 @@ https://their-jewelry-and-accessories.myshopify.com
 - [x] Setup Google Analytics
 - [ ] Setup Google Search Console
 
+## Preflight
+- [ ] Contact Information 'From Email'
+- [ ] Contact Information 'Contact Email'
+- [ ] Contact Information 'Policy Email'
+- [ ] Store Location (for shipping etc)
+- [ ] Shipping
+- [ ] Taxes
+- [ ] Products
+- [ ] Collections
+- [ ] Navigation
+- [ ] Test Orders
+- [ ] Page Photos
+- [ ] Page Content
+
 ## Phase 2.0
 ### Templates
 - [ ] Customer/Account
