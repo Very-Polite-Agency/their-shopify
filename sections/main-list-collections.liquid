@@ -1,15 +1,17 @@
-{%- assign section_name = 'list-collections' -%}
-{%- assign section_id = section_name | append: '--' | append: section.id -%}
-
-{% assign aos_id = section_id | append: '--aos' %}
-{% assign aos_delay = 250 %}
-{% assign aos_delay_increment = 250 %}
-
-{% assign alignment = section.settings.alignment | default: 'center' %}
-{% assign heading = section.settings.heading | default: '' %}
-{% assign message = section.settings.message | default: false %}
-
 {%- liquid
+
+  assign section_name = 'list-collections'
+  assign section_classes = section_name | append: ' section-' | append: section.id | append: '-padding'
+  assign section_id = section_name | append: '--' | append: section.id
+
+  assign aos_id = section_id | append: '--aos'
+  assign aos_delay = 250
+  assign aos_delay_increment = 250
+
+  assign alignment = section.settings.alignment | default: 'center'
+  assign heading = section.settings.heading | default: ''
+  assign message = section.settings.message | default: false
+
   case section.settings.sort
     when 'products_high' or 'products_low'
       assign collections = collections | sort: 'all_products_count'
@@ -20,6 +22,7 @@
   if section.settings.sort == 'products_high' or section.settings.sort == 'date_reversed' or section.settings.sort == 'alphabetical_reversed'
     assign collections = collections | reverse
   endif
+
 -%}
 
 <div class="{{ section_name }}" id="{{ section_id }}">
@@ -52,7 +55,9 @@
 
       <div class="{{ section_name }}__listing listing--{{ section_name }}">
         {%- for collection in collections -%}
-          {% render 'card-collection', classes: 'list-collections__collection', card_collection: collection, style: section_name %}
+          {% if collection.products_count > 0 %}
+            {% render 'card-collection', classes: 'list-collections__collection', card_collection: collection, style: section_name %}
+          {% endif %}
         {%- endfor -%}
       </div>
 

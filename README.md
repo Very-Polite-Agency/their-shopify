@@ -48,12 +48,14 @@ https://their-jewelry-and-accessories.myshopify.com
 ## Preflight
 - [x] Contact Information 'From Email'
 - [x] Contact Information 'Contact Email'
-- [ ] Contact Information 'Policy Email' hello@theirisours.com
+- [x] Contact Information 'Policy Email' hello@theirisours.com
 - [x] Store Location (for shipping etc)
 - [x] Shipping
 - [ ] Taxes
-- [ ] Products
-- [ ] Collections
+- [ ] Product Details
+- [ ] Product Images
+- [ ] Collections Details
+- [ ] Collections Images
 - [ ] Navigation
 - [ ] Test Orders
 - [ ] Page Photos
