@@ -46,9 +46,9 @@ https://their-jewelry-and-accessories.myshopify.com
 - [ ] Setup Google Search Console
 
 ## Preflight
-- [ ] Contact Information 'From Email'
-- [ ] Contact Information 'Contact Email'
-- [ ] Contact Information 'Policy Email'
+- [x] Contact Information 'From Email'
+- [x] Contact Information 'Contact Email'
+- [ ] Contact Information 'Policy Email' hello@theirisours.com
 - [x] Store Location (for shipping etc)
 - [x] Shipping
 - [ ] Taxes
