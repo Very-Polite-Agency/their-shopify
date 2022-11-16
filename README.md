@@ -49,8 +49,8 @@ https://their-jewelry-and-accessories.myshopify.com
 - [ ] Contact Information 'From Email'
 - [ ] Contact Information 'Contact Email'
 - [ ] Contact Information 'Policy Email'
-- [ ] Store Location (for shipping etc)
-- [ ] Shipping
+- [x] Store Location (for shipping etc)
+- [x] Shipping
 - [ ] Taxes
 - [ ] Products
 - [ ] Collections
