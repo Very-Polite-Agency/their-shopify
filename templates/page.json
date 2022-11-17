@@ -48,11 +48,11 @@
         "1095fb58-608c-457a-91eb-ae5149332c97"
       ],
       "settings": {
-        "width": "full",
+        "width": "compact",
         "background": "white",
         "container": "container",
         "padding_top": 36,
-        "padding_bottom": 36,
+        "padding_bottom": 0,
         "anchor_id": ""
       }
     }
