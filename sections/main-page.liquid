@@ -38,7 +38,7 @@
 <div class="{{ section_classes }}" id="{{ section_id }}">
   {% render 'bs-container', state: 'open', col: columns, container: container %}
     <div class="{{ section_name }}__main" id="{{ aos_id }}">
-      <h1 class="{{ section_name }}__title heading--title">{{ page.title | escape }}</h1>
+      <h1 class="{{ section_name }}__title heading--1">{{ page.title | escape }}</h1>
       <div class="{{ section_name }}__content body-copy--1">{{ page.content }}</div>
     </div>
   {% render 'bs-container', state: 'closed', container: container %}

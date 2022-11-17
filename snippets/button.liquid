@@ -1,0 +1,36 @@
+{%- if button_link and button_link != blank and button_title and button_title != blank -%}
+
+  {%- liquid
+
+    comment
+      Accepts:
+        - button_link: {String} URL
+        - button_title: {String} Title of link
+        - button_classes: {String} Optionally include classes
+        - button_style: {String} Style of link
+    endcomment
+
+    assign snippet_name = 'button'
+    assign snippet_class = snippet_name
+    assign target = "_self"
+    assign style = style | default: 'primary'
+
+    if style != blank
+      assign snippet_class = snippet_class | append: ' ' | append: snippet_name | append: '--' | append: style
+    endif
+
+    if classes != blank
+      assign snippet_class = snippet_class | prepend: ' ' | prepend: classes
+    endif
+
+    if link contains 'http'
+      assign target = "_blank"
+    endif
+
+  -%}
+
+  <a class="{{ snippet_class }}" href="{{ button_link }}" title="{{ button_title }}" target="{{ target }}">
+    <span class="{{ snippet_name }}__title">{{ button_title }}</span>
+  </a>
+
+{%- endif -%}
