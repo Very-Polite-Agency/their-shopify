@@ -71,7 +71,7 @@
           "type": "faq",
           "settings": {
             "title": "Can I change or cancel my order?",
-            "answer": "<p>If you need to cancel or make a change to your order, please send us an email at <a href=\"mailto:hello@theirisours.com\"><span style=\"text-decoration:underline\">hello@theirisours.com<\/span><\/a> within 24 hours of the order being placed.<\/p><p>Please ensure to include in the subject line ‘change order’ or ‘cancel order’ and your order number. We will do everything possible to sort out your request. <\/p>"
+            "answer": "<p>If you need to cancel or make a change to your order, please send us an email at <a href=\"mailto:hello@theirisours.com\" title=\"hello@theirisours.com\">hello@theirisours.com <\/a>within 24 hours of the order being placed.<\/p><p>Please ensure to include in the subject line ‘change order’ or ‘cancel order’ and your order number. We will do everything possible to sort out your request. <\/p>"
           }
         },
         "cd6ef9f6-cc03-4268-be40-9b070a47ff71": {
