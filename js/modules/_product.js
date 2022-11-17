@@ -4,7 +4,7 @@
 
 const Product = (() => {
 
-  let debug = true;
+  let debug = false;
   let info = { name : 'Product', version : '1.0' };
 
   let elements = {

@@ -4,7 +4,7 @@
 
 const AddToCart = (() => {
 
-  let debug = true;
+  let debug = false;
   let info = { name : 'Add to Cart', version : '1.0' };
 
   let tools = new Tools();

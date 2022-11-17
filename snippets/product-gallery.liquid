@@ -11,15 +11,15 @@
     {%- assign is_glider = true -%}
   {% endif %}
 
-  <div class="{{ template_name }}__gallery {{ snippet_name }}">
+  <div class="{{ template_name }}__gallery {{ snippet_name }} d-lg-none">
 
-    {% if is_glider %}<div class="glide js--glider" id="{{ glider_id }}" data-glide-style="{{ glider_id }}" data-glide-mobile-only="true">{% endif %}
+    {% if is_glider %}<div class="glide js--glider" id="{{ glider_id }}" data-glide-style="{{ glider_id }}">{% endif %}
       {% if is_glider %}<div class="glide__track" data-glide-el="track">{% endif %}
         {% if is_glider %}<ul class="glide__slides">{% endif %}
 
           {% for image in images %}
             {% if is_glider %}<li class="glide__slide">{% endif %}
-              <div class="{{ snippet_name }}">{% render 'lazyload-image', image: image %}</div>
+              <div class="{{ template_name }}__gallery-item">{% render 'lazyload-image', image: image %}</div>
             {% if is_glider %}</li>{% endif %}
           {% endfor %}
 
@@ -27,6 +27,12 @@
       {% if is_glider %}</div>{% endif %}
     {% if is_glider %}</div>{% endif %}
 
+  </div>
+
+  <div class="{{ template_name }}__gallery {{ snippet_name }} d-none d-lg-block">
+    {% for image in images %}
+      <div class="{{ template_name }}__gallery-item">{% render 'lazyload-image', image: image %}</div>
+    {% endfor %}
   </div>
 
 {% endif %}

@@ -4,7 +4,7 @@
 
 const Footer = (() => {
 
-  let debug = true;
+  let debug = false;
   let info = { name : 'Footer', version : '1.0' };
 
   let breakpoints = new Breakpoints();

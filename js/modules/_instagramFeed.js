@@ -6,7 +6,7 @@
 
 const InstagramFeed = (() => {
 
-  let debug = true;
+  let debug = false;
   let info = { name : 'Instagram Feed', version : '1.0' };
 
   let vpcreds = {

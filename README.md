@@ -41,9 +41,7 @@ https://their-jewelry-and-accessories.myshopify.com
 - [x] Integrate AOS on FAQs
 - [x] Remove 'post_per_page' override on the main-blog.liquid section
 - [ ] Test contact us form entries
-- [x] Solve random placement of background on FAQs page
-- [x] Setup Google Analytics
-- [ ] Setup Google Search Console
+- [ ] Solve random placement of background on FAQs page
 
 ## Preflight
 - [x] Contact Information 'From Email'
@@ -63,8 +61,8 @@ https://their-jewelry-and-accessories.myshopify.com
 - [x] Google Analytics
 - [x] Google Search Console
 - [x] Markets
-- [ ] Fix Carousel to Grid on PDP
-- [ ] Examine flashing content on 'featured carousel'
+- [x] Fix Carousel to Grid on PDP
+- [x] Examine flashing content on 'featured carousel'
 
 ## Phase 2.0
 ### Templates

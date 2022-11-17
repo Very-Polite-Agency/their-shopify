@@ -4,7 +4,7 @@
 
 const Header = (() => {
 
-  let debug = true;
+  let debug = false;
   let info = { name : 'Header', version : '1.0' };
   let throttled = false;
   let timeout = {
