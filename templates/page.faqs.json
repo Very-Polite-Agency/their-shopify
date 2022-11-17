@@ -114,7 +114,7 @@
           "type": "faq",
           "settings": {
             "title": "What do I do if my jewelry is defective or I received the wrong order? ",
-            "answer": "<p>If this happens, we would like to first off send our apologies! We work hard to make sure all of your pieces are quality checked and sent out accordingly. <\/p><p>Please send your order number and a photo of the defective or incorrect piece to <a href=\"mailto:hello@theirisours.com\"><span style=\"text-decoration:underline\">hello@theirisours.com<\/span><\/a>. Our team will be happy to resolve this for you! <\/p>"
+            "answer": "<p>If this happens, we would like to first off send our apologies! We work hard to make sure all of your pieces are quality checked and sent out accordingly. <\/p><p>Please send your order number and a photo of the defective or incorrect piece to <a href=\"mailto:hello@theirisours.com\" title=\"hello@theirisours.com\">hello@theirisours.com<\/a>. <\/p><p>Our team will be happy to resolve this for you! <\/p>"
           }
         }
       },
