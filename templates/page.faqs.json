@@ -77,8 +77,8 @@
         "cd6ef9f6-cc03-4268-be40-9b070a47ff71": {
           "type": "faq",
           "settings": {
-            "title": "Question consectetuer lorem ipsum lorem ipsum dolor sit amet, consectetuer?",
-            "answer": "<p>Quisque ac magna enim. Praesent justo nunc, accumsan ut risus maximus, aliquam semper velit. Morbi aliquam gravida tellus, ac iaculis quam porttitor ut. Nunc rutrum arcu at volutpat accumsan. Donec vitae commodo massa. Etiam elit metus, dapibus eu elementum eget, porttitor eu nibh. Sed pretium elit vitae mattis dictum. Proin id magna vitae ex pulvinar pharetra non in libero.<\/p>"
+            "title": "How are refunds processed?",
+            "answer": "<p>Please note Their cannot issue a refund to a method of payment that is different from the one used to place the order. Upon receiving your returned item, it will take up to 3 business days to process and send you a return confirmation email. Once the return is processed, it will take around 5-10 business days for the funds to reappear on your end.<\/p>"
           }
         }
       },
