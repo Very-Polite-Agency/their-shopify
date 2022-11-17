@@ -5,7 +5,7 @@
     - caption: {String} Description of featured image (optional)
     - card_product: {Object} Product Liquid object
     - style: {String} Conditionally load different card types by passing style option
-
+    – list_item: {Boolean} Optionally include ARAI "listitem" to roll attribute
 
     Usage:
     {% render 'card-product', caption: 'What an amazing caption', card_product: product, product_title: 'Some Custom Title', style: 'some-predefined-style' %}
@@ -23,6 +23,7 @@
   {% assign product_title = product_title | default: '' %}
   {% assign show_secondary_image = show_secondary_image | default: false %}
   {% assign style = style | default: 'default' %}
+  {% assign list_item = list_item | default: false %}
 
   {% if classes and classes != empty %}
     {% assign snippet_classes = snippet_classes | prepend: ' ' | prepend: classes %}
@@ -62,6 +63,7 @@
     data-published-at="{{ date_published | date: "%Y-%m-%d %H:%M:%S" }}"
     data-style="{{ style }}" {% unless available %}data-unavailable{% endunless %}
     {% if aos != blank %}{{ aos }}{% endif %}
+    {% if list_item %}role="listitem"{% endif %}
   >
     <div class="{{ snippet_classes }}__layout" id="{{ aos_id }}">
 

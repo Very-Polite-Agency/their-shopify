@@ -4,6 +4,7 @@
     - card_collection: {Object} Collection Liquid object
     - classes: {String} Optionally include custom classes for snippet
     - style: {String} Optionally load different card types by passing style option
+    – list_item: {Boolean} Optionally include ARAI "listitem" to roll attribute
 
     Usage:
     {% render 'card-collection', card_collection: collection, style: 'anything-but-default' %}
@@ -16,6 +17,7 @@
   {% assign snippet_classes = snippet_name | append: ' collection' %}
   {% assign snippet_id = snippet_name | append: '--' | append: card_collection.id -%}
   {% assign style = style | default: 'not-set' %}
+  {% assign list_item = list_item | default: false %}
 
   {% if classes and classes != empty %}
     {% assign snippet_classes = snippet_classes | prepend: ' ' | prepend: classes %}
@@ -31,7 +33,7 @@
   {% assign title = card_collection.title | default: '' %}
   {% assign url = card_collection.url | default: '' %}
 
-  <article class="{{ snippet_classes }}" id="{{ snippet_id }}" data-published-at="{{ date_published | date: "%Y-%m-%d %H:%M:%S" }}" data-style="{{ style }}">
+  <article class="{{ snippet_classes }}" id="{{ snippet_id }}" data-published-at="{{ date_published | date: "%Y-%m-%d %H:%M:%S" }}" data-style="{{ style }}" {% if list_item %}role="listitem"{% endif %}>
     <div class="{{ snippet_name }}__layout" id="{{ aos_id }}">
 
       {% case style %}

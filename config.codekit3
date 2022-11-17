@@ -2333,14 +2333,6 @@
       "oAP" : "\/sections\/apps.liquid",
       "oF" : 0
     },
-    "\/sections\/collection-list.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/collection-list.liquid",
-      "oF" : 0
-    },
     "\/sections\/contact-form.liquid" : {
       "cB" : 0,
       "ft" : 8192,
