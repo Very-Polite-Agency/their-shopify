@@ -65,7 +65,7 @@
             {% assign button_style = block.settings.style | default: 'primary' %}
             {% assign button_title = block.settings.title | default: '' %}
 
-            {% if link != blank and title != blank %}
+            {% if button_link != blank and button_title != blank %}
               <div class="{{ section_name }}__cta" data-alignment="{{ alignment }}">
                 {%
                   render 'button',
