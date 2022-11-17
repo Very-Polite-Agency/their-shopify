@@ -52,7 +52,7 @@ https://their-jewelry-and-accessories.myshopify.com
 - [x] Store Location (for shipping etc)
 - [x] Shipping
 - [ ] Taxes
-- [ ] Product Details
+- [x] Product Details
 - [ ] Product Images
 - [ ] Collections Details
 - [ ] Collections Images
@@ -60,6 +60,8 @@ https://their-jewelry-and-accessories.myshopify.com
 - [ ] Test Orders
 - [ ] Page Photos
 - [ ] Page Content
+- [ ] Google Analytics
+- [ ] Google Search Console
 
 ## Phase 2.0
 ### Templates
