@@ -2795,6 +2795,14 @@
       "oAP" : "\/snippets\/form-newsletter-sign-up.liquid",
       "oF" : 0
     },
+    "\/snippets\/google-analytics.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/google-analytics.liquid",
+      "oF" : 0
+    },
     "\/snippets\/input.liquid" : {
       "cB" : 0,
       "ft" : 8192,

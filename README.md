@@ -62,6 +62,7 @@ https://their-jewelry-and-accessories.myshopify.com
 - [ ] Page Content
 - [ ] Google Analytics
 - [ ] Google Search Console
+- [ ] Markets
 
 ## Phase 2.0
 ### Templates
