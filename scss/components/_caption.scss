@@ -29,20 +29,17 @@
     font-style: normal;
     font-weight: 400;
     font-size: 10px;
+    font-size: 8px;
     font-size: 12px;
     letter-spacing: .25em;
     text-transform: uppercase;
   }
 
-  @include breakpoint(sm) {
-
-
-  } // min width sm
-
   @include breakpoint(md) {
 
     &--2 {
       font-size: 13px;
+      font-size: 11px;
     }
 
   } // min width md
@@ -51,6 +48,7 @@
 
     &--2 {
       font-size: 9px;
+      font-size: 7px;
     }
 
   } // min width lg
@@ -59,6 +57,7 @@
 
     &--2 {
       font-size: 11px;
+      font-size: 9px;
     }
 
   } // min width xl
@@ -67,6 +66,7 @@
 
     &--2 {
       font-size: 13px;
+      font-size: 11px;
     }
 
   } // min width xxl
