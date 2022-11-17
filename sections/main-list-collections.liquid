@@ -53,10 +53,10 @@
         <div class="{{ section_name }}__message body-copy body-copy--1" {{ aos }}>{{ message }}</div>
       {% endif %}
 
-      <div class="{{ section_name }}__listing listing--{{ section_name }}">
+      <div class="{{ section_name }}__listing listing--{{ section_name }}" role="list">
         {%- for collection in collections -%}
           {% if collection.products_count > 0 %}
-            {% render 'card-collection', classes: 'list-collections__collection', card_collection: collection, style: section_name %}
+            {% render 'card-collection', classes: 'list-collections__collection', card_collection: collection, list_item: true, style: section_name %}
           {% endif %}
         {%- endfor -%}
       </div>
