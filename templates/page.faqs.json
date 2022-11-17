@@ -40,7 +40,7 @@
           "type": "faq",
           "settings": {
             "title": "How do discount codes work? ",
-            "answer": "<p>Simply enter the discount code by using the <span style=\"text-decoration:underline\"><em>Have a discount code?<\/em><\/span> button found in cart! A limit of one (1) discount may be applied to each order.<\/p>"
+            "answer": "<p>Simply enter the discount code at the checkout in the 'Discount code' field above the subtotal. <\/p><p>A limit of one (1) discount may be applied to each order.<\/p>"
           }
         }
       },
