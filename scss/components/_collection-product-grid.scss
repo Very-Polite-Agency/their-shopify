@@ -11,7 +11,6 @@
     &__title {
       text-transform: none;
       flex: 1;
-      padding-right: 20px;
       font-weight: 400;
     }
   }
@@ -95,8 +94,6 @@
     line-height: 1;
   }
 
-  @include breakpoint(sm) {} // min width sm
-
   @include breakpoint(md) {
 
     &__hero {
@@ -167,9 +164,5 @@
     }
 
   } // min width lg
-
-  @include breakpoint(xl) {} // min width xl
-
-  @include breakpoint(xxl) {} // min width xxl
 
 }
