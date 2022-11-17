@@ -29,7 +29,7 @@
           "settings": {
             "title": "Shop Now",
             "link": "shopify:\/\/products\/alfie-groove-dome-ring-14k-solid-gold",
-            "style": "primary",
+            "style": "secondary",
             "alignment": "right"
           }
         }
