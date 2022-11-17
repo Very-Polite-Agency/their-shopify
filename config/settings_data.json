@@ -172,16 +172,6 @@
           "color_scheme": "background-1"
         }
       },
-      "policies": {
-        "type": "policies",
-        "settings": {
-          "privacy_policy_hero_image": "shopify:\/\/shop_images\/policies--hero-image-02.png",
-          "refund_policy_hero_image": "shopify:\/\/shop_images\/policies--hero-image-01.png",
-          "shipping_policy_hero_image": "shopify:\/\/shop_images\/policies--hero-image-02.png",
-          "subscription_policy_hero_image": "shopify:\/\/shop_images\/policies--hero-image-01.png",
-          "terms_of_service_hero_image": "shopify:\/\/shop_images\/policies--hero-image-02.png"
-        }
-      },
       "mobile-menu": {
         "type": "mobile-menu",
         "settings": {

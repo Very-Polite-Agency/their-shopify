@@ -1,15 +1,57 @@
 {
   "order": [
-    "main"
+    "main",
+    "0e6cd93f-7496-4303-90c4-634f9bc7b232"
   ],
   "sections": {
     "main": {
       "type": "main-page",
       "settings": {
-        "width": "full",
-        "background": "black",
+        "width": "compact",
+        "background": "white",
         "container": "container",
         "padding_top": 0,
+        "padding_bottom": 0,
+        "anchor_id": ""
+      }
+    },
+    "0e6cd93f-7496-4303-90c4-634f9bc7b232": {
+      "type": "featured-text",
+      "blocks": {
+        "c4a644da-a58c-4463-ab39-70b37f4e4854": {
+          "type": "heading",
+          "settings": {
+            "heading": "Sample Heading",
+            "size": "1",
+            "style": "primary"
+          }
+        },
+        "8a50b266-3a0b-4117-a5ac-d879c740c702": {
+          "type": "message",
+          "settings": {
+            "message": "<p>Nunc pharetra venenatis nibh, at dictum erat egestas et. Morbi venenatis viverra diam, vitae consectetur turpis pulvinar pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed nec odio dignissim odio interdum fringilla nec non velit. Vestibulum aliquet semper odio sed tincidunt. Phasellus vitae molestie mauris. Etiam auctor viverra ante, ac auctor leo congue non. Pellentesque vitae mauris dictum mi interdum commodo non a diam. Vestibulum imperdiet sapien mi, a tristique lorem volutpat sit amet. Praesent faucibus congue ex et faucibus. Ut at purus ac dolor auctor eleifend.<\/p>"
+          }
+        },
+        "1095fb58-608c-457a-91eb-ae5149332c97": {
+          "type": "button",
+          "settings": {
+            "title": "Shop Now",
+            "link": "shopify:\/\/products\/alfie-groove-dome-ring-14k-solid-gold",
+            "style": "primary",
+            "alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "c4a644da-a58c-4463-ab39-70b37f4e4854",
+        "8a50b266-3a0b-4117-a5ac-d879c740c702",
+        "1095fb58-608c-457a-91eb-ae5149332c97"
+      ],
+      "settings": {
+        "width": "compact",
+        "background": "white",
+        "container": "container",
+        "padding_top": 36,
         "padding_bottom": 0,
         "anchor_id": ""
       }
