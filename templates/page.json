@@ -7,8 +7,8 @@
     "main": {
       "type": "main-page",
       "settings": {
-        "width": "full",
-        "background": "black",
+        "width": "compact",
+        "background": "white",
         "container": "container",
         "padding_top": 0,
         "padding_bottom": 0,
