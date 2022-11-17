@@ -11,29 +11,29 @@
         "193ff746-9978-40df-a003-96dc053439b4": {
           "type": "faq",
           "settings": {
-            "title": "Question Lorem  lorem ipsum dolor sit amet, consectetuer?",
-            "answer": "<p>Vivamus auctor dolor ut suscipit ultrices. In massa purus, pharetra at ex sed, lobortis dignissim eros. Suspendisse vitae ex in metus fermentum mollis. Fusce eu lectus tristique, sodales nisl nec, condimentum sem. Sed malesuada neque et nisl faucibus elementum. Ut tempor, diam a ornare blandit, orci magna sollicitudin ex, id gravida nulla ante sed nulla. Vestibulum sed turpis ex. Maecenas velit ante, tempus eget malesuada vel, blandit id magna. <\/p>"
+            "title": "Where does Their ship to? ",
+            "answer": "<p>Currently, we ship to the US, Canada, UK and the EU.<\/p>"
           }
         },
         "bfb841dd-4a1c-47c4-94be-358b912a8088": {
           "type": "faq",
           "settings": {
-            "title": "Question consectetuer lorem ipsum lorem ipsum dolor sit amet, consectetuer?",
-            "answer": "<p>Vivamus non dolor a nulla iaculis vestibulum ut et turpis. Mauris venenatis dui in urna viverra elementum. Aenean scelerisque, dolor lacinia mollis varius, nibh orci tincidunt lectus, nec dictum nisi nulla ut dolor. In sodales viverra neque in sodales. Donec scelerisque erat lorem, vel eleifend sapien luctus nec.<\/p>"
+            "title": "What does made to order mean?",
+            "answer": "<p>Once your order has been placed, we need to craft your piece since it is being made especially for you. We estimate around 6 weeks before shipping so make sure you plan accordingly!<\/p>"
           }
         },
         "90e55309-8f51-4c1d-a8bb-0280095a0477": {
           "type": "faq",
           "settings": {
-            "title": "Question Lorem Ipsum lorem ipsum dolor sit amet?",
-            "answer": "<p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In in arcu varius, gravida arcu non, convallis ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse ultrices blandit tellus, at hendrerit sapien aliquet a. Donec pharetra auctor efficitur.<\/p>"
+            "title": "When will my order arrive?",
+            "answer": "<p>Once your order has been placed, we will get it processed within 1-3 business days. Once it has been shipped you can expect to receive your package within 3-5 days in the US, 7-10 in Canada and 7-14 within the EU & UK. <\/p>"
           }
         },
         "0b595287-947d-4f3e-83ad-d22fe8498592": {
           "type": "faq",
           "settings": {
-            "title": "Question Lorem Ipsum lorem ipsum dolor sit amet, consectetuer?",
-            "answer": "<p>Quisque quis magna placerat, pharetra augue nec, iaculis lectus. Quisque quis luctus ex. Donec dapibus porta libero tempus sagittis. Nulla accumsan euismod magna. Nam sit amet lacinia mauris. Aliquam ut gravida quam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla consectetur a neque eget laoreet.<\/p>"
+            "title": "Will I be charged duties and taxes? ",
+            "answer": "<p>There may be duties and taxes incurred on your shipment that you will be responsible for. Please note that Their does not have any control over these fees and we cannot advise as to what the costs will be, as they vary by country. For more information, please contact your local customs office. <\/p>"
           }
         }
       },
