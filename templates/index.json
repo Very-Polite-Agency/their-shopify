@@ -5,7 +5,7 @@
       "settings": {
         "heading": "",
         "message": "",
-        "image": "shopify:\/\/shop_images\/COMING-NOVEMBER-2022--opt.jpg",
+        "image": "shopify:\/\/shop_images\/THEIR_Campaign_9.jpg",
         "image_caption": "",
         "style": "primary"
       }
@@ -19,8 +19,8 @@
           "settings": {
             "product": "",
             "product_title": "",
-            "heading": "<p>Carter Herringbone <\/p><p>Necklace<\/p>",
-            "message": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorpe.<\/p>",
+            "heading": "<p>Sutton Oval Locket 14k Gold Vermeil<\/p>",
+            "message": "<p>Designed with 14K recycled gold vermeil - The Sutton Oval Locket is made to represent a moment in time. Add a photo to make it an extra special piece, holding your loved ones close to your heart. All of THEIR necklaces are classic and modern unisex styles, easy to wear as a single statement piece or to be combined with other necklaces from our collection.<\/p>",
             "cta_title": "Shop Now",
             "cta_link": "shopify:\/\/collections\/all"
           }
@@ -28,7 +28,7 @@
         "203d1e11-ac22-4763-869a-d64adbedfd81": {
           "type": "media",
           "settings": {
-            "image": "shopify:\/\/shop_images\/THEIR--home-page--FF_3x_edaff467-bd0b-4aec-a9ae-49614203f4ee.png",
+            "image": "shopify:\/\/shop_images\/THEIR_Campaign_22.jpg",
             "caption": "",
             "stamp": "shopify:\/\/shop_images\/THEIR--home-page--ff-stamp_3x_c26f0594-7117-4b20-9d47-aa7e33a6dafc.png"
           }
