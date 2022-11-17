@@ -2405,6 +2405,14 @@
       "oAP" : "\/sections\/featured-image.liquid",
       "oF" : 0
     },
+    "\/sections\/featured-text.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/sections\/featured-text.liquid",
+      "oF" : 0
+    },
     "\/sections\/fifty-fifty.liquid" : {
       "cB" : 0,
       "ft" : 8192,
@@ -2565,14 +2573,6 @@
       "oAP" : "\/sections\/pickup-availability.liquid",
       "oF" : 0
     },
-    "\/sections\/policies.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/policies.liquid",
-      "oF" : 0
-    },
     "\/sections\/policy-privacy.liquid" : {
       "cB" : 0,
       "ft" : 8192,
@@ -2627,14 +2627,6 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/sections\/product-recommendations.liquid",
-      "oF" : 0
-    },
-    "\/sections\/text-feature.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/text-feature.liquid",
       "oF" : 0
     },
     "\/snippets\/accordion-item.liquid" : {
