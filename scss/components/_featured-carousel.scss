@@ -12,6 +12,9 @@
   padding-bottom: 30px;
 
   .glide {
+    .card-product__price {
+      line-height: 1.25;
+    }
     &__buttons {
       padding: 0 0 0 var(--bs-container-fluid-padding);
       margin-top: 56px;

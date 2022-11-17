@@ -60,9 +60,11 @@ https://their-jewelry-and-accessories.myshopify.com
 - [ ] Test Orders
 - [ ] Page Photos
 - [ ] Page Content
-- [ ] Google Analytics
-- [ ] Google Search Console
-- [ ] Markets
+- [x] Google Analytics
+- [x] Google Search Console
+- [x] Markets
+- [ ] Fix Carousel to Grid on PDP
+- [ ] Examine flashing content on 'featured carousel'
 
 ## Phase 2.0
 ### Templates
