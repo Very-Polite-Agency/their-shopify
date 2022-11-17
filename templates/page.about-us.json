@@ -3,7 +3,8 @@
     "1655160859cf10859f",
     "16551608611a2689b3",
     "1655161190b45a6c54",
-    "165516160734ca1368"
+    "165516160734ca1368",
+    "2952081f-3740-468a-908f-dcfe4ff6f1f9"
   ],
   "sections": {
     "1655160859cf10859f": {
@@ -50,6 +51,17 @@
         "image_supporting": "shopify:\/\/shop_images\/THEIR_Campaign_Test17.jpg",
         "auxiliary_image": "shopify:\/\/shop_images\/THEIR_Campaign_Test16.jpg",
         "auxiliary_image_caption": "Climate Neutral Certified",
+        "anchor_id": ""
+      }
+    },
+    "2952081f-3740-468a-908f-dcfe4ff6f1f9": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "",
+        "background": "white",
+        "container": "container",
+        "padding_top": 0,
+        "padding_bottom": 0,
         "anchor_id": ""
       }
     }
