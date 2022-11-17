@@ -5,10 +5,6 @@
   @import '../components/product-gallery.scss';
   @import '../components/product-recommendations.scss';
 
-  @include breakpoint(sm) {} // min width sm
-
-  @include breakpoint(md) {} // min width md
-
   @include breakpoint(lg) {
 
     &__actions,
@@ -20,10 +16,29 @@
       margin-right: auto;
     }
 
-  } // min width lg
+    &__sticky {
+      display: block;
+      height: 1000px;
+      min-height: 100%;
+      position: relative;
+      overflow-y: visible;
+      &-content {
+        transition: padding var(--theme-transition-duration);
+        top: var(--theme-header-height--total);
+        position: sticky;
+        height: auto;
+        padding-top: 0;
+      }
+    }
 
-  @include breakpoint(xl) {} // min width xl
+    .scroll-position--scrolled & {
+      &__sticky {
+        &-content {
+          padding-top: 20px;
+        }
+      }
+    }
 
-  @include breakpoint(xxl) {} // min width xxl
+  }
 
 }

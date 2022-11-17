@@ -24,10 +24,14 @@
         </div>
 
         <div class="col-12 col-lg-6">
-          {% render 'product-details', product: product %}
-          {% render 'product-options', product: product %}
-          {% render 'product-info', product: product %}
-          {% render 'product-actions', product: product %}
+          <div class="product__sticky">
+            <div class="product__sticky-content">
+              {% render 'product-details', product: product %}
+              {% render 'product-options', product: product %}
+              {% render 'product-info', product: product %}
+              {% render 'product-actions', product: product %}
+            </div>
+          </div>
         </div>
 
       </div>

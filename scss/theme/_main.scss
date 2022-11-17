@@ -3,7 +3,6 @@ main {
   padding-top: var(--theme-header-height--total);
   padding-bottom: calc( 1.5 * var(--theme-header-height--total) );
   position: relative;
-  overflow: hidden;
 
   &.index,
   &.template--cart,
