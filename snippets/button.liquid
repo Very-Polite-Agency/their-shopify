@@ -1,13 +1,13 @@
-{%- if button_link and button_link != blank and button_title and button_title != blank -%}
+{%- if button_url and button_url != blank and button_title and button_title != blank -%}
 
   {%- liquid
 
     comment
       Accepts:
-        - button_link: {String} URL
-        - button_title: {String} Title of link
         - button_classes: {String} Optionally include classes
         - button_style: {String} Style of link
+        - button_title: {String} Title of link
+        - button_url: {String} URL
     endcomment
 
     assign snippet_name = 'button'
@@ -29,7 +29,7 @@
 
   -%}
 
-  <a class="{{ snippet_class }}" href="{{ button_link }}" title="{{ button_title }}" target="{{ target }}">
+  <a class="{{ snippet_class }}" href="{{ button_url }}" title="{{ button_title }}" target="{{ target }}">
     <span class="{{ snippet_name }}__title">{{ button_title }}</span>
   </a>
 

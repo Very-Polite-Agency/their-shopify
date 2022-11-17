@@ -61,16 +61,16 @@
           {%- when 'button' -%}
 
             {% assign alignment = block.settings.alignment | default: 'left' %}
-            {% assign button_link = block.settings.link | default: '' %}
             {% assign button_style = block.settings.style | default: 'primary' %}
             {% assign button_title = block.settings.title | default: '' %}
+            {% assign button_url = block.settings.link | default: '' %}
 
-            {% if button_link != blank and button_title != blank %}
+            {% if button_url != blank and button_title != blank %}
               <div class="{{ section_name }}__cta" data-alignment="{{ alignment }}">
                 {%
                   render 'button',
                   button_classes: 'featured-text__cta-button',
-                  button_link: button_link,
+                  button_url: button_url,
                   button_style: button_style,
                   button_title: button_title
                 %}
