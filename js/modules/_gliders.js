@@ -341,7 +341,10 @@ const Gliders = (() => {
     if ( debug ) console.log( `${info.name}.init() Started` );
 
     setGliders();
-    initGliders();
+
+    window.addEventListener('load', function () {
+      initGliders();
+    });
 
     window.addEventListener('resize', function(e){
       if ( !throttled ) {
