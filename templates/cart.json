@@ -7,9 +7,9 @@
       "type": "main-cart",
       "settings": {
         "hero_heading": "Shopping Bag",
-        "empty_message": "<p>Nothing has been added to cart. Shop our latest <a href=\"\/collections\/all\" title=\"All products\">drop<\/a>.<\/p>",
+        "empty_message": "<p>Nothing has been added to cart.<\/p>",
         "empty_cta_title": "Back to Products",
-        "empty_cta_link": "shopify:\/\/collections\/all"
+        "empty_cta_link": ""
       }
     }
   }
