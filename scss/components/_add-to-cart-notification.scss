@@ -1,5 +1,10 @@
 :root {
   --theme-add-to-cart-notification-width: 320px;
+  --theme-add-to-cart-notification-width--sm: 330px;
+  --theme-add-to-cart-notification-width--md: 340px;
+  --theme-add-to-cart-notification-width--lg: 360px;
+  --theme-add-to-cart-notification-width--xl: 380px;
+  --theme-add-to-cart-notification-width--xxl: 400px;
 }
 
 .add-to-cart-notification {
@@ -48,7 +53,7 @@
   }
 
   &__image {
-    width: 100px;
+    width: 85px;
     height: auto;
     a, img, svg {
       display: block;
@@ -90,7 +95,7 @@
 
   &__product {
     &-details {
-      font-size: 12px;
+      font-size: 10px;
       line-height: 1.45;
       letter-spacing: 0.25em;
     }
@@ -107,14 +112,49 @@
     }
   }
 
-  @include breakpoint(sm) {} // min width sm
+  @include breakpoint(sm) {
 
-  @include breakpoint(md) {} // min width md
+    transform: translate3d( var(--theme-add-to-cart-notification-width--sm), 0, 0 );
+    width: var(--theme-add-to-cart-notification-width--sm);
 
-  @include breakpoint(lg) {} // min width lg
+  } // min width sm
 
-  @include breakpoint(xl) {} // min width xl
+  @include breakpoint(md) {
 
-  @include breakpoint(xxl) {} // min width xxl
+    transform: translate3d( var(--theme-add-to-cart-notification-width--md), 0, 0 );
+    width: var(--theme-add-to-cart-notification-width--md);
+
+  } // min width md
+
+  @include breakpoint(lg) {
+
+    transform: translate3d( var(--theme-add-to-cart-notification-width--lg), 0, 0 );
+    width: var(--theme-add-to-cart-notification-width--lg);
+
+    &__image {
+      width: 100px;
+    }
+
+    &__product {
+      &-details {
+        font-size: 11px;
+      }
+    }
+
+  } // min width lg
+
+  @include breakpoint(xl) {
+
+    transform: translate3d( var(--theme-add-to-cart-notification-width--xl), 0, 0 );
+    width: var(--theme-add-to-cart-notification-width--xl);
+
+  } // min width xl
+
+  @include breakpoint(xxl) {
+
+    transform: translate3d( var(--theme-add-to-cart-notification-width--xxl), 0, 0 );
+    width: var(--theme-add-to-cart-notification-width--xxl);
+
+  } // min width xxl
 
 }
