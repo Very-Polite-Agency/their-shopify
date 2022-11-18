@@ -46,7 +46,6 @@
     },
     "1655834543a2b5ab6f": {
       "type": "featured-carousel",
-      "disabled": true,
       "blocks": {
         "bf53173c-056a-467e-8cfc-c441bbe45408": {
           "type": "product",
@@ -73,14 +72,14 @@
           "type": "product",
           "settings": {
             "product": "shelby-initial-necklace-14k-solid-gold",
-            "image_position": "1"
+            "image_position": "2"
           }
         },
         "022adf07-e061-4172-832b-097ec168a44e": {
           "type": "product",
           "settings": {
-            "product": "james-groove-signet-ring-14k-solid-gold",
-            "image_position": "2"
+            "product": "taylor-hoop-earring-14k-semi-solid-gold",
+            "image_position": "0"
           }
         },
         "20c1bbbd-0a48-4f81-ab1b-d90ee4b8aba0": {
