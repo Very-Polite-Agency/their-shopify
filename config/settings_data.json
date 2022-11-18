@@ -176,7 +176,7 @@
         "type": "mobile-menu",
         "settings": {
           "cart_enabled": true,
-          "menu_main": "mobile-menu"
+          "menu_main": "mobile-menu-temp"
         }
       },
       "policy-refund": {
