@@ -7,9 +7,27 @@
         "show_secondary_image": true,
         "banner_image": "shopify:\/\/shop_images\/Mask_group_2x_b4cb4920-0e49-4b22-bf8e-fe34d1c40db4.png"
       }
+    },
+    "605423ad-b9ed-4e09-82a9-1c143d4a8f3e": {
+      "type": "featured-image",
+      "blocks": {
+        "b63efadc-51b9-48d3-bbfb-2ce47e274584": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/THEIR_Campaign_8.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "b63efadc-51b9-48d3-bbfb-2ce47e274584"
+      ],
+      "settings": {
+        "anchor_id": ""
+      }
     }
   },
   "order": [
-    "product-grid"
+    "product-grid",
+    "605423ad-b9ed-4e09-82a9-1c143d4a8f3e"
   ]
 }
