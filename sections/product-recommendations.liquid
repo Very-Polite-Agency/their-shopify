@@ -76,8 +76,8 @@
   function renderProductCardMarkup( product = {} ) {
 
     let featuredImage = {
-      small: Theme.imgURLFilter(product.featured_image, 'icon'),
-      large: Theme.imgURLFilter(product.featured_image, 'large')
+      small: Theme.tools.imgURLFilter(product.featured_image, 'icon'),
+      large: Theme.tools.imgURLFilter(product.featured_image, 'large')
     };
     let handle = product.handle;
     let title = product.title;
