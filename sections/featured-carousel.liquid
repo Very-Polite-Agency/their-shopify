@@ -27,27 +27,46 @@
 
             {% for block in section.blocks %}
 
-              <li class="glide__slide">
-                <div class="{{ section_name }}__item" data-index0="{{ forloop.index0 }}" data-index="{{ forloop.index }}">
-                  {% case block.type %}
-                    {% when 'image' %}
-                      {%
-                        render 'card-image',
-                        caption: block.settings.caption,
-                        image: block.settings.image,
-                        link: block.settings.link,
-                        style: section_name
-                      %}
-                    {% when 'product' %}
-                      {%
-                        render 'card-product',
-                        card_product: block.settings.product,
-                        image_position: block.settings.image_position,
-                        style: section_name
-                      %}
-                  {% endcase %}
-                </div>
-              </li>
+              {%- liquid
+
+                assign show_slide = false
+
+                case block.type
+                  when 'image'
+                    if block.settings.image
+                      assign show_slide = true
+                    endif
+                  when 'product'
+                    if block.settings.product.available
+                      assign show_slide = true
+                    endif
+                endcase
+
+              -%}
+
+              {% if show_slide %}
+                <li class="glide__slide">
+                  <div class="{{ section_name }}__item" data-index0="{{ forloop.index0 }}" data-index="{{ forloop.index }}">
+                    {% case block.type %}
+                      {% when 'image' %}
+                        {%
+                          render 'card-image',
+                          caption: block.settings.caption,
+                          image: block.settings.image,
+                          link: block.settings.link,
+                          style: section_name
+                        %}
+                      {% when 'product' %}
+                        {%
+                          render 'card-product',
+                          card_product: block.settings.product,
+                          image_position: block.settings.image_position,
+                          style: section_name
+                        %}
+                    {% endcase %}
+                  </div>
+                </li>
+              {% endif %}
             {% endfor %}
 
           </ul>
