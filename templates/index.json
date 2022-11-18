@@ -46,7 +46,6 @@
     },
     "1655834543a2b5ab6f": {
       "type": "featured-carousel",
-      "disabled": true,
       "blocks": {
         "bf53173c-056a-467e-8cfc-c441bbe45408": {
           "type": "product",
@@ -69,6 +68,13 @@
             "image_position": "0"
           }
         },
+        "022adf07-e061-4172-832b-097ec168a44e": {
+          "type": "product",
+          "settings": {
+            "product": "evan-groove-huggie-14k-solid-gold",
+            "image_position": "0"
+          }
+        },
         "e273a287-b7a5-4d0f-a2d9-c199753189b1": {
           "type": "product",
           "settings": {
@@ -76,29 +82,11 @@
             "image_position": "2"
           }
         },
-        "022adf07-e061-4172-832b-097ec168a44e": {
+        "20c1bbbd-0a48-4f81-ab1b-d90ee4b8aba0": {
           "type": "product",
           "settings": {
-            "product": "james-groove-signet-ring-14k-solid-gold",
-            "image_position": "2"
-          }
-        },
-        "f7b38c82-d92f-45ee-a29f-cafe762ee8d7": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "image": "shopify:\/\/shop_images\/feature-panel-03--image-supporting.png",
-            "caption": "",
-            "link": ""
-          }
-        },
-        "0b59634a-f69c-4f0c-9ffd-80c32d7acadc": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "image": "shopify:\/\/shop_images\/feature-panel-02--auxiliary.png",
-            "caption": "",
-            "link": ""
+            "product": "finley-smiley-signet-ring-14k-gold-vermeil",
+            "image_position": "0"
           }
         }
       },
@@ -106,10 +94,9 @@
         "bf53173c-056a-467e-8cfc-c441bbe45408",
         "6c27f179-2cd5-439e-b548-e553a2b68c71",
         "fbf936eb-27de-494d-a748-2e1ada860e3f",
-        "e273a287-b7a5-4d0f-a2d9-c199753189b1",
         "022adf07-e061-4172-832b-097ec168a44e",
-        "f7b38c82-d92f-45ee-a29f-cafe762ee8d7",
-        "0b59634a-f69c-4f0c-9ffd-80c32d7acadc"
+        "e273a287-b7a5-4d0f-a2d9-c199753189b1",
+        "20c1bbbd-0a48-4f81-ab1b-d90ee4b8aba0"
       ],
       "settings": {
         "heading": "Timeless Classic",
