@@ -26,6 +26,7 @@
           <ul class="glide__slides">
 
             {% for block in section.blocks %}
+
               <li class="glide__slide">
                 <div class="{{ section_name }}__item" data-index0="{{ forloop.index0 }}" data-index="{{ forloop.index }}">
                   {% case block.type %}
