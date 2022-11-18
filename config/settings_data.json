@@ -118,9 +118,9 @@
       "footer": {
         "type": "footer",
         "settings": {
-          "image": "shopify:\/\/shop_images\/footer_img.jpg",
-          "menu_main": "",
-          "menu_policies": "",
+          "image": "shopify:\/\/shop_images\/footer-v9.jpg",
+          "menu_main": "footer",
+          "menu_policies": "policies",
           "newsletter_heading": "Newsletter Sign Up",
           "newsletter_button_title": "Sign Up"
         }
@@ -156,7 +156,7 @@
           "announcements_enabled": false,
           "announcements_homepage_only": true,
           "menu_main": "",
-          "menu_main_extras": ""
+          "menu_main_extras": "extras"
         }
       },
       "main-password-footer": {
@@ -175,8 +175,8 @@
       "mobile-menu": {
         "type": "mobile-menu",
         "settings": {
-          "cart_enabled": false,
-          "menu_main": "blog-menu"
+          "cart_enabled": true,
+          "menu_main": "mobile-menu"
         }
       },
       "policy-refund": {

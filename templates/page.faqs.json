@@ -36,6 +36,14 @@
             "answer": "<p>There may be duties and taxes incurred on your shipment that you will be responsible for. Please note that Their does not have any control over these fees and we cannot advise as to what the costs will be, as they vary by country. For more information, please contact your local customs office. <\/p>"
           }
         },
+        "4ad2bbfc-7f82-496c-a329-493da27a8024": {
+          "type": "faq",
+          "disabled": true,
+          "settings": {
+            "title": "",
+            "answer": ""
+          }
+        },
         "44d68c2f-f31c-445d-9e3c-069881925b0c": {
           "type": "faq",
           "settings": {
@@ -49,6 +57,7 @@
         "bfb841dd-4a1c-47c4-94be-358b912a8088",
         "90e55309-8f51-4c1d-a8bb-0280095a0477",
         "0b595287-947d-4f3e-83ad-d22fe8498592",
+        "4ad2bbfc-7f82-496c-a329-493da27a8024",
         "44d68c2f-f31c-445d-9e3c-069881925b0c"
       ],
       "settings": {
