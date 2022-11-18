@@ -35,10 +35,17 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/narrow-feature_3x_7a3a28c1-9ff0-4943-9b12-0015e94e41a6.png"
           }
+        },
+        "9fc1216d-91e6-4f56-b477-c07c48b85171": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/THEIR_Campaign_47.jpg"
+          }
         }
       },
       "block_order": [
-        "ee212add-a151-4e46-a68b-7f011871c9c5"
+        "ee212add-a151-4e46-a68b-7f011871c9c5",
+        "9fc1216d-91e6-4f56-b477-c07c48b85171"
       ],
       "settings": {
         "anchor_id": ""
