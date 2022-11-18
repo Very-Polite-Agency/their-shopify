@@ -2,6 +2,7 @@
   "sections": {
     "1650923978b97fb93e": {
       "type": "hero",
+      "disabled": true,
       "settings": {
         "heading": "",
         "message": "",
