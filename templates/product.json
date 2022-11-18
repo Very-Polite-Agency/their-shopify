@@ -1,6 +1,7 @@
 {
   "order": [
     "main",
+    "f04e596a-89f8-413c-9cf5-5b0bb67bf8d5",
     "1655767302cfc75991",
     "165583490263ac7aff"
   ],
@@ -8,6 +9,14 @@
     "main": {
       "type": "main-product",
       "settings": {
+      }
+    },
+    "f04e596a-89f8-413c-9cf5-5b0bb67bf8d5": {
+      "type": "fifty-fifty",
+      "settings": {
+        "anchor_id": "",
+        "colour_theme": "light",
+        "text_alignment": "center"
       }
     },
     "1655767302cfc75991": {
