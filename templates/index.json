@@ -87,6 +87,22 @@
             "product": "finley-smiley-signet-ring-14k-gold-vermeil",
             "image_position": "0"
           }
+        },
+        "6ae86f41-35b9-4452-ae1d-fd332ca72c43": {
+          "type": "product",
+          "disabled": true,
+          "settings": {
+            "product": "",
+            "image_position": "0"
+          }
+        },
+        "1048bd4e-58c4-4ecf-95fb-4557bd3a00d9": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "caption": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
@@ -95,7 +111,9 @@
         "fbf936eb-27de-494d-a748-2e1ada860e3f",
         "022adf07-e061-4172-832b-097ec168a44e",
         "e273a287-b7a5-4d0f-a2d9-c199753189b1",
-        "20c1bbbd-0a48-4f81-ab1b-d90ee4b8aba0"
+        "20c1bbbd-0a48-4f81-ab1b-d90ee4b8aba0",
+        "6ae86f41-35b9-4452-ae1d-fd332ca72c43",
+        "1048bd4e-58c4-4ecf-95fb-4557bd3a00d9"
       ],
       "settings": {
         "heading": "Timeless Classic",
