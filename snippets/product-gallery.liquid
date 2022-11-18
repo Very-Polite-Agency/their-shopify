@@ -29,7 +29,7 @@
 
   </div>
 
-  <div class="{{ template_name }}__gallery {{ snippet_name }} d-none d-lg-block">
+  <div class="{{ template_name }}__gallery {{ snippet_name }} d-none d-lg-grid">
     {% for image in images %}
       <div class="{{ template_name }}__gallery-item">{% render 'lazyload-image', image: image %}</div>
     {% endfor %}
