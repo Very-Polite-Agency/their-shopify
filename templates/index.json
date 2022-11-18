@@ -55,17 +55,10 @@
             "image_position": "1"
           }
         },
-        "e273a287-b7a5-4d0f-a2d9-c199753189b1": {
-          "type": "product",
-          "settings": {
-            "product": "shelby-initial-necklace-14k-solid-gold",
-            "image_position": "2"
-          }
-        },
         "6c27f179-2cd5-439e-b548-e553a2b68c71": {
           "type": "product",
           "settings": {
-            "product": "drew-curb-chain-bracelet-14k-semi-solid-gold",
+            "product": "zion-beveled-cuff-14k-gold-vermeil",
             "image_position": "2"
           }
         },
@@ -74,6 +67,13 @@
           "settings": {
             "product": "bowie-u-shaped-earring-14k-solid-gold",
             "image_position": "0"
+          }
+        },
+        "e273a287-b7a5-4d0f-a2d9-c199753189b1": {
+          "type": "product",
+          "settings": {
+            "product": "shelby-initial-necklace-14k-solid-gold",
+            "image_position": "2"
           }
         },
         "022adf07-e061-4172-832b-097ec168a44e": {
@@ -104,9 +104,9 @@
       },
       "block_order": [
         "bf53173c-056a-467e-8cfc-c441bbe45408",
-        "e273a287-b7a5-4d0f-a2d9-c199753189b1",
         "6c27f179-2cd5-439e-b548-e553a2b68c71",
         "fbf936eb-27de-494d-a748-2e1ada860e3f",
+        "e273a287-b7a5-4d0f-a2d9-c199753189b1",
         "022adf07-e061-4172-832b-097ec168a44e",
         "f7b38c82-d92f-45ee-a29f-cafe762ee8d7",
         "0b59634a-f69c-4f0c-9ffd-80c32d7acadc"
