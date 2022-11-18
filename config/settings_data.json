@@ -119,8 +119,8 @@
         "type": "footer",
         "settings": {
           "image": "shopify:\/\/shop_images\/footer-v9.jpg",
-          "menu_main": "",
-          "menu_policies": "",
+          "menu_main": "footer",
+          "menu_policies": "policies",
           "newsletter_heading": "Newsletter Sign Up",
           "newsletter_button_title": "Sign Up"
         }
