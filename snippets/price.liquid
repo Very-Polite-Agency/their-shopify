@@ -21,8 +21,8 @@
   {% endif %}
 
   {%- assign available = product.available -%}
-  {%- assign currency_code = shop.currency | default: 'USD' -%}
-  {%- assign currency_symbol = shop.currency.symbol | default: '$' -%}
+  {%- assign currency_code = 'USD' -%}
+  {%- assign currency_symbol = '$' -%}
   {%- assign price = product.price | divided_by: 100 -%}
   {%- assign price_compare = product.compare_at_price | divided_by: 100 -%}
   {%- assign show_currency_code = show_currency_code | default: false -%}
