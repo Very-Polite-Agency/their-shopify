@@ -45,7 +45,7 @@
         <span class="cart-footer__summary-charge-amount js--checkout-charge-amount">{{ cart.checkout_charge_amount | divided_by: 100 | round: 2 }}</span>
         <span class="cart-footer__summary-notice">* Before Taxes & Shipping</span>
       </div>
-      <button class="cart-footer__button-checkout button button--primary" form="cart" name="checkout" type="submit">Checkout</button>
+      <button class="cart-footer__button-checkout button button--secondary" form="cart" name="checkout" type="submit">Checkout</button>
     </div>
   {% render 'bs-container', state: 'closed' %}
 </div>

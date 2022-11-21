@@ -10,6 +10,16 @@
   left: 0;
   padding: var(--bs-gutter-width) 0;
 
+  &__button-checkout {
+    &.button--secondary {
+      &:focus,
+      &:hover {
+        background: rgba(var(--theme-colour-gold), 1);
+        color: rgba(var(--theme-colour-black), 1);
+      }
+    }
+  }
+
   &__content {
     display: flex;
     justify-content: flex-end;
