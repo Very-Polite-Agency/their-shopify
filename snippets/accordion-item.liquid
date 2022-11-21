@@ -22,7 +22,12 @@
     </button>
 
     <div class="{{ snippet_name }}__main collapse{% if open %} show{% endif %}" id="{{ collapse_id }}">
-      <div class="{{ snippet_name }}__content body-copy body-copy--1">{{ content }}</div>
+      <div class="{{ snippet_name }}__content body-copy body-copy--1">
+        {{ content }}
+        {% if title contains 'Description' or title contains 'description' %}
+          <p>All sales in USD.</p>
+        {% endif %}
+      </div>
     </div>
 
   </div>
