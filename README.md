@@ -51,13 +51,13 @@ https://their-jewelry-and-accessories.myshopify.com
 - [x] Shipping
 - [ ] Taxes
 - [x] Product Details
-- [ ] Product Images
+- [x] Product Images
 - [ ] Collections Details
-- [ ] Collections Images
-- [ ] Navigation
-- [ ] Test Orders
-- [ ] Page Photos
-- [ ] Page Content
+- [x] Collections Images
+- [x] Navigation
+- [x] Test Orders
+- [x] Page Photos
+- [x] Page Content
 - [x] Google Analytics
 - [x] Google Search Console
 - [x] Markets
