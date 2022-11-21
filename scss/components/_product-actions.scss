@@ -1,23 +1,10 @@
 .product-actions {
 
-  margin-top: var(--bs-container-fluid-padding);
+  margin-top: 18px;
 
   &__button-add-to-cart {
     width: 100%;
     max-width: none;
   }
-
-  @include breakpoint(sm) {} // min width sm
-
-  @include breakpoint(md) {} // min width md
-
-  @include breakpoint(lg) {
-
-
-  } // min width lg
-
-  @include breakpoint(xl) {} // min width xl
-
-  @include breakpoint(xxl) {} // min width xxl
 
 }
