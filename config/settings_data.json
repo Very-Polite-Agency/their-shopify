@@ -155,7 +155,7 @@
         "settings": {
           "announcements_enabled": false,
           "announcements_homepage_only": true,
-          "menu_main": "",
+          "menu_main": "main-menu",
           "menu_main_extras": "extras"
         }
       },
