@@ -6,7 +6,7 @@
     "main": {
       "type": "main-blog",
       "settings": {
-        "hero_heading": "Our Amazing Blog",
+        "hero_heading": "Their Blog",
         "hero_info": "<p>See, Learn & Admire The Art & Science of Gold.<\/p>",
         "hero_text_colour_theme": "light",
         "hero_image": "shopify:\/\/shop_images\/blog_e5435243-25a9-4d74-9307-d2e4d8d3f33c.jpg",
