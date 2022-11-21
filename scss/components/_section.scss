@@ -1,7 +1,6 @@
 .section {
 
   position: relative;
-  overflow-x: hidden;
 
   &--faqs {
     & + .section--faqs {

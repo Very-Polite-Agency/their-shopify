@@ -122,6 +122,18 @@
     }
   }
 
+  &[disabled],
+  &--disabled {
+    cursor: no-drop;
+    pointer-events: none;
+    opacity: 0.5;
+    &:focus,
+    &:hover {
+      background: unset;
+      color: unset;
+    }
+  }
+
   @include breakpoint(sm) {} // min width sm
 
   @include breakpoint(md) {} // min width md
