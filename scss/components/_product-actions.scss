@@ -5,6 +5,13 @@
   &__button-add-to-cart {
     width: 100%;
     max-width: none;
+    &.button--secondary {
+      &:focus,
+      &:hover {
+        background: rgba(var(--theme-colour-gold), 1);
+        color: rgba(var(--theme-colour-black), 1);
+      }
+    }
   }
 
 }
