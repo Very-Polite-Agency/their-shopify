@@ -155,7 +155,7 @@
         "settings": {
           "announcements_enabled": false,
           "announcements_homepage_only": true,
-          "menu_main": "main-menu",
+          "menu_main": "",
           "menu_main_extras": "extras"
         }
       },
@@ -176,7 +176,7 @@
         "type": "mobile-menu",
         "settings": {
           "cart_enabled": true,
-          "menu_main": "mobile-menu"
+          "menu_main": "mobile-menu-temp"
         }
       },
       "policy-refund": {
