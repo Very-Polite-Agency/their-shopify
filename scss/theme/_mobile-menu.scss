@@ -75,7 +75,15 @@
       }
     }
     &__item {
-      margin-top: 12px;
+      margin-top: 18px;
+      line-height: 1;
+    }
+    &__link {
+      &.active,
+      &:focus,
+      &:hover {
+        color: rgba(var(--theme-colour-gold), 1);
+      }
     }
   }
 
