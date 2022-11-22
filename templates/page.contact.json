@@ -17,7 +17,7 @@
           "type": "product",
           "settings": {
             "product": "alfie-groove-dome-ring-14k-solid-gold",
-            "caption": "{{ block.settings.product.title }}"
+            "caption": "Alfie Dome Ring 14K Recycled Solid Gold"
           }
         }
       },
