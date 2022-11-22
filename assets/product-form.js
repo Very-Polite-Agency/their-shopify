@@ -27,7 +27,53 @@ if (!customElements.get('product-form')) {
 
       const formData = new FormData(this.form);
       formData.append('sections', this.cartNotification.getSectionsToRender().map((section) => section.id));
-      formData.append('sections_url', window.location.pathname);
+      formData.append('sections_url', window.location.pathname);            
+            /************************************************************/
+            $('.all-wrpp-varit input').each(function(){
+                var name = $(this).attr('name');
+                var value = $(this).val();
+
+                var ipType = $(this).attr('type');
+                if (ipType != 'radio') {
+                    if (ipType != 'checkbox') {
+                        formData.append(name, value);
+                    } else {
+                        if ($(this).is(':checked')) {
+                            formData.append(name, value);
+                        } 
+                    }
+                }
+            });
+
+            $('.all-wrpp-varit select').each(function(){
+                var name = $(this).attr('name');
+                var value = $(this).val();
+
+                var disAtrr = $(this).attr('disabled');
+                if (disAtrr != 'disabled') {
+                    formData.append(name, value);
+                }
+            });
+
+            $('.all-wrpp-varit textarea').each(function(){
+                var name = $(this).attr('name');
+                var value = $(this).val();
+
+                var disAtrr = $(this).attr('disabled');
+                if (disAtrr != 'disabled') {
+                    formData.append(name, value);
+                }
+            });
+
+            //swatch override
+            $('.swt-checked input').each(function () {
+                var name = $(this).attr('name');
+                var value = $(this).val();
+
+                formData.append(name, value);
+            });
+            /************************************************************/
+
       config.body = formData;
 
       fetch(`${routes.cart_add_url}`, config)
