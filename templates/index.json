@@ -10,39 +10,6 @@
         "style": "primary"
       }
     },
-    "165093044106648c6d": {
-      "type": "fifty-fifty",
-      "blocks": {
-        "35f168b3-3d22-4035-9a8e-a274b3a9bfaf": {
-          "type": "content",
-          "settings": {
-            "product": "",
-            "product_title": "",
-            "heading": "<p>Sutton Oval Locket 14k Gold Vermeil<\/p>",
-            "message": "<p>Designed with 14K recycled gold vermeil - The Sutton Oval Locket is made to represent a moment in time. Add a photo to make it an extra special piece, holding your loved ones close to your heart. All of THEIR necklaces are classic and modern unisex styles, easy to wear as a single statement piece or to be combined with other necklaces from our collection.<\/p>",
-            "cta_title": "Shop Now",
-            "cta_link": "shopify:\/\/products\/sutton-oval-locket-14k-gold-vermeil"
-          }
-        },
-        "203d1e11-ac22-4763-869a-d64adbedfd81": {
-          "type": "media",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/THEIR_Campaign_22.jpg",
-            "caption": "",
-            "stamp": "shopify:\/\/shop_images\/emblem.png"
-          }
-        }
-      },
-      "block_order": [
-        "35f168b3-3d22-4035-9a8e-a274b3a9bfaf",
-        "203d1e11-ac22-4763-869a-d64adbedfd81"
-      ],
-      "settings": {
-        "anchor_id": "",
-        "colour_theme": "light",
-        "text_alignment": "bottom"
-      }
-    },
     "1655834543a2b5ab6f": {
       "type": "featured-carousel",
       "blocks": {
@@ -101,6 +68,39 @@
         "heading": "Timeless Classic",
         "subheading": "Collection",
         "anchor_id": ""
+      }
+    },
+    "165093044106648c6d": {
+      "type": "fifty-fifty",
+      "blocks": {
+        "35f168b3-3d22-4035-9a8e-a274b3a9bfaf": {
+          "type": "content",
+          "settings": {
+            "product": "",
+            "product_title": "",
+            "heading": "<p>Sutton Oval Locket 14k Gold Vermeil<\/p>",
+            "message": "<p>Designed with 14K recycled gold vermeil - The Sutton Oval Locket is made to represent a moment in time. Add a photo to make it an extra special piece, holding your loved ones close to your heart. All of THEIR necklaces are classic and modern unisex styles, easy to wear as a single statement piece or to be combined with other necklaces from our collection.<\/p>",
+            "cta_title": "Shop Now",
+            "cta_link": "shopify:\/\/products\/sutton-oval-locket-14k-gold-vermeil"
+          }
+        },
+        "203d1e11-ac22-4763-869a-d64adbedfd81": {
+          "type": "media",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/THEIR_Campaign_22.jpg",
+            "caption": "",
+            "stamp": "shopify:\/\/shop_images\/emblem.png"
+          }
+        }
+      },
+      "block_order": [
+        "35f168b3-3d22-4035-9a8e-a274b3a9bfaf",
+        "203d1e11-ac22-4763-869a-d64adbedfd81"
+      ],
+      "settings": {
+        "anchor_id": "",
+        "colour_theme": "light",
+        "text_alignment": "bottom"
       }
     },
     "16510075059df4bdc9": {
@@ -184,8 +184,8 @@
   },
   "order": [
     "1650923978b97fb93e",
-    "165093044106648c6d",
     "1655834543a2b5ab6f",
+    "165093044106648c6d",
     "16510075059df4bdc9",
     "1651005681df706acc",
     "f2fd7723-b9af-4377-8025-baa44c4bd886"
