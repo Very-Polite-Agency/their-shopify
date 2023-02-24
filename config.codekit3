@@ -7,7 +7,7 @@
       "uuidString" : "037056FD-EDE6-4351-926C-FA9EDD95216F"
     }
   ],
-  "creatorBuild" : "34434",
+  "creatorBuild" : "34448",
   "files" : {
     "\/.editorconfig" : {
       "cB" : 0,
@@ -55,7 +55,7 @@
       "rq" : 75
     },
     "\/assets\/backup.min.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -78,7 +78,7 @@
       "pg" : 0
     },
     "\/assets\/cart-notification.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -89,7 +89,7 @@
       "tS" : 1
     },
     "\/assets\/cart.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -112,7 +112,7 @@
       "pg" : 0
     },
     "\/assets\/customer.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -123,7 +123,7 @@
       "tS" : 1
     },
     "\/assets\/details-disclosure.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -134,7 +134,7 @@
       "tS" : 1
     },
     "\/assets\/details-modal.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -157,7 +157,7 @@
       "pg" : 0
     },
     "\/assets\/facets.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -202,7 +202,7 @@
       "rq" : 75
     },
     "\/assets\/global.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -235,7 +235,7 @@
       "pg" : 0
     },
     "\/assets\/main.min.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -246,7 +246,7 @@
       "tS" : 1
     },
     "\/assets\/media-gallery.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -269,7 +269,7 @@
       "pg" : 0
     },
     "\/assets\/password-modal.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -280,7 +280,7 @@
       "tS" : 1
     },
     "\/assets\/pickup-availability.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -333,7 +333,7 @@
       "oF" : 0
     },
     "\/assets\/predictive-search.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -344,7 +344,7 @@
       "tS" : 1
     },
     "\/assets\/product-form.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -355,7 +355,7 @@
       "tS" : 1
     },
     "\/assets\/product-model.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -379,7 +379,7 @@
       "rq" : 75
     },
     "\/assets\/share.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -413,7 +413,7 @@
       "rq" : 75
     },
     "\/assets\/theme-editor.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -450,7 +450,7 @@
       "rq" : 75
     },
     "\/assets\/vendors.min.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -477,7 +477,7 @@
       "oS" : 1
     },
     "\/js\/backup.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -488,7 +488,7 @@
       "tS" : 1
     },
     "\/js\/main.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -499,7 +499,7 @@
       "tS" : 1
     },
     "\/js\/modules\/_add-to-cart.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -510,7 +510,7 @@
       "tS" : 1
     },
     "\/js\/modules\/_breakpoints.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -521,7 +521,7 @@
       "tS" : 1
     },
     "\/js\/modules\/_cart.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -532,7 +532,7 @@
       "tS" : 1
     },
     "\/js\/modules\/_credits.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -543,7 +543,7 @@
       "tS" : 1
     },
     "\/js\/modules\/_footer.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -554,7 +554,7 @@
       "tS" : 1
     },
     "\/js\/modules\/_forms.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -565,7 +565,7 @@
       "tS" : 1
     },
     "\/js\/modules\/_gliders.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -576,7 +576,7 @@
       "tS" : 1
     },
     "\/js\/modules\/_header.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -587,7 +587,7 @@
       "tS" : 1
     },
     "\/js\/modules\/_instagramFeed.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -598,7 +598,7 @@
       "tS" : 1
     },
     "\/js\/modules\/_mobileMenu.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -609,7 +609,7 @@
       "tS" : 1
     },
     "\/js\/modules\/_modals.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -620,7 +620,7 @@
       "tS" : 1
     },
     "\/js\/modules\/_product.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -631,7 +631,7 @@
       "tS" : 1
     },
     "\/js\/modules\/_render.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -642,7 +642,7 @@
       "tS" : 1
     },
     "\/js\/modules\/_scrolling.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -653,7 +653,7 @@
       "tS" : 1
     },
     "\/js\/modules\/_sizing.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -664,7 +664,7 @@
       "tS" : 1
     },
     "\/js\/modules\/_stepper.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -675,7 +675,7 @@
       "tS" : 1
     },
     "\/js\/modules\/_tools.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -686,7 +686,7 @@
       "tS" : 1
     },
     "\/js\/vendors.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -3755,6 +3755,10 @@
         "active" : 0,
         "optionString" : "'always', {exceptAfterSingleLine: false}"
       },
+      "logical-assignment-operators" : {
+        "active" : 0,
+        "optionString" : "'always',  {'enforceForIfStatements': false}"
+      },
       "max-classes-per-file" : {
         "active" : 0,
         "optionString" : "{'ignoreExpressions': false, 'max': 1}"
@@ -3915,6 +3919,9 @@
       "no-empty-pattern" : {
         "active" : 1
       },
+      "no-empty-static-block" : {
+        "active" : 0
+      },
       "no-eq-null" : {
         "active" : 0
       },
@@ -4053,6 +4060,9 @@
         "active" : 0
       },
       "no-new-func" : {
+        "active" : 0
+      },
+      "no-new-native-nonconstructor" : {
         "active" : 0
       },
       "no-new-object" : {
@@ -4569,7 +4579,7 @@
       "autoOutputPathReplace1" : "",
       "autoOutputPathReplace2" : "",
       "autoOutputPathStyle" : 1,
-      "bundleFormat" : 0,
+      "bundleFormat" : 4,
       "minifierStyle" : 1,
       "sourceMapStyle" : 0,
       "syntaxCheckerStyle" : 3,
@@ -4869,7 +4879,7 @@
       },
       "comments" : {
         "active" : 0,
-        "flagValue" : -1
+        "flagValue" : 1
       },
       "comparisons" : {
         "active" : 1,

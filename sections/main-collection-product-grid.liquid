@@ -12,6 +12,17 @@
 {% assign collection_title = collection.title | defualt: '' %}
 {% assign collection_description = collection.description | defualt: '' %}
 
+{% comment %}
+  manual
+  best-selling
+  title-ascending
+  title-descending
+  price-ascending
+  price-descending
+  created-ascending
+  created-descending
+{% endcomment %}
+
 <div class="{{ section_name }}" id="{{ section_id }}">
   {%- paginate collection.products by section.settings.products_per_page -%}
 
