@@ -1,27 +1,21 @@
-{%- assign section_name = 'collection-product-grid' -%}
-{%- assign section_id = section_name | append: '--' | append: section.id -%}
+{%- liquid
 
-{% assign banner_image = section.settings.banner_image | default: false %}
-{% assign show_secondary_image = section.settings.show_secondary_image | default: false %}
+  assign section_name = 'collection-product-grid'
+  assign section_id = section_name | append: '--' | append: section.id
 
-{% if section.settings.anchor_id != blank %}
-  {% assign section_id = section.settings.anchor_id %}
-{% endif %}
+  assign banner_image = section.settings.banner_image | default: false
+  assign show_secondary_image = section.settings.show_secondary_image | default: false
 
-{% assign collection_image = collection.image | defualt: false %}
-{% assign collection_title = collection.title | defualt: '' %}
-{% assign collection_description = collection.description | defualt: '' %}
+  if section.settings.anchor_id != blank
+    assign section_id = section.settings.anchor_id
+  endif
 
-{% comment %}
-  manual
-  best-selling
-  title-ascending
-  title-descending
-  price-ascending
-  price-descending
-  created-ascending
-  created-descending
-{% endcomment %}
+  assign collection_image = collection.image | defualt: false
+  assign collection_title = collection.title | defualt: ''
+  assign collection_description = collection.description | defualt: ''
+  assign collection_sort_by = section.settings.sort_by | default: 'title-ascending'
+
+-%}
 
 <div class="{{ section_name }}" id="{{ section_id }}">
   {%- paginate collection.products by section.settings.products_per_page -%}
@@ -136,6 +130,22 @@
     {
       "content": "Settings",
       "type": "header"
+    },
+     {
+      "label": "Sort By",
+      "type": "select",
+      "options": [
+        { "value": "manual", "label": "Manual" },
+        { "value": "best-selling", "label": "Best Selling" },
+        { "value": "title-ascending", "label": "Alphabetically, A-Z" },
+        { "value": "title-descending", "label": "Alphabetically, Z-A" },
+        { "value": "price-ascending", "label": "Price, low to high" },
+        { "value": "price-descending", "label": "Price, high to low" },
+        { "value": "created-ascending", "label": "Date, old to new" },
+        { "value": "created-descending", "label": "Date, new to old" }
+      ],
+      "default": "title-ascending",
+      "id": "sort_by"
     },
     {
       "label": "Products per Page",
