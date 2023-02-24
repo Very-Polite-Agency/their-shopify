@@ -3,6 +3,7 @@
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
+        "sort_by": "price-ascending",
         "products_per_page": "24",
         "show_secondary_image": true,
         "banner_image": "shopify:\/\/shop_images\/Mask_group_2x_b4cb4920-0e49-4b22-bf8e-fe34d1c40db4.png"
