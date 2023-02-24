@@ -13,7 +13,11 @@
   assign collection_image = collection.image | defualt: false
   assign collection_title = collection.title | defualt: ''
   assign collection_description = collection.description | defualt: ''
-  assign collection_sort_by = section.settings.sort_by | default: 'title-ascending'
+  assign collection_sort_by = section.settings.sort_by | default: collection.default_sort_by
+
+  if collection_sort_by != blank
+    assign collection.sort_by = collection_sort_by
+  endif
 
 -%}
 
@@ -43,10 +47,12 @@
 
             <div class="{{ section_name }}__sort-filter">
               <label class="{{ section_name }}__sort-filter-label caption--1">Sort by</label>
-              <select class="{{ section_name }}__sort-filter-options select--1" id="sort-by">
                 {% assign sort_by = collection.sort_by | default: collection.default_sort_by %}
+                <select class="{{ section_name }}__sort-filter-options select--1" id="sort-by">
                 {% for option in collection.sort_options %}
-                  <option value="{{ option.value }}" {% if option.value == sort_by %}selected="selected"{% endif %}>{% render 'sort-option-name', option_value: option.value %}</option>
+                  <option value="{{ option.value }}" {% if option.value == sort_by %}selected="selected"{% endif %}>
+                    {% render 'sort-option-name', option_value: option.value %}
+                  </option>
                 {% endfor %}
               </select>
             </div>
