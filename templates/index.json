@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "1650923978b97fb93e": {
@@ -5,7 +14,7 @@
       "settings": {
         "heading": "",
         "message": "",
-        "image": "shopify:\/\/shop_images\/THEIR_Campaign_9.jpg",
+        "image": "shopify://shop_images/THEIR_Campaign_9.jpg",
         "image_caption": "",
         "style": "primary"
       }
@@ -18,18 +27,18 @@
           "settings": {
             "product": "",
             "product_title": "",
-            "heading": "<p>Sutton Oval Locket 14k Gold Vermeil<\/p>",
-            "message": "<p>Designed with 14K recycled gold vermeil - The Sutton Oval Locket is made to represent a moment in time. Add a photo to make it an extra special piece, holding your loved ones close to your heart. All of THEIR necklaces are classic and modern unisex styles, easy to wear as a single statement piece or to be combined with other necklaces from our collection.<\/p>",
+            "heading": "<p>Sutton Oval Locket 14k Gold Vermeil</p>",
+            "message": "<p>Designed with 14K recycled gold vermeil - The Sutton Oval Locket is made to represent a moment in time. Add a photo to make it an extra special piece, holding your loved ones close to your heart. All of THEIR necklaces are classic and modern unisex styles, easy to wear as a single statement piece or to be combined with other necklaces from our collection.</p>",
             "cta_title": "Shop Now",
-            "cta_link": "shopify:\/\/products\/sutton-oval-locket-14k-gold-vermeil"
+            "cta_link": "shopify://products/sutton-oval-locket-14k-gold-vermeil"
           }
         },
         "203d1e11-ac22-4763-869a-d64adbedfd81": {
           "type": "media",
           "settings": {
-            "image": "shopify:\/\/shop_images\/THEIR_Campaign_22.jpg",
+            "image": "shopify://shop_images/THEIR_Campaign_22.jpg",
             "caption": "",
-            "stamp": "shopify:\/\/shop_images\/emblem.png"
+            "stamp": "shopify://shop_images/emblem.png"
           }
         }
       },
@@ -84,7 +93,7 @@
         "20c1bbbd-0a48-4f81-ab1b-d90ee4b8aba0": {
           "type": "product",
           "settings": {
-            "product": "finley-smiley-signet-ring-14k-gold-vermeil",
+            "product": "finley-smiley-signet-ring",
             "image_position": "0"
           }
         }
@@ -109,7 +118,7 @@
         "774a11ac-2236-4a3e-8e3e-851795e12bc0": {
           "type": "media",
           "settings": {
-            "image": "shopify:\/\/shop_images\/THEIR_Campaign_18.jpg",
+            "image": "shopify://shop_images/THEIR_Campaign_18.jpg",
             "caption": "Stevie Link Chain Bracelet 14k Solid Gold"
           }
         },
@@ -118,10 +127,10 @@
           "settings": {
             "product": "james-groove-signet-ring-14k-solid-gold",
             "product_title": "14k Solid Gold",
-            "heading": "<p>Behind the Brand<\/p>",
-            "message": "<p>The pieces we design aren’t about what’s happening around you like trends and popular opinions - we create pieces that celebrate who you are.<\/p>",
+            "heading": "<p>Behind the Brand</p>",
+            "message": "<p>The pieces we design aren’t about what’s happening around you like trends and popular opinions - we create pieces that celebrate who you are.</p>",
             "cta_title": "Learn More",
-            "cta_link": "shopify:\/\/pages\/about"
+            "cta_link": "shopify://pages/about"
           }
         }
       },
@@ -143,16 +152,16 @@
           "settings": {
             "product": "",
             "product_title": "",
-            "heading": "<p>Give Back<\/p>",
-            "message": "<p>We have committed to creating a Their Sustainability Plan, one that will grow with us and challenge us to be in a constant pursuit of ethical and responsible business practices. Although there’s always more that can be done, we are inspired to do what we can, where we can and to continue to see our give back commitment grow<\/p>",
+            "heading": "<p>Give Back</p>",
+            "message": "<p>We have committed to creating a Their Sustainability Plan, one that will grow with us and challenge us to be in a constant pursuit of ethical and responsible business practices. Although there’s always more that can be done, we are inspired to do what we can, where we can and to continue to see our give back commitment grow</p>",
             "cta_title": "Learn More",
-            "cta_link": "shopify:\/\/pages\/about"
+            "cta_link": "shopify://pages/about"
           }
         },
         "7e663e10-fb12-43c2-93f7-99a09fe5fe2a": {
           "type": "media",
           "settings": {
-            "image": "shopify:\/\/shop_images\/THEIR--home-page--FF02_3x_d686c333-42ae-4d81-97d4-88ea2d6c8c84.png",
+            "image": "shopify://shop_images/THEIR--home-page--FF02_3x_d686c333-42ae-4d81-97d4-88ea2d6c8c84.png",
             "caption": ""
           }
         }
